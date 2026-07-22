@@ -400,7 +400,7 @@
         <p style="font-size: 0.88rem; color: var(--wine); font-style: italic; font-weight: 600; margin-top: 10px; margin-bottom: 0;">*Note: All packages are fully customizable. Final pricing depends on menu selections and guest count, subject to mutual discussion.</p>
       </div>
 
-      <div class="row g-4 justify-content-center">
+      <div class="row g-4 justify-content-center mobile-swipe-deck">
         <!-- Silver Menu -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card">
@@ -486,7 +486,7 @@
         <p class="text-muted" style="max-width: 600px; margin: 0.5rem auto 0;">Enhance your catering experience with our interactive specialty live stations, overseen by our expert chefs.</p>
       </div>
 
-      <div class="row g-4 justify-content-center">
+      <div class="row g-4 justify-content-center mobile-swipe-deck">
         <!-- Craft Bar Lounge -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">

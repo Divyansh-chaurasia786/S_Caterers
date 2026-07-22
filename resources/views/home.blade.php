@@ -94,7 +94,7 @@
   <!-- ================= THE THREE PROMISE CARDS ================= -->
   <section class="promise-section" id="promise-banner">
     <div class="container">
-      <div class="row g-4 justify-content-center">
+      <div class="row g-4 justify-content-center mobile-swipe-deck">
         <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
@@ -140,7 +140,7 @@
         <h2 class="section-title">Our Signature <span class="accent">Specialities</span></h2>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 mobile-swipe-deck">
         <!-- Awadhi Specialties -->
         <div class="col-md-6 col-lg-3">
           <div class="specialty-card">
@@ -340,7 +340,7 @@
         <h2 class="section-title">Captured <span class="accent">Moments</span></h2>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 mobile-swipe-deck">
         <!-- Photo 1 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">

@@ -1334,6 +1334,32 @@ footer a:hover {
 }
 
 @media (max-width: 767.98px) {
+  /* Mobile Horizontal Swipe/Scroll snap deck utility */
+  .mobile-swipe-deck {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 1.25rem !important;
+    gap: 1.25rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .mobile-swipe-deck::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .mobile-swipe-deck > [class*="col-"] {
+    flex: 0 0 85% !important; /* Card takes 85% width, showing 15% hint on the right */
+    max-width: 85% !important;
+    scroll-snap-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   /* Global Spacing and Typography Overrides */
   body {
     font-size: 0.9rem !important;
@@ -1489,50 +1515,51 @@ footer a:hover {
 
   /* Promise Cards Redesign on Mobile */
   .promise-section {
-    padding: 2.5rem 0 !important;
+    padding: 1.5rem 0 !important;
   }
   
   .promise-card {
     background: #FFFFFF !important;
     border: 1px solid var(--gold-line) !important;
-    border-radius: 14px !important;
-    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     text-align: left !important;
-    gap: 1.25rem !important;
+    gap: 0.85rem !important;
     box-shadow: 0 4px 15px rgba(44, 26, 17, 0.04) !important;
     margin-bottom: 0 !important;
+    height: 100% !important;
   }
   
   .promise-card .icon-wrap {
-    width: 50px !important;
-    height: 50px !important;
+    width: 42px !important;
+    height: 42px !important;
     border-radius: 50% !important;
     background: rgba(212, 175, 55, 0.08) !important;
     border: 1.5px solid var(--gold-bright) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 1.25rem !important;
+    font-size: 1.05rem !important;
     color: var(--gold-bright) !important;
     flex-shrink: 0 !important;
     margin-bottom: 0 !important;
   }
   
   .promise-card .title {
-    font-size: 0.78rem !important;
+    font-size: 0.7rem !important;
     font-weight: 700 !important;
-    letter-spacing: 0.1em !important;
+    letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
     color: var(--gold) !important;
   }
   
   .promise-card .desc {
-    font-size: 0.95rem !important;
+    font-size: 0.88rem !important;
     color: var(--charcoal) !important;
-    margin-top: 0.15rem !important;
+    margin-top: 0.1rem !important;
     font-weight: 500 !important;
   }
 
@@ -1668,56 +1695,59 @@ footer a:hover {
 
   /* Services Page Styles Overrides */
   .pkg-custom-card {
-    padding: 1.5rem 1.2rem !important;
-    border-radius: 14px !important;
-    margin-bottom: 1.5rem;
+    padding: 1.25rem 1rem !important;
+    border-radius: 12px !important;
+    margin-bottom: 0 !important;
     box-shadow: 0 8px 24px rgba(44, 26, 17, 0.04) !important;
+    height: 100% !important;
   }
   
   .pkg-img-wrap {
-    margin: -1.5rem -1.2rem 1.2rem -1.2rem !important;
-    height: 160px !important;
-    border-top-left-radius: 14px !important;
-    border-top-right-radius: 14px !important;
+    margin: -1.25rem -1rem 1rem -1rem !important;
+    height: 135px !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
   }
   
   .pkg-header {
-    padding-bottom: 1.2rem !important;
-    margin-bottom: 1.2rem !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
   }
   
   .pkg-header h3 {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
   
   .pkg-header .desc {
-    font-size: 0.82rem !important;
+    font-size: 0.78rem !important;
   }
   
   .pkg-features li {
-    font-size: 0.82rem !important;
-    margin-bottom: 0.5rem !important;
+    font-size: 0.78rem !important;
+    margin-bottom: 0.4rem !important;
     display: flex !important;
     align-items: flex-start !important;
   }
   
   .pkg-features li i {
-    font-size: 0.88rem !important;
-    margin-top: 3px !important;
+    font-size: 0.82rem !important;
+    margin-top: 2px !important;
   }
 
   /* Addon counters cards mobile overrides */
   .addons-section .pkg-custom-card {
-    padding: 1.5rem 1.2rem !important;
-    border-radius: 14px !important;
-    margin-bottom: 1.2rem;
+    padding: 1.25rem 1rem !important;
+    border-radius: 12px !important;
+    margin-bottom: 0 !important;
+    height: 100% !important;
   }
   
   .addons-section .pkg-img-wrap {
-    margin: -1.5rem -1.2rem 1.2rem -1.2rem !important;
-    height: 160px !important;
-    border-top-left-radius: 14px !important;
-    border-top-right-radius: 14px !important;
+    margin: -1.25rem -1rem 1rem -1rem !important;
+    height: 135px !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+  }
   }
 
   /* Consultation Form Overrides */
