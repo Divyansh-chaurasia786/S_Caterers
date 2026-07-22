@@ -2124,9 +2124,30 @@ footer a:hover {
   }
 }
 
-/* Floating WhatsApp CTA button styling — Hidden on desktop by default */
+/* Floating WhatsApp CTA button styling */
 .floating-whatsapp-cta {
-  display: none !important;
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+  left: auto !important;
+  background-color: #25D366 !important;
+  color: #FFFFFF !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.8rem !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+  z-index: 9999 !important;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease !important;
+  text-decoration: none !important;
+}
+
+.floating-whatsapp-cta:hover {
+  transform: scale(1.1) !important;
+  background-color: #20BA5A !important;
 }
 
 @media (max-width: 767.98px) {
