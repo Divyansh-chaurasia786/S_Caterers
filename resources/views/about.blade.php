@@ -599,7 +599,6 @@
           <div class="footer-social mt-4">
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
 
