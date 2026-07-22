@@ -68,9 +68,10 @@
         </div>
 
         <div class="col-12 col-md-6 hero-image-col">
-          <!-- Hero Image -->
           <div class="hero-image-wrap">
-            <img src="https://picsum.photos/seed/cateringhero/900/700" alt="S. Caterers Wedding Dining Setup">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=cover');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=1200&auto=format&fit=cover');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=cover');"></div>
           </div>
 
           <!-- Option A Wavy Mask Overlay (SVG) -->
@@ -519,6 +520,21 @@
   <a href="https://wa.me/919839077960" class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+  <!-- Hero background slideshow script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.hero-slide');
+      if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }, 3500);
+      }
+    });
+  </script>
 
   <!-- Bootstrap 5 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
