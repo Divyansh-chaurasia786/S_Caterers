@@ -354,10 +354,9 @@
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
   <footer id="footer-section">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-5 footer-container">
         <!-- Logo Column -->
         <div class="col-md-6 col-lg-4">
           <img src="{{ asset('images/logo.png') }}" alt="S. Caterers Logo" class="footer-logo">
@@ -387,7 +386,7 @@
         </div>
 
         <!-- Contact Column -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 footer-contact">
           <h6>Contact Us</h6>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
