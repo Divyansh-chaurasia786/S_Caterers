@@ -13,7 +13,7 @@
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.2">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.5">
 </head>
 <body>
 
