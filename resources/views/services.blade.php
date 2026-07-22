@@ -380,66 +380,142 @@
       </div>
 
       <div class="row g-4 justify-content-center">
-        <!-- Silver Package -->
+        <!-- Silver Menu -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card">
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-seedling"></i></div>
-              <h3>Silver Package</h3>
-              <p class="desc">A tasteful compilation of traditional North Indian and authentic Awadhi vegetarian classics.</p>
+              <h3>Silver Menu</h3>
+              <div class="price-tag mb-3" style="font-size: 1.5rem; font-weight: 800; color: var(--wine);">₹450 <span style="font-size: 0.88rem; font-weight: 500; color: var(--ink-soft);">/ plate</span></div>
+              <p class="desc">Classic Indian fine vegetarian feast crafted with authentic spices and tradition. Perfect for sangeet functions, corporate events, and festive celebrations.</p>
             </div>
             <ul class="pkg-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Welcome Drinks:</strong> A selection of 2 hot coffees, classic kulhad tea, and carbonated beverages.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Soups & Starters:</strong> Cream of Tomato Soup, Paneer Tandoori, and crispy Hari Matar Samosas.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Main Course Stalls:</strong> Matar Paneer, Banarasi Dum Aalu, and comforting Dal Yellow Tadka.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Accompaniments:</strong> Bathua Raita, Jeera Rice, Tawa Roti (Aata & Besan), and Laccha Parathas.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Sweets & Dessert:</strong> Spongy Chena Kheer and vanilla/chocolate ice creams.</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Complete 100% Pure Veg Indian Buffet Service</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>2 Starters, 3 Authentic Gravy Mains & 2 Desi Sweets</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Live Tandoor Counter (Naan, Roti, Kulcha)</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Jeera Rice, Pulao & Authentic Tadka Dal</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Fresh Jaljeera & Welcome Drinks Counter</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Silver Package">Select Package</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Silver Menu (₹450)">Select Silver Menu</a>
             </div>
           </div>
         </div>
 
-        <!-- Gold Package -->
+        <!-- Gold Menu -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card">
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
-              <h3>Gold Package</h3>
-              <p class="desc">Our highly popular tier blending Mughlai specialties with live street food chaat galleries.</p>
+              <h3>Gold Menu</h3>
+              <div class="price-tag mb-3" style="font-size: 1.5rem; font-weight: 800; color: var(--wine);">₹750 <span style="font-size: 0.88rem; font-weight: 500; color: var(--ink-soft);">/ plate</span></div>
+              <p class="desc">Our signature luxury Indian banquet featuring live chef counters, rich gravy delicacies, and royal desserts.</p>
             </div>
             <ul class="pkg-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Welcome & Shakes:</strong> Mojitos, Fruit Shakes (Strawberry & Kesar Pista), and Cafe Hut espresso.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>BBQ & Starters:</strong> Paneer Mughlai Tikka, Malai Soya Chaap, and Dahi Kababs.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Live Chaat Street:</strong> Stuffed Aloo Tikki, Pani Batashas with 3 waters, and Palak Chaat.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Main Course:</strong> Paneer Lababdar, Nargisi Kofta, Dal Bukhara, and Veg Biryani.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Dessert Gallery:</strong> Kesariya Jaleba Mewa, Gajar Halwa, and classic Kulfi Falooda.</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>5-Course 100% Pure Veg Luxury Indian Banquet</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Live Dilli Chaat Counter (Pani Puri, Aloo Tikki, Raj Kachori)</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Zafrani Paneer & Dahi Ke Kebab Starters</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Royal Shahi Paneer, Dal Makhani & Kashmiri Pulao</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Gold & Brass Tableware Setup with Butler Service</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Gold Package">Select Package</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Gold Menu (₹750)">Select Gold Menu</a>
             </div>
           </div>
         </div>
 
-        <!-- Royal Package -->
+        <!-- Royal Menu -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card royal-active">
             <div class="royal-badge">Chef's Signature</div>
             <div class="pkg-header">
               <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
-              <h3>Royal Banquet</h3>
-              <p class="desc">A luxurious, multi-cuisine layout featuring global live stations, specialty mocktails, and chef-curated desserts.</p>
+              <h3>Royal Menu</h3>
+              <div class="price-tag mb-3" style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">₹1,250 <span style="font-size: 0.88rem; font-weight: 500; color: rgba(255,255,255,0.75);">/ plate</span></div>
+              <p class="desc">Opulent VIP Rajwada banquet dining, 24k gold leaf presentation, Awadhi dum biryanis, and traditional thali service.</p>
             </div>
             <ul class="pkg-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Luxury Mocktails:</strong> Blue Lagoon, Spiced Mango Pineapple, and fresh Lemon Slush.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>BBQ & Starters:</strong> Veg. Galawati Kababs, Corn Cheese Nests, and Mexican Lollipops.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Global Wok Live:</strong> Veg Sushi Bowls, Sizzling Veggie Teppanyaki, and live Pizza & Pasta.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Shahi Mains:</strong> Matar Angoor Kaju, Mushroom Kaleji, Dal Bukhara, and Amritsari Chhola.</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span><strong>Desserts in Terracotta:</strong> Chena Rabdi in Terracotta pots, Moong Badam Halwa, and chocolate fountains.</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>7-Course Royal Rajwada 100% Pure Veg Feast</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>2 Live Specialty Counters (Live Chaat & Live Jalebi-Rabri)</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>24k Gold Leaf Paneer & Dum Pukht Dal Makhani</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Awadhi Subz Dum Biryani & Methi Chaman</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Traditional Royal Silver Thali & White-Glove Service</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Package">Select Package</a>
+              <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Menu (₹1,250)">Select Royal Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PREMIUM ADD-ON COUNTERS ================= -->
+  <section class="addons-section bg-white py-5" id="addons" style="border-bottom: 1px solid var(--gold-line);">
+    <div class="container py-3">
+      <div class="section-title-wrap text-center mb-5">
+        <span class="eyebrow">EXCLUSIVE CULINARY ADD-ONS</span>
+        <h2 class="section-title">Signature Live <span class="accent">Counters</span></h2>
+        <p class="text-muted" style="max-width: 600px; margin: 0.5rem auto 0;">Enhance your catering experience with our interactive specialty live stations, overseen by our expert chefs.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Craft Bar Lounge -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+            <div class="pkg-header">
+              <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Craft Bar Lounge</h3>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Artisanal mixology lounge, smoke-infused mocktails, and fresh botanical sherbets served by professional mixologists.</p>
+            </div>
+            <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Professional Master Mixologist Team</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Desi Fusion Mocktails (Kala Khatta, Masala Guava, Shahi Thandai)</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fresh Botanical &amp; Gold Dust Garnishes</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Luxury Crystal Glassware Setup</span></li>
+            </ul>
+            <div class="mt-auto">
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Craft Bar Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Craft Bar Counter</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Juice Counter -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+            <div class="pkg-header">
+              <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-lemon"></i></div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Live Juice Counter</h3>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Freshly pressed organic fruit juices, live sugarcane extraction, tender coconut water, and botanical detox blends.</p>
+            </div>
+            <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>100% Organic Cold-Pressed Fruit Juices</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Live Fresh Sugarcane &amp; Tender Coconut Counter</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Exotic Tropical &amp; Ayurvedic Detox Blends</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Eco-Friendly Bamboo Setup &amp; Gilded Straws</span></li>
+            </ul>
+            <div class="mt-auto">
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Live Juice Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Juice Counter</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chocolate Counter -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+            <div class="pkg-header">
+              <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-ice-cream"></i></div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Chocolate Fountain</h3>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Multi-tiered Belgian chocolate cascade counter with eggless macarons, gold-dusted truffles, and fresh berry skewers.</p>
+            </div>
+            <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Warm Belgian Chocolate Cascade Fountain</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>24k Gold Dusted Truffles &amp; Eggless Treats</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fresh Strawberries, Marshmallows &amp; Berries</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Live Chocolatier Dipping Station</span></li>
+            </ul>
+            <div class="mt-auto">
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Chocolate Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Chocolate Counter</a>
             </div>
           </div>
         </div>
@@ -701,9 +777,12 @@
               <label for="inq-package">Catering Package</label>
               <select name="package" id="inq-package" required>
                 <option value="" disabled selected>Choose a starting tier...</option>
-                <option value="Silver Package">Heritage Silver Package</option>
-                <option value="Gold Package">Signature Gold Package</option>
-                <option value="Royal Package">Luxe Royal Banquet</option>
+                <option value="Silver Menu (₹450)">Silver Menu (₹450 / plate)</option>
+                <option value="Gold Menu (₹750)">Gold Menu (₹750 / plate)</option>
+                <option value="Royal Menu (₹1,250)">Royal Menu (₹1,250 / plate)</option>
+                <option value="Craft Bar Counter">Craft Bar Lounge (Add-on)</option>
+                <option value="Live Juice Counter">Live Juice Counter (Add-on)</option>
+                <option value="Chocolate Counter">Chocolate Fountain (Add-on)</option>
                 <option value="Custom Event">Bespoke Custom Catering</option>
               </select>
             </div>
