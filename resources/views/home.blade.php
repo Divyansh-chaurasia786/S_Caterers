@@ -52,7 +52,7 @@
   </div>
   <div class="container-fluid p-0">
     <div class="row g-0">
-      <div class="col-lg-6 d-flex flex-column justify-content-center">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
         <div class="hero-content ps-4 pe-4 ps-lg-5 pe-lg-5 text-start">
           <div class="mb-3">
             <span class="eyebrow"><i class="fa-solid fa-spa me-1"></i> A Legacy of Taste</span>
@@ -67,7 +67,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6 hero-image-col">
+        <div class="col-md-6 hero-image-col">
           <!-- Hero Image -->
           <div class="hero-image-wrap">
             <img src="https://picsum.photos/seed/cateringhero/900/700" alt="S. Caterers Wedding Dining Setup">
