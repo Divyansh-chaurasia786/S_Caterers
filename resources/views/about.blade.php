@@ -58,7 +58,7 @@
   <section class="section-pad bg-white">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-7">
+        <div class="col-7 col-lg-7">
           <span class="eyebrow">The Visionary</span>
           <h2 class="section-title mt-2 mb-4">Letter from the <span class="accent">Founder</span></h2>
           <p class="event-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft);">
@@ -75,7 +75,7 @@
             <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600;">Founder & CEO</span>
           </div>
         </div>
-        <div class="col-lg-5 text-center">
+        <div class="col-5 col-lg-5 text-center">
           <div class="event-frame-wrap" style="width: 330px; height: 440px;">
             <div class="event-frame-inner">
               <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=600&auto=format&fit=cover" alt="Amit Agrawal">
