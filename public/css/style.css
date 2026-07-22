@@ -34,19 +34,6 @@ body {
   color: var(--charcoal);
   overflow-x: hidden;
   line-height: 1.6;
-  
-  /* Flex layout to support sticky footer */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Safe Sticky Footer — Ensure flex items don't shrink or collapse */
-body > nav,
-body > section,
-body > div,
-body > footer {
-  flex-shrink: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
