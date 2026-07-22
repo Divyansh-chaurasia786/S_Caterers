@@ -34,6 +34,19 @@ body {
   color: var(--charcoal);
   overflow-x: hidden;
   line-height: 1.6;
+  
+  /* Flex layout to support sticky footer */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Safe Sticky Footer — Ensure flex items don't shrink or collapse */
+body > nav,
+body > section,
+body > div,
+body > footer {
+  flex-shrink: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1091,6 +1104,9 @@ footer {
   overflow: hidden !important;          /* Clip any horizontal overflow */
   width: 100% !important;
   margin-bottom: 0 !important;
+  
+  /* Push footer to absolute bottom on short pages */
+  margin-top: auto !important;
 }
 
 footer p, footer a {
