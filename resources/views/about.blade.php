@@ -44,9 +44,9 @@
   <section class="about-hero position-relative">
     <div class="hero-text-glow"></div>
     <div class="container text-center position-relative" style="z-index: 5;">
-      <span class="eyebrow text-uppercase" style="letter-spacing: 0.2em; font-size: 0.85rem;">Our Heritage & Devotion</span>
-      <h1 class="mt-2 mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 3.2rem; color: var(--charcoal);">Our Story & <span class="highlight" style="color: var(--wine);">Philosophy</span></h1>
-      <p class="lead-copy mx-auto" style="max-width: 600px; font-size: 1.15rem; color: var(--ink-soft); font-style: italic;">
+      <span class="eyebrow text-uppercase" style="letter-spacing: 0.2em; font-size: 0.85rem; color: var(--gold-bright);">Our Heritage & Devotion</span>
+      <h1 class="mt-2 mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 3.2rem; color: var(--ivory);">Our Story & <span class="highlight" style="color: var(--gold-bright);">Philosophy</span></h1>
+      <p class="lead-copy mx-auto" style="max-width: 600px; font-size: 1.15rem; color: var(--ivory-dim); font-style: italic;">
         "Crafting flawless vegetarian banquets with absolute purity, Lakhnavi heritage flavor, and royal hospitality."
       </p>
     </div>

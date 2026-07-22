@@ -1202,8 +1202,8 @@ footer a:hover {
 
 /* --- About Us Page Specific Styles --- */
 .about-hero {
-  background: var(--ivory);
-  padding: 8.5rem 0 5.5rem 0;
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--wine-deep) 60%, #1A0D06 100%);
+  padding: 9.5rem 0 6rem 0;
   border-bottom: 1px solid var(--gold-line);
 }
 
