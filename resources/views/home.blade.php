@@ -206,7 +206,8 @@
         <h2 class="section-title">Curated Catering <span class="accent">Packages</span></h2>
       </div>
 
-      <div class="row g-4 justify-content-center">
+      <!-- Desktop View (Grid Layout) -->
+      <div class="row g-4 justify-content-center d-none d-md-flex">
         <!-- Silver Package -->
         <div class="col-md-6 col-lg-4">
           <div class="package-card" id="pkg-silver">
@@ -237,6 +238,56 @@
             </div>
             <h3 class="pkg-title">Royal Package</h3>
             <p class="pkg-desc">A luxurious culinary banquet experience. Features live international counters (Italian, Thai, Continental), bespoke presentation displays, boutique serving staff, and custom menus crafted by our head chef.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile View (Tabbed Layout) -->
+      <div class="d-md-none">
+        <ul class="nav nav-pills pkg-tabs" id="pkgTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-silver" data-bs-toggle="tab" data-bs-target="#pane-silver" type="button" role="tab" aria-controls="pane-silver" aria-selected="true">Silver</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-gold" data-bs-toggle="tab" data-bs-target="#pane-gold" type="button" role="tab" aria-controls="pane-gold" aria-selected="false">Gold</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-royal" data-bs-toggle="tab" data-bs-target="#pane-royal" type="button" role="tab" aria-controls="pane-royal" aria-selected="false">Royal</button>
+          </li>
+        </ul>
+        
+        <div class="tab-content" id="pkgTabContent">
+          <!-- Silver Pane -->
+          <div class="tab-pane fade show active" id="pane-silver" role="tabpanel" aria-labelledby="tab-silver">
+            <div class="package-card" id="pkg-silver-mob">
+              <div class="pkg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Z"/><path d="M19 15v7"/></svg>
+              </div>
+              <h3 class="pkg-title">Silver Package</h3>
+              <p class="pkg-desc">An elegant arrangement of classic Lakhnavi and North Indian vegetarian specialties. Perfect for family gatherings, traditional rituals, and intimate celebrations looking for authentic heritage taste.</p>
+            </div>
+          </div>
+          
+          <!-- Gold Pane -->
+          <div class="tab-pane fade" id="pane-gold" role="tabpanel" aria-labelledby="tab-gold">
+            <div class="package-card" id="pkg-gold-mob">
+              <div class="pkg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-soup"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M7 21h10"/><path d="M12 2v4"/><path d="M7 5a3 3 0 0 1 3-3"/><path d="M14 5a3 3 0 0 1 3-3"/><path d="M3 12h18"/></svg>
+              </div>
+              <h3 class="pkg-title">Gold Package</h3>
+              <p class="pkg-desc">Our highly popular signature setup. Blends premium traditional courses with interactive street food chaat counters and modern dessert platters, offering a rich variety for grand receptions.</p>
+            </div>
+          </div>
+          
+          <!-- Royal Pane -->
+          <div class="tab-pane fade" id="pane-royal" role="tabpanel" aria-labelledby="tab-royal">
+            <div class="package-card royal-package" id="pkg-royal-mob">
+              <div class="pkg-icon" style="color: var(--gold-bright);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crown"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/><path d="M5 20h14"/></svg>
+              </div>
+              <h3 class="pkg-title">Royal Package</h3>
+              <p class="pkg-desc">A luxurious culinary banquet experience. Features live international counters (Italian, Thai, Continental), bespoke presentation displays, boutique serving staff, and custom menus crafted by our head chef.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -432,9 +483,28 @@
         <!-- Contact Column -->
         <div class="col-md-6 col-lg-4">
           <h6>Contact Us</h6>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a></p>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>, <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a></p>
-          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a></p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a>
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>
+              </p>
+              <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a>
+              </p>
+            </div>
+            
+            <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a>
+            </p>
+          </div>
         </div>
       </div>
 

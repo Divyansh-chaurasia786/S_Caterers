@@ -400,7 +400,8 @@
         <p style="font-size: 0.88rem; color: var(--wine); font-style: italic; font-weight: 600; margin-top: 10px; margin-bottom: 0;">*Note: All packages are fully customizable. Final pricing depends on menu selections and guest count, subject to mutual discussion.</p>
       </div>
 
-      <div class="row g-4 justify-content-center mobile-swipe-deck">
+      <!-- Desktop View (Grid Layout) -->
+      <div class="row g-4 justify-content-center d-none d-md-flex">
         <!-- Silver Menu -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card">
@@ -470,6 +471,96 @@
             </ul>
             <div class="text-center mt-auto pt-3">
               <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Menu">Select Royal Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile View (Tabbed Layout) -->
+      <div class="d-md-none">
+        <ul class="nav nav-pills pkg-tabs" id="servPkgTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="serv-tab-silver" data-bs-toggle="tab" data-bs-target="#serv-pane-silver" type="button" role="tab" aria-controls="serv-pane-silver" aria-selected="true">Silver</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="serv-tab-gold" data-bs-toggle="tab" data-bs-target="#serv-pane-gold" type="button" role="tab" aria-controls="serv-pane-gold" aria-selected="false">Gold</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="serv-tab-royal" data-bs-toggle="tab" data-bs-target="#serv-pane-royal" type="button" role="tab" aria-controls="serv-pane-royal" aria-selected="false">Royal</button>
+          </li>
+        </ul>
+        
+        <div class="tab-content" id="servPkgTabContent">
+          <!-- Silver Pane -->
+          <div class="tab-pane fade show active" id="serv-pane-silver" role="tabpanel" aria-labelledby="serv-tab-silver">
+            <div class="pkg-custom-card">
+              <div class="pkg-img-wrap">
+                <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Silver Menu" loading="lazy">
+              </div>
+              <div class="pkg-header">
+                <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Silver Menu</h3>
+                <p class="desc">Classic Indian fine vegetarian feast crafted with authentic spices and tradition. Perfect for sangeet functions, corporate events, and festive celebrations.</p>
+              </div>
+              <ul class="pkg-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span>Complete 100% Pure Veg Indian Buffet Service</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>2 Starters, 3 Authentic Gravy Mains & 2 Desi Sweets</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Live Tandoor Counter (Naan, Roti, Kulcha)</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Jeera Rice, Pulao & Authentic Tadka Dal</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Fresh Jaljeera & Welcome Drinks Counter</span></li>
+              </ul>
+              <div class="text-center mt-auto pt-3">
+                <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Silver Menu">Select Silver Menu</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gold Pane -->
+          <div class="tab-pane fade" id="serv-pane-gold" role="tabpanel" aria-labelledby="serv-tab-gold">
+            <div class="pkg-custom-card">
+              <div class="pkg-img-wrap">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Gold Menu" loading="lazy">
+              </div>
+              <div class="pkg-header">
+                <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
+                <h3>Gold Menu</h3>
+                <p class="desc">Our signature luxury Indian banquet featuring live chef counters, rich gravy delicacies, and royal desserts.</p>
+              </div>
+              <ul class="pkg-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span>5-Course 100% Pure Veg Luxury Indian Banquet</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Live Dilli Chaat Counter (Pani Puri, Aloo Tikki, Raj Kachori)</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Zafrani Paneer & Dahi Ke Kebab Starters</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Royal Shahi Paneer, Dal Makhani & Kashmiri Pulao</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Gold & Brass Tableware Setup with Butler Service</span></li>
+              </ul>
+              <div class="text-center mt-auto pt-3">
+                <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Gold Menu">Select Gold Menu</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Royal Pane -->
+          <div class="tab-pane fade" id="serv-pane-royal" role="tabpanel" aria-labelledby="serv-tab-royal">
+            <div class="pkg-custom-card royal-active">
+              <div class="royal-badge">Chef's Signature</div>
+              <div class="pkg-img-wrap">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Royal Menu" loading="lazy">
+              </div>
+              <div class="pkg-header">
+                <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
+                <h3>Royal Menu</h3>
+                <p class="desc">Opulent VIP Rajwada banquet dining, 24k gold leaf presentation, Awadhi dum biryanis, and traditional thali service.</p>
+              </div>
+              <ul class="pkg-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span>7-Course Royal Rajwada 100% Pure Veg Feast</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>2 Live Specialty Counters (Live Chaat & Live Jalebi-Rabri)</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>24k Gold Leaf Paneer & Dum Pukht Dal Makhani</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Awadhi Subz Dum Biryani & Methi Chaman</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Traditional Royal Silver Thali & White-Glove Service</span></li>
+              </ul>
+              <div class="text-center mt-auto pt-3">
+                <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Menu">Select Royal Menu</a>
+              </div>
             </div>
           </div>
         </div>
@@ -882,9 +973,28 @@
         <!-- Contact Column -->
         <div class="col-md-6 col-lg-4">
           <h6>Contact Us</h6>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> Keshav Nagar, Sitapur Road, Lucknow, UP</p>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> +91 98390 77960, +91 94157 88950</p>
-          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> scatererslko@gmail.com</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a>
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>
+              </p>
+              <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a>
+              </p>
+            </div>
+            
+            <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a>
+            </p>
+          </div>
         </div>
       </div>
 
