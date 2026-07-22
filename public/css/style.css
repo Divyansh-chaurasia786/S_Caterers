@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --ivory: #FDFBF7; /* Warmer, softer cream */
-  --ivory-dim: #F5EFE6;
-  --charcoal: #2A2421; /* Warm Espresso Dark */
-  --charcoal-soft: #3D3531;
-  --wine: #7A1C2B; /* Richer royal wine red */
-  --wine-deep: #54101A;
-  --gold: #C5A880; /* Soft luxury gold */
-  --gold-bright: #E2C793; /* Polished champagne gold */
-  --gold-line: rgba(197, 168, 128, 0.3);
-  --blush: #F5E6DC;
-  --ink-soft: #7D726A;
+  --ivory: #FAF7F2; /* Pure soft warm white background */
+  --ivory-dim: #F5EFE6; /* Elegant cream white for subtle overlays */
+  --charcoal: #26160C; /* Rich dark espresso brown for primary headlines and navbar links */
+  --charcoal-soft: #3C2415; /* Soft mahogany brown for section headings */
+  --wine: #5A3921; /* Warm terracotta/clay brown as the primary accent (replaces wine crimson) */
+  --wine-deep: #3C2415; /* Deep mahogany brown (replaces wine deep) */
+  --gold: #C5A059; /* Luxury Champagne Gold for thin lines, borders, outlines */
+  --gold-bright: #D4AF37; /* Radiant metallic Gold for buttons, active links, badges */
+  --gold-line: rgba(197, 160, 89, 0.4);
+  --blush: #F4EBE1; /* Soft cream/brown-blush for alerts and highlights */
+  --ink-soft: #7E6554; /* Muted taupe-brown for paragraph description texts */
   --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
