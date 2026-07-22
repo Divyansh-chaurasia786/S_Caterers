@@ -2133,11 +2133,13 @@ footer a:hover {
 
 @media (max-width: 767.98px) {
   .floating-whatsapp-cta {
-    bottom: 20px;
-    right: 20px;
+    bottom: calc(24px + env(safe-area-inset-bottom)) !important;
+    right: 24px !important;
+    left: auto !important;
     width: 50px;
     height: 50px;
     font-size: 1.6rem;
+    z-index: 99999 !important;
   }
 
   /* Compact Carousel Card Sizing & Spacing for mobile carousels */
