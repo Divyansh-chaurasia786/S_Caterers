@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
   background-color: #2A1B12 !important; /* Mahogany background color under footer */
 }
 
@@ -33,6 +34,11 @@ body {
   color: var(--charcoal);
   overflow-x: hidden;
   line-height: 1.6;
+  
+  /* Flex layout to support sticky footer */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1087,6 +1093,9 @@ footer {
   padding: 4.5rem 0 2.5rem;
   position: relative;
   border-top: 3px solid var(--gold);
+  
+  /* Push footer to absolute bottom on short pages */
+  margin-top: auto !important;
 }
 
 footer .footer-logo {
@@ -2115,42 +2124,29 @@ footer a:hover {
   }
 }
 
-/* Floating WhatsApp CTA button styling */
+/* Floating WhatsApp CTA button styling — Hidden on desktop by default */
 .floating-whatsapp-cta {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  left: auto !important;
-  background-color: #25D366 !important;
-  color: #FFFFFF !important;
-  width: 56px !important;
-  height: 56px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 1.8rem !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
-  z-index: 9999 !important;
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease !important;
-  text-decoration: none !important;
-}
-
-.floating-whatsapp-cta:hover {
-  transform: scale(1.1) !important;
-  background-color: #20BA5A !important;
+  display: none !important;
 }
 
 @media (max-width: 767.98px) {
   .floating-whatsapp-cta {
+    display: flex !important; /* Make it visible on mobile */
     position: fixed !important;
     bottom: 20px !important;
     right: 20px !important;
     left: auto !important;
+    background-color: #25D366 !important;
+    color: #FFFFFF !important;
     width: 50px !important;
     height: 50px !important;
+    border-radius: 50% !important;
+    align-items: center !important;
+    justify-content: center !important;
     font-size: 1.6rem !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
     z-index: 9999 !important;
+    text-decoration: none !important;
   }
 
   /* Compact Carousel Card Sizing & Spacing for mobile carousels */
