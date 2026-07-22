@@ -30,11 +30,11 @@
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom active" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#footer-section">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}#inquiry">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="{{ route('home') }}#services" class="btn-gold">Explore Packages</a>
+          <a href="{{ route('services') }}" class="btn-gold">Explore Packages</a>
         </div>
       </div>
     </div>
@@ -517,7 +517,7 @@
           Reach out to Amit Agrawal's boutique planning wing to customize your pure-veg menu and reserve your catering date anywhere in Uttar Pradesh.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <a href="https://wa.me/9198xxxxxx10" target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Us Now</a>
+          <a href="https://wa.me/919839077960" target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Us Now</a>
           <a href="{{ route('home') }}" class="btn-outline-wine">Back to Homepage</a>
         </div>
       </div>
@@ -544,7 +544,7 @@
           <h6>Explore</h6>
           <a href="{{ route('home') }}">Home</a>
           <a href="{{ route('about') }}">About Us</a>
-          <a href="{{ route('home') }}#services">Our Packages</a>
+          <a href="{{ route('services') }}">Our Packages</a>
           <a href="{{ route('home') }}#gallery-section">Gallery</a>
         </div>
 
@@ -560,9 +560,9 @@
         <!-- Contact Column -->
         <div class="col-md-6 col-lg-4">
           <h6>Contact Us</h6>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> Sitapur Road, Lucknow, Uttar Pradesh</p>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> +91 98xxxxxx10</p>
-          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> info@scatererslucknow.in</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> Keshav Nagar, Sitapur Road, Lucknow, UP</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> +91 98390 77960, +91 94157 88950</p>
+          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> scatererslko@gmail.com</p>
         </div>
       </div>
 

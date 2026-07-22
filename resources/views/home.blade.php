@@ -34,11 +34,11 @@
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
           <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('about') }}">About Us</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}#inquiry">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="#services" class="btn-gold">Explore Packages</a>
+          <a href="{{ route('services') }}" class="btn-gold">Explore Packages</a>
         </div>
       </div>
     </div>
@@ -61,8 +61,8 @@
             <h1 class="mt-1">S. CATERERS<br><span class="highlight">by Amit Agrawal</span></h1>
             <p class="lead-copy">Crafting culinary masterpieces and premium dining experiences for your most treasured celebrations. From traditional Lakhnavi delicacies to global gourmet courses, we cater with pure love, hygiene, and unmatched devotion.</p>
             <div class="d-flex gap-3 flex-wrap">
-              <a href="#services" class="btn-gold">Explore Menus</a>
-              <a href="https://wa.me/9198xxxxxx10" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+              <a href="{{ route('services') }}" class="btn-gold">Explore Menus</a>
+              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
             </div>
           </div>
         </div>
@@ -242,7 +242,7 @@
       </div>
 
       <div class="text-center mt-5">
-        <a href="#" class="btn-outline-wine">Know More</a>
+        <a href="{{ route('services') }}" class="btn-outline-wine">Know More</a>
       </div>
     </div>
   </section>
@@ -269,7 +269,7 @@
             <span class="event-tag-pill">Grand Scale</span>
             <h3 class="event-title">Destination Weddings</h3>
             <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to boutique family table service, we ensure your wedding feast is nothing short of legendary.</p>
-            <a href="https://wa.me/9198xxxxxx10" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
+            <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
           </div>
         </div>
       </div>
@@ -288,7 +288,7 @@
             <span class="event-tag-pill">Corporate</span>
             <h3 class="event-title">Corporate Galas</h3>
             <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering, ensuring flawless service, hygiene, and punctual execution.</p>
-            <a href="https://wa.me/9198xxxxxx10" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
+            <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
           </div>
         </div>
       </div>
@@ -307,7 +307,7 @@
             <span class="event-tag-pill">100% Satvik</span>
             <h3 class="event-title">Traditional Pujas & Griha Pravesh</h3>
             <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request, served in completely sanitized pure vegetarian setups.</p>
-            <a href="https://wa.me/9198xxxxxx10" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
+            <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
           </div>
         </div>
       </div>
@@ -424,9 +424,9 @@
         <!-- Contact Column -->
         <div class="col-md-6 col-lg-4">
           <h6>Contact Us</h6>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> Sitapur Road, Lucknow, Uttar Pradesh</p>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> +91 98xxxxxx10</p>
-          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> info@scatererslucknow.in</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> Keshav Nagar, Sitapur Road, Lucknow, UP</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> +91 98390 77960, +91 94157 88950</p>
+          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> scatererslko@gmail.com</p>
         </div>
       </div>
 
