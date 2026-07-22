@@ -303,11 +303,35 @@
       transition: border-color 0.25s ease;
     }
     
-    .form-group-custom input:focus,
-    .form-group-custom select:focus,
-    .form-group-custom textarea:focus {
-      border-color: var(--wine);
-      box-shadow: 0 0 0 3px rgba(110, 20, 35, 0.08);
+    @media (max-width: 767.98px) {
+      .services-hero {
+        padding: 7.5rem 0 4.5rem !important;
+      }
+      .pkg-custom-card, 
+      .menu-items-grid, 
+      .inquiry-form-box {
+        padding: 1.5rem !important;
+      }
+      .pkg-custom-card {
+        margin-bottom: 1.5rem;
+      }
+      /* Horizontally scrollable tabs with hidden scrollbar */
+      .menu-tabs {
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        margin-bottom: 2rem !important;
+        flex-wrap: nowrap !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .menu-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .menu-tab-btn {
+        flex-shrink: 0;
+      }
     }
   </style>
 </head>

@@ -176,12 +176,14 @@
       box-shadow: 0 0 0 3px rgba(110, 20, 35, 0.08);
     }
     
-    .pricing-help-note {
-      font-size: 0.82rem;
-      color: var(--wine);
-      font-style: italic;
-      font-weight: 600;
-      line-height: 1.4;
+    @media (max-width: 767.98px) {
+      .contact-hero {
+        padding: 7.5rem 0 4.5rem !important;
+      }
+      .contact-info-card, 
+      .contact-form-card {
+        padding: 1.5rem !important;
+      }
     }
   </style>
 </head>

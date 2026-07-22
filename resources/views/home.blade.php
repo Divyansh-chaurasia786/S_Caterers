@@ -60,7 +60,7 @@
             <div class="font-cursive mt-2">Welcome to</div>
             <h1 class="mt-1">S. CATERERS<br><span class="highlight">by Amit Agrawal</span></h1>
             <p class="lead-copy">Crafting culinary masterpieces and premium dining experiences for your most treasured celebrations. From traditional Lakhnavi delicacies to global gourmet courses, we cater with pure love, hygiene, and unmatched devotion.</p>
-            <div class="d-flex gap-3 flex-wrap">
+            <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
               <a href="{{ route('services') }}" class="btn-gold">Explore Menus</a>
               <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
             </div>
