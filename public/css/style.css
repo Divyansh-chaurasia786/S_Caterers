@@ -1306,34 +1306,462 @@ footer a:hover {
   line-height: 1.7;
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--ivory-dim) !important;
+    padding: 1.5rem !important;
+    border-radius: 14px !important;
+    margin-top: 0.75rem !important;
+    border: 1px solid var(--gold-line) !important;
+    box-shadow: 0 10px 30px rgba(44, 26, 17, 0.12) !important;
+  }
+  .nav-link-custom {
+    margin: 0.5rem 0 !important;
+    display: block !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    color: var(--charcoal) !important;
+  }
+  .nav-link-custom.active,
+  .nav-link-custom:hover {
+    background: rgba(212, 175, 55, 0.1) !important;
+    color: var(--wine) !important;
+  }
+  .nav-link-custom::after {
+    display: none !important;
+  }
+}
+
 @media (max-width: 767.98px) {
+  /* Global Spacing and Typography Overrides */
+  body {
+    font-size: 0.9rem !important;
+    background-color: var(--ivory) !important;
+  }
+  
+  .section-pad, 
+  section[class*="-section"], 
+  .package-grid-section,
+  .addons-section,
+  .menu-showcase-section,
+  .about-story-section,
+  .timeline-section,
+  .contact-section {
+    padding: 3rem 0 !important;
+  }
+  
+  .section-title {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.8rem !important;
+  }
+  
+  .section-title-wrap {
+    margin-bottom: 2rem !important;
+    padding: 0 1rem;
+  }
+  
+  .section-title-wrap p.text-muted,
+  .section-title-wrap p {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .navbar-brand-logo img {
+    height: 40px !important;
+  }
+
   .footer-bottom {
     justify-content: center !important;
     text-align: center;
     flex-direction: column;
     gap: 0.75rem;
   }
-  .navbar-brand-logo img {
-    height: 45px !important;
-  }
-}
 
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    background: #FAF7F2;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin-top: 0.75rem;
-    border: 1px solid var(--gold-line);
-    box-shadow: 0 10px 30px rgba(38, 22, 12, 0.08);
+  /* Hero Section Overhaul (Mobile Portrait) */
+  .hero {
+    background: linear-gradient(rgba(44, 26, 17, 0.8), rgba(44, 26, 17, 0.9)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80') no-repeat center center !important;
+    background-size: cover !important;
+    min-height: 82vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6.5rem 1rem 3.5rem !important;
   }
-  .nav-link-custom {
-    margin: 0.5rem 0 !important;
-    display: block;
-    padding: 0.5rem 0;
+  
+  .hero-content {
+    padding: 1rem 0 !important;
+    text-align: center !important;
+    width: 100% !important;
   }
-  .nav-link-custom::after {
+  
+  .hero-content .font-cursive {
+    color: var(--gold-bright) !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  
+  .hero h1 {
+    color: #FFFFFF !important;
+    font-size: 2.1rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  }
+  
+  .hero h1 span.highlight {
+    color: var(--gold-bright) !important;
+  }
+  
+  .hero .lead-copy {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin: 1.2rem auto 2.2rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+    max-width: 100% !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+  
+  .hero .btn-gold,
+  .hero .btn-outline-wine {
+    width: 100% !important;
+    margin-bottom: 0.6rem;
+    padding: 12px 0 !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero .btn-outline-wine {
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    background: transparent !important;
+  }
+  
+  .hero .btn-outline-wine:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #FFFFFF !important;
+  }
+
+  .hero-image-col,
+  .hero-wavy-mask {
     display: none !important;
+  }
+
+  .hero-top-tag-bar {
+    top: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: rgba(44, 26, 17, 0.92) !important;
+    border: 1px solid var(--gold) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    padding: 6px 14px !important;
+    border-radius: 30px !important;
+  }
+  
+  .hero-top-tag-bar .veg-tag {
+    font-size: 0.72rem !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Promise Cards Redesign on Mobile */
+  .promise-section {
+    padding: 2rem 0 !important;
+  }
+  
+  .promise-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 1.5rem !important;
+    text-align: center;
+    margin-bottom: 1rem !important;
+  }
+  
+  .promise-card:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .promise-card .icon {
+    font-size: 2rem !important;
+    margin-bottom: 0.8rem !important;
+    color: var(--gold-bright) !important;
+    background: rgba(255,255,255,0.05);
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .promise-card h3 {
+    font-size: 1.1rem !important;
+    color: #FFFFFF !important;
+    margin-bottom: 0.4rem !important;
+  }
+  
+  .promise-card p {
+    font-size: 0.82rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 1.5 !important;
+  }
+
+  /* About/Chef Section Redesign on Mobile */
+  .about-story-section {
+    text-align: center;
+  }
+  
+  .about-story-section .row {
+    flex-direction: column-reverse !important;
+  }
+  
+  .journey-frame-wrap {
+    width: 240px !important;
+    height: 240px !important;
+    margin: 0 auto 1.8rem !important;
+  }
+  
+  .journey-text-panel {
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  /* Food Showcase Tabs & Scroll bar on Mobile */
+  .menu-showcase-section {
+    background-color: var(--ivory) !important;
+  }
+  
+  .wok-tabs-container {
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .tab-btn-custom {
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+    border-radius: 20px !important;
+    margin-right: 0.5rem !important;
+  }
+  
+  .menu-item-card {
+    border-radius: 12px !important;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(44, 26, 17, 0.03) !important;
+    border: 1px solid var(--gold-line) !important;
+  }
+  
+  .menu-item-card .card-body {
+    padding: 1.2rem !important;
+  }
+  
+  .menu-item-card h4 {
+    font-size: 1.05rem !important;
+  }
+
+  /* Testimonials stacked on Mobile */
+  .testimonial-carousel-container {
+    padding: 0 0.5rem;
+  }
+  
+  .testimonial-card-custom {
+    padding: 1.8rem 1.2rem !important;
+    margin-bottom: 1.2rem;
+    border-radius: 14px !important;
+    box-shadow: 0 8px 20px rgba(44, 26, 17, 0.05) !important;
+    border: 1px solid var(--gold-line) !important;
+  }
+  
+  .testimonial-card-custom p.quote {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Stats Section on Mobile */
+  .stats-circle-wrap {
+    width: 85px !important;
+    height: 85px !important;
+    border-width: 3px !important;
+    margin: 0 auto 0.6rem !important;
+  }
+  
+  .stats-circle-wrap h2 {
+    font-size: 1.45rem !important;
+  }
+  
+  .stats-col p {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* Services Page Styles Overrides */
+  .pkg-custom-card {
+    padding: 1.5rem 1.2rem !important;
+    border-radius: 14px !important;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(44, 26, 17, 0.04) !important;
+  }
+  
+  .pkg-img-wrap {
+    margin: -1.5rem -1.2rem 1.2rem -1.2rem !important;
+    height: 160px !important;
+    border-top-left-radius: 14px !important;
+    border-top-right-radius: 14px !important;
+  }
+  
+  .pkg-header {
+    padding-bottom: 1.2rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+  
+  .pkg-header h3 {
+    font-size: 1.3rem !important;
+  }
+  
+  .pkg-header .desc {
+    font-size: 0.82rem !important;
+  }
+  
+  .pkg-features li {
+    font-size: 0.82rem !important;
+    margin-bottom: 0.5rem !important;
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+  
+  .pkg-features li i {
+    font-size: 0.88rem !important;
+    margin-top: 3px !important;
+  }
+
+  /* Addon counters cards mobile overrides */
+  .addons-section .pkg-custom-card {
+    padding: 1.5rem 1.2rem !important;
+    border-radius: 14px !important;
+    margin-bottom: 1.2rem;
+  }
+  
+  .addons-section .pkg-img-wrap {
+    margin: -1.5rem -1.2rem 1.2rem -1.2rem !important;
+    height: 160px !important;
+    border-top-left-radius: 14px !important;
+    border-top-right-radius: 14px !important;
+  }
+
+  /* Consultation Form Overrides */
+  .booking-form-card, 
+  .contact-form-card {
+    padding: 1.5rem 1.2rem !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 30px rgba(44, 26, 17, 0.06) !important;
+    border: 1px solid var(--gold-line) !important;
+  }
+  
+  .form-group-custom label {
+    font-size: 0.78rem !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .form-group-custom input,
+  .form-group-custom select,
+  .form-group-custom textarea {
+    padding: 10px 14px !important;
+    font-size: 0.88rem !important;
+    height: 46px !important;
+  }
+  
+  .form-group-custom textarea {
+    height: 100px !important;
+  }
+  
+  .form-group-custom select {
+    background-size: 12px !important;
+  }
+
+  /* Timeline Slider Mobile Overhaul */
+  .journey-timeline-nav {
+    display: none !important;
+  }
+  
+  .journey-slider-container {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+  
+  .journey-slide {
+    display: block !important;
+    opacity: 1 !important;
+    position: relative !important;
+    visibility: visible !important;
+    margin-bottom: 2rem !important;
+    border-bottom: 1px dashed var(--gold-line) !important;
+    padding-bottom: 2rem !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .journey-slide:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  .journey-image-panel {
+    margin-bottom: 1.2rem !important;
+  }
+  
+  .journey-image-panel img {
+    max-height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+  }
+  
+  .journey-text-panel {
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  
+  .journey-year-bg {
+    font-size: 4rem !important;
+    top: -25px !important;
+    opacity: 0.08 !important;
+  }
+
+  /* Contact Cards Mobile Overhaul */
+  .contact-info-card-custom {
+    padding: 1.5rem 1.2rem !important;
+    border-radius: 12px !important;
+    margin-bottom: 1rem !important;
+    box-shadow: 0 6px 18px rgba(44, 26, 17, 0.04) !important;
+    border: 1px solid var(--gold-line) !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .contact-info-card-custom .icon-wrap {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.3rem !important;
+    margin: 0 auto 1rem !important;
+  }
+  
+  .contact-info-card-custom h4 {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .contact-info-card-custom p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
   }
 }
 
