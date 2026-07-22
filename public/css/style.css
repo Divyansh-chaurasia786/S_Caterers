@@ -1167,18 +1167,60 @@ footer a:hover {
   .section-pad {
     padding: 5rem 0;
   }
-  .hero-content {
-    padding: 6.5rem 0 3.5rem !important;
-    text-align: center !important;
+  .hero {
+    background: linear-gradient(rgba(44, 26, 17, 0.78), rgba(44, 26, 17, 0.88)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80') no-repeat center center;
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem 4rem !important;
   }
-  .hero-content .lead-copy {
-    margin: 1.5rem auto 2.5rem !important;
+  .hero-content {
+    padding: 2rem 0 !important;
+    text-align: center !important;
+    width: 100%;
+  }
+  .hero-content .font-cursive {
+    color: var(--gold-bright) !important;
+    font-size: 1.8rem !important;
+  }
+  .hero h1 {
+    color: #FFFFFF !important;
+    font-size: 2.3rem !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  .hero h1 span.highlight {
+    color: var(--gold-bright) !important;
+  }
+  .hero .lead-copy {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin: 1.2rem auto 2.2rem !important;
+    font-size: 0.95rem !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  .hero .btn-outline-wine {
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+  }
+  .hero .btn-outline-wine:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #FFFFFF !important;
   }
   .hero-image-col {
-    min-height: 380px !important;
+    display: none !important;
   }
   .hero-wavy-mask {
     display: none !important;
+  }
+  .hero-top-tag-bar {
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: rgba(44, 26, 17, 0.9) !important;
+    border: 1px solid var(--gold) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   }
   .promise-card {
     margin-bottom: 1.8rem;
