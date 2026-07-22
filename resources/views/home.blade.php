@@ -95,7 +95,7 @@
   <!-- ================= THE THREE PROMISE CARDS ================= -->
   <section class="promise-section" id="promise-banner">
     <div class="container">
-      <div class="row g-4 justify-content-center mobile-swipe-deck">
+      <div class="row g-3 justify-content-center">
         <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
