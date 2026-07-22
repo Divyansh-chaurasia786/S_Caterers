@@ -52,7 +52,7 @@
   </div>
   <div class="container-fluid p-0">
     <div class="row g-0">
-      <div class="col-7 col-md-6 d-flex flex-column justify-content-center">
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
         <div class="hero-content ps-4 pe-4 ps-lg-5 pe-lg-5 text-start">
           <div class="mb-3">
             <span class="eyebrow"><i class="fa-solid fa-spa me-1"></i> A Legacy of Taste</span>
@@ -67,7 +67,7 @@
           </div>
         </div>
 
-        <div class="col-5 col-md-6 hero-image-col">
+        <div class="col-12 col-md-6 hero-image-col">
           <!-- Hero Image -->
           <div class="hero-image-wrap">
             <img src="https://picsum.photos/seed/cateringhero/900/700" alt="S. Caterers Wedding Dining Setup">
@@ -95,7 +95,7 @@
   <section class="promise-section" id="promise-banner">
     <div class="container">
       <div class="row g-4 justify-content-center">
-        <div class="col-4 col-md-4">
+        <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
               <i class="fa-solid fa-leaf"></i>
@@ -106,7 +106,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4 col-md-4">
+        <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
               <i class="fa-solid fa-spa"></i>
@@ -117,7 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4 col-md-4">
+        <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
               <i class="fa-solid fa-award"></i>
@@ -257,14 +257,14 @@
 
       <!-- Wedding Catering Row (Image Left, Text Right) -->
       <div class="row align-items-center g-5 event-row">
-        <div class="col-5 col-md-6 text-center">
+        <div class="col-12 col-lg-6 text-center">
           <div class="event-frame-wrap">
             <div class="event-frame-inner">
               <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=cover" alt="Weddings">
             </div>
           </div>
         </div>
-        <div class="col-7 col-md-6">
+        <div class="col-12 col-lg-6">
           <div class="event-content-col">
             <span class="event-tag-pill">Grand Scale</span>
             <h3 class="event-title">Destination Weddings</h3>
@@ -276,14 +276,14 @@
 
       <!-- Corporate Galas Row (Image Right, Text Left) -->
       <div class="row align-items-center g-5 event-row flex-lg-row-reverse">
-        <div class="col-5 col-md-6 text-center">
+        <div class="col-12 col-lg-6 text-center">
           <div class="event-frame-wrap">
             <div class="event-frame-inner">
               <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=cover" alt="Corporate Galas">
             </div>
           </div>
         </div>
-        <div class="col-7 col-md-6">
+        <div class="col-12 col-lg-6">
           <div class="event-content-col">
             <span class="event-tag-pill">Corporate</span>
             <h3 class="event-title">Corporate Galas</h3>
@@ -295,14 +295,14 @@
 
       <!-- Sacred Pujas Row (Image Left, Text Right) -->
       <div class="row align-items-center g-5 event-row">
-        <div class="col-5 col-md-6 text-center">
+        <div class="col-12 col-lg-6 text-center">
           <div class="event-frame-wrap">
             <div class="event-frame-inner">
               <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=600&auto=format&fit=cover" alt="Sacred Pujas">
             </div>
           </div>
         </div>
-        <div class="col-7 col-md-6">
+        <div class="col-12 col-lg-6">
           <div class="event-content-col">
             <span class="event-tag-pill">100% Satvik</span>
             <h3 class="event-title">Traditional Pujas & Griha Pravesh</h3>

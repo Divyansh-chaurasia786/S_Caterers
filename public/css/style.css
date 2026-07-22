@@ -1379,31 +1379,31 @@ footer a:hover {
     gap: 0.75rem;
   }
 
-  /* Hero Section Overhaul (Mobile Portrait - Side by Side) */
+  /* Hero Section Overhaul (Mobile Portrait) */
   .hero {
     background: var(--ivory) !important;
     min-height: auto !important;
     display: block !important;
-    padding: 5rem 0 3rem !important;
+    padding: 6.5rem 0 3.5rem !important;
     border-bottom: 1px solid var(--gold-line);
   }
   
   .hero-content {
     padding: 0.5rem 0 !important;
-    text-align: left !important;
+    text-align: center !important;
     width: 100% !important;
   }
   
   .hero-content .font-cursive {
     color: var(--wine) !important;
-    font-size: 1.1rem !important;
+    font-size: 1.6rem !important;
     margin-bottom: 0.2rem !important;
   }
   
   .hero h1 {
     color: var(--charcoal) !important;
-    font-size: 1.45rem !important;
-    line-height: 1.15 !important;
+    font-size: 2.1rem !important;
+    line-height: 1.25 !important;
     letter-spacing: -0.01em;
     text-shadow: none !important;
   }
@@ -1414,32 +1414,30 @@ footer a:hover {
   
   .hero .lead-copy {
     color: var(--ink-soft) !important;
-    margin: 0.8rem 0 1.2rem !important;
-    font-size: 0.78rem !important;
-    line-height: 1.55 !important;
+    margin: 1.2rem auto 2.2rem !important;
+    font-size: 0.92rem !important;
+    line-height: 1.65 !important;
     max-width: 100% !important;
     text-shadow: none !important;
   }
 
   .hero-content .d-flex.gap-3 {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    gap: 0.4rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
   }
   
   .hero .btn-gold,
   .hero .btn-outline-wine {
-    width: auto !important;
-    flex: 1;
-    max-width: 110px !important;
+    width: 100% !important;
+    max-width: 280px !important;
     margin-bottom: 0;
-    padding: 8px 6px !important;
-    font-size: 0.72rem !important;
-    display: inline-flex !important;
+    padding: 12px 0 !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
     justify-content: center;
     align-items: center;
-    border-radius: 6px !important;
+    border-radius: 8px !important;
   }
   
   .hero .btn-outline-wine {
@@ -1454,137 +1452,151 @@ footer a:hover {
 
   .hero-image-col {
     display: block !important;
-    min-height: 250px !important;
+    min-height: auto !important;
+    margin-top: 2rem !important;
+    padding: 0 1rem !important;
   }
 
   .hero-image-wrap {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
+    position: relative !important;
     width: 100% !important;
-    height: 100% !important;
+    height: 250px !important;
+    border-radius: 16px !important;
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 12px 30px rgba(44, 26, 17, 0.12) !important;
+    overflow: hidden !important;
   }
 
   .hero-wavy-mask {
-    display: block !important;
-    transform: none !important;
-    position: absolute !important;
-    top: -2px !important;
-    bottom: -2px !important;
-    left: -2px !important;
-    width: 50px !important;
-    height: calc(100% + 4px) !important;
-    z-index: 5 !important;
+    display: none !important;
   }
 
   .hero-top-tag-bar {
-    top: 10px !important;
-    left: 15px !important;
-    transform: none !important;
+    top: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     background: rgba(255, 253, 249, 0.95) !important;
     border: 1px solid var(--gold-line) !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    padding: 4px 10px !important;
+    padding: 6px 14px !important;
     border-radius: 20px !important;
   }
   
   .hero-top-tag-bar .veg-tag {
-    font-size: 0.65rem !important;
+    font-size: 0.7rem !important;
     color: var(--charcoal) !important;
   }
 
-  /* Promise Cards Redesign on Mobile (Side by Side) */
+  /* Promise Cards Redesign on Mobile */
   .promise-section {
-    padding: 1.5rem 0 !important;
+    padding: 2.5rem 0 !important;
   }
   
   .promise-card {
+    background: #FFFFFF !important;
+    border: 1px solid var(--gold-line) !important;
+    border-radius: 14px !important;
+    padding: 1.5rem !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    gap: 0.4rem !important;
-    text-align: center !important;
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
+    text-align: left !important;
+    gap: 1.25rem !important;
+    box-shadow: 0 4px 15px rgba(44, 26, 17, 0.04) !important;
     margin-bottom: 0 !important;
   }
   
   .promise-card .icon-wrap {
-    width: 36px !important;
-    height: 36px !important;
-    border-width: 1px !important;
-    font-size: 0.95rem !important;
-    margin-bottom: 0.2rem !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    background: rgba(212, 175, 55, 0.08) !important;
+    border: 1.5px solid var(--gold-bright) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.25rem !important;
+    color: var(--gold-bright) !important;
+    flex-shrink: 0 !important;
+    margin-bottom: 0 !important;
   }
   
   .promise-card .title {
-    font-size: 0.55rem !important;
-    letter-spacing: 0.04em !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: var(--gold) !important;
   }
   
   .promise-card .desc {
-    font-size: 0.72rem !important;
-    margin-top: 0 !important;
+    font-size: 0.95rem !important;
+    color: var(--charcoal) !important;
+    margin-top: 0.15rem !important;
+    font-weight: 500 !important;
   }
 
-  /* About/Chef & Occasion Sections on Mobile (Side by Side) */
+  /* About/Chef & Occasion Sections on Mobile */
   .about-story-section,
   .promise-section + section,
   #events {
-    text-align: left !important;
+    text-align: center !important;
   }
   
   .about-story-section .row,
   .event-row {
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: center !important;
   }
   
   .event-frame-wrap {
-    width: 105px !important;
-    height: 140px !important;
-    margin: 0 auto !important;
+    width: 220px !important;
+    height: 290px !important;
+    margin: 0 auto 1.5rem !important;
   }
 
   .event-frame-inner img {
-    border-radius: 8px !important;
+    border-radius: 12px !important;
   }
   
   .event-content-col {
-    padding-left: 0.2rem !important;
+    padding: 0 1rem !important;
+    text-align: center !important;
   }
 
   .event-tag-pill {
-    font-size: 0.6rem !important;
-    padding: 2px 6px !important;
-    margin-bottom: 0.4rem !important;
+    font-size: 0.65rem !important;
+    padding: 3px 8px !important;
+    margin: 0 auto 0.6rem !important;
   }
 
   .event-title {
-    font-size: 1.05rem !important;
-    margin-bottom: 0.3rem !important;
+    font-size: 1.35rem !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .event-desc {
-    font-size: 0.7rem !important;
-    line-height: 1.45 !important;
-    margin-bottom: 0.6rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+    color: var(--ink-soft) !important;
   }
 
   .event-content-col .btn-outline-wine {
-    font-size: 0.68rem !important;
-    padding: 6px 10px !important;
-    width: max-content !important;
-    border-radius: 4px !important;
+    font-size: 0.85rem !important;
+    padding: 10px 20px !important;
+    width: 100% !important;
+    max-width: 240px !important;
+    margin: 0.5rem auto 0 !important;
+    border-radius: 6px !important;
   }
   
   .journey-text-panel {
     border-left: none !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
-    margin-top: 0 !important;
-    text-align: left !important;
+    margin-top: 1.5rem !important;
+    text-align: center !important;
   }
 
   /* Food Showcase Tabs & Scroll bar on Mobile */
