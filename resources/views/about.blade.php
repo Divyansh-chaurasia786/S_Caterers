@@ -135,34 +135,110 @@
 
   <div class="jali-divider" id="divider-pillars"></div>
 
-  <!-- ================= TESTIMONIALS / JOURNEY SLIDER ================= -->
-  <section class="section-pad journey-section" id="journey-section">
+  <!-- ================= JOURNEY: 3D PAGE-FLIP BOOK ================= -->
+  <section class="section-pad journey-section" id="journey-section" style="background: #FDFAF4; overflow: hidden;">
     <div class="container">
-      <div class="section-title-wrap text-center">
+      <div class="section-title-wrap text-center mb-4">
         <span class="eyebrow">Our Milestones</span>
         <h2 class="section-title">The Journey of <span class="accent">S. Caterers</span></h2>
       </div>
 
-      <!-- Golden Thread Horizontal Timeline Navigation Bar -->
-      <div class="timeline-nav-container">
-        <div class="timeline-thread"></div>
-        <div class="timeline-nodes-wrap">
-          <div class="timeline-node-item active" data-slide="0"><span class="year-label">1995</span></div>
-          <div class="timeline-node-item" data-slide="1"><span class="year-label">1998</span></div>
-          <div class="timeline-node-item" data-slide="2"><span class="year-label">2001</span></div>
-          <div class="timeline-node-item" data-slide="3"><span class="year-label">2005</span></div>
-          <div class="timeline-node-item" data-slide="4"><span class="year-label">2008</span></div>
-          <div class="timeline-node-item" data-slide="5"><span class="year-label">2011</span></div>
-          <div class="timeline-node-item" data-slide="6"><span class="year-label">2014</span></div>
-          <div class="timeline-node-item" data-slide="7"><span class="year-label">2017</span></div>
-          <div class="timeline-node-item" data-slide="8"><span class="year-label">2020</span></div>
-          <div class="timeline-node-item" data-slide="9"><span class="year-label">2022</span></div>
-          <div class="timeline-node-item" data-slide="10"><span class="year-label">2024</span></div>
-          <div class="timeline-node-item" data-slide="11"><span class="year-label">2026</span></div>
+      <!-- ─── DESKTOP: 3D Heritage Book Page-Flip ─── -->
+      <div class="d-none d-lg-block">
+
+        <!-- Timeline Year Nav with Prev/Next arrows -->
+        <div class="book-timeline-nav" id="book-timeline-nav">
+          <button class="book-arrow-btn" id="book-prev" aria-label="Previous Era">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="book-years-track" id="book-years-track">
+            <span class="book-year active" data-page="0">1995</span>
+            <span class="book-year" data-page="1">1998</span>
+            <span class="book-year" data-page="2">2001</span>
+            <span class="book-year" data-page="3">2005</span>
+            <span class="book-year" data-page="4">2008</span>
+            <span class="book-year" data-page="5">2011</span>
+            <span class="book-year" data-page="6">2014</span>
+            <span class="book-year" data-page="7">2017</span>
+            <span class="book-year" data-page="8">2020</span>
+            <span class="book-year" data-page="9">2022</span>
+            <span class="book-year" data-page="10">2024</span>
+            <span class="book-year" data-page="11">2026</span>
+          </div>
+          <button class="book-arrow-btn" id="book-next" aria-label="Next Era">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- 3D Book Container -->
+        <div class="milestones-book-container" id="milestones-book">
+          <!-- Spine shadow in center -->
+          <div class="book-spine"></div>
+
+          <!-- LEFT PAGE: Year + Description -->
+          <div class="book-page book-left" id="book-left-page">
+            <div class="book-page-inner">
+              <div class="book-page-content">
+                <div class="book-chapter-label">The Story</div>
+                <div class="book-year-display" id="book-year-display">1995</div>
+                <h3 class="book-title" id="book-title">The Seed of a Dream</h3>
+                <p class="book-desc" id="book-desc">Amit Agrawal establishes S. Caterers with a humble kitchen, deep local ties, and a burning passion to serve authentic Lakhnavi vegetarian delicacies to family gatherings and social circles.</p>
+                <div class="book-page-number">Page 1 / 12</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT PAGE: Milestone Photo -->
+          <div class="book-page book-right" id="book-right-page">
+            <div class="book-page-inner">
+              <div class="book-img-wrap">
+                <img id="book-img" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&h=500&q=80" alt="Milestone 1995">
+                <div class="book-img-caption" id="book-img-caption">Est. 1995 — Lucknow</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip overlay panel (animates over right page) -->
+          <div class="book-flip-panel" id="book-flip-panel">
+            <div class="book-flip-front">
+              <div class="book-img-wrap">
+                <img id="book-flip-img" src="" alt="">
+              </div>
+            </div>
+            <div class="book-flip-back">
+              <div class="book-page-content">
+                <div class="book-chapter-label">The Story</div>
+                <div class="book-year-display" id="book-flip-year"></div>
+                <h3 class="book-title" id="book-flip-title"></h3>
+                <p class="book-desc" id="book-flip-desc"></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="journey-slider-container">
+      <!-- ─── MOBILE: Classic slide (unchanged) ─── -->
+      <div class="d-lg-none">
+        <!-- Golden Thread Horizontal Timeline Navigation Bar -->
+        <div class="timeline-nav-container">
+          <div class="timeline-thread"></div>
+          <div class="timeline-nodes-wrap">
+            <div class="timeline-node-item active" data-slide="0"><span class="year-label">1995</span></div>
+            <div class="timeline-node-item" data-slide="1"><span class="year-label">1998</span></div>
+            <div class="timeline-node-item" data-slide="2"><span class="year-label">2001</span></div>
+            <div class="timeline-node-item" data-slide="3"><span class="year-label">2005</span></div>
+            <div class="timeline-node-item" data-slide="4"><span class="year-label">2008</span></div>
+            <div class="timeline-node-item" data-slide="5"><span class="year-label">2011</span></div>
+            <div class="timeline-node-item" data-slide="6"><span class="year-label">2014</span></div>
+            <div class="timeline-node-item" data-slide="7"><span class="year-label">2017</span></div>
+            <div class="timeline-node-item" data-slide="8"><span class="year-label">2020</span></div>
+            <div class="timeline-node-item" data-slide="9"><span class="year-label">2022</span></div>
+            <div class="timeline-node-item" data-slide="10"><span class="year-label">2024</span></div>
+            <div class="timeline-node-item" data-slide="11"><span class="year-label">2026</span></div>
+          </div>
+        </div>
+
+        <div class="journey-slider-container">
         
         <!-- Slide 1 -->
         <div class="journey-slide active">
@@ -404,20 +480,20 @@
           </div>
         </div>
 
-      </div>
+        </div><!-- /.journey-slider-container -->
 
-      <!-- Slider Controls -->
-      <div class="journey-controls">
-        <button class="slider-arrow" id="journey-prev" aria-label="Previous Slide">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <div class="journey-dots" id="journey-dots-container">
-          <!-- Dots will be populated by JS -->
+        <!-- Mobile Slider Controls -->
+        <div class="journey-controls">
+          <button class="slider-arrow" id="journey-prev" aria-label="Previous Slide">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="journey-dots" id="journey-dots-container"></div>
+          <button class="slider-arrow" id="journey-next" aria-label="Next Slide">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-        <button class="slider-arrow" id="journey-next" aria-label="Next Slide">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
+      </div><!-- /.d-lg-none -->
+
     </div>
   </section>
 
@@ -583,120 +659,244 @@
   <!-- Bootstrap 5 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Accordion and Journey Slider scripts -->
+  <!-- Accordion, Mobile Journey Slider, and Desktop Book-Flip scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. FAQ Accordion Logic
+
+      /* =========================================================
+         1. FAQ Accordion Logic
+      ========================================================= */
       const triggers = document.querySelectorAll('.faq-trigger');
-      
       triggers.forEach(trigger => {
         trigger.addEventListener('click', () => {
           const item = trigger.parentElement;
           const panel = trigger.nextElementSibling;
           const isActive = item.classList.contains('active');
-          
-          // Collapse all panels
           document.querySelectorAll('.faq-item').forEach(i => {
             i.classList.remove('active');
             i.querySelector('.faq-panel').style.maxHeight = null;
           });
-          
-          // Toggle active
           if (!isActive) {
             item.classList.add('active');
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.style.maxHeight = panel.scrollHeight + 'px';
           }
         });
       });
 
-      // 2. Journey Slider Logic
-      const slides = document.querySelectorAll('.journey-slide');
+      /* =========================================================
+         2. MOBILE Journey Slider (unchanged)
+      ========================================================= */
+      const slides        = document.querySelectorAll('.journey-slide');
       const timelineNodes = document.querySelectorAll('.timeline-node-item');
       const dotsContainer = document.getElementById('journey-dots-container');
-      const prevBtn = document.getElementById('journey-prev');
-      const nextBtn = document.getElementById('journey-next');
-      let currentSlide = 0;
+      const prevBtn       = document.getElementById('journey-prev');
+      const nextBtn       = document.getElementById('journey-next');
+      let currentSlide  = 0;
       let autoplayTimer;
 
-      // Dynamically build indicator dots
-      slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if(index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-          showSlide(index);
-          resetAutoplay();
+      if (slides.length && dotsContainer) {
+        slides.forEach((_, index) => {
+          const dot = document.createElement('div');
+          dot.classList.add('dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => { showSlide(index); resetAutoplay(); });
+          dotsContainer.appendChild(dot);
         });
-        dotsContainer.appendChild(dot);
-      });
 
-      const dots = document.querySelectorAll('.dot');
+        const dots = document.querySelectorAll('.dot');
 
-      function showSlide(index) {
-        slides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        timelineNodes.forEach(node => node.classList.remove('active'));
-        
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        timelineNodes[index].classList.add('active');
-
-        // Scroll the timeline nav to center the active node on mobile viewports
-        const activeNode = timelineNodes[index];
-        const container = document.querySelector('.timeline-nav-container');
-        if (container) {
-          const containerWidth = container.offsetWidth;
-          const nodeLeft = activeNode.offsetLeft;
-          const nodeWidth = activeNode.offsetWidth;
-          container.scrollTo({
-            left: nodeLeft - (containerWidth / 2) + (nodeWidth / 2),
-            behavior: 'smooth'
-          });
+        function showSlide(index) {
+          slides.forEach(s => s.classList.remove('active'));
+          dots.forEach(d => d.classList.remove('active'));
+          timelineNodes.forEach(n => n.classList.remove('active'));
+          slides[index].classList.add('active');
+          dots[index].classList.add('active');
+          timelineNodes[index] && timelineNodes[index].classList.add('active');
+          const activeNode = timelineNodes[index];
+          const navCont = document.querySelector('.timeline-nav-container');
+          if (navCont && activeNode) {
+            navCont.scrollTo({
+              left: activeNode.offsetLeft - navCont.offsetWidth / 2 + activeNode.offsetWidth / 2,
+              behavior: 'smooth'
+            });
+          }
+          currentSlide = index;
         }
-        
-        currentSlide = index;
-      }
 
-      // Add click listener to timeline nodes
-      timelineNodes.forEach((node, index) => {
-        node.addEventListener('click', () => {
-          showSlide(index);
-          resetAutoplay();
+        timelineNodes.forEach((node, index) => {
+          node.addEventListener('click', () => { showSlide(index); resetAutoplay(); });
         });
-      });
 
-      function nextSlide() {
-        let next = (currentSlide + 1) % slides.length;
-        showSlide(next);
-      }
+        function nextSlide() { showSlide((currentSlide + 1) % slides.length); }
+        function prevSlide() { showSlide((currentSlide - 1 + slides.length) % slides.length); }
 
-      function prevSlide() {
-        let prev = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(prev);
-      }
+        prevBtn && prevBtn.addEventListener('click', () => { prevSlide(); resetAutoplay(); });
+        nextBtn && nextBtn.addEventListener('click', () => { nextSlide(); resetAutoplay(); });
 
-      nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoplay();
-      });
-
-      prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoplay();
-      });
-
-      // Autoplay logic - 3000ms (3 seconds) interval as requested
-      function startAutoplay() {
-        autoplayTimer = setInterval(nextSlide, 3000);
-      }
-
-      function resetAutoplay() {
-        clearInterval(autoplayTimer);
+        function startAutoplay() { autoplayTimer = setInterval(nextSlide, 3000); }
+        function resetAutoplay() { clearInterval(autoplayTimer); startAutoplay(); }
         startAutoplay();
       }
 
-      startAutoplay();
-    });
+      /* =========================================================
+         3. DESKTOP 3D Heritage Book Page-Flip
+      ========================================================= */
+      const bookMilestones = [
+        { year: '1995', title: 'The Seed of a Dream',            desc: 'Amit Agrawal establishes S. Caterers with a humble kitchen, deep local ties, and a burning passion to serve authentic Lakhnavi vegetarian delicacies to family gatherings and social circles.', img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&h=500&q=80', caption: 'Est. 1995 — Lucknow' },
+        { year: '1998', title: 'First Grand Wedding',            desc: 'S. Caterers successfully caters their first major wedding of 500+ guests. The flawless presentation and exquisite food taste set a new benchmark for wedding catering in Lucknow.', img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&h=500&q=80', caption: '1998 — Grand Wedding' },
+        { year: '2001', title: 'The Chaat Revolution',           desc: 'We introduce live Lakhnavi street food and premium chaat counters. Offering a gourmet spin on traditional street food, these live displays quickly became a signature feature at every event.', img: 'https://images.unsplash.com/photo-1601050690597-df056fb49785?auto=format&fit=crop&w=600&h=500&q=80', caption: '2001 — Chaat Revolution' },
+        { year: '2005', title: '100% Pure Veg Commitment',       desc: 'Making a landmark decision, S. Caterers commits to being a strictly vegetarian company. We pledge to run a completely segregated veg-only kitchen with no meat and no eggs ever.', img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&h=500&q=80', caption: '2005 — Pure Veg Pledge' },
+        { year: '2008', title: 'Expanding to Sitapur Road',      desc: 'To support growing demand, Amit Agrawal builds a new, modern central kitchen on Sitapur Road, Lucknow. This facility houses advanced sanitary machinery and dedicated prep bays.', img: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&h=500&q=80', caption: '2008 — New Kitchen' },
+        { year: '2011', title: 'Satvik & Jain Specialization',   desc: 'We form a highly specialized culinary division dedicated to onion-free, garlic-free, and strict Satvik preparations, guaranteeing culinary satisfaction for all community events.', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&h=500&q=80', caption: '2011 — Satvik Division' },
+        { year: '2014', title: 'Introducing Global Cuisines',    desc: 'S. Caterers expands the menu by introducing authentic Italian, Continental, Chinese, and Thai menus, hiring specialty chefs to maintain taste authenticity for premium menus.', img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&h=500&q=80', caption: '2014 — Global Flavours' },
+        { year: '2017', title: 'The Corporate Leap',             desc: 'Expanding corporate operations, we cater high-profile summits, industrial inaugurations, and elite business events, establishing a reputation for speed, safety, and scale.', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&h=500&q=80', caption: '2017 — Corporate Catering' },
+        { year: '2020', title: 'Safety and Adaptation',          desc: 'During global health challenges, S. Caterers immediately shifts to contact-free catering and 5-star medical sanitation guidelines, demonstrating corporate agility and client care.', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&h=500&q=80', caption: '2020 — Safe Catering' },
+        { year: '2022', title: 'Modern Culinary Plating',        desc: 'We introduce boutique catering aesthetics, featuring miniature appetizers, molecular gastronomy elements, and high-fashion food presentation that mirrors international dining styles.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=500&q=80', caption: '2022 — Artisan Plating' },
+        { year: '2024', title: '10,000+ Events Served',          desc: 'We hit a monumental milestone of serving over 10,000 corporate, wedding, and social events since our inception, cementing our place in our community\'s celebrations.', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&h=500&q=80', caption: '2024 — 10K Events' },
+        { year: '2026', title: 'Expanding Horizons: All of UP',  desc: 'Officially expanding our horizons beyond Lucknow, S. Caterers now opens booking operations to cater premium weddings, corporate summits, and grand galas across the entire state of Uttar Pradesh (UP).', img: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&h=500&q=80', caption: '2026 — Uttar Pradesh' }
+      ];
+
+      const book         = document.getElementById('milestones-book');
+      const flipPanel    = document.getElementById('book-flip-panel');
+      const bookYears    = document.querySelectorAll('.book-year');
+      const bPrev        = document.getElementById('book-prev');
+      const bNext        = document.getElementById('book-next');
+
+      // Live content elements
+      const elYear    = document.getElementById('book-year-display');
+      const elTitle   = document.getElementById('book-title');
+      const elDesc    = document.getElementById('book-desc');
+      const elImg     = document.getElementById('book-img');
+      const elCaption = document.getElementById('book-img-caption');
+      const elPageNum = book ? book.querySelector('.book-page-number') : null;
+
+      // Flip staging elements
+      const elFlipImg   = document.getElementById('book-flip-img');
+      const elFlipYear  = document.getElementById('book-flip-year');
+      const elFlipTitle = document.getElementById('book-flip-title');
+      const elFlipDesc  = document.getElementById('book-flip-desc');
+
+      if (!book || !flipPanel) return; // desktop elements not rendered
+
+      let bookPage   = 0;
+      let isFlipping = false;
+
+      function setBookContent(data, pageIndex) {
+        elYear.textContent    = data.year;
+        elTitle.textContent   = data.title;
+        elDesc.textContent    = data.desc;
+        elImg.src             = data.img;
+        elImg.alt             = data.caption;
+        elCaption.textContent = data.caption;
+        if (elPageNum) elPageNum.textContent = 'Page ' + (pageIndex + 1) + ' / ' + bookMilestones.length;
+      }
+
+      function highlightYear(index) {
+        bookYears.forEach(y => y.classList.remove('active'));
+        bookYears[index] && bookYears[index].classList.add('active');
+      }
+
+      function flipToPage(newIndex) {
+        if (isFlipping || newIndex === bookPage) return;
+        isFlipping = true;
+
+        const next = bookMilestones[newIndex];
+        const direction = newIndex > bookPage ? 1 : -1; // 1 = forward, -1 = back
+
+        // Stage the flip panel with NEXT content (on back face = left-page text)
+        elFlipImg.src          = next.img;
+        elFlipYear.textContent  = next.year;
+        elFlipTitle.textContent = next.title;
+        elFlipDesc.textContent  = next.desc;
+
+        // Position the flip panel: starts flush on top of right page
+        flipPanel.style.transition = 'none';
+        if (direction === 1) {
+          // Forward flip: panel starts as the current right page, rotates to reveal left-page text
+          flipPanel.style.transformOrigin = 'left center';
+          flipPanel.style.transform = 'rotateY(0deg)';
+        } else {
+          // Backward flip: panel starts as the target left page, rotates back to right
+          flipPanel.style.transformOrigin = 'left center';
+          flipPanel.style.transform = 'rotateY(-180deg)';
+        }
+        flipPanel.classList.add('flipping');
+
+        // Force reflow so the starting transform is painted before we animate
+        flipPanel.offsetWidth;
+
+        // Start the flip animation
+        flipPanel.style.transition = 'transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1.000)';
+        flipPanel.style.transform  = direction === 1 ? 'rotateY(-180deg)' : 'rotateY(0deg)';
+
+        // At the halfway point (~450ms) swap the underlying page content
+        setTimeout(() => {
+          setBookContent(next, newIndex);
+          highlightYear(newIndex);
+          bookPage = newIndex;
+        }, 450);
+
+        // After animation ends, reset flip panel to hidden state
+        setTimeout(() => {
+          flipPanel.classList.remove('flipping');
+          flipPanel.style.transition = 'none';
+          flipPanel.style.transform  = 'rotateY(0deg)';
+          isFlipping = false;
+        }, 960);
+      }
+
+      // Year tab clicks — pause autoplay on manual nav
+      bookYears.forEach((btn, i) => {
+        btn.addEventListener('click', () => { flipToPage(i); resetBookAutoplay(); });
+      });
+
+      // Arrow buttons — pause autoplay on manual nav
+      bPrev && bPrev.addEventListener('click', () => {
+        flipToPage((bookPage - 1 + bookMilestones.length) % bookMilestones.length);
+        resetBookAutoplay();
+      });
+      bNext && bNext.addEventListener('click', () => {
+        flipToPage((bookPage + 1) % bookMilestones.length);
+        resetBookAutoplay();
+      });
+
+      // Keyboard navigation — pause autoplay
+      document.addEventListener('keydown', e => {
+        if (window.innerWidth < 992) return;
+        if (e.key === 'ArrowRight') { flipToPage((bookPage + 1) % bookMilestones.length); resetBookAutoplay(); }
+        if (e.key === 'ArrowLeft')  { flipToPage((bookPage - 1 + bookMilestones.length) % bookMilestones.length); resetBookAutoplay(); }
+      });
+
+      /* ── Autoplay: flip forward every 4 seconds ── */
+      let bookAutoTimer = null;
+
+      function startBookAutoplay() {
+        bookAutoTimer = setInterval(() => {
+          flipToPage((bookPage + 1) % bookMilestones.length);
+        }, 6000);
+      }
+
+      function stopBookAutoplay() {
+        clearInterval(bookAutoTimer);
+        bookAutoTimer = null;
+      }
+
+      function resetBookAutoplay() {
+        stopBookAutoplay();
+        // Resume after 5 seconds of inactivity
+        bookAutoTimer = setTimeout(() => {
+          startBookAutoplay();
+        }, 5000);
+      }
+
+      // Pause on hover, resume when mouse leaves
+      book.addEventListener('mouseenter', stopBookAutoplay);
+      book.addEventListener('mouseleave', startBookAutoplay);
+
+      // Kick off autoplay on load
+      startBookAutoplay();
+
+    }); // end DOMContentLoaded
   </script>
 
   <!-- Floating WhatsApp CTA -->

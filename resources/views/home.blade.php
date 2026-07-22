@@ -601,6 +601,10 @@
         const cards = deck.children;
         const totalCards = cards.length;
         if (totalCards <= 1) return;
+
+        let intervalId = null;
+        let resumeTimeout = null;
+        let isUserInteracting = false;
         
         // Build gold pagination dots dynamically
         dotsContainer.innerHTML = '';
@@ -610,10 +614,9 @@
           if (i === 0) dot.classList.add('active');
           
           dot.addEventListener('click', () => {
-            pauseAutoplay();
+            handleUserInteraction();
             const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
             deck.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
-            resumeAutoplayDelayed();
           });
           
           dotsContainer.appendChild(dot);
@@ -632,11 +635,23 @@
             }
           });
         });
-        
-        // Autoplay functionality (Move right, auto loop back instantly)
-        let intervalId = null;
-        let resumeTimeout = null;
-        let isUserInteracting = false;
+
+        // Robust handler for all manual interactions
+        const handleUserInteraction = () => {
+          isUserInteracting = true;
+          if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+          }
+          if (resumeTimeout) {
+            clearTimeout(resumeTimeout);
+          }
+          // Resume autoplay after 10 seconds of no interaction
+          resumeTimeout = setTimeout(() => {
+            isUserInteracting = false;
+            startAutoplay();
+          }, 10000);
+        };
         
         const startAutoplay = () => {
           if (intervalId) clearInterval(intervalId);
@@ -648,13 +663,14 @@
             
             let currentIndex = Math.round(deck.scrollLeft / cardWidth);
             let nextIndex = (currentIndex + 1) % totalCards;
-            
-            if (deck.scrollLeft >= maxScroll - 10) {
-              deck.scrollTo({ left: 0, behavior: 'auto' });
+
+            if (deck.scrollLeft >= maxScroll - 15) {
+              // Smoothly scroll back to start so the transition flow doesn't break
+              deck.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
               deck.scrollTo({ left: nextIndex * cardWidth, behavior: 'smooth' });
             }
-          }, 3800);
+          }, 3000);
         };
         
         const pauseAutoplay = () => {
@@ -668,32 +684,26 @@
           }
         };
         
-        const resumeAutoplayDelayed = () => {
-          if (resumeTimeout) clearTimeout(resumeTimeout);
-          resumeTimeout = setTimeout(() => {
-            isUserInteracting = false;
-            startAutoplay();
-          }, 4000);
-        };
-        
         // Touch events handling
         deck.addEventListener('touchstart', () => {
-          isUserInteracting = true;
-          pauseAutoplay();
+          handleUserInteraction();
+        }, { passive: true });
+        
+        deck.addEventListener('touchmove', () => {
+          handleUserInteraction();
         }, { passive: true });
         
         deck.addEventListener('touchend', () => {
-          resumeAutoplayDelayed();
+          handleUserInteraction();
         }, { passive: true });
         
         // Mouse hover handling
         deck.addEventListener('mouseenter', () => {
-          isUserInteracting = true;
-          pauseAutoplay();
+          handleUserInteraction();
         });
         
         deck.addEventListener('mouseleave', () => {
-          resumeAutoplayDelayed();
+          handleUserInteraction();
         });
         
         // Initialize if viewport is mobile
@@ -726,7 +736,7 @@
         let pkgInterval = setInterval(() => {
           currentPkgIndex = (currentPkgIndex + 1) % pkgTabButtons.length;
           pkgTabButtons[currentPkgIndex].click();
-        }, 4000);
+        }, 3000);
         
         pkgTabButtons.forEach((btn, index) => {
           btn.addEventListener('click', () => {

@@ -1113,7 +1113,7 @@
           let pkgInterval = setInterval(() => {
             currentPkgIndex = (currentPkgIndex + 1) % pkgTabButtons.length;
             pkgTabButtons[currentPkgIndex].click();
-          }, 4000);
+          }, 3000);
           
           pkgTabButtons.forEach((btn, index) => {
             btn.addEventListener('click', () => {

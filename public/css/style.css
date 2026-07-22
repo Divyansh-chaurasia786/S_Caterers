@@ -1203,8 +1203,11 @@ footer a:hover {
     width: auto !important;
   }
   
+  /* FIX 3: Section wrapper – auto height, remove any fixed height causing white gaps */
   .section-pad {
-    padding: 3.5rem 0 !important;
+    padding: 24px 16px !important;
+    height: auto !important;
+    min-height: auto !important;
   }
   
   /* Standardize Mobile Typography */
@@ -1247,11 +1250,19 @@ footer a:hover {
     color: #FFFFFF !important;
     box-shadow: 0 4px 10px rgba(110, 20, 35, 0.15) !important;
   }
+  /* Premium dissolve (fade-in & slide-up) effect for tab switching */
   .tab-content > .tab-pane {
-    display: none !important;
+    display: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.45s ease-in-out, transform 0.45s ease-in-out !important;
   }
   .tab-content > .active {
-    display: block !important;
+    display: block;
+  }
+  .tab-content > .show {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .hero {
@@ -1301,13 +1312,23 @@ footer a:hover {
   .hero-wavy-mask {
     display: none !important;
   }
+  /* FIX 1 (768px breakpoint): also override absolute positioning here */
   .hero-top-tag-bar {
-    top: 20px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     background: rgba(44, 26, 17, 0.9) !important;
     border: 1px solid var(--gold) !important;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: auto !important;
   }
   .promise-card {
     margin-bottom: 1.8rem;
@@ -1498,9 +1519,22 @@ footer a:hover {
                 url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=cover') no-repeat center center !important;
     background-size: cover !important;
     min-height: auto !important;
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     padding: 24px 16px !important;
     border-bottom: 1px solid var(--gold-line) !important;
+  }
+
+  /* The tag bar now flows as first flex child — sits naturally below navbar */
+  .hero > .hero-top-tag-bar {
+    order: -1 !important;
+    align-self: center !important;
+  }
+
+  /* container-fluid is the second flex child */
+  .hero > .container-fluid {
+    width: 100% !important;
   }
   
   .hero-content {
@@ -1598,15 +1632,26 @@ footer a:hover {
     display: none !important;
   }
 
+  /* FIX 1: Pull hero-top-tag-bar OUT of absolute positioning on mobile
+     so it flows normally and never overlaps hero title text */
   .hero-top-tag-bar {
-    top: 15px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
     background: rgba(255, 253, 249, 0.95) !important;
     border: 1px solid var(--gold-line) !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     padding: 6px 14px !important;
     border-radius: 20px !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: auto !important;
   }
   
   .hero-top-tag-bar .veg-tag {
@@ -2097,7 +2142,7 @@ footer a:hover {
     gap: 16px !important; /* Spacing gap: 16px */
     margin-left: 0 !important;
     margin-right: 0 !important;
-    touch-action: pan-y !important; /* Enable native swipe/drag gestures */
+    touch-action: auto !important; /* Allow both vertical scrolling and horizontal swiping */
   }
 
   .mobile-swipe-deck::-webkit-scrollbar {
@@ -2171,17 +2216,63 @@ footer a:hover {
     margin-top: 8px !important;
   }
 
-  /* Enforce image height and curved gold border bounds on other sliders */
+  /* FIX 2: Restore collapsed specialty cards — explicit background, min-height, visible content */
   .specialty-card {
-    height: 100% !important;
-    border: 1px solid var(--gold-line) !important;
-    border-radius: 16px !important;
+    height: auto !important;
+    min-height: 240px !important;
+    background: #FFFDF9 !important;
+    border: 1px solid #E6D8C3 !important;
+    border-radius: 12px !important;
     overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
   }
-  
+
+  /* FIX 2b: Keep specialty image visible */
   .specialty-img-wrap {
-    height: 180px !important; /* Image Height: 180px */
+    height: 160px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
     border-bottom: 2px solid var(--gold) !important;
+  }
+
+  .specialty-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 0 !important;
+  }
+
+  /* FIX 2c: Force overlay to be static block (not absolute) on mobile so text shows */
+  .specialty-overlay {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    background: #FFFDF9 !important;
+    padding: 12px 14px !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .specialty-title {
+    font-size: 1rem !important;
+    color: var(--charcoal) !important;
+    margin-bottom: 4px !important;
+  }
+
+  .specialty-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    color: var(--ink-soft) !important;
+    margin: 0 !important;
   }
 
   .gallery-card {
@@ -2228,4 +2319,323 @@ footer a:hover {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DESKTOP 3D HERITAGE BOOK — MILESTONES PAGE-FLIP
+═══════════════════════════════════════════════════════════════ */
+
+/* Timeline year nav bar */
+.book-timeline-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: nowrap;
+  padding: 10px 0 12px;   /* extra vertical room so pills aren't half-clipped */
+  overflow: visible;      /* never clip the nav itself */
+}
+
+.book-years-track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: visible;    /* pills can grow upward on .active scale */
+  padding: 4px 12px 6px; /* top+bottom buffer so transform:scale isn't clipped */
+  scrollbar-width: none;
+}
+.book-years-track::-webkit-scrollbar { display: none; }
+
+.book-year {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #7A5930;
+  background: #f5ead8;
+  border: 1.5px solid #d9c4a0;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+  white-space: nowrap;
+  user-select: none;
+}
+.book-year:hover {
+  background: #e8d5b0;
+  transform: translateY(-2px);
+}
+.book-year.active {
+  background: #C5A059;
+  color: #fff;
+  border-color: #A07830;
+  box-shadow: 0 3px 12px rgba(197,160,89,0.45);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Arrow buttons flanking the year bar */
+.book-arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #C5A059;
+  background: transparent;
+  color: #C5A059;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.book-arrow-btn:hover {
+  background: #C5A059;
+  color: #fff;
+  transform: scale(1.1);
+}
+.book-arrow-btn:active { transform: scale(0.95); }
+
+/* ── Main book wrapper ── */
+.milestones-book-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 440px;
+  display: flex;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow:
+    0 24px 60px rgba(90,50,10,0.18),
+    0 4px 16px rgba(90,50,10,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  perspective: 1200px;
+}
+
+/* ── Book pages (left and right) ── */
+.book-page {
+  flex: 1;
+  height: 100%;
+  background: #fdfbf7;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle inner page line shadow */
+.book-page-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+/* LEFT page */
+.book-left {
+  border-radius: 12px 0 0 12px;
+  background: linear-gradient(108deg, #fdfbf7 80%, #f5ead8 100%);
+  border-right: 1px solid #e8d8ba;
+  padding: 0;
+}
+.book-left .book-page-inner {
+  padding: 40px 36px 32px 44px;
+  flex-direction: column;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    rgba(197,160,89,0.08) 27px,
+    rgba(197,160,89,0.08) 28px
+  );
+}
+
+/* RIGHT page */
+.book-right {
+  border-radius: 0 12px 12px 0;
+  background: #f7f2e8;
+  overflow: hidden;
+}
+.book-right .book-page-inner {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Spine gradient — sits on top in the exact center */
+.book-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(140,90,30,0.22) 0%,
+    rgba(255,245,220,0.08) 40%,
+    rgba(255,245,220,0.08) 60%,
+    rgba(140,90,30,0.18) 100%
+  );
+}
+
+/* ── Left page content elements ── */
+.book-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.book-chapter-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #C5A059;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.book-year-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #3A1F04;
+  opacity: 0.12;
+  margin-bottom: -10px;
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+
+.book-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #3A1F04;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.book-desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #5C3D1E;
+  margin-bottom: 0;
+}
+
+.book-page-number {
+  margin-top: 20px;
+  font-size: 0.7rem;
+  color: #C5A059;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* ── Right page image ── */
+.book-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.book-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.milestones-book-container:hover .book-img-wrap img {
+  transform: scale(1.04);
+}
+.book-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(30,10,0,0.7));
+  color: #fdf3dc;
+  font-size: 0.8rem;
+  padding: 24px 16px 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── FLIP PANEL (3D page that animates) ── */
+.book-flip-panel {
+  position: absolute;
+  top: 0;
+  left: 50%;           /* Sits on the RIGHT half */
+  width: 50%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transform: rotateY(0deg);
+  z-index: 20;
+  pointer-events: none; /* hidden by default, only visible while .flipping */
+  opacity: 0;
+  border-radius: 0 12px 12px 0;
+}
+.book-flip-panel.flipping {
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Front face = shows current right-page image being flipped away */
+.book-flip-front,
+.book-flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+.book-flip-front {
+  background: #f7f2e8;
+  border-radius: 0 12px 12px 0;
+}
+.book-flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(108deg, #fdfbf7 80%, #f5ead8 100%);
+  padding: 40px 36px 32px 44px;
+  display: flex;
+  align-items: center;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    rgba(197,160,89,0.08) 27px,
+    rgba(197,160,89,0.08) 28px
+  );
+  border-radius: 0 12px 12px 0;
+}
+.book-flip-back .book-page-content {
+  height: auto;
+}
+.book-flip-front .book-img-wrap img {
+  transition: none;
+}
+
+/* Global premium dissolve transition for Bootstrap package tabs */
+.tab-content > .tab-pane.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.45s ease-in-out, transform 0.45s ease-in-out;
+}
+.tab-content > .tab-pane.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
