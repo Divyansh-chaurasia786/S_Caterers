@@ -2084,6 +2084,143 @@ footer a:hover {
     height: 50px;
     font-size: 1.6rem;
   }
+
+  /* Compact Carousel Card Sizing & Spacing for mobile carousels */
+  .mobile-swipe-deck {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 0.8rem !important;
+    gap: 16px !important; /* Spacing gap: 16px */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    touch-action: pan-y !important; /* Enable native swipe/drag gestures */
+  }
+
+  .mobile-swipe-deck::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Force cards inside specialties, occasions, and gallery sliders to be exactly 82vw width */
+  .mobile-swipe-deck > [class*="col-"],
+  #occasions-swipe-deck > [class*="col-"] {
+    flex: 0 0 82vw !important; /* Card width: 82vw */
+    max-width: 300px !important; /* max-width: 300px */
+    scroll-snap-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Custom styling for Occasion Card in mobile carousel */
+  .occasion-card {
+    background: var(--ivory-dim) !important;
+    border: 1px solid var(--gold-line) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 24px rgba(44, 26, 17, 0.05) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    text-align: left !important;
+  }
+
+  .occasion-img-wrap {
+    width: 100% !important;
+    height: 180px !important; /* Image Height: 180px */
+    overflow: hidden !important;
+    border-bottom: 2px solid var(--gold) !important;
+  }
+
+  .occasion-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .occasion-content {
+    padding: 1.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .occasion-content .event-tag-pill {
+    align-self: flex-start !important;
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .occasion-content .event-title {
+    font-size: 1.15rem !important;
+    margin: 0 !important;
+    color: var(--charcoal) !important;
+  }
+
+  .occasion-content .event-desc {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+    color: var(--ink-soft) !important;
+  }
+
+  .occasion-content .btn-outline-wine {
+    width: 100% !important;
+    margin-top: 8px !important;
+  }
+
+  /* Enforce image height and curved gold border bounds on other sliders */
+  .specialty-card {
+    height: 100% !important;
+    border: 1px solid var(--gold-line) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+  
+  .specialty-img-wrap {
+    height: 180px !important; /* Image Height: 180px */
+    border-bottom: 2px solid var(--gold) !important;
+  }
+
+  .gallery-card {
+    border-radius: 16px !important;
+    border: 1px solid var(--gold-line) !important;
+    overflow: hidden !important;
+    height: 180px !important; /* Restrict gallery height to 180px */
+  }
+
+  .gallery-card img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Small elegant gold pagination dots container directly below each slider */
+  .carousel-dots {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 1rem auto 0 auto !important;
+    width: max-content !important;
+  }
+
+  .carousel-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background-color: #8B6B1B !important;
+    opacity: 0.25 !important; /* Inactive dot: light opacity gold */
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+  }
+
+  .carousel-dot.active {
+    opacity: 1 !important; /* Active dot: filled gold #8B6B1B */
+    transform: scale(1.2) !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

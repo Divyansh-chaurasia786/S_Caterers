@@ -141,7 +141,7 @@
         <h2 class="section-title">Our Signature <span class="accent">Specialities</span></h2>
       </div>
 
-      <div class="row g-4 mobile-swipe-deck">
+      <div class="row g-4 mobile-swipe-deck" id="specialties-swipe-deck">
         <!-- Awadhi Specialties -->
         <div class="col-md-6 col-lg-3">
           <div class="specialty-card">
@@ -194,6 +194,8 @@
           </div>
         </div>
       </div>
+      <!-- Specialties Pagination Dots -->
+      <div class="carousel-dots d-md-none" id="dots-specialties"></div>
     </div>
   </section>
 
@@ -307,61 +309,114 @@
         <h2 class="section-title">Catering For Your <span class="accent">Milestones</span></h2>
       </div>
 
-      <!-- Wedding Catering Row (Image Left, Text Right) -->
-      <div class="row align-items-center g-5 event-row">
-        <div class="col-12 col-lg-6 text-center">
-          <div class="event-frame-wrap">
-            <div class="event-frame-inner">
-              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=cover" alt="Weddings">
+      <!-- Desktop Layout: 3 Rows -->
+      <div class="d-none d-md-block">
+        <!-- Wedding Catering Row (Image Left, Text Right) -->
+        <div class="row align-items-center g-5 event-row">
+          <div class="col-12 col-lg-6 text-center">
+            <div class="event-frame-wrap">
+              <div class="event-frame-inner">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=cover" alt="Weddings">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="event-content-col">
+              <span class="event-tag-pill">Grand Scale</span>
+              <h3 class="event-title">Destination Weddings</h3>
+              <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to boutique family table service, we ensure your wedding feast is nothing short of legendary.</p>
+              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="event-content-col">
-            <span class="event-tag-pill">Grand Scale</span>
-            <h3 class="event-title">Destination Weddings</h3>
-            <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to boutique family table service, we ensure your wedding feast is nothing short of legendary.</p>
-            <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
+
+        <!-- Corporate Galas Row (Image Right, Text Left) -->
+        <div class="row align-items-center g-5 event-row flex-lg-row-reverse">
+          <div class="col-12 col-lg-6 text-center">
+            <div class="event-frame-wrap">
+              <div class="event-frame-inner">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=cover" alt="Corporate Galas">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="event-content-col">
+              <span class="event-tag-pill">Corporate</span>
+              <h3 class="event-title">Corporate Galas</h3>
+              <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering, ensuring flawless service, hygiene, and punctual execution.</p>
+              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sacred Pujas Row (Image Left, Text Right) -->
+        <div class="row align-items-center g-5 event-row">
+          <div class="col-12 col-lg-6 text-center">
+            <div class="event-frame-wrap">
+              <div class="event-frame-inner">
+                <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=600&auto=format&fit=cover" alt="Sacred Pujas">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="event-content-col">
+              <span class="event-tag-pill">100% Satvik</span>
+              <h3 class="event-title">Traditional Pujas & Griha Pravesh</h3>
+              <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request, served in completely sanitized pure vegetarian setups.</p>
+              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Corporate Galas Row (Image Right, Text Left) -->
-      <div class="row align-items-center g-5 event-row flex-lg-row-reverse">
-        <div class="col-12 col-lg-6 text-center">
-          <div class="event-frame-wrap">
-            <div class="event-frame-inner">
-              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=cover" alt="Corporate Galas">
+      <!-- Mobile Layout: Horizontal Auto-playing Carousel -->
+      <div class="d-md-none">
+        <div class="row g-4 mobile-swipe-deck" id="occasions-swipe-deck">
+          <!-- Card 1: Destination Weddings -->
+          <div class="col-12">
+            <div class="occasion-card">
+              <div class="occasion-img-wrap">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=cover" alt="Weddings">
+              </div>
+              <div class="occasion-content">
+                <span class="event-tag-pill">Grand Scale</span>
+                <h3 class="event-title">Destination Weddings</h3>
+                <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to family table service, we ensure your wedding feast is legendary.</p>
+                <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2: Corporate Galas -->
+          <div class="col-12">
+            <div class="occasion-card">
+              <div class="occasion-img-wrap">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=cover" alt="Corporate Galas">
+              </div>
+              <div class="occasion-content">
+                <span class="event-tag-pill">Corporate</span>
+                <h3 class="event-title">Corporate Galas</h3>
+                <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering with flawless service.</p>
+                <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: Traditional Pujas & Griha Pravesh -->
+          <div class="col-12">
+            <div class="occasion-card">
+              <div class="occasion-img-wrap">
+                <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=600&auto=format&fit=cover" alt="Sacred Pujas">
+              </div>
+              <div class="occasion-content">
+                <span class="event-tag-pill">100% Satvik</span>
+                <h3 class="event-title">Traditional Pujas</h3>
+                <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request in completely sanitized setups.</p>
+                <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="event-content-col">
-            <span class="event-tag-pill">Corporate</span>
-            <h3 class="event-title">Corporate Galas</h3>
-            <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering, ensuring flawless service, hygiene, and punctual execution.</p>
-            <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sacred Pujas Row (Image Left, Text Right) -->
-      <div class="row align-items-center g-5 event-row">
-        <div class="col-12 col-lg-6 text-center">
-          <div class="event-frame-wrap">
-            <div class="event-frame-inner">
-              <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=600&auto=format&fit=cover" alt="Sacred Pujas">
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-6">
-          <div class="event-content-col">
-            <span class="event-tag-pill">100% Satvik</span>
-            <h3 class="event-title">Traditional Pujas & Griha Pravesh</h3>
-            <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request, served in completely sanitized pure vegetarian setups.</p>
-            <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
-          </div>
-        </div>
+        <!-- Occasions Pagination Dots -->
+        <div class="carousel-dots" id="dots-occasions"></div>
       </div>
     </div>
   </section>  <div class="jali-divider dark" id="divider-2"></div>
@@ -392,7 +447,7 @@
         <h2 class="section-title">Captured <span class="accent">Moments</span></h2>
       </div>
 
-      <div class="row g-4 mobile-swipe-deck">
+      <div class="row g-4 mobile-swipe-deck" id="gallery-swipe-deck">
         <!-- Photo 1 -->
         <div class="col-sm-6 col-lg-3">
           <a href="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
@@ -441,6 +496,8 @@
           </a>
         </div>
       </div>
+      <!-- Gallery Pagination Dots -->
+      <div class="carousel-dots d-md-none" id="dots-gallery"></div>
 
       <div class="text-center mt-5">
         <a href="#" class="btn-outline-wine">View More</a>
@@ -535,52 +592,127 @@
         }, 3500);
       }
 
-      // 2. Mobile swipe decks auto-scroll (Signature Specialties, Gallery, etc.)
-      const swipeDecks = document.querySelectorAll('.mobile-swipe-deck');
-      swipeDecks.forEach(deck => {
-        let isTouching = false;
+      // 2. Helper function to build and control a mobile slider carousel with dots and rightward loop
+      const setupMobileSlider = (deckId, dotsContainerId) => {
+        const deck = document.getElementById(deckId);
+        const dotsContainer = document.getElementById(dotsContainerId);
+        if (!deck || !dotsContainer) return;
+        
+        const cards = deck.children;
+        const totalCards = cards.length;
+        if (totalCards <= 1) return;
+        
+        // Build gold pagination dots dynamically
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalCards; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('carousel-dot');
+          if (i === 0) dot.classList.add('active');
+          
+          dot.addEventListener('click', () => {
+            pauseAutoplay();
+            const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
+            deck.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
+            resumeAutoplayDelayed();
+          });
+          
+          dotsContainer.appendChild(dot);
+        }
+        
+        // Synchronize active dot status during scrolling
+        deck.addEventListener('scroll', () => {
+          const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
+          const activeIndex = Math.round(deck.scrollLeft / cardWidth);
+          const dots = dotsContainer.querySelectorAll('.carousel-dot');
+          dots.forEach((dot, idx) => {
+            if (idx === activeIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        });
+        
+        // Autoplay functionality (Move right, auto loop back instantly)
         let intervalId = null;
+        let resumeTimeout = null;
+        let isUserInteracting = false;
         
-        deck.addEventListener('touchstart', () => {
-          isTouching = true;
-        }, { passive: true });
-        
-        deck.addEventListener('touchend', () => {
-          isTouching = false;
-        }, { passive: true });
-        
-        const startAutoScroll = () => {
+        const startAutoplay = () => {
+          if (intervalId) clearInterval(intervalId);
           intervalId = setInterval(() => {
-            if (isTouching) return;
-            
-            const cards = deck.children;
-            if (cards.length <= 1) return;
+            if (isUserInteracting) return;
             
             const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
             const maxScroll = deck.scrollWidth - deck.clientWidth;
             
             let currentIndex = Math.round(deck.scrollLeft / cardWidth);
-            let nextIndex = (currentIndex + 1) % cards.length;
+            let nextIndex = (currentIndex + 1) % totalCards;
             
             if (deck.scrollLeft >= maxScroll - 10) {
               deck.scrollTo({ left: 0, behavior: 'auto' });
             } else {
               deck.scrollTo({ left: nextIndex * cardWidth, behavior: 'smooth' });
             }
+          }, 3800);
+        };
+        
+        const pauseAutoplay = () => {
+          if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+          }
+          if (resumeTimeout) {
+            clearTimeout(resumeTimeout);
+            resumeTimeout = null;
+          }
+        };
+        
+        const resumeAutoplayDelayed = () => {
+          if (resumeTimeout) clearTimeout(resumeTimeout);
+          resumeTimeout = setTimeout(() => {
+            isUserInteracting = false;
+            startAutoplay();
           }, 4000);
         };
         
+        // Touch events handling
+        deck.addEventListener('touchstart', () => {
+          isUserInteracting = true;
+          pauseAutoplay();
+        }, { passive: true });
+        
+        deck.addEventListener('touchend', () => {
+          resumeAutoplayDelayed();
+        }, { passive: true });
+        
+        // Mouse hover handling
+        deck.addEventListener('mouseenter', () => {
+          isUserInteracting = true;
+          pauseAutoplay();
+        });
+        
+        deck.addEventListener('mouseleave', () => {
+          resumeAutoplayDelayed();
+        });
+        
+        // Initialize if viewport is mobile
         if (window.innerWidth < 768) {
-          startAutoScroll();
+          startAutoplay();
         }
         
         window.addEventListener('resize', () => {
-          clearInterval(intervalId);
+          pauseAutoplay();
           if (window.innerWidth < 768) {
-            startAutoScroll();
+            startAutoplay();
           }
         });
-      });
+      };
+
+      // Initialize all three mobile sliders
+      setupMobileSlider('specialties-swipe-deck', 'dots-specialties');
+      setupMobileSlider('occasions-swipe-deck', 'dots-occasions');
+      setupMobileSlider('gallery-swipe-deck', 'dots-gallery');
 
       // 3. Auto-sliding catering packages tabs on mobile
       const pkgTabButtons = [
