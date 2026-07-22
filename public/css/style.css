@@ -1096,17 +1096,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Footer --- */
 footer {
-  background-color: #2A1B12 !important;
-  color: #D3C9C2;
-  padding: 4.5rem 24px 2.5rem !important; /* Horizontal padding absorbs row margins */
-  position: relative;
-  border-top: 3px solid var(--gold);
-  overflow: hidden !important;          /* Clip any horizontal overflow */
+  position: relative !important;
   width: 100% !important;
-  margin-bottom: 0 !important;
-  
-  /* Push footer to absolute bottom on short pages */
-  margin-top: auto !important;
+  background-color: #2A1B12 !important; /* Mahogany theme color */
+  color: #D3C9C2 !important;
+  border-top: 3px solid var(--gold) !important;
+  padding: 60px 24px 20px 24px !important; /* 60px top, 20px bottom padding with 24px sides */
+  margin-top: 80px !important;
+  clear: both !important; /* Prevents hero/header elements from overlapping */
+  box-sizing: border-box !important;
+  overflow: hidden !important;
 }
 
 footer p, footer a {
@@ -1175,7 +1174,7 @@ footer a:hover {
 }
 
 /* Footer Container Setup (Desktop CSS Grid Override) */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .footer-container {
     display: grid !important;
     grid-template-columns: 1.5fr 1fr 1fr 1.2fr !important;
