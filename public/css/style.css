@@ -24,11 +24,12 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #2A1B12 !important; /* Mahogany background color under footer */
 }
 
 body {
   font-family: 'Inter', var(--font-fallback);
-  background: var(--ivory);
+  background-color: var(--ivory);
   color: var(--charcoal);
   overflow-x: hidden;
   line-height: 1.6;
@@ -1081,7 +1082,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Footer --- */
 footer {
-  background: var(--charcoal);
+  background-color: #2A1B12 !important;
   color: #D3C9C2;
   padding: 4.5rem 0 2.5rem;
   position: relative;
@@ -1507,13 +1508,21 @@ footer a:hover {
   }
 
   footer {
-    padding: 3.5rem 16px 2rem !important; /* Add padding to prevent offscreen row overflow */
+    background-color: #2A1B12 !important;
+    padding: 3.5rem 16px 32px !important; /* Prevents overflow and white spaces below */
     overflow: hidden !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
   }
 
   footer p, footer a {
     word-break: break-word !important;
     overflow-wrap: break-word !important;
+  }
+
+  /* Hide redundant static WhatsApp link in footer social block on mobile */
+  .footer-social a[aria-label="WhatsApp"] {
+    display: none !important;
   }
 
   .footer-bottom {
@@ -2108,38 +2117,40 @@ footer a:hover {
 
 /* Floating WhatsApp CTA button styling */
 .floating-whatsapp-cta {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  background-color: #25D366 !important;
   color: #FFFFFF !important;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  z-index: 9999;
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
-  text-decoration: none;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.8rem !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+  z-index: 9999 !important;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease !important;
+  text-decoration: none !important;
 }
 
 .floating-whatsapp-cta:hover {
-  transform: scale(1.1);
-  background-color: #20BA5A;
+  transform: scale(1.1) !important;
+  background-color: #20BA5A !important;
 }
 
 @media (max-width: 767.98px) {
   .floating-whatsapp-cta {
-    bottom: calc(24px + env(safe-area-inset-bottom)) !important;
-    right: 24px !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
     left: auto !important;
-    width: 50px;
-    height: 50px;
-    font-size: 1.6rem;
-    z-index: 99999 !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.6rem !important;
+    z-index: 9999 !important;
   }
 
   /* Compact Carousel Card Sizing & Spacing for mobile carousels */
