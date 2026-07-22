@@ -1193,7 +1193,7 @@ footer a:hover {
     padding-left: 16px !important;
     padding-right: 16px !important;
     margin: 0 auto !important;
-    overflow-x: hidden !important;
+    overflow: visible !important;
   }
   
   /* Exclude swipable columns from overflow hidden clipping */
