@@ -36,6 +36,10 @@ class HomeController extends Controller
 
         Inquiry::create($validated);
 
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json(['success' => true, 'message' => 'Consultation request saved.']);
+        }
+
         return redirect()->back()->with('success', 'Thank you! Your catering consultation request has been submitted successfully. Amit Agrawal and team will contact you shortly.');
     }
 }

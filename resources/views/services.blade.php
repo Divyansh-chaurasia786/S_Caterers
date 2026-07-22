@@ -352,6 +352,7 @@
         <span class="eyebrow">OUR CATERING OPTIONS</span>
         <h2 class="section-title">Curated Menu <span class="accent">Packages</span></h2>
         <p class="text-muted" style="max-width: 600px; margin: 0.5rem auto 0;">Select a starting tier to begin planning your wedding feast, haldi lunch, sangeet reception, or private corporate gala.</p>
+        <p style="font-size: 0.88rem; color: var(--wine); font-style: italic; font-weight: 600; margin-top: 10px; margin-bottom: 0;">*Note: All packages are fully customizable. Final pricing depends on menu selections and guest count, subject to mutual discussion.</p>
       </div>
 
       <div class="row g-4 justify-content-center">
@@ -689,8 +690,17 @@
             <textarea name="notes" id="inq-notes" rows="4" placeholder="Mention any specific requirements (e.g. 100% Satvik / Jain kitchen segregation, custom uniform theme, live teppanyaki preferences)..."></textarea>
           </div>
 
+          <div class="form-group-custom d-flex align-items-center gap-2 mb-4">
+            <input type="checkbox" name="customization" id="inq-customization" value="Yes" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--wine);">
+            <label for="inq-customization" style="margin-bottom: 0; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--charcoal); text-transform: none; letter-spacing: normal;">I would like to customize my package menu / add custom counters</label>
+          </div>
+
+          <div class="text-center mb-3">
+            <p style="font-size: 0.82rem; color: var(--wine); font-style: italic; font-weight: 600; margin-bottom: 0;">*Note: Final catering prices depend on menu selection, guest count, and mutual discussion.</p>
+          </div>
+
           <div class="text-center pt-2">
-            <button type="submit" class="btn-gold w-100 py-3" style="font-size: 1.05rem; border-radius: 12px; font-weight: 700;">Submit Consultation Request</button>
+            <button type="submit" class="btn-gold w-100 py-3" style="font-size: 1.05rem; border-radius: 12px; font-weight: 700;">Submit &amp; Open WhatsApp Chat</button>
           </div>
         </form>
       </div>
@@ -779,6 +789,70 @@
         }
       });
     });
+
+    // Intercept form submission, save to database via AJAX, then redirect to WhatsApp
+    const form = document.querySelector('.inquiry-form-box form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('inq-name').value;
+        const email = document.getElementById('inq-email').value;
+        const phone = document.getElementById('inq-phone').value;
+        const date = document.getElementById('inq-date').value;
+        const guests = document.getElementById('inq-guests').value;
+        const pkg = document.getElementById('inq-package').value;
+        const notes = document.getElementById('inq-notes').value;
+        const customize = document.getElementById('inq-customization').checked ? 'Yes' : 'No';
+        
+        // Prepare data to save in SQLite via AJAX
+        const formData = new FormData(this);
+        
+        // Submit via AJAX
+        fetch(this.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        }).then(response => {
+          // Construct the WhatsApp message details
+          const msg = `Hello S. Caterers! I would like to book a catering consultation:\n\n` +
+                      `*Name:* ${name}\n` +
+                      `*Email:* ${email}\n` +
+                      `*Phone:* ${phone}\n` +
+                      `*Event Date:* ${date}\n` +
+                      `*Expected Guests:* ${guests}\n` +
+                      `*Package:* ${pkg}\n` +
+                      `*Request Menu Customization:* ${customize}\n` +
+                      `*Special Requests / Notes:* ${notes ? notes : 'None'}\n\n` +
+                      `*(Note: I understand final pricing depends on menu selections & discussion)*`;
+                      
+          const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
+          
+          // Open WhatsApp in a new tab
+          window.open(waUrl, '_blank');
+          
+          // Show alert and reload page
+          alert("Thank you! Your catering inquiry has been saved, and you are being redirected to WhatsApp to chat with Amit Agrawal.");
+          window.location.reload();
+        }).catch(err => {
+          console.error("Inquiry Save Error:", err);
+          // Fallback direct redirect to WhatsApp
+          const msg = `Hello S. Caterers! I would like to book a catering consultation:\n\n` +
+                      `*Name:* ${name}\n` +
+                      `*Email:* ${email}\n` +
+                      `*Phone:* ${phone}\n` +
+                      `*Event Date:* ${date}\n` +
+                      `*Expected Guests:* ${guests}\n` +
+                      `*Package:* ${pkg}\n` +
+                      `*Request Menu Customization:* ${customize}\n` +
+                      `*Special Requests / Notes:* ${notes ? notes : 'None'}`;
+          const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
+          window.open(waUrl, '_blank');
+        });
+      });
+    }
   </script>
 </body>
 </html>
