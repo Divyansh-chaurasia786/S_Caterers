@@ -30,11 +30,11 @@
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom active" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services.index') }}">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services.index') }}#inquiry">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#footer-section">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="{{ route('services.index') }}" class="btn-gold">Explore Packages</a>
+          <a href="{{ route('home') }}#services" class="btn-gold">Explore Packages</a>
         </div>
       </div>
     </div>
@@ -544,7 +544,7 @@
           <h6>Explore</h6>
           <a href="{{ route('home') }}">Home</a>
           <a href="{{ route('about') }}">About Us</a>
-          <a href="{{ route('services.index') }}">Our Packages</a>
+          <a href="{{ route('home') }}#services">Our Packages</a>
           <a href="{{ route('home') }}#gallery-section">Gallery</a>
         </div>
 

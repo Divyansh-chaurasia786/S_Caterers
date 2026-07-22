@@ -34,11 +34,11 @@
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
           <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('about') }}">About Us</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services.index') }}">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services.index') }}#inquiry">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="{{ route('services.index') }}" class="btn-gold">Explore Packages</a>
+          <a href="#services" class="btn-gold">Explore Packages</a>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
             <h1 class="mt-1">S. CATERERS<br><span class="highlight">by Amit Agrawal</span></h1>
             <p class="lead-copy">Crafting culinary masterpieces and premium dining experiences for your most treasured celebrations. From traditional Lakhnavi delicacies to global gourmet courses, we cater with pure love, hygiene, and unmatched devotion.</p>
             <div class="d-flex gap-3 flex-wrap">
-              <a href="{{ route('services.index') }}" class="btn-gold">Explore Menus</a>
+              <a href="#services" class="btn-gold">Explore Menus</a>
               <a href="https://wa.me/9198xxxxxx10" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
             </div>
           </div>
@@ -408,7 +408,7 @@
           <h6>Explore</h6>
           <a href="{{ route('home') }}">Home</a>
           <a href="{{ route('about') }}">About Us</a>
-          <a href="{{ route('services.index') }}">Our Packages</a>
+          <a href="#services">Our Packages</a>
           <a href="#gallery-section">Gallery</a>
         </div>
 
