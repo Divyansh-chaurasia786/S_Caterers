@@ -176,6 +176,14 @@
       box-shadow: 0 0 0 3px rgba(110, 20, 35, 0.08);
     }
     
+    .pricing-help-note {
+      font-size: 0.8rem;
+      color: var(--wine);
+      font-style: italic;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    
     @media (max-width: 767.98px) {
       .contact-hero {
         padding: 7.5rem 0 4.5rem !important;
@@ -232,7 +240,9 @@
             <p class="text-muted mb-4" style="font-size: 0.92rem;">Feel free to reach out to us directly via phone, email, or WhatsApp, or drop us a message using the form. We are active 24x7 to manage and plan events.</p>
             
             <div class="contact-detail-item">
-              <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
               <div class="contact-text-box">
                 <h4>Main Office &amp; Kitchen</h4>
                 <p>Keshav Nagar, Sitapur Road,<br>Lucknow, Uttar Pradesh, India</p>
@@ -240,7 +250,9 @@
             </div>
 
             <div class="contact-detail-item">
-              <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
               <div class="contact-text-box">
                 <h4>Call or WhatsApp Us</h4>
                 <p>
@@ -251,7 +263,9 @@
             </div>
 
             <div class="contact-detail-item">
-              <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
               <div class="contact-text-box">
                 <h4>Email Support</h4>
                 <p>
@@ -262,12 +276,19 @@
             </div>
 
             <div class="contact-detail-item">
-              <div class="contact-icon-box"><i class="fa-solid fa-clock"></i></div>
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
               <div class="contact-text-box">
                 <h4>Operating Hours</h4>
                 <p>Monday - Sunday: 24 Hours Active<br><em>(Support for booked celebrations)</em></p>
               </div>
             </div>
+          </div>
+          
+          <!-- Interactive Google Maps Location Embed -->
+          <div class="contact-info-card mt-4 p-0 overflow-hidden" style="height: 250px; border-radius: 18px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.62947230489!2d80.9329061!3d26.9143615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd0a51157831%3A0x379afb476865df05!2sKeshav+Nagar%2C+Sitapur+Road%2C+Lucknow!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
@@ -316,7 +337,16 @@
                 <p class="pricing-help-note">*Note: Final pricing depends on menu choices, custom layout requirements, and mutual discussion.</p>
               </div>
 
-              <button type="submit" class="btn-gold w-100 py-3" style="font-size: 1.02rem; border-radius: 12px; font-weight: 700;">Send Message &amp; Open Chat</button>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <button type="submit" class="btn-gold w-100 py-3" style="font-size: 1rem; border-radius: 12px; font-weight: 700;">Send Inquiry</button>
+                </div>
+                <div class="col-sm-6">
+                  <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine w-100 py-3 d-flex align-items-center justify-content-center" style="font-size: 1rem; border-radius: 12px; font-weight: 700; border-width: 2px; text-decoration: none;">
+                    <i class="fa-brands fa-whatsapp me-2" style="font-size: 1.25rem;"></i> Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -360,9 +390,9 @@
         <!-- Contact Column -->
         <div class="col-md-6 col-lg-4">
           <h6>Contact Us</h6>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> Keshav Nagar, Sitapur Road, Lucknow, UP</p>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> +91 98390 77960, +91 94157 88950</p>
-          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> scatererslko@gmail.com</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a></p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>, <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a></p>
+          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a></p>
         </div>
       </div>
 
