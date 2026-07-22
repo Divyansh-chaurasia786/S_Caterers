@@ -386,7 +386,6 @@
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-seedling"></i></div>
               <h3>Silver Menu</h3>
-              <div class="price-tag mb-3" style="font-size: 1.5rem; font-weight: 800; color: var(--wine);">₹450 <span style="font-size: 0.88rem; font-weight: 500; color: var(--ink-soft);">/ plate</span></div>
               <p class="desc">Classic Indian fine vegetarian feast crafted with authentic spices and tradition. Perfect for sangeet functions, corporate events, and festive celebrations.</p>
             </div>
             <ul class="pkg-features">
@@ -397,7 +396,7 @@
               <li><i class="fa-solid fa-circle-check"></i> <span>Fresh Jaljeera & Welcome Drinks Counter</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Silver Menu (₹450)">Select Silver Menu</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Silver Menu">Select Silver Menu</a>
             </div>
           </div>
         </div>
@@ -408,7 +407,6 @@
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
               <h3>Gold Menu</h3>
-              <div class="price-tag mb-3" style="font-size: 1.5rem; font-weight: 800; color: var(--wine);">₹750 <span style="font-size: 0.88rem; font-weight: 500; color: var(--ink-soft);">/ plate</span></div>
               <p class="desc">Our signature luxury Indian banquet featuring live chef counters, rich gravy delicacies, and royal desserts.</p>
             </div>
             <ul class="pkg-features">
@@ -419,7 +417,7 @@
               <li><i class="fa-solid fa-circle-check"></i> <span>Gold & Brass Tableware Setup with Butler Service</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Gold Menu (₹750)">Select Gold Menu</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Gold Menu">Select Gold Menu</a>
             </div>
           </div>
         </div>
@@ -431,7 +429,6 @@
             <div class="pkg-header">
               <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
               <h3>Royal Menu</h3>
-              <div class="price-tag mb-3" style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">₹1,250 <span style="font-size: 0.88rem; font-weight: 500; color: rgba(255,255,255,0.75);">/ plate</span></div>
               <p class="desc">Opulent VIP Rajwada banquet dining, 24k gold leaf presentation, Awadhi dum biryanis, and traditional thali service.</p>
             </div>
             <ul class="pkg-features">
@@ -442,7 +439,7 @@
               <li><i class="fa-solid fa-circle-check"></i> <span>Traditional Royal Silver Thali & White-Glove Service</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Menu (₹1,250)">Select Royal Menu</a>
+              <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Menu">Select Royal Menu</a>
             </div>
           </div>
         </div>
@@ -777,9 +774,9 @@
               <label for="inq-package">Catering Package</label>
               <select name="package" id="inq-package" required>
                 <option value="" disabled selected>Choose a starting tier...</option>
-                <option value="Silver Menu (₹450)">Silver Menu (₹450 / plate)</option>
-                <option value="Gold Menu (₹750)">Gold Menu (₹750 / plate)</option>
-                <option value="Royal Menu (₹1,250)">Royal Menu (₹1,250 / plate)</option>
+                <option value="Silver Menu">Silver Menu</option>
+                <option value="Gold Menu">Gold Menu</option>
+                <option value="Royal Menu">Royal Menu</option>
                 <option value="Craft Bar Counter">Craft Bar Lounge (Add-on)</option>
                 <option value="Live Juice Counter">Live Juice Counter (Add-on)</option>
                 <option value="Chocolate Counter">Chocolate Fountain (Add-on)</option>
