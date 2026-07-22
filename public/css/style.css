@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --ivory: #FAF7F2; /* Pure soft warm white background */
-  --ivory-dim: #F5EFE6; /* Elegant cream white for subtle overlays */
-  --charcoal: #26160C; /* Rich dark espresso brown for primary headlines and navbar links */
-  --charcoal-soft: #3C2415; /* Soft mahogany brown for section headings */
-  --wine: #5A3921; /* Warm terracotta/clay brown as the primary accent (replaces wine crimson) */
-  --wine-deep: #3C2415; /* Deep mahogany brown (replaces wine deep) */
-  --gold: #C5A059; /* Luxury Champagne Gold for thin lines, borders, outlines */
-  --gold-bright: #D4AF37; /* Radiant metallic Gold for buttons, active links, badges */
-  --gold-line: rgba(197, 160, 89, 0.4);
-  --blush: #F4EBE1; /* Soft cream/brown-blush for alerts and highlights */
-  --ink-soft: #7E6554; /* Muted taupe-brown for paragraph description texts */
+  --ivory: #FFFDF9; /* Cream bg from services.css */
+  --ivory-dim: #FAF6EF; /* Cream card from services.css */
+  --charcoal: #2C1A11; /* Brown-dark from services.css */
+  --charcoal-soft: #3E2723; /* Brown-mid from services.css */
+  --wine: #5D4037; /* Brown-light from services.css */
+  --wine-deep: #2C1A11; /* Brown-dark from services.css */
+  --gold: #AA7C11; /* Gold-dark from services.css */
+  --gold-bright: #D4AF37; /* Gold-primary from services.css */
+  --gold-line: rgba(212, 175, 55, 0.25); /* Gold-glow from services.css */
+  --blush: #FAF6EF;
+  --ink-soft: #8D6E63; /* Brown-muted from services.css */
   --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 

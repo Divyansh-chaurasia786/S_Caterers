@@ -111,6 +111,27 @@
       border-radius: 20px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      z-index: 10;
+    }
+    
+    .pkg-img-wrap {
+      margin: -2.5rem -2rem 1.5rem -2rem;
+      overflow: hidden;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      height: 200px;
+      position: relative;
+    }
+    
+    .pkg-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .pkg-custom-card:hover .pkg-img-wrap img {
+      transform: scale(1.08);
     }
     
     .pkg-header {
@@ -383,6 +404,9 @@
         <!-- Silver Menu -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card">
+            <div class="pkg-img-wrap">
+              <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Silver Menu" loading="lazy">
+            </div>
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-seedling"></i></div>
               <h3>Silver Menu</h3>
@@ -404,6 +428,9 @@
         <!-- Gold Menu -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card">
+            <div class="pkg-img-wrap">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Gold Menu" loading="lazy">
+            </div>
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
               <h3>Gold Menu</h3>
@@ -426,6 +453,9 @@
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card royal-active">
             <div class="royal-badge">Chef's Signature</div>
+            <div class="pkg-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Royal Menu" loading="lazy">
+            </div>
             <div class="pkg-header">
               <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
               <h3>Royal Menu</h3>
@@ -460,6 +490,9 @@
         <!-- Craft Bar Lounge -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+            <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Craft Bar Lounge" loading="lazy">
+            </div>
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-martini-glass-citrus"></i></div>
               <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Craft Bar Lounge</h3>
@@ -480,6 +513,9 @@
         <!-- Live Juice Counter -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+            <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
+              <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=800&q=80" alt="Live Juice Counter" loading="lazy">
+            </div>
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-lemon"></i></div>
               <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Live Juice Counter</h3>
@@ -500,6 +536,9 @@
         <!-- Chocolate Counter -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+            <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
+              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="Chocolate Counter" loading="lazy">
+            </div>
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-ice-cream"></i></div>
               <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Chocolate Fountain</h3>
