@@ -98,7 +98,7 @@
         <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
-              <i class="fa-solid fa-leaf"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.58 1 9.8a7 7 0 0 1-13.7 3.2"/><path d="M9 22v-4h4"/></svg>
             </div>
             <div>
               <div class="title">Our Promise</div>
@@ -109,7 +109,7 @@
         <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
-              <i class="fa-solid fa-spa"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="m4.93 4.93 5.66 5.66"/><path d="M2 12h8"/><path d="m4.93 19.07 5.66-5.66"/><path d="M12 22v-8"/><path d="m19.07 19.07-5.66-5.66"/><path d="M22 12h-8"/><path d="m19.07 4.93-5.66 5.66"/><circle cx="12" cy="12" r="2.5"/></svg>
             </div>
             <div>
               <div class="title">Satvik Options</div>
@@ -120,7 +120,7 @@
         <div class="col-12 col-md-4">
           <div class="promise-card">
             <div class="icon-wrap">
-              <i class="fa-solid fa-award"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>
             </div>
             <div>
               <div class="title">Trusted Caterer</div>
@@ -211,7 +211,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="package-card" id="pkg-silver">
             <div class="pkg-icon">
-              <i class="fa-solid fa-plate-wheat"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Z"/><path d="M19 15v7"/></svg>
             </div>
             <h3 class="pkg-title">Silver Package</h3>
             <p class="pkg-desc">An elegant arrangement of classic Lakhnavi and North Indian vegetarian specialties. Perfect for family gatherings, traditional rituals, and intimate celebrations looking for authentic heritage taste.</p>
@@ -222,7 +222,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="package-card" id="pkg-gold">
             <div class="pkg-icon">
-              <i class="fa-solid fa-bowl-food"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-soup"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M7 21h10"/><path d="M12 2v4"/><path d="M7 5a3 3 0 0 1 3-3"/><path d="M14 5a3 3 0 0 1 3-3"/><path d="M3 12h18"/></svg>
             </div>
             <h3 class="pkg-title">Gold Package</h3>
             <p class="pkg-desc">Our highly popular signature setup. Blends premium traditional courses with interactive street food chaat counters and modern dessert platters, offering a rich variety for grand receptions.</p>
@@ -233,7 +233,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="package-card royal-package" id="pkg-royal">
             <div class="pkg-icon" style="color: var(--gold-bright);">
-              <i class="fa-solid fa-crown"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crown"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/><path d="M5 20h14"/></svg>
             </div>
             <h3 class="pkg-title">Royal Package</h3>
             <p class="pkg-desc">A luxurious culinary banquet experience. Features live international counters (Italian, Thai, Continental), bespoke presentation displays, boutique serving staff, and custom menus crafted by our head chef.</p>
@@ -343,42 +343,50 @@
       <div class="row g-4 mobile-swipe-deck">
         <!-- Photo 1 -->
         <div class="col-sm-6 col-lg-3">
-          <div class="gallery-card">
-            <img src="https://picsum.photos/seed/gallery1/500/500" alt="Catering Presentation 1">
-            <div class="gallery-overlay">
-              <div class="gallery-title-card">Exquisite Plating</div>
+          <a href="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=600&auto=format&fit=cover" alt="Exquisite Plating Presentation">
+              <div class="gallery-overlay">
+                <div class="gallery-title-card">Exquisite Plating</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Photo 2 -->
         <div class="col-sm-6 col-lg-3">
-          <div class="gallery-card">
-            <img src="https://picsum.photos/seed/gallery2/500/500" alt="Catering Presentation 2">
-            <div class="gallery-overlay">
-              <div class="gallery-title-card">Lakhnavi Street Chaat</div>
+          <a href="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=cover" alt="Lakhnavi Street Chaat Presentation">
+              <div class="gallery-overlay">
+                <div class="gallery-title-card">Lakhnavi Street Chaat</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Photo 3 -->
         <div class="col-sm-6 col-lg-3">
-          <div class="gallery-card">
-            <img src="https://picsum.photos/seed/gallery3/500/500" alt="Catering Presentation 3">
-            <div class="gallery-overlay">
-              <div class="gallery-title-card">Royal Buffet Decor</div>
+          <a href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=cover" alt="Royal Buffet Decor Setup">
+              <div class="gallery-overlay">
+                <div class="gallery-title-card">Royal Buffet Decor</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Photo 4 -->
         <div class="col-sm-6 col-lg-3">
-          <div class="gallery-card">
-            <img src="https://picsum.photos/seed/gallery4/500/500" alt="Catering Presentation 4">
-            <div class="gallery-overlay">
-              <div class="gallery-title-card">Dessert Banquet Display</div>
+          <a href="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=600&auto=format&fit=cover" alt="Dessert Banquet Display Setup">
+              <div class="gallery-overlay">
+                <div class="gallery-title-card">Dessert Banquet Display</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -399,7 +407,7 @@
           <div class="footer-social mt-4">
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/919839077960" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -424,9 +432,9 @@
         <!-- Contact Column -->
         <div class="col-md-6 col-lg-4">
           <h6>Contact Us</h6>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> Keshav Nagar, Sitapur Road, Lucknow, UP</p>
-          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> +91 98390 77960, +91 94157 88950</p>
-          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> scatererslko@gmail.com</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-location-dot me-2" style="color: var(--gold-bright);"></i> <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a></p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;"><i class="fa-solid fa-phone me-2" style="color: var(--gold-bright);"></i> <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>, <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a></p>
+          <p style="font-size: 0.88rem;"><i class="fa-solid fa-envelope me-2" style="color: var(--gold-bright);"></i> <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a></p>
         </div>
       </div>
 
@@ -436,6 +444,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/919839077960" class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <!-- Bootstrap 5 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
