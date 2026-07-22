@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inquiry;
+use App\Models\Contact;
 
 class HomeController extends Controller
 {
@@ -41,5 +42,29 @@ class HomeController extends Controller
         }
 
         return redirect()->back()->with('success', 'Thank you! Your catering consultation request has been submitted successfully. Amit Agrawal and team will contact you shortly.');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function submitContact(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string|max:2000',
+        ]);
+
+        Contact::create($validated);
+
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json(['success' => true, 'message' => 'Your message has been saved successfully.']);
+        }
+
+        return redirect()->back()->with('success', 'Thank you! Your message has been sent successfully. Amit Agrawal and team will contact you shortly.');
     }
 }

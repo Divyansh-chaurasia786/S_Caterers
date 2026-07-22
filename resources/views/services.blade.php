@@ -326,8 +326,8 @@
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('about') }}">About Us</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom active" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#footer-section">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="{{ route('services') }}">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
           <a href="https://wa.me/919839077960" target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>

@@ -31,7 +31,7 @@
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom active" href="#">About Us</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}#inquiry">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
           <a href="{{ route('services') }}" class="btn-gold">Explore Packages</a>
