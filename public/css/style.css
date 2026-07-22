@@ -1506,6 +1506,16 @@ footer a:hover {
     height: 40px !important;
   }
 
+  footer {
+    padding: 3.5rem 16px 2rem !important; /* Add padding to prevent offscreen row overflow */
+    overflow: hidden !important;
+  }
+
+  footer p, footer a {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
   .footer-bottom {
     justify-content: center !important;
     text-align: center;
