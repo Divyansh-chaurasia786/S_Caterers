@@ -1100,6 +1100,28 @@
           const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
           window.open(waUrl, '_blank');
         });
+      // Auto-sliding catering packages tabs on mobile (Silver, Gold, Royal Menu)
+      document.addEventListener('DOMContentLoaded', () => {
+        const pkgTabButtons = [
+          document.getElementById('serv-tab-silver'),
+          document.getElementById('serv-tab-gold'),
+          document.getElementById('serv-tab-royal')
+        ].filter(btn => btn !== null);
+        
+        if (pkgTabButtons.length > 0) {
+          let currentPkgIndex = 0;
+          let pkgInterval = setInterval(() => {
+            currentPkgIndex = (currentPkgIndex + 1) % pkgTabButtons.length;
+            pkgTabButtons[currentPkgIndex].click();
+          }, 4000);
+          
+          pkgTabButtons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+              clearInterval(pkgInterval);
+              currentPkgIndex = index;
+            });
+          });
+        }
       });
     }
   </script>

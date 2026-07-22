@@ -521,9 +521,10 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- Hero background slideshow script -->
+  <!-- Homepage Auto-Sliding and Scrolling Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // 1. Hero background slideshow
       const slides = document.querySelectorAll('.hero-slide');
       if (slides.length > 0) {
         let currentSlide = 0;
@@ -532,6 +533,75 @@
           currentSlide = (currentSlide + 1) % slides.length;
           slides[currentSlide].classList.add('active');
         }, 3500);
+      }
+
+      // 2. Mobile swipe decks auto-scroll (Signature Specialties, Gallery, etc.)
+      const swipeDecks = document.querySelectorAll('.mobile-swipe-deck');
+      swipeDecks.forEach(deck => {
+        let isTouching = false;
+        let intervalId = null;
+        
+        deck.addEventListener('touchstart', () => {
+          isTouching = true;
+        }, { passive: true });
+        
+        deck.addEventListener('touchend', () => {
+          isTouching = false;
+        }, { passive: true });
+        
+        const startAutoScroll = () => {
+          intervalId = setInterval(() => {
+            if (isTouching) return;
+            
+            const cards = deck.children;
+            if (cards.length <= 1) return;
+            
+            const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
+            const maxScroll = deck.scrollWidth - deck.clientWidth;
+            
+            let currentIndex = Math.round(deck.scrollLeft / cardWidth);
+            let nextIndex = (currentIndex + 1) % cards.length;
+            
+            if (deck.scrollLeft >= maxScroll - 5) {
+              deck.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              deck.scrollTo({ left: nextIndex * cardWidth, behavior: 'smooth' });
+            }
+          }, 4000);
+        };
+        
+        if (window.innerWidth < 768) {
+          startAutoScroll();
+        }
+        
+        window.addEventListener('resize', () => {
+          clearInterval(intervalId);
+          if (window.innerWidth < 768) {
+            startAutoScroll();
+          }
+        });
+      });
+
+      // 3. Auto-sliding catering packages tabs on mobile
+      const pkgTabButtons = [
+        document.getElementById('tab-silver'),
+        document.getElementById('tab-gold'),
+        document.getElementById('tab-royal')
+      ].filter(btn => btn !== null);
+      
+      if (pkgTabButtons.length > 0) {
+        let currentPkgIndex = 0;
+        let pkgInterval = setInterval(() => {
+          currentPkgIndex = (currentPkgIndex + 1) % pkgTabButtons.length;
+          pkgTabButtons[currentPkgIndex].click();
+        }, 4000);
+        
+        pkgTabButtons.forEach((btn, index) => {
+          btn.addEventListener('click', () => {
+            clearInterval(pkgInterval);
+            currentPkgIndex = index;
+          });
+        });
       }
     });
   </script>
