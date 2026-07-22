@@ -562,8 +562,8 @@
             let currentIndex = Math.round(deck.scrollLeft / cardWidth);
             let nextIndex = (currentIndex + 1) % cards.length;
             
-            if (deck.scrollLeft >= maxScroll - 5) {
-              deck.scrollTo({ left: 0, behavior: 'smooth' });
+            if (deck.scrollLeft >= maxScroll - 10) {
+              deck.scrollTo({ left: 0, behavior: 'auto' });
             } else {
               deck.scrollTo({ left: nextIndex * cardWidth, behavior: 'smooth' });
             }
