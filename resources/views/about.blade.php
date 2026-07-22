@@ -172,13 +172,12 @@
                 <div class="journey-year-badge">1995</div>
                 <h3 class="journey-title">The Seed of a Dream</h3>
                 <p class="journey-desc">Amit Agrawal establishes S. Caterers with a humble kitchen, deep local ties, and a burning passion to serve authentic Lakhnavi vegetarian delicacies to family gatherings and social circles.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/culinarydreams/500/600" alt="Milestone 1">
+                  <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 1">
                 </div>
               </div>
             </div>
@@ -193,13 +192,12 @@
                 <div class="journey-year-badge">1998</div>
                 <h3 class="journey-title">First Grand Wedding</h3>
                 <p class="journey-desc">S. Caterers successfully caters their first major wedding of 500+ guests. The flawless presentation and exquisite food taste set a new benchmark for wedding catering in Lucknow.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/banquetsetup/500/600" alt="Milestone 2">
+                  <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 2">
                 </div>
               </div>
             </div>
@@ -214,13 +212,12 @@
                 <div class="journey-year-badge">2001</div>
                 <h3 class="journey-title">The Chaat Revolution</h3>
                 <p class="journey-desc">We introduce live Lakhnavi street food and premium chaat counters. Offering a gourmet spin on traditional street food, these live displays quickly became a signature feature at every event.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/lakhnavichaat/500/600" alt="Milestone 3">
+                  <img src="https://images.unsplash.com/photo-1601050690597-df056fb49785?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 3">
                 </div>
               </div>
             </div>
@@ -235,13 +232,12 @@
                 <div class="journey-year-badge">2005</div>
                 <h3 class="journey-title">100% Pure Veg Commitment</h3>
                 <p class="journey-desc">Making a landmark decision, S. Caterers commits to being a strictly vegetarian company. We pledge to run a completely segregated veg-only kitchen with no meat and no eggs ever.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/freshvegetables/500/600" alt="Milestone 4">
+                  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 4">
                 </div>
               </div>
             </div>
@@ -256,13 +252,12 @@
                 <div class="journey-year-badge">2008</div>
                 <h3 class="journey-title">Expanding to Sitapur Road</h3>
                 <p class="journey-desc">To support growing demand, Amit Agrawal builds a new, modern central kitchen on Sitapur Road, Lucknow. This facility houses advanced sanitary machinery and dedicated prep bays.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/cateringkitchen/500/600" alt="Milestone 5">
+                  <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 5">
                 </div>
               </div>
             </div>
@@ -277,13 +272,12 @@
                 <div class="journey-year-badge">2011</div>
                 <h3 class="journey-title">Satvik & Jain Specialization</h3>
                 <p class="journey-desc">We form a highly specialized culinary division dedicated to onion-free, garlic-free, and strict Satvik preparations, guaranteeing culinary satisfaction for all community events.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/satvikkitchen/500/600" alt="Milestone 6">
+                  <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 6">
                 </div>
               </div>
             </div>
@@ -298,13 +292,12 @@
                 <div class="journey-year-badge">2014</div>
                 <h3 class="journey-title">Introducing Global Cuisines</h3>
                 <p class="journey-desc">S. Caterers expands the menu by introducing authentic Italian, Continental, Chinese, and Thai menus, hiring specialty chefs to maintain taste authenticity for premium menus.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/pastaitalian/500/600" alt="Milestone 7">
+                  <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 7">
                 </div>
               </div>
             </div>
@@ -319,13 +312,12 @@
                 <div class="journey-year-badge">2017</div>
                 <h3 class="journey-title">The Corporate Leap</h3>
                 <p class="journey-desc">Expanding corporate operations, we cater high-profile summits, industrial inaugurations, and elite business events, establishing a reputation for speed, safety, and scale.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/corporateevent/500/600" alt="Milestone 8">
+                  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 8">
                 </div>
               </div>
             </div>
@@ -340,13 +332,12 @@
                 <div class="journey-year-badge">2020</div>
                 <h3 class="journey-title">Safety and Adaptation</h3>
                 <p class="journey-desc">During global health challenges, S. Caterers immediately shifts to contact-free catering and 5-star medical sanitation guidelines, demonstrating corporate agility and client care.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/hygienecatering/500/600" alt="Milestone 9">
+                  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 9">
                 </div>
               </div>
             </div>
@@ -361,13 +352,12 @@
                 <div class="journey-year-badge">2022</div>
                 <h3 class="journey-title">Modern Culinary Plating</h3>
                 <p class="journey-desc">We introduce boutique catering aesthetics, featuring miniature appetizers, molecular gastronomy elements, and high-fashion food presentation that mirrors international dining styles.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/fineplating/500/600" alt="Milestone 10">
+                  <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 10">
                 </div>
               </div>
             </div>
@@ -382,13 +372,12 @@
                 <div class="journey-year-badge">2024</div>
                 <h3 class="journey-title">10,000+ Events Served</h3>
                 <p class="journey-desc">We hit a monumental milestone of serving over 10,000 corporate, wedding, and social events since our inception, cementing our place in our community's celebrations.</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/grandwedding/500/600" alt="Milestone 11">
+                  <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 11">
                 </div>
               </div>
             </div>
@@ -403,13 +392,12 @@
                 <div class="journey-year-badge">2026</div>
                 <h3 class="journey-title">Expanding Horizons: Serving All of Uttar Pradesh</h3>
                 <p class="journey-desc">Officially expanding our horizons beyond Lucknow, S. Caterers now opens booking operations to cater premium weddings, corporate summits, and grand galas across the entire state of Uttar Pradesh (UP).</p>
-                <div class="journey-signature">Amit Agrawal</div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://picsum.photos/seed/chefcooking/500/600" alt="Milestone 12">
+                  <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 12">
                 </div>
               </div>
             </div>

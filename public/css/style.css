@@ -1781,42 +1781,83 @@ footer a:hover {
   }
 
   /* Timeline Slider Mobile Overhaul */
-  .journey-timeline-nav {
+  .timeline-nav-container {
+    display: block !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    padding: 2.5rem 0 1.2rem 0 !important;
+    margin-bottom: 1.5rem !important;
+    position: relative !important;
+    max-width: 100% !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .timeline-nav-container::-webkit-scrollbar {
     display: none !important;
   }
+  .timeline-nodes-wrap {
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 3.5rem !important;
+    width: max-content !important;
+    padding: 0 2.5rem !important;
+  }
+  .timeline-thread {
+    position: absolute !important;
+    top: 50% !important;
+    left: 2.5rem !important;
+    width: calc(100% - 5rem) !important;
+    height: 2px !important;
+    background: var(--gold-line) !important;
+    transform: translateY(-50%) !important;
+    display: block !important;
+    z-index: 1 !important;
+  }
+  .timeline-node-item span.year-label {
+    font-size: 0.78rem !important;
+    top: -24px !important;
+  }
   
+  /* Active Slide Viewport */
   .journey-slider-container {
     min-height: auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 0 1rem !important;
+    perspective: none !important;
+  }
+  .journey-slide {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    position: relative !important;
+    transform: none !important;
+    transition: opacity 0.4s ease-in-out !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+  .journey-slide.active {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .journey-slide .row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  .journey-slide .col-lg-7,
+  .journey-slide .col-lg-5 {
+    width: 100% !important;
     padding: 0 !important;
   }
   
-  .journey-slide {
-    display: block !important;
-    opacity: 1 !important;
-    position: relative !important;
-    visibility: visible !important;
-    margin-bottom: 2rem !important;
-    border-bottom: 1px dashed var(--gold-line) !important;
-    padding-bottom: 2rem !important;
-    transition: none !important;
-    transform: none !important;
-  }
-  
-  .journey-slide:last-child {
-    border-bottom: none !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  .journey-image-panel {
-    margin-bottom: 1.2rem !important;
-  }
-  
-  .journey-image-panel img {
-    max-height: 200px !important;
-    width: 100% !important;
-    object-fit: cover !important;
-    border-radius: 10px !important;
+  .journey-slide .journey-frame-wrap {
+    width: 140px !important;
+    height: 190px !important;
+    margin: 0 auto !important;
   }
   
   .journey-text-panel {
@@ -1824,10 +1865,58 @@ footer a:hover {
     text-align: center !important;
   }
   
-  .journey-year-bg {
-    font-size: 4rem !important;
-    top: -25px !important;
-    opacity: 0.08 !important;
+  .journey-year-badge {
+    font-size: 0.95rem !important;
+    padding: 3px 10px !important;
+    margin-bottom: 0.5rem !important;
+    width: max-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .journey-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.4rem !important;
+    text-align: center !important;
+  }
+  
+  .journey-desc {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    text-align: center !important;
+    color: var(--ink-soft) !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .journey-signature {
+    display: none !important;
+  }
+  
+  .journey-controls {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+  }
+  
+  .journey-dots {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+  
+  .journey-dots .dot {
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--gold-line) !important;
+    border-radius: 50% !important;
+  }
+  
+  .journey-dots .dot.active {
+    background: var(--wine) !important;
+    transform: scale(1.2) !important;
   }
 
   /* Contact Cards Mobile Overhaul */
