@@ -87,9 +87,36 @@ class HomeController extends Controller
             return redirect()->route('home')->with('error', 'Access Denied.');
         }
 
-        $images = GalleryImage::orderBy('id', 'desc')->get();
-        $categories = GalleryImage::pluck('category')->unique()->filter()->values();
+        list($images, $categories) = $this->ensureDatabaseAndFetchImages();
         return view('admin.gallery', compact('images', 'categories'));
+    }
+
+    private function ensureDatabaseAndFetchImages()
+    {
+        try {
+            $images = GalleryImage::orderBy('id', 'desc')->get();
+            $categories = GalleryImage::pluck('category')->unique()->filter()->values();
+            return [$images, $categories];
+        } catch (\Throwable $e) {
+            try {
+                if (!\Illuminate\Support\Facades\Schema::hasTable('gallery_images')) {
+                    \Illuminate\Support\Facades\Schema::create('gallery_images', function ($table) {
+                        $table->id();
+                        $table->string('title');
+                        $table->string('category');
+                        $table->string('path');
+                        $table->boolean('is_video')->default(false);
+                        $table->boolean('is_local')->default(false);
+                        $table->timestamps();
+                    });
+                }
+                $images = GalleryImage::orderBy('id', 'desc')->get();
+                $categories = GalleryImage::pluck('category')->unique()->filter()->values();
+                return [$images, $categories];
+            } catch (\Throwable $e2) {
+                return [collect([]), collect([])];
+            }
+        }
     }
 
     public function adminLogin(Request $request)
