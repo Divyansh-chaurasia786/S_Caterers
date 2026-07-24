@@ -44,6 +44,10 @@ class GalleryImage extends Model
         $path = $this->path ?? '';
 
         if (!$this->isCloudinary() || empty($path)) {
+            // Local image — wrap with asset() to get a proper URL
+            if (!empty($path) && !str_starts_with($path, 'http')) {
+                return asset($path);
+            }
             return $path;
         }
 

@@ -178,11 +178,11 @@
         <div class="col-md-6 col-lg-3">
           <div class="specialty-card">
             <div class="specialty-img-wrap">
-              <img src="{{ asset('images/specialty-live.jpg') }}" alt="Global Live Stations">
+              <img src="{{ asset('images/specialty-live.jpg') }}" alt="Live Gol Gappe Counter">
             </div>
             <div class="specialty-overlay">
-              <h3 class="specialty-title">Global Live Stations</h3>
-              <p class="specialty-desc">Interactive live pasta bars, wood-fired artisanal flatbreads, and fresh East Asian stir-fry woks prepared live by our chefs.</p>
+              <h3 class="specialty-title">Live Gol Gappe Counter</h3>
+              <p class="specialty-desc">Our iconic live Gol Gappe &amp; chaat counter — freshly prepared with flavoured waters, ragda, and chutneys by our dedicated counter staff.</p>
             </div>
           </div>
         </div>
@@ -322,7 +322,7 @@
           <div class="col-12 col-lg-6 text-center">
             <div class="event-frame-wrap">
               <div class="event-frame-inner">
-                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Weddings">
+                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Grand Wedding Buffet">
               </div>
             </div>
           </div>
@@ -341,7 +341,7 @@
           <div class="col-12 col-lg-6 text-center">
             <div class="event-frame-wrap">
               <div class="event-frame-inner">
-                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Corporate Galas">
+                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Event Service in Action">
               </div>
             </div>
           </div>
@@ -382,7 +382,7 @@
           <div class="col-12">
             <div class="occasion-card">
               <div class="occasion-img-wrap">
-                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Weddings">
+                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Grand Wedding Buffet">
               </div>
               <div class="occasion-content">
                 <span class="event-tag-pill">Grand Scale</span>
@@ -396,7 +396,7 @@
           <div class="col-12">
             <div class="occasion-card">
               <div class="occasion-img-wrap">
-                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Corporate Galas">
+                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Event Service in Action">
               </div>
               <div class="occasion-content">
                 <span class="event-tag-pill">Corporate</span>
@@ -454,49 +454,49 @@
       </div>
 
       <div class="row g-4 mobile-swipe-deck" id="gallery-swipe-deck">
-        <!-- Photo 1 -->
+        <!-- Photo 1: Grand Wedding Hall -->
         <div class="col-sm-6 col-lg-3">
-          <a href="{{ asset('images/specialty-korma.jpg') }}" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/gallery-wedding-hall.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="{{ asset('images/specialty-korma.jpg') }}" alt="Exquisite Plating Presentation">
+              <img src="{{ asset('images/gallery-wedding-hall.jpg') }}" alt="Grand Wedding Banquet Setup">
               <div class="gallery-overlay">
-                <div class="gallery-title-card">Exquisite Plating</div>
+                <div class="gallery-title-card">Grand Wedding Setup</div>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- Photo 2 -->
+        <!-- Photo 2: Live Chinese Counter -->
         <div class="col-sm-6 col-lg-3">
-          <a href="{{ asset('images/lakhnavi-street-chaat.jpg') }}" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/gallery-chinese.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="{{ asset('images/lakhnavi-street-chaat.jpg') }}" alt="Lakhnavi Street Chaat Presentation">
+              <img src="{{ asset('images/gallery-chinese.jpg') }}" alt="Live Chinese Counter">
               <div class="gallery-overlay">
-                <div class="gallery-title-card">Lakhnavi Street Chaat</div>
+                <div class="gallery-title-card">Live Chinese Counter</div>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- Photo 3 -->
+        <!-- Photo 3: Fruit Art Display -->
         <div class="col-sm-6 col-lg-3">
-          <a href="{{ asset('images/occasion-wedding.jpg') }}" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/gallery-fruit-art.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Royal Buffet Decor Setup">
+              <img src="{{ asset('images/gallery-fruit-art.jpg') }}" alt="Fruit Art Presentation Tower">
               <div class="gallery-overlay">
-                <div class="gallery-title-card">Royal Buffet Decor</div>
+                <div class="gallery-title-card">Fruit Art Tower</div>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- Photo 4 -->
+        <!-- Photo 4: Live Gol Gappe Counter -->
         <div class="col-sm-6 col-lg-3">
-          <a href="{{ asset('images/specialty-dessert.jpg') }}" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/gallery-golgappe.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="{{ asset('images/specialty-dessert.jpg') }}" alt="Dessert Banquet Display Setup">
+              <img src="{{ asset('images/gallery-golgappe.jpg') }}" alt="Live Gol Gappe Counter">
               <div class="gallery-overlay">
-                <div class="gallery-title-card">Dessert Banquet Display</div>
+                <div class="gallery-title-card">Live Gol Gappe Counter</div>
               </div>
             </div>
           </a>
