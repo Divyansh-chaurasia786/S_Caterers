@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => (isset($_SERVER['VERCEL']) || getenv('VERCEL') || env('VERCEL')) ? 'sqlite' : env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
