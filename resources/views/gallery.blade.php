@@ -284,7 +284,54 @@
       transform: scale(1.1);
     }
 
+    /* Lightbox Navigation Buttons */
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(17, 14, 13, 0.85);
+      color: #FFFFFF;
+      border: 2px solid var(--gold);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 9999;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .lightbox-nav-btn:hover {
+      background: var(--wine);
+      color: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-50%) scale(1.15);
+    }
+
+    .lightbox-nav-btn.prev-btn {
+      left: 20px;
+    }
+
+    .lightbox-nav-btn.next-btn {
+      right: 20px;
+    }
+
     @media (max-width: 768px) {
+      .lightbox-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+      .lightbox-nav-btn.prev-btn {
+        left: 8px;
+      }
+      .lightbox-nav-btn.next-btn {
+        right: 8px;
+      }
       .gallery-hero {
         padding: 7.5rem 0 4.5rem;
       }
@@ -511,13 +558,24 @@
 
   <!-- ================= LIGHTBOX MODAL ================= -->
   <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-nav-btn prev-btn" id="lightboxPrevBtn" onclick="navigateLightbox(-1)" aria-label="Previous Media">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
     <div class="lightbox-content">
       <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
       <div id="lightboxMediaContainer">
         <img id="lightboxImg" src="" alt="Expanded View">
       </div>
-      <div class="lightbox-caption" id="lightboxCaption">Royal Buffet Presentation</div>
+      <div class="lightbox-caption">
+        <span id="lightboxCaption">Royal Buffet Presentation</span>
+        <span id="lightboxCounter" style="font-size: 0.82rem; font-weight: 500; opacity: 0.85; margin-left: 8px;"></span>
+      </div>
     </div>
+
+    <button class="lightbox-nav-btn next-btn" id="lightboxNextBtn" onclick="navigateLightbox(1)" aria-label="Next Media">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
   </div>
 
   <!-- Bootstrap 5 Bundle JS -->
@@ -562,17 +620,45 @@
       }
     }
 
-    // 2. Lightbox Open/Close logic
+    // 2. Lightbox Open/Close & Navigation logic
+    let currentVisibleCards = [];
+    let currentLightboxIndex = -1;
+
+    function getVisibleCards() {
+      return Array.from(document.querySelectorAll('.gallery-grid-item:not(.hidden) .gallery-card'));
+    }
+
     function openLightbox(card) {
+      currentVisibleCards = getVisibleCards();
+      currentLightboxIndex = currentVisibleCards.indexOf(card);
+
+      if (currentLightboxIndex === -1) {
+        currentVisibleCards = [card];
+        currentLightboxIndex = 0;
+      }
+
+      renderLightboxItem(currentLightboxIndex);
+
+      const modal = document.getElementById('lightboxModal');
+      if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function renderLightboxItem(index) {
+      if (!currentVisibleCards.length || index < 0 || index >= currentVisibleCards.length) return;
+
+      const card = currentVisibleCards[index];
       const isVideo = card.getAttribute('data-is-video') === '1';
       const mediaSrc = card.getAttribute('data-src') || (card.querySelector('img') ? card.querySelector('img').src : card.querySelector('video').src);
       const title = card.getAttribute('data-title') || (card.querySelector('.gallery-overlay span') ? card.querySelector('.gallery-overlay span').textContent : '');
 
-      const modal = document.getElementById('lightboxModal');
       const mediaContainer = document.getElementById('lightboxMediaContainer');
       const modalCaption = document.getElementById('lightboxCaption');
+      const modalCounter = document.getElementById('lightboxCounter');
 
-      if (modal && mediaContainer) {
+      if (mediaContainer) {
         if (isVideo) {
           const cleanSrc = mediaSrc.split('#')[0];
           mediaContainer.innerHTML = `<video src="${cleanSrc}" controls autoplay playsinline controlsList="nodownload" style="max-width: 100%; max-height: calc(85vh - 50px); display: block; object-fit: contain; margin: 0 auto; outline: none; z-index: 1;"></video>`;
@@ -584,10 +670,15 @@
           mediaContainer.innerHTML = `<img id="lightboxImg" src="${mediaSrc}" alt="${title}" style="max-width: 100%; max-height: calc(85vh - 50px); display: block; object-fit: contain; margin: 0 auto;">`;
         }
 
-        modalCaption.textContent = title;
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden'; // Disable scroll background
+        if (modalCaption) modalCaption.textContent = title;
+        if (modalCounter) modalCounter.textContent = `(${index + 1} / ${currentVisibleCards.length})`;
       }
+    }
+
+    function navigateLightbox(direction) {
+      if (!currentVisibleCards.length) return;
+      currentLightboxIndex = (currentLightboxIndex + direction + currentVisibleCards.length) % currentVisibleCards.length;
+      renderLightboxItem(currentLightboxIndex);
     }
 
     function closeLightbox() {
@@ -598,23 +689,57 @@
         if (mediaContainer) {
           mediaContainer.innerHTML = '';
         }
-        document.body.style.overflow = 'auto'; // Re-enable scroll
+        document.body.style.overflow = 'auto';
       }
     }
 
-    // Close on click outside the lightbox image
+    // Close on click outside media box
     document.getElementById('lightboxModal').addEventListener('click', function(e) {
       if (e.target === this) {
         closeLightbox();
       }
     });
 
-    // Close on escape key
+    // Keyboard navigation (Left, Right, Escape)
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal || !modal.classList.contains('show')) return;
+
+      if (e.key === 'ArrowLeft') {
+        navigateLightbox(-1);
+      } else if (e.key === 'ArrowRight') {
+        navigateLightbox(1);
+      } else if (e.key === 'Escape') {
         closeLightbox();
       }
     });
+
+    // Touch Swipe Support for Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const modalContent = document.getElementById('lightboxModal');
+    if (modalContent) {
+      modalContent.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      modalContent.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+    }
+
+    function handleSwipe() {
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          navigateLightbox(1); // Swipe left -> Next
+        } else {
+          navigateLightbox(-1); // Swipe right -> Prev
+        }
+      }
+    }
   </script>
 
   <!-- Floating WhatsApp CTA -->
