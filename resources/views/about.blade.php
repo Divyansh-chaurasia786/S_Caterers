@@ -198,7 +198,7 @@
           <div class="book-page book-right" id="book-right-page">
             <div class="book-page-inner">
               <div class="book-img-wrap">
-                <img id="book-img" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&h=500&q=80" alt="Milestone 1998">
+                <img id="book-img" src="{{ asset('images/milestones/milestone-1998.jpg') }}" alt="Milestone 1998">
                 <div class="book-img-caption" id="book-img-caption">Est. 1998 — Lucknow</div>
               </div>
             </div>
@@ -259,7 +259,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 1">
+                  <img src="{{ asset('images/milestones/milestone-1998.jpg') }}" alt="Milestone 1">
                 </div>
               </div>
             </div>
@@ -279,7 +279,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 2">
+                  <img src="{{ asset('images/milestones/milestone-2000.jpg') }}" alt="Milestone 2">
                 </div>
               </div>
             </div>
@@ -299,7 +299,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1601050690597-df056fb49785?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 3">
+                  <img src="{{ asset('images/milestones/milestone-2001.jpg') }}" alt="Milestone 3">
                 </div>
               </div>
             </div>
@@ -319,7 +319,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 4">
+                  <img src="{{ asset('images/milestones/milestone-2005.jpg') }}" alt="Milestone 4">
                 </div>
               </div>
             </div>
@@ -339,7 +339,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 5">
+                  <img src="{{ asset('images/milestones/milestone-2008.jpg') }}" alt="Milestone 5">
                 </div>
               </div>
             </div>
@@ -359,7 +359,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 6">
+                  <img src="{{ asset('images/milestones/milestone-2011.jpg') }}" alt="Milestone 6">
                 </div>
               </div>
             </div>
@@ -379,7 +379,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 7">
+                  <img src="{{ asset('images/milestones/milestone-2014.jpg') }}" alt="Milestone 7">
                 </div>
               </div>
             </div>
@@ -399,7 +399,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 8">
+                  <img src="{{ asset('images/milestones/milestone-2017.jpg') }}" alt="Milestone 8">
                 </div>
               </div>
             </div>
@@ -419,7 +419,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 9">
+                  <img src="{{ asset('images/milestones/milestone-2020.jpg') }}" alt="Milestone 9">
                 </div>
               </div>
             </div>
@@ -439,7 +439,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 10">
+                  <img src="{{ asset('images/milestones/milestone-2022.jpg') }}" alt="Milestone 10">
                 </div>
               </div>
             </div>
@@ -459,7 +459,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 11">
+                  <img src="{{ asset('images/milestones/milestone-2024.jpg') }}" alt="Milestone 11">
                 </div>
               </div>
             </div>
@@ -479,7 +479,7 @@
             <div class="col-lg-5">
               <div class="journey-frame-wrap">
                 <div class="journey-frame-inner">
-                  <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=500&h=600&q=80" alt="Milestone 12">
+                  <img src="{{ asset('images/milestones/milestone-2026.jpg') }}" alt="Milestone 12">
                 </div>
               </div>
             </div>
@@ -801,18 +801,18 @@
          3. DESKTOP 3D Heritage Book Page-Flip
       ========================================================= */
       const bookMilestones = [
-        { year: '1998', title: 'The Secret & The Spark',          desc: 'When Amit Agarwal set out in Lucknow in 1998, no one anticipated the culinary storm to follow. Armed only with secret family spice blends and an unwavering vow of vegetarian purity, S. Caterers took its very first step into royal dining.', img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&h=500&q=80', caption: '1998 — Founded in Lucknow' },
-        { year: '2000', title: 'The High-Stakes Feast',          desc: 'A high-stakes challenge arrived: catering a grand royal wedding of over 500 elite guests. Under immense pressure, the flavors captivated every palate, overnight turning a local name into Lucknow\'s most talked-about culinary secret.', img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&h=500&q=80', caption: '2000 — Grand Wedding' },
-        { year: '2001', title: 'Unlocking Royal Street Flavors', desc: 'Daring to break tradition, S. Caterers introduced live Lakhnavi chaat galleries to high-profile banquets. The aroma of sizzled spices and theatrical live cooking transformed ordinary wedding dinners into unforgettable gastronomic spectacles.', img: 'https://images.unsplash.com/photo-1601050690597-df056fb49785?auto=format&fit=crop&w=600&h=500&q=80', caption: '2001 — Chaat Revolution' },
-        { year: '2005', title: 'The Uncompromising Vow',         desc: 'A defining turning point. In a market full of shortcuts, Amit Agarwal took a bold, non-negotiable oath: 100% pure vegetarian & Satvik integrity. No meat, no eggs, no compromises — building trust that remains unshakeable to this day.', img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&h=500&q=80', caption: '2005 — Pure Veg Vow' },
-        { year: '2008', title: 'Conquering Beyond Lucknow',      desc: 'Tales of royal taste could no longer be contained within one city. Demands poured in from Kanpur, Jhansi, Sitapur, Bahraich, and Lakhimpur as S. Caterers expanded its fleet to orchestrate mega celebrations across regional frontiers.', img: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&h=500&q=80', caption: '2008 — Regional Conquest' },
-        { year: '2011', title: 'The Secret Satvik Mastery',       desc: 'Unlocking the delicate art of onion-free and garlic-free Satvik cuisine, S. Caterers pioneered a specialized culinary division, proving that sacred ancestral recipes could achieve 5-star fine-dining grandeur.', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&h=500&q=80', caption: '2011 — Satvik Mastery' },
-        { year: '2014', title: 'The Global Fusion Revelation',  desc: 'Fusing royal Lakhnavi heritage with international horizons, master chefs were brought in to introduce live artisanal Italian, Thai, and Continental galleries — creating a thrilling multi-cuisine symphony.', img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&h=500&q=80', caption: '2014 — Global Fusion' },
-        { year: '2017', title: 'The Corporate Conquest',         desc: 'Stepping onto the corporate stage, S. Caterers executed massive industrial inaugurations and high-profile summits with surgical precision, proving that scale, speed, and luxury could co-exist flawlessly.', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&h=500&q=80', caption: '2017 — Corporate Summit' },
-        { year: '2020', title: 'The Unshakable Shield',          desc: 'When global uncertainty halted the world, S. Caterers stood resilient — pioneering medical-grade sanitation protocols and zero-contact serving rituals to safeguard every host and guest without losing warmth.', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&h=500&q=80', caption: '2020 — Safe Catering' },
-        { year: '2022', title: 'High-Fashion Culinary Plating',   desc: 'Redefining how India views wedding buffets, we unveiled molecular gastronomy displays, gold-leaf presentation art, and luxury dessert galleries that left guests spellbound before the first bite.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=500&q=80', caption: '2022 — Culinary Art' },
-        { year: '2024', title: 'The 10,000 Milestone Legend',    desc: 'A monumental triumph: 10,000+ legendary celebrations served. From royal weddings to executive galas, S. Caterers cemented its legacy as the undisputed heart of North Indian hospitality.', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&h=500&q=80', caption: '2024 — 10K Celebrations' },
-        { year: '2026', title: 'Vision 2026: Conquering All of UP', desc: 'The story reaches its grandest chapter yet. In 2026 and beyond, our goal is to conquer the culinary landscape of all 75 districts of Uttar Pradesh — establishing S. Caterers as the ultimate statewide benchmark for luxury pure-veg dining.', img: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&h=500&q=80', caption: '2026 — Vision for UP' }
+        { year: '1998', title: 'The Secret & The Spark',          desc: 'When Amit Agarwal set out in Lucknow in 1998, no one anticipated the culinary storm to follow. Armed only with secret family spice blends and an unwavering vow of vegetarian purity, S. Caterers took its very first step into royal dining.', img: "{{ asset('images/milestones/milestone-1998.jpg') }}", caption: '1998 — Founded in Lucknow' },
+        { year: '2000', title: 'The High-Stakes Feast',          desc: 'A high-stakes challenge arrived: catering a grand royal wedding of over 500 elite guests. Under immense pressure, the flavors captivated every palate, overnight turning a local name into Lucknow\'s most talked-about culinary secret.', img: "{{ asset('images/milestones/milestone-2000.jpg') }}", caption: '2000 — Grand Wedding' },
+        { year: '2001', title: 'Unlocking Royal Street Flavors', desc: 'Daring to break tradition, S. Caterers introduced live Lakhnavi chaat galleries to high-profile banquets. The aroma of sizzled spices and theatrical live cooking transformed ordinary wedding dinners into unforgettable gastronomic spectacles.', img: "{{ asset('images/milestones/milestone-2001.jpg') }}", caption: '2001 — Chaat Revolution' },
+        { year: '2005', title: 'The Uncompromising Vow',         desc: 'A defining turning point. In a market full of shortcuts, Amit Agarwal took a bold, non-negotiable oath: 100% pure vegetarian & Satvik integrity. No meat, no eggs, no compromises — building trust that remains unshakeable to this day.', img: "{{ asset('images/milestones/milestone-2005.jpg') }}", caption: '2005 — Pure Veg Vow' },
+        { year: '2008', title: 'Conquering Beyond Lucknow',      desc: 'Tales of royal taste could no longer be contained within one city. Demands poured in from Kanpur, Jhansi, Sitapur, Bahraich, and Lakhimpur as S. Caterers expanded its fleet to orchestrate mega celebrations across regional frontiers.', img: "{{ asset('images/milestones/milestone-2008.jpg') }}", caption: '2008 — Regional Conquest' },
+        { year: '2011', title: 'The Secret Satvik Mastery',       desc: 'Unlocking the delicate art of onion-free and garlic-free Satvik cuisine, S. Caterers pioneered a specialized culinary division, proving that sacred ancestral recipes could achieve 5-star fine-dining grandeur.', img: "{{ asset('images/milestones/milestone-2011.jpg') }}", caption: '2011 — Satvik Mastery' },
+        { year: '2014', title: 'The Global Fusion Revelation',  desc: 'Fusing royal Lakhnavi heritage with international horizons, master chefs were brought in to introduce live artisanal Italian, Thai, and Continental galleries — creating a thrilling multi-cuisine symphony.', img: "{{ asset('images/milestones/milestone-2014.jpg') }}", caption: '2014 — Global Fusion' },
+        { year: '2017', title: 'The Corporate Conquest',         desc: 'Stepping onto the corporate stage, S. Caterers executed massive industrial inaugurations and high-profile summits with surgical precision, proving that scale, speed, and luxury could co-exist flawlessly.', img: "{{ asset('images/milestones/milestone-2017.jpg') }}", caption: '2017 — Corporate Summit' },
+        { year: '2020', title: 'The Unshakable Shield',          desc: 'When global uncertainty halted the world, S. Caterers stood resilient — pioneering medical-grade sanitation protocols and zero-contact serving rituals to safeguard every host and guest without losing warmth.', img: "{{ asset('images/milestones/milestone-2020.jpg') }}", caption: '2020 — Safe Catering' },
+        { year: '2022', title: 'High-Fashion Culinary Plating',   desc: 'Redefining how India views wedding buffets, we unveiled molecular gastronomy displays, gold-leaf presentation art, and luxury dessert galleries that left guests spellbound before the first bite.', img: "{{ asset('images/milestones/milestone-2022.jpg') }}", caption: '2022 — Culinary Art' },
+        { year: '2024', title: 'The 10,000 Milestone Legend',    desc: 'A monumental triumph: 10,000+ legendary celebrations served. From royal weddings to executive galas, S. Caterers cemented its legacy as the undisputed heart of North Indian hospitality.', img: "{{ asset('images/milestones/milestone-2024.jpg') }}", caption: '2024 — 10K Celebrations' },
+        { year: '2026', title: 'Vision 2026: Conquering All of UP', desc: 'The story reaches its grandest chapter yet. In 2026 and beyond, our goal is to conquer the culinary landscape of all 75 districts of Uttar Pradesh — establishing S. Caterers as the ultimate statewide benchmark for luxury pure-veg dining.', img: "{{ asset('images/milestones/milestone-2026.jpg') }}", caption: '2026 — Vision for UP' }
       ];
 
       const book         = document.getElementById('milestones-book');
