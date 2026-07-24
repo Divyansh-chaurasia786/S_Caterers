@@ -673,50 +673,64 @@
         z-index: 10 !important;
       }
       .inquiry-form-box {
-        padding: 24px 16px !important;
+        padding: 24px 18px !important;
         background: var(--ivory) !important;
         border: 1px solid var(--gold-line) !important;
-        border-radius: 24px !important;
+        border-radius: 20px !important;
         max-width: 100% !important;
+        box-shadow: 0 8px 24px rgba(32, 28, 26, 0.05) !important;
       }
       .inquiry-form-box .text-center.mb-5 {
-        margin-bottom: 20px !important;
+        margin-bottom: 24px !important;
       }
       .inquiry-form-box h2.section-title {
-        font-size: 24px !important;
+        font-size: 22px !important;
         margin-bottom: 6px !important;
       }
       .inquiry-form-box p.text-muted {
         font-size: 13px !important;
-        line-height: 1.4 !important;
+        line-height: 1.5 !important;
         margin-bottom: 0 !important;
       }
       .form-group-custom {
-        margin-bottom: 0 !important;
+        margin-bottom: 16px !important;
       }
       .form-group-custom label {
+        display: block !important;
         font-size: 11px !important;
-        margin-bottom: 4px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.06em !important;
+        margin-bottom: 6px !important;
+        color: var(--wine) !important;
       }
       .form-group-custom input:not([type="checkbox"]),
       .form-group-custom select,
       .form-group-custom textarea {
-        height: 44px !important;
+        height: 46px !important;
         font-size: 14px !important;
-        padding: 8px 12px !important;
-        margin-bottom: 12px !important;
-        border-radius: 8px !important;
-        border: 1px solid #E6D8C3 !important;
+        padding: 10px 14px !important;
+        margin-bottom: 0 !important;
+        border-radius: 10px !important;
+        border: 1.5px solid #E6D8C3 !important;
         width: 100% !important;
         box-sizing: border-box !important;
         background: #FFFFFF !important;
       }
+      .form-group-custom select {
+        background-image: url("data:image/svg+xml;utf8,<svg fill='%236E1423' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 10px center !important;
+        background-size: 18px !important;
+        padding-right: 32px !important;
+      }
       .form-group-custom textarea {
-        height: 80px !important;
+        height: 90px !important;
+        padding: 10px 14px !important;
       }
       .form-group-custom input[type="checkbox"] {
         width: 18px !important;
         height: 18px !important;
+        margin-top: 3px !important;
         margin-bottom: 0 !important;
         padding: 0 !important;
         background: transparent !important;
@@ -725,30 +739,42 @@
       }
       .side-by-side-row {
         display: flex !important;
-        gap: 10px !important;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        margin-bottom: 16px !important;
       }
       .side-by-side-row > div {
-        flex: 1 !important;
+        flex: 1 1 calc(50% - 6px) !important;
+        min-width: 130px !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      .addon-toggle-header {
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+      }
+      .addon-chip span {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
       }
       #inquiry button[type="submit"] {
         background: #25D366 !important;
         color: #FFF !important;
         font-weight: 700 !important;
-        height: 48px !important;
-        border-radius: 24px !important;
-        font-size: 14px !important;
+        height: 50px !important;
+        border-radius: 12px !important;
+        font-size: 15px !important;
         border: none !important;
-        margin-top: 12px !important;
-        padding: 0 !important;
+        margin-top: 14px !important;
+        padding: 0 16px !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         width: 100% !important;
-        box-shadow: none !important;
+        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25) !important;
       }
       /* Horizontally scrollable tabs with hidden scrollbar */
       .menu-tabs {
@@ -1347,9 +1373,9 @@
             </div>
           </div>
 
-          <div class="form-group-custom d-flex align-items-center gap-2 mb-4">
-            <input type="checkbox" name="customization" id="inq-customization" value="Yes" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--wine);">
-            <label for="inq-customization" style="margin-bottom: 0; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--charcoal); text-transform: none; letter-spacing: normal;">I would like to customize my package menu / add custom counters</label>
+          <div class="form-group-custom d-flex align-items-start gap-2 mb-4">
+            <input type="checkbox" name="customization" id="inq-customization" value="Yes" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--wine); margin-top: 3px;">
+            <label for="inq-customization" style="margin-bottom: 0; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--charcoal); text-transform: none; letter-spacing: normal; line-height: 1.4;">I would like to customize my package menu / add custom counters</label>
           </div>
 
           <div class="text-center mb-3">
