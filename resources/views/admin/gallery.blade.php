@@ -505,6 +505,34 @@
       border-color: #DC3545;
     }
 
+    /* Hide card selection checkboxes by default */
+    .media-select-checkbox {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 20;
+      transform: scale(1.35);
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      border: 2px solid #fff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.2s ease;
+    }
+
+    /* Reveal checkboxes when selection mode active, checked, or hovered */
+    body.selection-mode-active .media-select-checkbox,
+    .media-select-checkbox:checked,
+    .gallery-grid-card:hover .media-select-checkbox {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .gallery-grid-card.selecting {
+      transform: scale(0.97) !important;
+      border: 2px solid var(--admin-gold) !important;
+    }
+
     /* Floating Sticky Bulk Action Bar */
     .floating-bulk-bar {
       position: fixed;
@@ -661,7 +689,7 @@
               <div style="width:{{ max(2, $pct) }}%;height:100%;background:{{ $barColor }};border-radius:6px;transition:width 0.6s ease;"></div>
             </div>
             <div style="display:flex;justify-content:space-between;width:100%;font-size:0.72rem;color:var(--admin-muted);">
-              <span><i class="fa-brands fa-cloudversify me-1" style="color:#6C47FF;"></i>{{ $ss['cloudinary_count'] }} cloud</span>
+              <span><i class="fa-solid fa-cloud me-1 text-gold"></i>{{ $ss['cloudinary_count'] }} assets</span>
               <span><i class="fa-solid fa-hard-drive me-1"></i>{{ $ss['local_count'] }} local</span>
               <span style="color:{{ $barColor }};font-weight:700;">{{ $pct }}%</span>
             </div>
@@ -757,7 +785,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-2" style="font-size: 0.75rem; color: var(--admin-muted);">
                   <span id="upload-progress-subtext">0 MB / 0 MB uploaded</span>
-                  <span><i class="fa-brands fa-cloudversify me-1" style="color:#6C47FF;"></i>Cloudinary API</span>
+                  <span><i class="fa-solid fa-shield-halved me-1 text-warning"></i>Protected Cloud Transfer</span>
                 </div>
               </div>
 
@@ -840,10 +868,9 @@
                       </div>
 
                       <div class="d-flex align-items-center gap-2" onclick="event.stopPropagation();">
-                        <!-- Section Checkbox on Folder Bar -->
-                        <label class="d-flex align-items-center gap-1 mb-0 py-1 px-2" style="font-size: 0.8rem; font-weight: 700; color: var(--admin-wine-dark); background: rgba(255,255,255,0.85); border-radius: 6px; border: 1px solid var(--admin-border); cursor: pointer;" title="Select all items in {{ $categoryName }}" onclick="event.stopPropagation();">
-                          <input type="checkbox" class="form-check-input folder-section-checkbox" id="folder-cb-{{ $catSlug }}" onchange="toggleFolderSection(this, '{{ $catSlug }}')" style="cursor: pointer; transform: scale(1.15);">
-                          <span class="d-none d-sm-inline">Select Section</span>
+                        <!-- Section Checkbox on Folder Bar (Clean Checkbox Only) -->
+                        <label class="d-flex align-items-center mb-0 p-1" style="color: var(--admin-wine-dark); background: rgba(255,255,255,0.85); border-radius: 6px; border: 1px solid var(--admin-border); cursor: pointer;" title="Select all items in {{ $categoryName }}" onclick="event.stopPropagation();">
+                          <input type="checkbox" class="form-check-input folder-section-checkbox" id="folder-cb-{{ $catSlug }}" onchange="toggleFolderSection(this, '{{ $catSlug }}')" style="cursor: pointer; transform: scale(1.25); margin: 0;">
                         </label>
 
                         <!-- Delete Folder Button -->
@@ -864,12 +891,9 @@
                               
                               <div class="card-thumb-wrap">
                                 <input type="checkbox" class="media-select-checkbox media-item-{{ $catSlug }} form-check-input" value="{{ $image->cloudinary_id ?? $image->id }}" data-category-slug="{{ $catSlug }}" onchange="updateFolderSelectionState('{{ $catSlug }}')" style="position: absolute; top: 10px; right: 10px; z-index: 20; transform: scale(1.35); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.4); border: 2px solid #fff;">
-                                <span class="category-badge-pill">
-                                  @if($image->is_video)
-                                    <i class="fa-solid fa-video me-1" style="color: var(--admin-gold);"></i>
-                                  @endif
-                                  {{ $image->category }}
-                                </span>
+                                @if($image->is_video)
+                                  <span class="badge position-absolute top-0 start-0 m-2 px-2 py-1 bg-dark bg-opacity-75 text-warning rounded-pill" style="font-size:0.68rem; z-index:5;"><i class="fa-solid fa-video me-1"></i> Video</span>
+                                @endif
                                 
                                 @if($image->is_video)
                                   <div class="position-relative w-100 h-100 bg-dark d-flex align-items-center justify-content-center">
@@ -904,7 +928,7 @@
                                     {{ $image->title }}
                                   </div>
                                   <div class="card-photo-meta d-flex align-items-center justify-content-between">
-                                    <span><i class="fa-regular fa-hard-drive me-1"></i> {{ $image->is_video ? 'Video Clip' : ($image->is_local ? 'Uploaded' : 'Preset') }}</span>
+                                    <span><i class="fa-solid fa-folder-open me-1 text-warning"></i> {{ $image->category }}</span>
                                     <span>#{{ $image->id }}</span>
                                   </div>
                                 </div>
@@ -947,12 +971,9 @@
                       <div class="gallery-grid-card">
                         
                         <div class="card-thumb-wrap">
-                          <span class="category-badge-pill">
-                            @if($image->is_video)
-                              <i class="fa-solid fa-video me-1" style="color: var(--admin-gold);"></i>
-                            @endif
-                            {{ $image->category }}
-                          </span>
+                          @if($image->is_video)
+                            <span class="badge position-absolute top-0 start-0 m-2 px-2 py-1 bg-dark bg-opacity-75 text-warning rounded-pill" style="font-size:0.68rem; z-index:5;"><i class="fa-solid fa-video me-1"></i> Video</span>
+                          @endif
 
                           @if($image->is_video)
                             <div class="position-relative w-100 h-100 bg-dark d-flex align-items-center justify-content-center">
@@ -987,7 +1008,7 @@
                               {{ $image->title }}
                             </div>
                             <div class="card-photo-meta d-flex align-items-center justify-content-between">
-                              <span><i class="fa-regular fa-hard-drive me-1"></i> {{ $image->is_video ? 'Video Clip' : ($image->is_local ? 'Uploaded' : 'Preset') }}</span>
+                              <span><i class="fa-solid fa-folder-open me-1 text-warning"></i> {{ $image->category }}</span>
                               <span>#{{ $image->id }}</span>
                             </div>
                           </div>
@@ -1294,6 +1315,12 @@
         fileSizeText.textContent = (file.size / (1024 * 1024)).toFixed(2) + ' MB';
         
         const isVideo = file.type.startsWith('video/') || ['mp4', 'mov', 'webm', 'mkv', 'avi'].some(ext => file.name.toLowerCase().endsWith('.' + ext));
+
+        // Auto-assign folder category if empty
+        const catSelect = document.getElementById('category-select');
+        if (catSelect && (!catSelect.value || catSelect.value === '')) {
+          catSelect.value = isVideo ? 'Event Videos' : 'Event Photos';
+        }
 
         if (isVideo) {
           previewWrap.innerHTML = `<video src="${URL.createObjectURL(file)}" class="file-preview-img" muted playsinline autoplay loop></video>`;
@@ -1697,6 +1724,12 @@
       if (btnDeleteSelected) {
         btnDeleteSelected.style.display = count > 0 ? 'inline-block' : 'none';
       }
+
+      if (count > 0) {
+        document.body.classList.add('selection-mode-active');
+      } else {
+        document.body.classList.remove('selection-mode-active');
+      }
     }
 
     function toggleSelectAll(masterCheckbox) {
@@ -1751,7 +1784,7 @@
     }
 
     async function deleteAllMedia() {
-      if (!confirm('⚠️ WARNING: Are you sure you want to DELETE ALL MEDIA (photos & videos) from your gallery? This will permanently remove all files from Cloudinary storage!')) {
+      if (!confirm('⚠️ WARNING: Are you sure you want to DELETE ALL MEDIA (photos & videos) from your gallery? This will permanently remove all files from cloud storage!')) {
         return;
       }
 
@@ -1794,16 +1827,44 @@
       updateSelectionState();
     }
 
-    // 11. Auto-open login modal if not authenticated
-    @if(!empty($showLoginModal))
+    // 12. Press & Hold (Long-press 500ms gesture) to Activate Card Selection Mode
     document.addEventListener('DOMContentLoaded', function() {
-      const loginModalEl = document.getElementById('adminLoginModal');
-      if (loginModalEl) {
-        const loginModal = new bootstrap.Modal(loginModalEl, { backdrop: 'static', keyboard: false });
-        loginModal.show();
-      }
+      const cards = document.querySelectorAll('.gallery-grid-card');
+
+      cards.forEach(card => {
+        let pressTimer = null;
+
+        const startPress = (e) => {
+          if (e.target.closest('.card-action-row') || e.target.closest('.media-select-checkbox')) return;
+          
+          card.classList.add('selecting');
+          pressTimer = setTimeout(() => {
+            document.body.classList.add('selection-mode-active');
+            const checkbox = card.querySelector('.media-select-checkbox');
+            if (checkbox) {
+              checkbox.checked = !checkbox.checked;
+              const catSlug = checkbox.getAttribute('data-category-slug');
+              if (catSlug) updateFolderSelectionState(catSlug);
+              else updateSelectionState();
+            }
+            card.classList.remove('selecting');
+          }, 500);
+        };
+
+        const cancelPress = () => {
+          clearTimeout(pressTimer);
+          card.classList.remove('selecting');
+        };
+
+        card.addEventListener('mousedown', startPress);
+        card.addEventListener('touchstart', startPress, { passive: true });
+
+        card.addEventListener('mouseup', cancelPress);
+        card.addEventListener('mouseleave', cancelPress);
+        card.addEventListener('touchend', cancelPress);
+        card.addEventListener('touchcancel', cancelPress);
+      });
     });
-    @endif
   </script>
 
 </body>
