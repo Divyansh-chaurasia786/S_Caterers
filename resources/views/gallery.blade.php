@@ -194,7 +194,7 @@
       justify-content: center;
       opacity: 0;
       transition: opacity 0.3s ease;
-      padding: 20px;
+      padding: 15px;
     }
 
     .lightbox-modal.show {
@@ -205,54 +205,83 @@
     .lightbox-content {
       position: relative;
       max-width: 90vw;
-      max-height: 80vh;
-      border-radius: 12px;
+      max-height: 85vh;
+      border-radius: 14px;
       overflow: hidden;
       border: 3px solid var(--gold);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
       transform: scale(0.9);
       transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+      display: flex;
+      flex-direction: column;
+      background: #000000;
+      width: auto;
     }
 
     .lightbox-modal.show .lightbox-content {
       transform: scale(1);
     }
 
-    .lightbox-content img {
+    #lightboxMediaContainer {
+      position: relative;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000000;
+      overflow: hidden;
+      max-height: calc(85vh - 50px);
+    }
+
+    #lightboxMediaContainer img,
+    #lightboxMediaContainer video {
       max-width: 100%;
-      max-height: 80vh;
+      max-height: calc(85vh - 50px);
       display: block;
       object-fit: contain;
+      margin: 0 auto;
     }
 
     .lightbox-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(110, 20, 35, 0.9);
+      position: relative;
+      flex: 0 0 auto;
+      background: rgba(110, 20, 35, 0.98);
       color: #FFFFFF;
-      padding: 12px;
+      padding: 10px 16px;
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       font-family: var(--font-heading);
+      border-top: 1px solid var(--gold-line);
+      width: 100%;
+      z-index: 10;
+      box-sizing: border-box;
     }
 
     .lightbox-close {
       position: absolute;
-      top: -45px;
-      right: 0;
+      top: 12px;
+      right: 12px;
       color: #FFFFFF;
-      font-size: 2rem;
-      background: none;
-      border: none;
+      font-size: 1.2rem;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
-      transition: color 0.3s ease;
+      z-index: 30;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     .lightbox-close:hover {
       color: var(--gold);
+      background: rgba(110, 20, 35, 0.9);
+      transform: scale(1.1);
     }
 
     @media (max-width: 768px) {
@@ -546,13 +575,13 @@
       if (modal && mediaContainer) {
         if (isVideo) {
           const cleanSrc = mediaSrc.split('#')[0];
-          mediaContainer.innerHTML = `<video src="${cleanSrc}" controls autoplay playsinline style="max-width: 100%; max-height: 80vh; display: block; object-fit: contain;"></video>`;
+          mediaContainer.innerHTML = `<video src="${cleanSrc}" controls autoplay playsinline controlsList="nodownload" style="max-width: 100%; max-height: calc(85vh - 50px); display: block; object-fit: contain; margin: 0 auto; outline: none; z-index: 1;"></video>`;
           const vidEl = mediaContainer.querySelector('video');
           if (vidEl) {
             vidEl.play().catch(function(){});
           }
         } else {
-          mediaContainer.innerHTML = `<img id="lightboxImg" src="${mediaSrc}" alt="${title}" style="max-width: 100%; max-height: 80vh; display: block; object-fit: contain;">`;
+          mediaContainer.innerHTML = `<img id="lightboxImg" src="${mediaSrc}" alt="${title}" style="max-width: 100%; max-height: calc(85vh - 50px); display: block; object-fit: contain; margin: 0 auto;">`;
         }
 
         modalCaption.textContent = title;
