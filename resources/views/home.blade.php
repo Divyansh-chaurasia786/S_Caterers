@@ -322,7 +322,7 @@
           <div class="col-12 col-lg-6 text-center">
             <div class="event-frame-wrap">
               <div class="event-frame-inner">
-                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Grand Wedding Buffet">
+                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Weddings">
               </div>
             </div>
           </div>
@@ -341,7 +341,7 @@
           <div class="col-12 col-lg-6 text-center">
             <div class="event-frame-wrap">
               <div class="event-frame-inner">
-                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Event Service in Action">
+                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Corporate Galas">
               </div>
             </div>
           </div>
@@ -382,7 +382,7 @@
           <div class="col-12">
             <div class="occasion-card">
               <div class="occasion-img-wrap">
-                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Grand Wedding Buffet">
+                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Weddings">
               </div>
               <div class="occasion-content">
                 <span class="event-tag-pill">Grand Scale</span>
@@ -396,7 +396,7 @@
           <div class="col-12">
             <div class="occasion-card">
               <div class="occasion-img-wrap">
-                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Event Service in Action">
+                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Corporate Galas">
               </div>
               <div class="occasion-content">
                 <span class="event-tag-pill">Corporate</span>
