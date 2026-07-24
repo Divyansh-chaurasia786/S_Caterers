@@ -969,7 +969,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
-              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Craft Bar Lounge" loading="lazy">
+              <img src="{{ asset('images/bar-lounge.jpg') }}" alt="Craft Bar Lounge" loading="lazy">
             </div>
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-martini-glass-citrus"></i></div>
@@ -993,18 +993,18 @@
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
-              <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=800&q=80" alt="Live Juice Counter" loading="lazy">
+              <img src="{{ asset('images/juice-counter.jpg') }}" alt="Live Juice Counter" loading="lazy">
             </div>
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-lemon"></i></div>
               <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Live Juice Counter</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Freshly pressed organic fruit juices, live sugarcane extraction, tender coconut water, and botanical detox blends.</p>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Pure, natural &amp; refreshing cold-pressed fruit juices, signature herb infusions, and live gourmet dispensers served in a grand fairy-lit floral setup.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>100% Organic Cold-Pressed Fruit Juices</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Live Fresh Sugarcane &amp; Tender Coconut Counter</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Exotic Tropical &amp; Ayurvedic Detox Blends</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Eco-Friendly Bamboo Setup &amp; Gilded Straws</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Pure Fruit Juices:</strong> Fresh Orange, Kiwi, Watermelon, Pineapple &amp; Kala Khatta</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Specialty Infusions:</strong> Lemon Mint &amp; Botanical Refreshers</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Live Beverage Gallery:</strong> Hygienic Glass Dispensers &amp; Custom Sips</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Luxury Setup:</strong> Backlit Fretwork Counter with Warm Fairy Lights &amp; Floral Decor</span></li>
             </ul>
             <div class="mt-auto">
               <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Live Juice Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Juice Counter</a>
