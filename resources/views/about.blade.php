@@ -84,7 +84,7 @@
         <div class="col-12 col-lg-5 text-center">
           <div class="event-frame-wrap" style="width: 330px; height: 440px;">
             <div class="event-frame-inner">
-              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=600&auto=format&fit=cover" alt="Amit Agarwal">
+              <img src="{{ asset('images/founder.jpg') }}" alt="Amit Agarwal - Founder & CEO S. Caterers">
             </div>
           </div>
         </div>
