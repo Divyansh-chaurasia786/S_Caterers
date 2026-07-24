@@ -3152,11 +3152,9 @@ footer a:hover {
 .service-card, 
 .gallery-grid-card, 
 .admin-card, 
-.contact-info-card, 
 .stat-card, 
 .feature-card, 
 .info-card, 
-.contact-detail-item, 
 .category-accordion-item,
 .card {
   box-shadow: 0 16px 36px rgba(42, 27, 18, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
@@ -3167,7 +3165,6 @@ footer a:hover {
 .service-card:hover, 
 .gallery-grid-card:hover, 
 .admin-card:hover, 
-.contact-info-card:hover, 
 .stat-card:hover, 
 .feature-card:hover, 
 .info-card:hover, 
@@ -3175,5 +3172,21 @@ footer a:hover {
 .card:hover {
   transform: translateY(-8px) !important;
   box-shadow: 0 26px 52px rgba(42, 27, 18, 0.2), 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Explicitly disable all box shadows on Contact Page cards */
+.contact-info-card,
+.contact-form-card,
+.contact-detail-item,
+.contact-info-card-custom {
+  box-shadow: none !important;
+  transform: none !important;
+}
+.contact-info-card:hover,
+.contact-form-card:hover,
+.contact-detail-item:hover,
+.contact-info-card-custom:hover {
+  box-shadow: none !important;
+  transform: none !important;
 }
 

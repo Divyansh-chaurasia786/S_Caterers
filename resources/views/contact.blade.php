@@ -85,7 +85,7 @@
       border: 1px solid var(--gold-line);
       border-radius: 18px;
       padding: 2.5rem;
-      box-shadow: 0 8px 30px rgba(32, 28, 26, 0.04);
+      box-shadow: none !important;
       height: 100%;
     }
     
@@ -94,6 +94,7 @@
       align-items: flex-start;
       gap: 20px;
       margin-bottom: 2rem;
+      box-shadow: none !important;
     }
     
     .contact-detail-item:last-child {
@@ -112,6 +113,7 @@
       font-size: 1.25rem;
       color: var(--wine);
       flex-shrink: 0;
+      box-shadow: none !important;
     }
     
     .contact-text-box h4 {
@@ -143,7 +145,7 @@
       border: 1px solid var(--gold-line);
       border-radius: 18px;
       padding: 2.5rem;
-      box-shadow: 0 8px 30px rgba(32, 28, 26, 0.04);
+      box-shadow: none !important;
     }
     
     .form-group-custom {
