@@ -1304,7 +1304,7 @@
 
           <div class="form-group-custom">
             <label for="inq-notes">Special Dietary Requests &amp; Notes <span style="font-size:0.75rem;color:#999;font-weight:500;">(Optional)</span></label>
-            <textarea name="notes" id="inq-notes" rows="4" placeholder="Mention any specific requirements (e.g. 100% Satvik / Jain kitchen segregation, custom uniform theme, live teppanyaki preferences)..."></textarea>
+            <textarea name="notes" id="inq-notes" rows="4" placeholder="Mention any specific requirements (e.g. 100% Satvik / Jain dietary requirements, custom uniform theme, live teppanyaki preferences)..."></textarea>
           </div>
 
           <!-- Add-on Services Section -->

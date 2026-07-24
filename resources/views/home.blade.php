@@ -109,7 +109,7 @@
             </div>
             <div>
               <div class="title">Our Promise</div>
-              <div class="desc">100% Pure Veg Kitchen</div>
+              <div class="desc">100% Pure Veg Catering</div>
             </div>
           </div>
         </div>
@@ -434,7 +434,7 @@
         <span class="eyebrow">Our Legacy</span>
         <h2 class="section-title mt-2 mb-3">Serving Exquisite Tastes Since <span class="accent">1998</span></h2>
         <p class="lead-copy mx-auto" style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); max-width: 650px;">
-          What started as a beloved local kitchen in Lucknow has grown into a statewide premium service. Discover our 28-year journey of culinary devotion, our strict 100% vegetarian sanitation standards, and our recent expansion to serve grand celebrations across the entire state of Uttar Pradesh.
+          What started as a beloved local catering business in Lucknow has grown into a statewide premium service. Discover our 28-year journey of culinary devotion, our strict 100% vegetarian sanitation standards, and our recent expansion to serve grand celebrations across the entire state of Uttar Pradesh.
         </p>
         <div class="mt-4">
           <a href="{{ route('about') }}" class="btn-gold">Read Our Story & Standards</a>

@@ -71,7 +71,7 @@
             Welcome to S. Caterers. When I decided to establish this business in Lucknow in 1998, my goal was simple yet unwavering: to offer the families of Lucknow a catering experience that is as pure as it is delicious.
           </p>
           <p class="event-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft);">
-            For us, catering is not a transaction; it is a sacred act of hospitality. S. Caterers stands as a pledge to absolute vegetarian integrity. We have built custom segregated kitchens, sourced local fresh farm products, and trained our servers to serve with unmatched warmth and respect.
+            For us, catering is not a transaction; it is a sacred act of hospitality. S. Caterers stands as a pledge to absolute vegetarian integrity. We enforce strict pure-vegetarian preparation protocols, source local fresh farm products, and train our servers to serve with unmatched warmth and respect.
           </p>
           <p class="event-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); font-weight: 500;">
             Today, as we open our doors to serve grand destination weddings and celebrations across the entire state of Uttar Pradesh, our devotion remains the same.
@@ -109,8 +109,8 @@
             <div class="pkg-icon" style="font-size: 2.2rem; color: var(--wine); margin-bottom: 1.5rem;">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h3 class="pkg-title" style="font-size: 1.3rem; margin-bottom: 1rem;">100% Segregated Kitchens</h3>
-            <p class="pkg-desc" style="font-size: 0.92rem; line-height: 1.6;">We guarantee absolute spiritual purity. Our modern facility is strictly vegetarian, meaning no meat, seafood, or egg products ever cross our thresholds.</p>
+            <h3 class="pkg-title" style="font-size: 1.3rem; margin-bottom: 1rem;">100% Pure Veg Integrity</h3>
+            <p class="pkg-desc" style="font-size: 0.92rem; line-height: 1.6;">We guarantee absolute spiritual purity. Our catering operations are strictly vegetarian, meaning no meat, seafood, or egg products ever touch our preparation systems.</p>
           </div>
         </div>
 
@@ -188,7 +188,7 @@
                 <div class="book-chapter-label">The Story</div>
                 <div class="book-year-display" id="book-year-display">1998</div>
                 <h3 class="book-title" id="book-title">The Seed of a Dream</h3>
-                <p class="book-desc" id="book-desc">Amit Agarwal establishes S. Caterers with a humble kitchen, deep local ties, and a burning passion to serve authentic Lakhnavi vegetarian delicacies to family gatherings and social circles.</p>
+                <p class="book-desc" id="book-desc">Amit Agarwal decides to establish S. Caterers in Lucknow with deep local ties and a burning passion to serve authentic Lakhnavi vegetarian delicacies to family gatherings and social circles.</p>
                 <div class="book-page-number">Page 1 / 12</div>
               </div>
             </div>
@@ -510,18 +510,18 @@
     <div class="container">
       <div class="section-title-wrap text-center mb-5">
         <span class="eyebrow">GALLERY</span>
-        <h2 class="section-title">Our Kitchen &amp; <span class="accent">Service Craft</span></h2>
-        <p class="text-muted mx-auto" style="max-width: 600px; margin-top: 0.5rem;">A visual journey behind the scenes of our premium catering operations, high-end presentation standards, and pristine kitchens.</p>
+        <h2 class="section-title">Our Live Culinary &amp; <span class="accent">Service Craft</span></h2>
+        <p class="text-muted mx-auto" style="max-width: 600px; margin-top: 0.5rem;">A visual journey behind the scenes of our premium catering operations, high-end presentation standards, and live gourmet setups.</p>
       </div>
 
       <div class="row g-4 mobile-swipe-deck" id="about-gallery-swipe-deck">
         <!-- Gallery Item 1 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Pristine Kitchen Preparation" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Live Gourmet Preparation" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
-              <span>Pristine Kitchen Setup</span>
+              <span>Live Gourmet Setup</span>
             </div>
           </div>
         </div>

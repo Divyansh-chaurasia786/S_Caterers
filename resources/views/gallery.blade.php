@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | S. Caterers - Pure Vegetarian Premium Catering</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore the portfolio of S. Caterers by Amit Agarwal. Browse high-resolution photos of our signature wedding buffet setups, luxury live counters, pristine kitchens, and fine-dine presentation.">
+  <meta name="description" content="Explore the portfolio of S. Caterers by Amit Agarwal. Browse high-resolution photos of our signature wedding buffet setups, luxury live counters, live gourmet prep, and fine-dine presentation.">
   <meta name="keywords" content="S. Caterers Gallery, Wedding Catering Photos, Lucknow Catering Portfolio, Food Presentation, Catering Setup Lucknow">
   <meta name="author" content="Amit Agarwal">
 
@@ -324,7 +323,7 @@
     <div class="container">
       <span class="eyebrow">OUR CATERING PORTFOLIO</span>
       <h1>Captured <span>Moments</span></h1>
-      <p>Explore our premium catering portfolio—showcasing grand wedding setups, luxury live counters, pristine kitchens, and masterfully plated cuisines across Uttar Pradesh.</p>
+      <p>Explore our premium catering portfolio—showcasing grand wedding setups, luxury live counters, live culinary prep, and masterfully plated cuisines across Uttar Pradesh.</p>
     </div>
   </section>
 

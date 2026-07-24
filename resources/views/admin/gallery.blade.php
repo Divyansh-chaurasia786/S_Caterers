@@ -725,13 +725,13 @@
                   <option value="Grand Weddings">Grand Weddings</option>
                   <option value="Live Counters">Live Counters</option>
                   <option value="Cuisine &amp; Plating">Cuisine &amp; Plating</option>
-                  <option value="Pristine Kitchens">Pristine Kitchens</option>
+                  <option value="Culinary Crafts">Culinary Crafts</option>
                   <option value="Event Photos">Event Photos</option>
                   <option value="Event Videos">Event Videos</option>
                   
                   <!-- Custom categories from DB -->
                   @foreach($categories as $cat)
-                    @if(!in_array($cat, ['Grand Weddings', 'Live Counters', 'Cuisine & Plating', 'Pristine Kitchens', 'Event Photos', 'Event Videos']))
+                    @if(!in_array($cat, ['Grand Weddings', 'Live Counters', 'Cuisine & Plating', 'Culinary Crafts', 'Event Photos', 'Event Videos']))
                       <option value="{{ $cat }}">{{ $cat }}</option>
                     @endif
                   @endforeach
@@ -1135,12 +1135,12 @@
                 <option value="Grand Weddings">Grand Weddings</option>
                 <option value="Live Counters">Live Counters</option>
                 <option value="Cuisine &amp; Plating">Cuisine &amp; Plating</option>
-                <option value="Pristine Kitchens">Pristine Kitchens</option>
+                <option value="Culinary Crafts">Culinary Crafts</option>
                 <option value="Event Photos">Event Photos</option>
                 <option value="Event Videos">Event Videos</option>
                 
                 @foreach($categories as $cat)
-                  @if(!in_array($cat, ['Grand Weddings', 'Live Counters', 'Cuisine & Plating', 'Pristine Kitchens', 'Event Photos', 'Event Videos']))
+                  @if(!in_array($cat, ['Grand Weddings', 'Live Counters', 'Cuisine & Plating', 'Culinary Crafts', 'Event Photos', 'Event Videos']))
                     <option value="{{ $cat }}">{{ $cat }}</option>
                   @endif
                 @endforeach
