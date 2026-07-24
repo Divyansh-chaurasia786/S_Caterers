@@ -292,7 +292,7 @@
           <li class="nav-item"><a class="nav-link nav-link-custom active" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20connect%20with%20Amit%20Agarwal%20and%20team%20for%20event%20catering." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+          <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20connect%20with%20Amit%20Agarwal%20and%20team%20for%20event%20catering." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -314,7 +314,7 @@
         <!-- Contact Information Cards -->
         <div class="col-lg-5">
           <div class="contact-info-card">
-            <h3 class="font-display mb-4" style="font-weight: 700; color: var(--wine);">Our Office &amp; Kitchen</h3>
+            <h3 class="font-display mb-4" style="font-weight: 700; color: var(--wine);">Our Main Office</h3>
             <p class="text-muted mb-4" style="font-size: 0.92rem;">Feel free to reach out to us directly via phone, email, or WhatsApp, or drop us a message using the form. We are active 24x7 to manage and plan events.</p>
             
             <div class="contact-detail-item">
@@ -322,8 +322,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div class="contact-text-box">
-                <h4>Main Office &amp; Kitchen</h4>
-                <p>Keshav Nagar, Sitapur Road,<br>Lucknow, Uttar Pradesh, India</p>
+                <h4>Main Office</h4>
+                <p>Sachan Complex, Chungi, Krishna Nagar,<br>Lucknow, Uttar Pradesh</p>
               </div>
             </div>
 
@@ -334,8 +334,7 @@
               <div class="contact-text-box">
                 <h4>Call or WhatsApp Us</h4>
                 <p>
-                  <a href="tel:+919839077960">+91 98390 77960</a> (Primary)<br>
-                  <a href="tel:+919415788950">+91 94157 88950</a>
+                  <a href="https://wa.me/916393998141" target="_blank">+91 63939 98141</a>
                 </p>
               </div>
             </div>
@@ -347,8 +346,7 @@
               <div class="contact-text-box">
                 <h4>Email Support</h4>
                 <p>
-                  <a href="mailto:scatererslko@gmail.com">scatererslko@gmail.com</a><br>
-                  <a href="mailto:amit1881970@yahoo.in">amit1881970@yahoo.in</a>
+                  <a href="mailto:scatererslko@gmail.com">scatererslko@gmail.com</a>
                 </p>
               </div>
             </div>
@@ -393,7 +391,7 @@
               <div class="row">
                 <div class="col-md-6 form-group-custom">
                   <label for="c-phone">Phone Number</label>
-                  <input type="text" name="phone" id="c-phone" placeholder="e.g. +91 98390 77960" required>
+                  <input type="text" name="phone" id="c-phone" placeholder="e.g. +91 63939 98141" required>
                 </div>
                 <div class="col-md-6 form-group-custom">
                   <label for="c-subject">Subject</label>
@@ -467,17 +465,17 @@
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a>
+              <a href="https://maps.google.com/?q=Sachan+Complex,+Chungi,+Krishna+Nagar,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Sachan Complex, Chungi, Krishna Nagar, Lucknow, UP</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>
+              <a href="tel:+916393998141" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a>
+              <a href="tel:+916393998141" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
@@ -528,7 +526,7 @@
                       `*Message:* ${message}\n\n` +
                       `*(Note: Final pricing depends on menu selections and mutual discussion)*`;
                       
-          const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
+          const waUrl = `https://wa.me/916393998141?text=${encodeURIComponent(msg)}`;
           
           window.open(waUrl, '_blank');
           
@@ -542,14 +540,14 @@
                       `*Phone:* ${phone}\n` +
                       `*Subject:* ${subject}\n` +
                       `*Message:* ${message}`;
-          const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
+          const waUrl = `https://wa.me/916393998141?text=${encodeURIComponent(msg)}`;
           window.open(waUrl, '_blank');
         });
       });
     }
   </script>
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 

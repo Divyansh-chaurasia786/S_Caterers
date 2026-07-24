@@ -68,7 +68,7 @@
           <span class="eyebrow">The Visionary</span>
           <h2 class="section-title mt-2 mb-4">Letter from the <span class="accent">Founder</span></h2>
           <p class="event-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft);">
-            Welcome to S. Caterers. When I established this company on Sitapur Road in 1998, my goal was simple yet unwavering: to offer the families of Lucknow a catering experience that is as pure as it is delicious.
+            Welcome to S. Caterers. When I decided to establish this business in Lucknow in 1998, my goal was simple yet unwavering: to offer the families of Lucknow a catering experience that is as pure as it is delicious.
           </p>
           <p class="event-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft);">
             For us, catering is not a transaction; it is a sacred act of hospitality. S. Caterers stands as a pledge to absolute vegetarian integrity. We have built custom segregated kitchens, sourced local fresh farm products, and trained our servers to serve with unmatched warmth and respect.
@@ -252,8 +252,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">1998</div>
-                <h3 class="journey-title">The Seed of a Dream</h3>
-                <p class="journey-desc">Amit Agarwal establishes S. Caterers with a humble kitchen, deep local ties, and a burning passion to serve authentic Lakhnavi vegetarian delicacies to family gatherings and social circles.</p>
+                <h3 class="journey-title">The Secret &amp; The Spark</h3>
+                <p class="journey-desc">When Amit Agarwal set out in Lucknow in 1998, no one anticipated the culinary storm to follow. Armed only with secret family spice blends and an unwavering vow of vegetarian purity, S. Caterers took its very first step into royal dining.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -271,9 +271,9 @@
           <div class="row align-items-center g-5">
             <div class="col-lg-7">
               <div class="journey-text-panel">
-                <div class="journey-year-badge">1998</div>
-                <h3 class="journey-title">First Grand Wedding</h3>
-                <p class="journey-desc">S. Caterers successfully caters their first major wedding of 500+ guests. The flawless presentation and exquisite food taste set a new benchmark for wedding catering in Lucknow.</p>
+                <div class="journey-year-badge">2000</div>
+                <h3 class="journey-title">The High-Stakes Feast</h3>
+                <p class="journey-desc">A high-stakes challenge arrived: catering a grand royal wedding of over 500 elite guests. Under immense pressure, the flavors captivated every palate, overnight turning a local name into Lucknow's most talked-about culinary secret.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -292,8 +292,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2001</div>
-                <h3 class="journey-title">The Chaat Revolution</h3>
-                <p class="journey-desc">We introduce live Lakhnavi street food and premium chaat counters. Offering a gourmet spin on traditional street food, these live displays quickly became a signature feature at every event.</p>
+                <h3 class="journey-title">Unlocking Royal Street Flavors</h3>
+                <p class="journey-desc">Daring to break tradition, S. Caterers introduced live Lakhnavi chaat galleries to high-profile banquets. The aroma of sizzled spices and theatrical live cooking transformed ordinary wedding dinners into unforgettable gastronomic spectacles.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -312,8 +312,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2005</div>
-                <h3 class="journey-title">100% Pure Veg Commitment</h3>
-                <p class="journey-desc">Making a landmark decision, S. Caterers commits to being a strictly vegetarian company. We pledge to run a completely segregated veg-only kitchen with no meat and no eggs ever.</p>
+                <h3 class="journey-title">The Uncompromising Vow</h3>
+                <p class="journey-desc">A defining turning point. In a market full of shortcuts, Amit Agarwal took a bold, non-negotiable oath: 100% pure vegetarian &amp; Satvik integrity. No meat, no eggs, no compromises — building trust that remains unshakeable to this day.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -332,8 +332,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2008</div>
-                <h3 class="journey-title">Expanding to Sitapur Road</h3>
-                <p class="journey-desc">To support growing demand, Amit Agarwal builds a new, modern central kitchen on Sitapur Road, Lucknow. This facility houses advanced sanitary machinery and dedicated prep bays.</p>
+                <h3 class="journey-title">Conquering Beyond Lucknow</h3>
+                <p class="journey-desc">Tales of royal taste could no longer be contained within one city. Demands poured in from Kanpur, Jhansi, Sitapur, Bahraich, and Lakhimpur as S. Caterers expanded its fleet to orchestrate mega celebrations across regional frontiers.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -352,8 +352,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2011</div>
-                <h3 class="journey-title">Satvik & Jain Specialization</h3>
-                <p class="journey-desc">We form a highly specialized culinary division dedicated to onion-free, garlic-free, and strict Satvik preparations, guaranteeing culinary satisfaction for all community events.</p>
+                <h3 class="journey-title">The Secret Satvik Mastery</h3>
+                <p class="journey-desc">Unlocking the delicate art of onion-free and garlic-free Satvik cuisine, S. Caterers pioneered a specialized culinary division, proving that sacred ancestral recipes could achieve 5-star fine-dining grandeur.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -372,8 +372,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2014</div>
-                <h3 class="journey-title">Introducing Global Cuisines</h3>
-                <p class="journey-desc">S. Caterers expands the menu by introducing authentic Italian, Continental, Chinese, and Thai menus, hiring specialty chefs to maintain taste authenticity for premium menus.</p>
+                <h3 class="journey-title">The Global Fusion Revelation</h3>
+                <p class="journey-desc">Fusing royal Lakhnavi heritage with international horizons, master chefs were brought in to introduce live artisanal Italian, Thai, and Continental galleries — creating a thrilling multi-cuisine symphony.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -392,8 +392,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2017</div>
-                <h3 class="journey-title">The Corporate Leap</h3>
-                <p class="journey-desc">Expanding corporate operations, we cater high-profile summits, industrial inaugurations, and elite business events, establishing a reputation for speed, safety, and scale.</p>
+                <h3 class="journey-title">The Corporate Conquest</h3>
+                <p class="journey-desc">Stepping onto the corporate stage, S. Caterers executed massive industrial inaugurations and high-profile summits with surgical precision, proving that scale, speed, and luxury could co-exist flawlessly.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -412,8 +412,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2020</div>
-                <h3 class="journey-title">Safety and Adaptation</h3>
-                <p class="journey-desc">During global health challenges, S. Caterers immediately shifts to contact-free catering and 5-star medical sanitation guidelines, demonstrating corporate agility and client care.</p>
+                <h3 class="journey-title">The Unshakable Shield</h3>
+                <p class="journey-desc">When global uncertainty halted the world, S. Caterers stood resilient — pioneering medical-grade sanitation protocols and zero-contact serving rituals to safeguard every host and guest without losing warmth.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -432,8 +432,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2022</div>
-                <h3 class="journey-title">Modern Culinary Plating</h3>
-                <p class="journey-desc">We introduce boutique catering aesthetics, featuring miniature appetizers, molecular gastronomy elements, and high-fashion food presentation that mirrors international dining styles.</p>
+                <h3 class="journey-title">High-Fashion Culinary Plating</h3>
+                <p class="journey-desc">Redefining how India views wedding buffets, we unveiled molecular gastronomy displays, gold-leaf presentation art, and luxury dessert galleries that left guests spellbound before the first bite.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -452,8 +452,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2024</div>
-                <h3 class="journey-title">10,000+ Events Served</h3>
-                <p class="journey-desc">We hit a monumental milestone of serving over 10,000 corporate, wedding, and social events since our inception, cementing our place in our community's celebrations.</p>
+                <h3 class="journey-title">The 10,000 Milestone Legend</h3>
+                <p class="journey-desc">A monumental triumph: 10,000+ legendary celebrations served. From royal weddings to executive galas, S. Caterers cemented its legacy as the undisputed heart of North Indian hospitality.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -472,8 +472,8 @@
             <div class="col-lg-7">
               <div class="journey-text-panel">
                 <div class="journey-year-badge">2026</div>
-                <h3 class="journey-title">Expanding Horizons: Serving All of Uttar Pradesh</h3>
-                <p class="journey-desc">Officially expanding our horizons beyond Lucknow, S. Caterers now opens booking operations to cater premium weddings, corporate summits, and grand galas across the entire state of Uttar Pradesh (UP).</p>
+                <h3 class="journey-title">Vision 2026: Conquering All of UP</h3>
+                <p class="journey-desc">The story reaches its grandest chapter yet. In 2026 and beyond, our goal is to conquer the culinary landscape of all 75 districts of Uttar Pradesh — establishing S. Caterers as the ultimate statewide benchmark for luxury pure-veg dining.</p>
               </div>
             </div>
             <div class="col-lg-5">
@@ -622,7 +622,7 @@
               </button>
               <div class="faq-panel">
                 <div class="pb-4">
-                  <p class="mb-0 text-muted">Yes, our boutique wing is built exactly for this! We coordinate themed layout setups (royal Lakhnavi, gold luxury, rustic fusion) and provide boutique uniform selections for our servers to match your overall event aesthetic.</p>
+                  <p class="mb-0 text-muted">Yes, our event catering team is built exactly for this! We coordinate themed layout setups (royal Lakhnavi, gold luxury, rustic fusion) and provide premium uniform selections for our servers to match your overall event aesthetic.</p>
                 </div>
               </div>
             </div>
@@ -642,10 +642,10 @@
         <span class="eyebrow" style="color: var(--wine);">Plan Your Celebration</span>
         <h2 class="section-title mt-2 mb-3" style="color: var(--charcoal);">Let's Craft an Exquisite Feast Together</h2>
         <p class="mx-auto mb-4" style="max-width: 550px; font-size: 1.02rem; line-height: 1.8; color: var(--ink-soft);">
-          Reach out to Amit Agarwal's boutique planning wing to customize your pure-veg menu and reserve your catering date anywhere in Uttar Pradesh.
+          Reach out to Amit Agarwal &amp; S. Caterers team to customize your pure-veg menu and reserve your catering date anywhere in Uttar Pradesh.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20read%20about%20your%2028-year%20legacy%20and%20would%20like%20to%20discuss%20catering%20for%20an%20upcoming%20event." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Us Now</a>
+          <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20read%20about%20your%2028-year%20legacy%20and%20would%20like%20to%20discuss%20catering%20for%20an%20upcoming%20event." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Us Now</a>
           <a href="{{ route('home') }}" class="btn-outline-wine">Back to Homepage</a>
         </div>
       </div>
@@ -692,17 +692,12 @@
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a>
+              <a href="https://maps.google.com/?q=Sachan+Complex,+Chungi,+Krishna+Nagar,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Sachan Complex, Chungi, Krishna Nagar, Lucknow, UP</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>
-            </p>
-            
-            <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a>
+              <a href="https://wa.me/916393998141" target="_blank" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
@@ -806,18 +801,18 @@
          3. DESKTOP 3D Heritage Book Page-Flip
       ========================================================= */
       const bookMilestones = [
-        { year: '1998', title: 'The Seed of a Dream',            desc: 'Amit Agarwal establishes S. Caterers with a humble kitchen, deep local ties, and a burning passion to serve authentic Lakhnavi vegetarian delicacies to family gatherings and social circles.', img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&h=500&q=80', caption: 'Est. 1998 — Lucknow' },
-        { year: '2000', title: 'First Grand Wedding',            desc: 'S. Caterers successfully caters their first major wedding of 500+ guests. The flawless presentation and exquisite food taste set a new benchmark for wedding catering in Lucknow.', img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&h=500&q=80', caption: '2000 — Grand Wedding' },
-        { year: '2001', title: 'The Chaat Revolution',           desc: 'We introduce live Lakhnavi street food and premium chaat counters. Offering a gourmet spin on traditional street food, these live displays quickly became a signature feature at every event.', img: 'https://images.unsplash.com/photo-1601050690597-df056fb49785?auto=format&fit=crop&w=600&h=500&q=80', caption: '2001 — Chaat Revolution' },
-        { year: '2005', title: '100% Pure Veg Commitment',       desc: 'Making a landmark decision, S. Caterers commits to being a strictly vegetarian company. We pledge to run a completely segregated veg-only kitchen with no meat and no eggs ever.', img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&h=500&q=80', caption: '2005 — Pure Veg Pledge' },
-        { year: '2008', title: 'Expanding to Sitapur Road',      desc: 'To support growing demand, Amit Agarwal builds a new, modern central kitchen on Sitapur Road, Lucknow. This facility houses advanced sanitary machinery and dedicated prep bays.', img: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&h=500&q=80', caption: '2008 — New Kitchen' },
-        { year: '2011', title: 'Satvik & Jain Specialization',   desc: 'We form a highly specialized culinary division dedicated to onion-free, garlic-free, and strict Satvik preparations, guaranteeing culinary satisfaction for all community events.', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&h=500&q=80', caption: '2011 — Satvik Division' },
-        { year: '2014', title: 'Introducing Global Cuisines',    desc: 'S. Caterers expands the menu by introducing authentic Italian, Continental, Chinese, and Thai menus, hiring specialty chefs to maintain taste authenticity for premium menus.', img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&h=500&q=80', caption: '2014 — Global Flavours' },
-        { year: '2017', title: 'The Corporate Leap',             desc: 'Expanding corporate operations, we cater high-profile summits, industrial inaugurations, and elite business events, establishing a reputation for speed, safety, and scale.', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&h=500&q=80', caption: '2017 — Corporate Catering' },
-        { year: '2020', title: 'Safety and Adaptation',          desc: 'During global health challenges, S. Caterers immediately shifts to contact-free catering and 5-star medical sanitation guidelines, demonstrating corporate agility and client care.', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&h=500&q=80', caption: '2020 — Safe Catering' },
-        { year: '2022', title: 'Modern Culinary Plating',        desc: 'We introduce boutique catering aesthetics, featuring miniature appetizers, molecular gastronomy elements, and high-fashion food presentation that mirrors international dining styles.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=500&q=80', caption: '2022 — Artisan Plating' },
-        { year: '2024', title: '10,000+ Events Served',          desc: 'We hit a monumental milestone of serving over 10,000 corporate, wedding, and social events since our inception, cementing our place in our community\'s celebrations.', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&h=500&q=80', caption: '2024 — 10K Events' },
-        { year: '2026', title: 'Expanding Horizons: All of UP',  desc: 'Officially expanding our horizons beyond Lucknow, S. Caterers now opens booking operations to cater premium weddings, corporate summits, and grand galas across the entire state of Uttar Pradesh (UP).', img: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&h=500&q=80', caption: '2026 — Uttar Pradesh' }
+        { year: '1998', title: 'The Secret & The Spark',          desc: 'When Amit Agarwal set out in Lucknow in 1998, no one anticipated the culinary storm to follow. Armed only with secret family spice blends and an unwavering vow of vegetarian purity, S. Caterers took its very first step into royal dining.', img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&h=500&q=80', caption: '1998 — Founded in Lucknow' },
+        { year: '2000', title: 'The High-Stakes Feast',          desc: 'A high-stakes challenge arrived: catering a grand royal wedding of over 500 elite guests. Under immense pressure, the flavors captivated every palate, overnight turning a local name into Lucknow\'s most talked-about culinary secret.', img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&h=500&q=80', caption: '2000 — Grand Wedding' },
+        { year: '2001', title: 'Unlocking Royal Street Flavors', desc: 'Daring to break tradition, S. Caterers introduced live Lakhnavi chaat galleries to high-profile banquets. The aroma of sizzled spices and theatrical live cooking transformed ordinary wedding dinners into unforgettable gastronomic spectacles.', img: 'https://images.unsplash.com/photo-1601050690597-df056fb49785?auto=format&fit=crop&w=600&h=500&q=80', caption: '2001 — Chaat Revolution' },
+        { year: '2005', title: 'The Uncompromising Vow',         desc: 'A defining turning point. In a market full of shortcuts, Amit Agarwal took a bold, non-negotiable oath: 100% pure vegetarian & Satvik integrity. No meat, no eggs, no compromises — building trust that remains unshakeable to this day.', img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&h=500&q=80', caption: '2005 — Pure Veg Vow' },
+        { year: '2008', title: 'Conquering Beyond Lucknow',      desc: 'Tales of royal taste could no longer be contained within one city. Demands poured in from Kanpur, Jhansi, Sitapur, Bahraich, and Lakhimpur as S. Caterers expanded its fleet to orchestrate mega celebrations across regional frontiers.', img: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&h=500&q=80', caption: '2008 — Regional Conquest' },
+        { year: '2011', title: 'The Secret Satvik Mastery',       desc: 'Unlocking the delicate art of onion-free and garlic-free Satvik cuisine, S. Caterers pioneered a specialized culinary division, proving that sacred ancestral recipes could achieve 5-star fine-dining grandeur.', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&h=500&q=80', caption: '2011 — Satvik Mastery' },
+        { year: '2014', title: 'The Global Fusion Revelation',  desc: 'Fusing royal Lakhnavi heritage with international horizons, master chefs were brought in to introduce live artisanal Italian, Thai, and Continental galleries — creating a thrilling multi-cuisine symphony.', img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&h=500&q=80', caption: '2014 — Global Fusion' },
+        { year: '2017', title: 'The Corporate Conquest',         desc: 'Stepping onto the corporate stage, S. Caterers executed massive industrial inaugurations and high-profile summits with surgical precision, proving that scale, speed, and luxury could co-exist flawlessly.', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&h=500&q=80', caption: '2017 — Corporate Summit' },
+        { year: '2020', title: 'The Unshakable Shield',          desc: 'When global uncertainty halted the world, S. Caterers stood resilient — pioneering medical-grade sanitation protocols and zero-contact serving rituals to safeguard every host and guest without losing warmth.', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&h=500&q=80', caption: '2020 — Safe Catering' },
+        { year: '2022', title: 'High-Fashion Culinary Plating',   desc: 'Redefining how India views wedding buffets, we unveiled molecular gastronomy displays, gold-leaf presentation art, and luxury dessert galleries that left guests spellbound before the first bite.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=500&q=80', caption: '2022 — Culinary Art' },
+        { year: '2024', title: 'The 10,000 Milestone Legend',    desc: 'A monumental triumph: 10,000+ legendary celebrations served. From royal weddings to executive galas, S. Caterers cemented its legacy as the undisputed heart of North Indian hospitality.', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&h=500&q=80', caption: '2024 — 10K Celebrations' },
+        { year: '2026', title: 'Vision 2026: Conquering All of UP', desc: 'The story reaches its grandest chapter yet. In 2026 and beyond, our goal is to conquer the culinary landscape of all 75 districts of Uttar Pradesh — establishing S. Caterers as the ultimate statewide benchmark for luxury pure-veg dining.', img: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&h=500&q=80', caption: '2026 — Vision for UP' }
       ];
 
       const book         = document.getElementById('milestones-book');
@@ -1128,7 +1123,7 @@
   </script>
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 

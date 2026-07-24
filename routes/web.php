@@ -15,6 +15,13 @@ Route::post('/contact/submit', [HomeController::class, 'submitContact'])->name('
 Route::get('/admin/gallery', [HomeController::class, 'adminGallery'])->name('admin.gallery');
 Route::post('/admin/gallery/login', [HomeController::class, 'adminLogin'])->name('admin.login');
 Route::post('/admin/gallery/logout', [HomeController::class, 'adminLogout'])->name('admin.logout');
+Route::get('/admin/gallery/cloudinary-signature', [HomeController::class, 'getCloudinarySignature'])->name('admin.signature');
+Route::post('/admin/gallery/save-media', [HomeController::class, 'saveCloudinaryMedia'])->name('admin.save-media');
+Route::get('/admin/gallery/export-db', [HomeController::class, 'exportDatabaseBackup'])->name('admin.export-db');
 Route::post('/admin/gallery/upload', [HomeController::class, 'adminUpload'])->name('admin.upload');
-Route::post('/admin/gallery/update/{id}', [HomeController::class, 'adminUpdate'])->name('admin.update');
-Route::post('/admin/gallery/delete/{id}', [HomeController::class, 'adminDelete'])->name('admin.delete');
+
+Route::post('/admin/gallery/update/{id}', [HomeController::class, 'adminUpdate'])->where('id', '.*')->name('admin.update');
+Route::post('/admin/gallery/delete/{id}', [HomeController::class, 'adminDelete'])->where('id', '.*')->name('admin.delete');
+Route::post('/admin/gallery/bulk-delete', [HomeController::class, 'adminBulkDelete'])->name('admin.bulk-delete');
+
+

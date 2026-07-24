@@ -68,7 +68,7 @@
             <p class="lead-copy">Crafting culinary masterpieces and premium dining experiences for your most treasured celebrations. From traditional Lakhnavi delicacies to global gourmet courses, we cater with pure love, hygiene, and unmatched devotion.</p>
             <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
               <a href="{{ route('services') }}" class="btn-gold">Explore Menus</a>
-              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services%20for%20an%20upcoming%20event." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+              <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services%20for%20an%20upcoming%20event." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
             </div>
           </div>
         </div>
@@ -246,7 +246,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crown"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/><path d="M5 20h14"/></svg>
             </div>
             <h3 class="pkg-title">Royal Package</h3>
-            <p class="pkg-desc">A luxurious culinary banquet experience. Features live international counters (Italian, Thai, Continental), bespoke presentation displays, boutique serving staff, and custom menus crafted by our head chef.</p>
+            <p class="pkg-desc">A luxurious culinary banquet experience. Features live international counters (Italian, Thai, Continental), bespoke presentation displays, professional uniform serving staff, and custom menus crafted by our head chef.</p>
           </div>
         </div>
       </div>
@@ -295,7 +295,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crown"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/><path d="M5 20h14"/></svg>
               </div>
               <h3 class="pkg-title">Royal Package</h3>
-              <p class="pkg-desc">A luxurious culinary banquet experience. Features live international counters (Italian, Thai, Continental), bespoke presentation displays, boutique serving staff, and custom menus crafted by our head chef.</p>
+              <p class="pkg-desc">A luxurious culinary banquet experience. Features live international counters (Italian, Thai, Continental), bespoke presentation displays, professional uniform serving staff, and custom menus crafted by our head chef.</p>
             </div>
           </div>
         </div>
@@ -330,8 +330,8 @@
             <div class="event-content-col">
               <span class="event-tag-pill">Grand Scale</span>
               <h3 class="event-title">Destination Weddings</h3>
-              <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to boutique family table service, we ensure your wedding feast is nothing short of legendary.</p>
-              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20plan%20a%20grand%20pure-veg%20Wedding%20Catering%20menu." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
+              <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to exclusive family table service, we ensure your wedding feast is nothing short of legendary.</p>
+              <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20plan%20a%20grand%20pure-veg%20Wedding%20Catering%20menu." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@
               <span class="event-tag-pill">Corporate</span>
               <h3 class="event-title">Corporate Galas</h3>
               <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering, ensuring flawless service, hygiene, and punctual execution.</p>
-              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20Corporate%20Catering%20services%20and%20packages." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
+              <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20Corporate%20Catering%20services%20and%20packages." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
             </div>
           </div>
         </div>
@@ -369,7 +369,7 @@
               <span class="event-tag-pill">100% Satvik</span>
               <h3 class="event-title">Traditional Pujas & Griha Pravesh</h3>
               <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request, served in completely sanitized pure vegetarian setups.</p>
-              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20Satvik%20%2F%20Jain%20Puja%20Catering%20options." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
+              <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20Satvik%20%2F%20Jain%20Puja%20Catering%20options." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
             </div>
           </div>
         </div>
@@ -388,7 +388,7 @@
                 <span class="event-tag-pill">Grand Scale</span>
                 <h3 class="event-title">Destination Weddings</h3>
                 <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to family table service, we ensure your wedding feast is legendary.</p>
-                <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20plan%20a%20grand%20pure-veg%20Wedding%20Catering%20menu." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
+                <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20plan%20a%20grand%20pure-veg%20Wedding%20Catering%20menu." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
               </div>
             </div>
           </div>
@@ -402,7 +402,7 @@
                 <span class="event-tag-pill">Corporate</span>
                 <h3 class="event-title">Corporate Galas</h3>
                 <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering with flawless service.</p>
-                <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20Corporate%20Catering%20services%20and%20packages." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
+                <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20Corporate%20Catering%20services%20and%20packages." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
               </div>
             </div>
           </div>
@@ -416,7 +416,7 @@
                 <span class="event-tag-pill">100% Satvik</span>
                 <h3 class="event-title">Traditional Pujas</h3>
                 <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request in completely sanitized setups.</p>
-                <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20Satvik%20%2F%20Jain%20Puja%20Catering%20options." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
+                <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20Satvik%20%2F%20Jain%20Puja%20Catering%20options." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
               </div>
             </div>
           </div>
@@ -552,17 +552,12 @@
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a>
+              <a href="https://maps.google.com/?q=Sachan+Complex,+Chungi,+Krishna+Nagar,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Sachan Complex, Chungi, Krishna Nagar, Lucknow, UP</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>
-            </p>
-            
-            <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a>
+              <a href="https://wa.me/916393998141" target="_blank" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
@@ -581,7 +576,7 @@
   </footer>
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 

@@ -313,7 +313,7 @@
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20saw%20your%20gallery%20portfolio%20and%20would%20like%20to%20discuss%20event%20catering." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+          <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20saw%20your%20gallery%20portfolio%20and%20would%20like%20to%20discuss%20event%20catering." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -344,15 +344,39 @@
   <section class="gallery-grid-section">
     <div class="container">
       <div class="row g-4" id="gallery-grid-container">
-        
-        @foreach($images as $image)
+               @foreach($images as $image)
+        @php
+          $videoSrc = $image->is_video
+            ? ($image->isCloudinary() ? $image->path : asset($image->path))
+            : '';
+          $imgSrc = $image->is_video
+            ? ($image->isCloudinary() ? $image->getThumbnailUrl() : null)
+            : $image->getOptimizedUrl();
+        @endphp
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 gallery-grid-item" data-category="{{ Str::slug($image->category) }}">
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="{{ Str::startsWith($image->path, 'http') ? $image->path : asset($image->path) }}" alt="{{ $image->title }}" loading="lazy">
-            <div class="gallery-overlay">
-              <i class="fa-solid fa-expand"></i>
-              <span>{{ $image->title }}</span>
-            </div>
+          <div class="gallery-card" onclick="openLightbox(this)"
+               data-is-video="{{ $image->is_video ? '1' : '0' }}"
+               data-src="{{ $image->is_video ? $videoSrc : $image->getOptimizedUrl() }}">
+            @if($image->is_video)
+              @if($image->isCloudinary() && $imgSrc)
+                {{-- Cloudinary video: use generated jpg poster frame --}}
+                <img src="{{ $imgSrc }}" alt="{{ $image->title }}" loading="lazy">
+              @else
+                {{-- Local video: use video element as thumbnail (preloads first frame) --}}
+                <video src="{{ $videoSrc }}#t=0.5" muted playsinline preload="metadata"
+                       style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+              @endif
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-circle-play" style="font-size:2.5rem;"></i>
+                <span>{{ $image->title }}</span>
+              </div>
+            @else
+              <img src="{{ $imgSrc }}" alt="{{ $image->title }}" loading="lazy">
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-expand"></i>
+                <span>{{ $image->title }}</span>
+              </div>
+            @endif
           </div>
         </div>
         @endforeach
@@ -402,12 +426,12 @@
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a>
+              <a href="https://maps.google.com/?q=Sachan+Complex,+Chungi,+Krishna+Nagar,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Sachan Complex, Chungi, Krishna Nagar, Lucknow, UP</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>
+              <a href="tel:+916393998141" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
@@ -443,7 +467,7 @@
           <div class="footer-contact-info">
             <h6>Get In Touch</h6>
             <p><i class="fa-solid fa-user me-2" style="color: var(--gold);"></i> Amit Agarwal (Founder)</p>
-            <p><i class="fa-solid fa-phone me-2" style="color: var(--gold);"></i> <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a></p>
+            <p><i class="fa-solid fa-phone me-2" style="color: var(--gold);"></i> <a href="https://wa.me/916393998141" target="_blank" style="color: inherit; text-decoration: none;">+91 63939 98141</a></p>
             <p><i class="fa-solid fa-location-dot me-2" style="color: var(--gold);"></i> Lucknow, Uttar Pradesh</p>
             <p><i class="fa-solid fa-envelope me-2" style="color: var(--gold);"></i> <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a></p>
           </div>
@@ -522,7 +546,12 @@
 
       if (modal && mediaContainer) {
         if (isVideo) {
-          mediaContainer.innerHTML = `<video src="${mediaSrc}" controls autoplay playsinline style="max-width: 100%; max-height: 80vh; display: block; object-fit: contain;"></video>`;
+          const cleanSrc = mediaSrc.split('#')[0];
+          mediaContainer.innerHTML = `<video src="${cleanSrc}" controls autoplay playsinline style="max-width: 100%; max-height: 80vh; display: block; object-fit: contain;"></video>`;
+          const vidEl = mediaContainer.querySelector('video');
+          if (vidEl) {
+            vidEl.play().catch(function(){});
+          }
         } else {
           mediaContainer.innerHTML = `<img id="lightboxImg" src="${mediaSrc}" alt="${title}" style="max-width: 100%; max-height: 80vh; display: block; object-fit: contain;">`;
         }
@@ -561,7 +590,7 @@
   </script>
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 

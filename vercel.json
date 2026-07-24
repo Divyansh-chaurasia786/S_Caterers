@@ -4,20 +4,24 @@
     {
       "src": "api/index.php",
       "use": "vercel-php"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(css|js|images|videos|fonts|build)/(.*)",
-      "dest": "/$1/$2"
+      "dest": "/public/$1/$2"
     },
     {
       "src": "/favicon\\.ico",
-      "dest": "/favicon.ico"
+      "dest": "/public/favicon.ico"
     },
     {
       "src": "/robots\\.txt",
-      "dest": "/robots.txt"
+      "dest": "/public/robots.txt"
     },
     {
       "src": "/(.*)",
@@ -31,9 +35,16 @@
     "APP_DEBUG": "true",
     "LOG_CHANNEL": "stderr",
     "DB_CONNECTION": "sqlite",
-    "SESSION_DRIVER": "cookie",
+    "DB_DATABASE": "/tmp/database/database.sqlite",
+    "SESSION_DRIVER": "array",
     "CACHE_STORE": "array",
     "QUEUE_CONNECTION": "sync",
-    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views"
+    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
+    "APP_PACKAGES_CACHE": "/tmp/bootstrap/cache/packages.php",
+    "APP_SERVICES_CACHE": "/tmp/bootstrap/cache/services.php",
+    "CLOUDINARY_CLOUD_NAME": "dbmyeqafj",
+    "CLOUDINARY_API_KEY": "499981468335259",
+    "CLOUDINARY_API_SECRET": "XkCkx8xN3cm2p4ceZgYw0xXWEl0",
+    "CLOUDINARY_URL": "cloudinary://499981468335259:XkCkx8xN3cm2p4ceZgYw0xXWEl0@dbmyeqafj"
   }
 }

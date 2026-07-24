@@ -27,5 +27,10 @@ Homestead.yaml
 Thumbs.db
 /s.caters
 # /database/database.sqlite
+/bootstrap/cache/*.php
 .vercel
+composer-setup.php
+composer.phar
 scratch/
+
+.vercel

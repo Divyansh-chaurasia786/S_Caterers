@@ -457,6 +457,15 @@
       outline: none;
       transition: border-color 0.25s ease;
     }
+    /* Hide number input spinner arrows */
+    .form-group-custom input[type="number"]::-webkit-outer-spin-button,
+    .form-group-custom input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .form-group-custom input[type="number"] {
+      -moz-appearance: textfield;
+    }
     
     @media (max-width: 767.98px) {
       .mobile-swipe-deck {
@@ -781,7 +790,7 @@
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20catering%20packages%20and%20menu%20customizations." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+          <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20catering%20packages%20and%20menu%20customizations." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -817,7 +826,7 @@
               <p class="desc">Classic Indian fine vegetarian feast crafted with authentic spices and tradition. Perfect for sangeet functions, corporate events, and festive celebrations.</p>
             </div>
             <ul class="pkg-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span>Complete 100% Pure Veg Indian Buffet Service</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Complete Indian Buffet Service</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>2 Starters, 3 Authentic Gravy Mains & 2 Desi Sweets</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Live Tandoor Counter (Naan, Roti, Kulcha)</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Jeera Rice, Pulao & Authentic Tadka Dal</span></li>
@@ -838,7 +847,7 @@
               <p class="desc">Our signature luxury Indian banquet featuring live chef counters, rich gravy delicacies, and royal desserts.</p>
             </div>
             <ul class="pkg-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span>5-Course 100% Pure Veg Luxury Indian Banquet</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>5-Course Luxury Indian Banquet</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Live Dilli Chaat Counter (Pani Puri, Aloo Tikki, Raj Kachori)</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Zafrani Paneer & Dahi Ke Kebab Starters</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Royal Shahi Paneer, Dal Makhani & Kashmiri Pulao</span></li>
@@ -860,7 +869,7 @@
               <p class="desc">Opulent VIP Rajwada banquet dining, 24k gold leaf presentation, Awadhi dum biryanis, and traditional thali service.</p>
             </div>
             <ul class="pkg-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span>7-Course Royal Rajwada 100% Pure Veg Feast</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>7-Course Royal Rajwada Feast</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>2 Live Specialty Counters (Live Chaat & Live Jalebi-Rabri)</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>24k Gold Leaf Paneer & Dum Pukht Dal Makhani</span></li>
               <li><i class="fa-solid fa-circle-check"></i> <span>Awadhi Subz Dum Biryani & Methi Chaman</span></li>
@@ -885,7 +894,7 @@
                 <p class="desc">Classic Indian fine vegetarian feast crafted with authentic spices and tradition. Perfect for sangeet functions, corporate events, and festive celebrations.</p>
               </div>
               <ul class="pkg-features">
-                <li><i class="fa-solid fa-circle-check"></i> <span>Complete 100% Pure Veg Indian Buffet Service</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Complete Indian Buffet Service</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>2 Starters, 3 Authentic Gravy Mains & 2 Desi Sweets</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>Live Tandoor Counter (Naan, Roti, Kulcha)</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>Jeera Rice, Pulao & Authentic Tadka Dal</span></li>
@@ -906,7 +915,7 @@
                 <p class="desc">Our signature luxury Indian banquet featuring live chef counters, rich gravy delicacies, and royal desserts.</p>
               </div>
               <ul class="pkg-features">
-                <li><i class="fa-solid fa-circle-check"></i> <span>5-Course 100% Pure Veg Luxury Indian Banquet</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>5-Course Luxury Indian Banquet</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>Live Dilli Chaat Counter (Pani Puri, Aloo Tikki, Raj Kachori)</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>Zafrani Paneer & Dahi Ke Kebab Starters</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>Royal Shahi Paneer, Dal Makhani & Kashmiri Pulao</span></li>
@@ -928,7 +937,7 @@
                 <p class="desc">Opulent VIP Rajwada banquet dining, 24k gold leaf presentation, Awadhi dum biryanis, and traditional thali service.</p>
               </div>
               <ul class="pkg-features">
-                <li><i class="fa-solid fa-circle-check"></i> <span>7-Course Royal Rajwada 100% Pure Veg Feast</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>7-Course Royal Rajwada Feast</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>2 Live Specialty Counters (Live Chaat & Live Jalebi-Rabri)</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>24k Gold Leaf Paneer & Dum Pukht Dal Makhani</span></li>
                 <li><i class="fa-solid fa-circle-check"></i> <span>Awadhi Subz Dum Biryani & Methi Chaman</span></li>
@@ -965,10 +974,11 @@
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-martini-glass-citrus"></i></div>
               <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Craft Bar Lounge</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Artisanal mixology lounge, smoke-infused mocktails, and fresh botanical sherbets served by professional mixologists.</p>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Artisanal mixology lounge serving premium cocktails &amp; smoke-infused mocktails, fresh botanical sherbets — crafted live by professional mixologists.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
               <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Professional Master Mixologist Team</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Premium Cocktails &amp; Mocktails Bar (served on request)</span></li>
               <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Desi Fusion Mocktails (Kala Khatta, Masala Guava, Shahi Thandai)</span></li>
               <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fresh Botanical &amp; Gold Dust Garnishes</span></li>
               <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Luxury Crystal Glassware Setup</span></li>
@@ -1002,25 +1012,25 @@
           </div>
         </div>
 
-        <!-- Celebration Cake Lounge -->
+        <!-- Vintage Bakery Counter -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
-              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Celebration Cake Lounge" loading="lazy">
+              <img src="{{ asset('images/bakery-counter.jpg') }}" alt="Vintage Bakery Counter" loading="lazy">
             </div>
             <div class="pkg-header">
-              <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-cake-candles"></i></div>
-              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Celebration Cake Lounge</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Delight guests with our multi-tiered custom designer cakes, gold-leaf pastries, and artisanal macarons crafted live by master pastry chefs.</p>
+              <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-cookie-bite"></i></div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Vintage Bakery Counter</h3>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Treat your guests to a 100% pure vegetarian Vintage Cafe &amp; Bakery experience featuring artisanal pastries, gourmet puddings, dessert cups, fresh muffins, and hot oven-baked cafe savories.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Custom Multi-Tier Designer Theme Cakes</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Live Cake Decoration &amp; Custom Frosting Station</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Warm Saffron &amp; Rose Infused Fusion Pastries</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>100% Eggless Premium Vegetarian Patisserie</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Signature Pastries:</strong> Belgian Chocolate Truffle, Tropical Pineapple &amp; Red Velvet</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Gourmet Puddings &amp; Desserts:</strong> Butterscotch Pudding, Strawberry Compote &amp; Chocolate Fountain</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Fresh Bakes &amp; Confections:</strong> Double Choco Muffins, Fruit Cups, Brownies &amp; Dry Fruit Cookies</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Hot Cafe Savories:</strong> Oven-Baked Garlic Bread, Live Cheese Pizza, Burgers &amp; Alfredo Pasta</span></li>
             </ul>
             <div class="mt-auto">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Celebration Cake Lounge" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Cake Lounge</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Vintage Bakery Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Bakery Counter</a>
             </div>
           </div>
         </div>
@@ -1063,7 +1073,7 @@
               <div class="menu-item-desc">A gorgeous tropical blend of sweet pineapple and tangy mango syrup with a hint of red chili spice.</div>
             </div>
             <div class="col-md-6 menu-item-row">
-              <div class="menu-item-name">Espresso & Cappuccino <span class="extra-badge">Davidoff</span></div>
+              <div class="menu-item-name">Espresso & Cappuccino</div>
               <div class="menu-item-desc">Freshly ground premium coffee beans brewed with thick, rich milk foam at our live café stall.</div>
             </div>
             <div class="col-md-6 menu-item-row">
@@ -1115,7 +1125,7 @@
         <div class="menu-pane" id="pane-chaat">
           <div class="row">
             <div class="col-md-6 menu-item-row">
-              <div class="menu-item-name">Pani Batasha (Atta & Suji) <span class="extra-badge">3 Waters</span></div>
+              <div class="menu-item-name">Pani Batasha (Atta & Suji)</div>
               <div class="menu-item-desc">Crispy puffed puris served with potato chickpea stuffing and three distinct flavored waters (Mint, Tamarind, Lemon).</div>
             </div>
             <div class="col-md-6 menu-item-row">
@@ -1153,7 +1163,7 @@
               <div class="menu-item-desc">Live chef station with seasoned seasonal vegetables and tofu sizzled on a hot iron plate with ginger soy.</div>
             </div>
             <div class="col-md-6 menu-item-row">
-              <div class="menu-item-name">Veg. & Cheese Dimsums <span class="extra-badge">On Trolleys</span></div>
+              <div class="menu-item-name">Veg. & Cheese Dimsums</div>
               <div class="menu-item-desc">Steamed delicate dumplings filled with finely chopped cabbage, carrots, and cheese, served with garlic chili dip.</div>
             </div>
             <div class="col-md-6 menu-item-row">
@@ -1205,7 +1215,7 @@
         <div class="menu-pane" id="pane-sweets">
           <div class="row">
             <div class="col-md-6 menu-item-row">
-              <div class="menu-item-name">Kesariya Chena Rabdi <span class="extra-badge">Terracotta Pots</span></div>
+              <div class="menu-item-name">Kesariya Chena Rabdi</div>
               <div class="menu-item-desc">Thick, sweetened condensed milk flavored with rich saffron and green cardamoms, served with soft chena balls.</div>
             </div>
             <div class="col-md-6 menu-item-row">
@@ -1267,7 +1277,7 @@
           <div class="row">
             <div class="col-md-6 form-group-custom">
               <label for="inq-phone">Contact Number</label>
-              <input type="text" name="phone" id="inq-phone" placeholder="e.g. +91 98390 77960" required>
+              <input type="tel" name="phone" id="inq-phone" placeholder="e.g. 6393998141" maxlength="10" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" required>
             </div>
             <div class="col-md-6 form-group-custom">
               <label for="inq-package">Catering Package</label>
@@ -1287,13 +1297,13 @@
               <input type="date" name="event_date" id="inq-date" required>
             </div>
             <div class="col-6 form-group-custom">
-              <label for="inq-guests">Expected Guests</label>
-              <input type="number" name="guests" id="inq-guests" placeholder="e.g. 250" min="20" required>
+              <label for="inq-guests">Expected Guests <span style="font-size:0.75rem;color:var(--wine);font-weight:600;">(min. 10)</span></label>
+              <input type="number" name="guests" id="inq-guests" placeholder="e.g. 250" min="10" required>
             </div>
           </div>
 
           <div class="form-group-custom">
-            <label for="inq-notes">Special Dietary Requests &amp; Notes</label>
+            <label for="inq-notes">Special Dietary Requests &amp; Notes <span style="font-size:0.75rem;color:#999;font-weight:500;">(Optional)</span></label>
             <textarea name="notes" id="inq-notes" rows="4" placeholder="Mention any specific requirements (e.g. 100% Satvik / Jain kitchen segregation, custom uniform theme, live teppanyaki preferences)..."></textarea>
           </div>
 
@@ -1301,7 +1311,7 @@
           <div class="form-group-custom mb-3">
             <div class="addon-toggle-header" id="addon-toggle-trigger" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 10px 14px; background: #FFFDF9; border: 1px solid #E6D8C3; border-radius: 10px; transition: all 0.3s ease; margin-bottom: 12px; user-select: none;">
               <span style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--wine); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;">
-                <i class="fa-solid fa-circle-plus" style="color: var(--gold); font-size: 1.05rem;"></i> Select Add-on Services
+                <i class="fa-solid fa-circle-plus" style="color: var(--gold); font-size: 1.05rem;"></i> Select Add-on Services <span style="font-size:0.75rem;color:#999;font-weight:500;text-transform:none;letter-spacing:0;">(Optional)</span>
               </span>
               <span style="font-size: 0.8rem; color: #8B6B1B; font-weight: 700;" class="toggle-status-text">TAP TO EXPAND</span>
             </div>
@@ -1315,8 +1325,8 @@
                 <span>+ Live Juice Bar</span>
               </label>
               <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Celebration Cake Lounge">
-                <span>+ Celebration Cake Lounge</span>
+                <input type="checkbox" name="addons[]" value="Vintage Bakery Counter">
+                <span>+ Vintage Bakery Counter</span>
               </label>
               <label class="addon-chip">
                 <input type="checkbox" name="addons[]" value="Live Pizza & Pasta Station">
@@ -1394,17 +1404,12 @@
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: flex-start; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <a href="https://maps.google.com/?q=Keshav+Nagar,+Sitapur+Road,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Keshav Nagar, Sitapur Road, Lucknow, UP</a>
+              <a href="https://maps.google.com/?q=Sachan+Complex,+Chungi,+Krishna+Nagar,+Lucknow" target="_blank" style="color: inherit; text-decoration: none;">Sachan Complex, Chungi, Krishna Nagar, Lucknow, UP</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919839077960" style="color: inherit; text-decoration: none;">+91 98390 77960</a>
-            </p>
-            
-            <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+919415788950" style="color: inherit; text-decoration: none;">+91 94157 88950</a>
+              <a href="https://wa.me/916393998141" target="_blank" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
@@ -1523,11 +1528,11 @@
         isPaused = true;
         stopAutoplay();
         if (resumeTimeout) clearTimeout(resumeTimeout);
-        // Resume autoplay after 7 seconds of inactivity
+        // Resume autoplay after 30 seconds of inactivity
         resumeTimeout = setTimeout(() => {
           isPaused = false;
           startAutoplay();
-        }, 7000);
+        }, 30000);
       };
 
       // Listen for click on each tab button to update the index and handle user override
@@ -1557,13 +1562,23 @@
         }, { passive: true });
       }
 
-      startAutoplay();
+      // Only start autoplay on mobile
+      if (window.innerWidth < 992) {
+        startAutoplay();
+      }
+    }
+
+    // Only initialise autoplay on mobile screens; desktop uses manual click only
+    function maybeInitSpecialtiesAutoplay() {
+      if (window.innerWidth < 992) {
+        initSpecialtiesTabAutoplay();
+      }
     }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initSpecialtiesTabAutoplay);
+      document.addEventListener('DOMContentLoaded', maybeInitSpecialtiesAutoplay);
     } else {
-      initSpecialtiesTabAutoplay();
+      maybeInitSpecialtiesAutoplay();
     }
 
     // Auto-select package in inquiry form on click
@@ -1585,12 +1600,39 @@
       initAutoSelectPackage();
     }
 
+    // Strip non-digit characters from phone field in real time
+    const phoneInput = document.getElementById('inq-phone');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function() {
+        this.value = this.value.replace(/\D/g, '').slice(0, 10);
+      });
+      phoneInput.addEventListener('keypress', function(e) {
+        if (!/[0-9]/.test(e.key)) e.preventDefault();
+      });
+    }
+
     // Intercept form submission, save to database via AJAX, then redirect to WhatsApp
     const form = document.querySelector('.inquiry-form-box form');
     if (form) {
       form.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
+        // --- Validate phone: exactly 10 digits, starts with 6-9 ---
+        const rawPhone = document.getElementById('inq-phone').value.trim();
+        if (!/^[6-9][0-9]{9}$/.test(rawPhone)) {
+          alert('Please enter a valid 10-digit Indian mobile number (e.g. 6393998141).');
+          document.getElementById('inq-phone').focus();
+          return;
+        }
+
+        // --- Validate guests: must be 10 or more ---
+        const rawGuests = parseInt(document.getElementById('inq-guests').value, 10);
+        if (isNaN(rawGuests) || rawGuests < 10) {
+          alert('Expected Guests must be at least 10.');
+          document.getElementById('inq-guests').focus();
+          return;
+        }
+
         const name = document.getElementById('inq-name').value;
         const email = document.getElementById('inq-email').value;
         const phone = document.getElementById('inq-phone').value;
@@ -1626,7 +1668,7 @@
                       `*Special Requests / Notes:* ${notes ? notes : 'None'}\n\n` +
                       `*(Note: I understand final pricing depends on menu selections & discussion)*`;
                       
-          const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
+          const waUrl = `https://wa.me/916393998141?text=${encodeURIComponent(msg)}`;
           
           // Open WhatsApp in a new tab
           window.open(waUrl, '_blank');
@@ -1647,7 +1689,7 @@
                       `*Add-on Services:* ${addons.length > 0 ? addons.join(', ') : 'None'}\n` +
                       `*Request Menu Customization:* ${customize}\n` +
                       `*Special Requests / Notes:* ${notes ? notes : 'None'}`;
-          const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
+          const waUrl = `https://wa.me/916393998141?text=${encodeURIComponent(msg)}`;
           window.open(waUrl, '_blank');
         });
       });
@@ -1818,7 +1860,7 @@
     }
   </script>
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
