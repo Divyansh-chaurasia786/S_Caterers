@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S. Caterers by Amit Agrawal — Pure Vegetarian Catering, Lucknow</title>
+  <title>S. Caterers by Amit Agarwal — Pure Vegetarian Catering, Lucknow</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="S. Caterers by Amit Agrawal offers premium, 100% pure vegetarian catering services in Lucknow. Specializing in weddings, corporate events, and Satvik/Jain menus.">
-  <meta name="keywords" content="S Caterers, Amit Agrawal, Vegetarian Catering Lucknow, Wedding Caterer Lucknow, Jain Catering, Satvik Food">
-  <meta name="author" content="Amit Agrawal">
+  <meta name="description" content="S. Caterers by Amit Agarwal offers premium, 100% pure vegetarian catering services in Lucknow. Specializing in weddings, corporate events, and Satvik/Jain menus.">
+  <meta name="keywords" content="S Caterers, Amit Agarwal, Vegetarian Catering Lucknow, Wedding Caterer Lucknow, Jain Catering, Satvik Food">
+  <meta name="author" content="Amit Agarwal">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo.png') }}">
+  <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.5">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=6.1">
 </head>
 <body>
 
@@ -32,9 +37,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('about') }}">About Us</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('gallery') }}">Gallery</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
@@ -58,20 +64,20 @@
             <span class="eyebrow"><i class="fa-solid fa-spa me-1"></i> A Legacy of Taste</span>
           </div>
             <div class="font-cursive mt-2">Welcome to</div>
-            <h1 class="mt-1">S. CATERERS<br><span class="highlight">by Amit Agrawal</span></h1>
+            <h1 class="mt-1">S. CATERERS<br><span class="highlight">by Amit Agarwal</span></h1>
             <p class="lead-copy">Crafting culinary masterpieces and premium dining experiences for your most treasured celebrations. From traditional Lakhnavi delicacies to global gourmet courses, we cater with pure love, hygiene, and unmatched devotion.</p>
             <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
               <a href="{{ route('services') }}" class="btn-gold">Explore Menus</a>
-              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services%20for%20an%20upcoming%20event." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
             </div>
           </div>
         </div>
 
         <div class="col-12 col-md-6 hero-image-col">
           <div class="hero-image-wrap">
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=cover');"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=1200&auto=format&fit=cover');"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=cover');"></div>
+            <div class="hero-slide active slide-1" style="background-image: url('{{ asset('images/hero-slide-1.jpg') }}');"></div>
+            <div class="hero-slide slide-2" style="background-image: url('{{ asset('images/hero-slide-2.jpg') }}');"></div>
+            <div class="hero-slide slide-3" style="background-image: url('{{ asset('images/hero-slide-3.jpg') }}');"></div>
           </div>
 
           <!-- Option A Wavy Mask Overlay (SVG) -->
@@ -146,10 +152,10 @@
         <div class="col-md-6 col-lg-3">
           <div class="specialty-card">
             <div class="specialty-img-wrap">
-              <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=600&auto=format&fit=cover" alt="Awadhi Biryani">
+              <img src="{{ asset('images/specialty-biryani.jpg') }}" alt="Veg Dum Biryani">
             </div>
             <div class="specialty-overlay">
-              <h3 class="specialty-title">Awadhi Dum Biryani</h3>
+              <h3 class="specialty-title">Veg Dum Biryani</h3>
               <p class="specialty-desc">Aromatic slow-cooked basmati rice layered with garden-fresh seasonal vegetables, pure saffron strands, and hand-ground spices.</p>
             </div>
           </div>
@@ -159,7 +165,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="specialty-card">
             <div class="specialty-img-wrap">
-              <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=cover" alt="Shahi Korma">
+              <img src="{{ asset('images/specialty-korma.jpg') }}" alt="Paneer Shahi Korma">
             </div>
             <div class="specialty-overlay">
               <h3 class="specialty-title">Paneer Shahi Korma</h3>
@@ -172,7 +178,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="specialty-card">
             <div class="specialty-img-wrap">
-              <img src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=600&auto=format&fit=cover" alt="Live Stations">
+              <img src="{{ asset('images/specialty-live.jpg') }}" alt="Global Live Stations">
             </div>
             <div class="specialty-overlay">
               <h3 class="specialty-title">Global Live Stations</h3>
@@ -185,7 +191,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="specialty-card">
             <div class="specialty-img-wrap">
-              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=600&auto=format&fit=cover" alt="Royal Desserts">
+              <img src="{{ asset('images/specialty-dessert.jpg') }}" alt="Royal Dessert Lounge">
             </div>
             <div class="specialty-overlay">
               <h3 class="specialty-title">Royal Dessert Lounge</h3>
@@ -316,7 +322,7 @@
           <div class="col-12 col-lg-6 text-center">
             <div class="event-frame-wrap">
               <div class="event-frame-inner">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=cover" alt="Weddings">
+                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Weddings">
               </div>
             </div>
           </div>
@@ -325,7 +331,7 @@
               <span class="event-tag-pill">Grand Scale</span>
               <h3 class="event-title">Destination Weddings</h3>
               <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to boutique family table service, we ensure your wedding feast is nothing short of legendary.</p>
-              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
+              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20plan%20a%20grand%20pure-veg%20Wedding%20Catering%20menu." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
             </div>
           </div>
         </div>
@@ -335,7 +341,7 @@
           <div class="col-12 col-lg-6 text-center">
             <div class="event-frame-wrap">
               <div class="event-frame-inner">
-                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=cover" alt="Corporate Galas">
+                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Corporate Galas">
               </div>
             </div>
           </div>
@@ -344,7 +350,7 @@
               <span class="event-tag-pill">Corporate</span>
               <h3 class="event-title">Corporate Galas</h3>
               <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering, ensuring flawless service, hygiene, and punctual execution.</p>
-              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
+              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20Corporate%20Catering%20services%20and%20packages." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
             </div>
           </div>
         </div>
@@ -354,7 +360,7 @@
           <div class="col-12 col-lg-6 text-center">
             <div class="event-frame-wrap">
               <div class="event-frame-inner">
-                <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=600&auto=format&fit=cover" alt="Sacred Pujas">
+                <img src="{{ asset('images/occasion-puja.jpg') }}" alt="Sacred Pujas">
               </div>
             </div>
           </div>
@@ -363,7 +369,7 @@
               <span class="event-tag-pill">100% Satvik</span>
               <h3 class="event-title">Traditional Pujas & Griha Pravesh</h3>
               <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request, served in completely sanitized pure vegetarian setups.</p>
-              <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
+              <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20Satvik%20%2F%20Jain%20Puja%20Catering%20options." target="_blank" class="btn-outline-wine"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
             </div>
           </div>
         </div>
@@ -376,13 +382,13 @@
           <div class="col-12">
             <div class="occasion-card">
               <div class="occasion-img-wrap">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=cover" alt="Weddings">
+                <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Weddings">
               </div>
               <div class="occasion-content">
                 <span class="event-tag-pill">Grand Scale</span>
                 <h3 class="event-title">Destination Weddings</h3>
                 <p class="event-desc">Experience a wedding banquet that mirrors royal dining traditions. From gorgeous multi-themed food installations and live chaat galleries to family table service, we ensure your wedding feast is legendary.</p>
-                <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
+                <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20plan%20a%20grand%20pure-veg%20Wedding%20Catering%20menu." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Wedding Menu</a>
               </div>
             </div>
           </div>
@@ -390,13 +396,13 @@
           <div class="col-12">
             <div class="occasion-card">
               <div class="occasion-img-wrap">
-                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=cover" alt="Corporate Galas">
+                <img src="{{ asset('images/occasion-corporate.jpg') }}" alt="Corporate Galas">
               </div>
               <div class="occasion-content">
                 <span class="event-tag-pill">Corporate</span>
                 <h3 class="event-title">Corporate Galas</h3>
                 <p class="event-desc">Make a statement with professional plated luncheons, elegant buffet stations, and formal corporate dinners. We specialize in high-end corporate gala catering with flawless service.</p>
-                <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
+                <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20Corporate%20Catering%20services%20and%20packages." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Corporate Event</a>
               </div>
             </div>
           </div>
@@ -404,13 +410,13 @@
           <div class="col-12">
             <div class="occasion-card">
               <div class="occasion-img-wrap">
-                <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=600&auto=format&fit=cover" alt="Sacred Pujas">
+                <img src="{{ asset('images/occasion-puja.jpg') }}" alt="Sacred Pujas">
               </div>
               <div class="occasion-content">
                 <span class="event-tag-pill">100% Satvik</span>
                 <h3 class="event-title">Traditional Pujas</h3>
                 <p class="event-desc">Catering crafted with absolute purity and spiritual devotion. We prepare dedicated Satvik menus with zero onion, garlic, or root vegetables on request in completely sanitized setups.</p>
-                <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
+                <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20Satvik%20%2F%20Jain%20Puja%20Catering%20options." target="_blank" class="btn-outline-wine btn-sm"><i class="fa-brands fa-whatsapp me-1"></i> Plan Puja Menu</a>
               </div>
             </div>
           </div>
@@ -426,9 +432,9 @@
     <div class="container py-3">
       <div style="max-width: 800px; margin: 0 auto;">
         <span class="eyebrow">Our Legacy</span>
-        <h2 class="section-title mt-2 mb-3">Serving Exquisite Tastes Since <span class="accent">1995</span></h2>
+        <h2 class="section-title mt-2 mb-3">Serving Exquisite Tastes Since <span class="accent">1998</span></h2>
         <p class="lead-copy mx-auto" style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); max-width: 650px;">
-          What started as a beloved local kitchen in Lucknow has grown into a statewide premium service. Discover our 30-year journey of culinary devotion, our strict 100% vegetarian sanitation standards, and our recent expansion to serve grand celebrations across the entire state of Uttar Pradesh.
+          What started as a beloved local kitchen in Lucknow has grown into a statewide premium service. Discover our 28-year journey of culinary devotion, our strict 100% vegetarian sanitation standards, and our recent expansion to serve grand celebrations across the entire state of Uttar Pradesh.
         </p>
         <div class="mt-4">
           <a href="{{ route('about') }}" class="btn-gold">Read Our Story & Standards</a>
@@ -450,9 +456,9 @@
       <div class="row g-4 mobile-swipe-deck" id="gallery-swipe-deck">
         <!-- Photo 1 -->
         <div class="col-sm-6 col-lg-3">
-          <a href="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/specialty-korma.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=600&auto=format&fit=cover" alt="Exquisite Plating Presentation">
+              <img src="{{ asset('images/specialty-korma.jpg') }}" alt="Exquisite Plating Presentation">
               <div class="gallery-overlay">
                 <div class="gallery-title-card">Exquisite Plating</div>
               </div>
@@ -462,9 +468,9 @@
 
         <!-- Photo 2 -->
         <div class="col-sm-6 col-lg-3">
-          <a href="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/lakhnavi-street-chaat.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=cover" alt="Lakhnavi Street Chaat Presentation">
+              <img src="{{ asset('images/lakhnavi-street-chaat.jpg') }}" alt="Lakhnavi Street Chaat Presentation">
               <div class="gallery-overlay">
                 <div class="gallery-title-card">Lakhnavi Street Chaat</div>
               </div>
@@ -474,9 +480,9 @@
 
         <!-- Photo 3 -->
         <div class="col-sm-6 col-lg-3">
-          <a href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/occasion-wedding.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=cover" alt="Royal Buffet Decor Setup">
+              <img src="{{ asset('images/occasion-wedding.jpg') }}" alt="Royal Buffet Decor Setup">
               <div class="gallery-overlay">
                 <div class="gallery-title-card">Royal Buffet Decor</div>
               </div>
@@ -486,9 +492,9 @@
 
         <!-- Photo 4 -->
         <div class="col-sm-6 col-lg-3">
-          <a href="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1200&auto=format&fit=cover" target="_blank" style="text-decoration: none;">
+          <a href="{{ asset('images/specialty-dessert.jpg') }}" target="_blank" style="text-decoration: none;">
             <div class="gallery-card">
-              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=600&auto=format&fit=cover" alt="Dessert Banquet Display Setup">
+              <img src="{{ asset('images/specialty-dessert.jpg') }}" alt="Dessert Banquet Display Setup">
               <div class="gallery-overlay">
                 <div class="gallery-title-card">Dessert Banquet Display</div>
               </div>
@@ -500,7 +506,7 @@
       <div class="carousel-dots d-md-none" id="dots-gallery"></div>
 
       <div class="text-center mt-5">
-        <a href="#" class="btn-outline-wine">View More</a>
+        <a href="{{ route('gallery') }}" class="btn-outline-wine">View More Gallery</a>
       </div>
     </div>
   </section>
@@ -512,10 +518,13 @@
         <!-- Logo Column -->
         <div class="col-md-6 col-lg-4">
           <img src="{{ asset('images/logo.png') }}" alt="S. Caterers Logo" class="footer-logo">
-          <p style="font-size: 0.88rem; line-height: 1.6; max-width: 320px;">Premium 100% vegetarian catering services by Amit Agrawal, serving royal taste and unmatched hospitality across Lucknow and the entire state of Uttar Pradesh (UP) since 1995.</p>
+          <p class="footer-summary-text" style="font-size: 0.88rem; line-height: 1.6; max-width: 320px;">Premium 100% vegetarian catering services by Amit Agarwal, serving royal taste and unmatched hospitality across Lucknow and the entire state of Uttar Pradesh (UP) since 1998.</p>
           <div class="footer-social mt-4">
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+            </a>
           </div>
         </div>
 
@@ -565,14 +574,14 @@
       </div>
 
       <div class="footer-bottom d-flex flex-wrap justify-content-between">
-        <span>&copy; 2026 S. Caterers by Amit Agrawal. All rights reserved.</span>
+        <span>&copy; 2026 S. Caterers by Amit Agarwal. All rights reserved.</span>
         <span>Designed with devotion for exquisite tastes.</span>
       </div>
     </div>
   </footer>
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960" class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -584,10 +593,13 @@
       if (slides.length > 0) {
         let currentSlide = 0;
         setInterval(() => {
-          slides[currentSlide].classList.remove('active');
+          slides.forEach(s => s.classList.remove('leaving'));
+          const prevSlide = currentSlide;
+          slides[prevSlide].classList.remove('active');
+          slides[prevSlide].classList.add('leaving');
           currentSlide = (currentSlide + 1) % slides.length;
           slides[currentSlide].classList.add('active');
-        }, 3500);
+        }, 4500);
       }
 
       // 2. Helper function to build and control a mobile slider carousel with dots and rightward loop
@@ -722,6 +734,53 @@
       setupMobileSlider('occasions-swipe-deck', 'dots-occasions');
       setupMobileSlider('gallery-swipe-deck', 'dots-gallery');
 
+      // 2b. Specialties Spotlight Autoplay on Desktop / Slider Autoplay on Mobile
+      const specialtiesDeck = document.getElementById('specialties-swipe-deck');
+      if (specialtiesDeck) {
+        const cards = specialtiesDeck.querySelectorAll('.specialty-card');
+        let currentSpotlight = 0;
+        let spotlightInterval = null;
+
+        const startSpotlight = () => {
+          if (spotlightInterval) clearInterval(spotlightInterval);
+          // Highlight first card immediately
+          cards.forEach(c => c.classList.remove('active-spotlight'));
+          cards[currentSpotlight].classList.add('active-spotlight');
+          currentSpotlight = (currentSpotlight + 1) % cards.length;
+
+          spotlightInterval = setInterval(() => {
+            cards.forEach(c => c.classList.remove('active-spotlight'));
+            cards[currentSpotlight].classList.add('active-spotlight');
+            currentSpotlight = (currentSpotlight + 1) % cards.length;
+          }, 3000);
+        };
+
+        const stopSpotlight = () => {
+          if (spotlightInterval) {
+            clearInterval(spotlightInterval);
+            spotlightInterval = null;
+          }
+          cards.forEach(c => c.classList.remove('active-spotlight'));
+        };
+
+        const handleSpecialtiesAutoplay = () => {
+          if (window.innerWidth >= 768) {
+            startSpotlight();
+          } else {
+            stopSpotlight();
+          }
+        };
+
+        // Pause spotlight on manual hover to let users interact normally
+        cards.forEach(card => {
+          card.addEventListener('mouseenter', stopSpotlight);
+          card.addEventListener('mouseleave', handleSpecialtiesAutoplay);
+        });
+
+        handleSpecialtiesAutoplay();
+        window.addEventListener('resize', handleSpecialtiesAutoplay);
+      }
+
       // 3. Auto-sliding catering packages tabs on mobile
       const pkgTabButtons = [
         document.getElementById('tab-silver'),
@@ -748,6 +807,9 @@
 
   <!-- Bootstrap 5 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Admin Verification Script -->
+  <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
 
 </body>
 </html>

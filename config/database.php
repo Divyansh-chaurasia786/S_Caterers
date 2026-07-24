@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => (isset($_SERVER['VERCEL']) || getenv('VERCEL') || env('VERCEL')) ? 'sqlite' : env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +35,22 @@ return [
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
-            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'database' => (function() {
+                $envDb = env('DB_DATABASE');
+                if ($envDb) return $envDb;
+                if (isset($_SERVER['VERCEL']) || getenv('VERCEL')) {
+                    $tmpDb = '/tmp/database/database.sqlite';
+                    if (!file_exists($tmpDb)) {
+                        @mkdir('/tmp/database', 0777, true);
+                        $srcDb = database_path('database.sqlite');
+                        if (file_exists($srcDb)) {
+                            @copy($srcDb, $tmpDb);
+                        }
+                    }
+                    return $tmpDb;
+                }
+                return database_path('database.sqlite');
+            })(),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
             'busy_timeout' => null,

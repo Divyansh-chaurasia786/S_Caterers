@@ -6,9 +6,14 @@
   <title>Contact S. Caterers | Lucknow & Uttar Pradesh</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Get in touch with S. Caterers by Amit Agrawal. Contact us for premium vegetarian catering inquiries, destination wedding planning, and menu customizations across Lucknow and UP.">
-  <meta name="keywords" content="Contact S. Caterers, Catering Office Lucknow, Amit Agrawal Contact, S. Caterers Phone Number, Email S. Caterers">
-  <meta name="author" content="Amit Agrawal">
+  <meta name="description" content="Get in touch with S. Caterers by Amit Agarwal. Contact us for premium vegetarian catering inquiries, destination wedding planning, and menu customizations across Lucknow and UP.">
+  <meta name="keywords" content="Contact S. Caterers, Catering Office Lucknow, Amit Agarwal Contact, S. Caterers Phone Number, Email S. Caterers">
+  <meta name="author" content="Amit Agarwal">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo.png') }}">
+  <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.5">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=6.1">
   
   <style>
     /* Scoped Contact Page Styles */
@@ -184,13 +189,85 @@
       margin-bottom: 0;
     }
     
-    @media (max-width: 767.98px) {
+    @media (max-width: 768px) {
+      /* 1. Card Container & Section Spacing */
       .contact-hero {
-        padding: 7.5rem 0 4.5rem !important;
+        padding: 5rem 1rem 3rem !important;
+        min-height: auto !important;
+      }
+      .contact-layout-section {
+        padding: 2.5rem 0 !important;
+        min-height: auto !important;
       }
       .contact-info-card, 
       .contact-form-card {
-        padding: 1.5rem !important;
+        padding: 1.25rem !important;
+        margin-bottom: 1.25rem !important;
+        height: auto !important;
+      }
+      
+      /* 2. Typography Scaling */
+      .contact-hero h1 {
+        font-size: clamp(1.35rem, 4.5vw, 1.75rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+      }
+      .contact-hero p {
+        font-size: 0.88rem !important;
+        line-height: 1.45 !important;
+      }
+      .contact-info-card h3,
+      .contact-form-card h3 {
+        font-size: clamp(1.2rem, 4vw, 1.45rem) !important;
+        margin-bottom: 12px !important;
+      }
+      .contact-text-box h4 {
+        font-size: 0.92rem !important;
+        font-weight: 700 !important;
+      }
+      .contact-text-box p {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+      }
+
+      /* 3. Form Component Sizing */
+      .form-group-custom {
+        margin-bottom: 14px !important;
+      }
+      .form-group-custom label {
+        font-size: 0.8rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        margin-bottom: 6px !important;
+      }
+      .form-group-custom input,
+      .form-group-custom select,
+      .form-group-custom textarea {
+        padding: 10px 14px !important;
+        font-size: 0.9rem !important;
+        border-radius: 8px !important;
+      }
+      .pricing-help-note {
+        font-size: 0.78rem !important;
+      }
+      
+      /* Buttons inside the cards */
+      .contact-form-card button,
+      .contact-form-card a.btn-outline-wine {
+        padding: 10px 14px !important;
+        font-size: 0.9rem !important;
+        border-radius: 8px !important;
+      }
+
+      .contact-detail-item {
+        gap: 12px !important;
+        margin-bottom: 1.25rem !important;
+      }
+      .contact-icon-box {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.1rem !important;
+        border-radius: 8px !important;
       }
     }
   </style>
@@ -211,10 +288,11 @@
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('about') }}">About Us</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('services') }}">Services</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom active" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('gallery') }}">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="https://wa.me/919839077960" target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+          <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20connect%20with%20Amit%20Agarwal%20and%20team%20for%20event%20catering." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -225,7 +303,7 @@
     <div class="container">
       <span class="eyebrow">HAVE AN EVENT IN MIND?</span>
       <h1>Let's Connect &amp; <span>Discuss</span></h1>
-      <p>Reach out to S. Caterers team by Amit Agrawal. Let us help you craft a legendary pure vegetarian dining experience for your guests.</p>
+      <p>Reach out to S. Caterers team by Amit Agarwal. Let us help you craft a legendary pure vegetarian dining experience for your guests.</p>
     </div>
   </section>
 
@@ -285,11 +363,6 @@
               </div>
             </div>
           </div>
-          
-          <!-- Interactive Google Maps Location Embed -->
-          <div class="contact-info-card mt-4 p-0 overflow-hidden" style="height: 250px; border-radius: 18px;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.62947230489!2d80.9329061!3d26.9143615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd0a51157831%3A0x379afb476865df05!2sKeshav+Nagar%2C+Sitapur+Road%2C+Lucknow!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
         </div>
 
         <!-- General Contact Message Form -->
@@ -337,15 +410,10 @@
                 <p class="pricing-help-note">*Note: Final pricing depends on menu choices, custom layout requirements, and mutual discussion.</p>
               </div>
 
-              <div class="row g-3">
-                <div class="col-sm-6">
-                  <button type="submit" class="btn-gold w-100 py-3" style="font-size: 1rem; border-radius: 12px; font-weight: 700;">Send Inquiry</button>
-                </div>
-                <div class="col-sm-6">
-                  <a href="https://wa.me/919839077960" target="_blank" class="btn-outline-wine w-100 py-3 d-flex align-items-center justify-content-center" style="font-size: 1rem; border-radius: 12px; font-weight: 700; border-width: 2px; text-decoration: none;">
-                    <i class="fa-brands fa-whatsapp me-2" style="font-size: 1.25rem;"></i> Chat on WhatsApp
-                  </a>
-                </div>
+              <div>
+                <button type="submit" class="btn-gold w-100 py-3 d-flex align-items-center justify-content-center gap-2" style="font-size: 1.05rem; border-radius: 12px; font-weight: 700;">
+                  <i class="fa-brands fa-whatsapp" style="font-size: 1.35rem;"></i> Send Enquiry on WhatsApp
+                </button>
               </div>
             </form>
           </div>
@@ -354,16 +422,24 @@
     </div>
   </section>
 
+  <!-- Full Width Interactive Google Map Section -->
+  <section class="map-section-full p-0" style="height: 480px; width: 100%; overflow: hidden; border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line);">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.62947230489!2d80.9329061!3d26.9143615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd0a51157831%3A0x379afb476865df05!2sKeshav+Nagar%2C+Sitapur+Road%2C+Lucknow!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
   <footer id="footer-section">
     <div class="container">
       <div class="row g-5 footer-container">
         <!-- Logo Column -->
         <div class="col-md-6 col-lg-4">
           <img src="{{ asset('images/logo.png') }}" alt="S. Caterers Logo" class="footer-logo">
-          <p style="font-size: 0.88rem; line-height: 1.6; max-width: 320px;">Premium 100% vegetarian catering services by Amit Agrawal, serving royal taste and unmatched hospitality across Lucknow and the entire state of Uttar Pradesh (UP) since 1995.</p>
+          <p class="footer-summary-text" style="font-size: 0.88rem; line-height: 1.6; max-width: 320px;">Premium 100% vegetarian catering services by Amit Agarwal, serving royal taste and unmatched hospitality across Lucknow and the entire state of Uttar Pradesh (UP) since 1998.</p>
           <div class="footer-social mt-4">
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+            </a>
           </div>
         </div>
 
@@ -413,7 +489,7 @@
       </div>
 
       <div class="footer-bottom d-flex flex-wrap justify-content-between">
-        <span>&copy; 2026 S. Caterers by Amit Agrawal. All rights reserved.</span>
+        <span>&copy; 2026 S. Caterers by Amit Agarwal. All rights reserved.</span>
         <span>Designed with devotion for exquisite tastes.</span>
       </div>
     </div>
@@ -456,7 +532,7 @@
           
           window.open(waUrl, '_blank');
           
-          alert("Thank you! Your message has been saved, and you are being redirected to WhatsApp to chat with Amit Agrawal.");
+          alert("Thank you! Your message has been saved, and you are being redirected to WhatsApp to chat with Amit Agarwal.");
           window.location.reload();
         }).catch(err => {
           console.error("General contact save error:", err);
@@ -473,9 +549,12 @@
     }
   </script>
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960" class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+  <!-- Admin Verification Script -->
+  <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
 
 </body>
 </html>

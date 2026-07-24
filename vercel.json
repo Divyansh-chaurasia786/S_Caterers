@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.php",
+      "use": "vercel-php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(css|js|images|videos|fonts|build)/(.*)",
+      "dest": "/$1/$2"
+    },
+    {
+      "src": "/favicon\\.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/robots\\.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
+    }
+  ],
+  "env": {
+    "APP_KEY": "base64:LREC/2lhfmqQ/M2MSS2UsZuMWYcXlTGMGtedY7/Yd6U=",
+    "APP_ENV": "production",
+    "APP_URL": "https://scaterers.vercel.app",
+    "APP_DEBUG": "true",
+    "LOG_CHANNEL": "stderr",
+    "DB_CONNECTION": "sqlite",
+    "SESSION_DRIVER": "cookie",
+    "CACHE_STORE": "array",
+    "QUEUE_CONNECTION": "sync",
+    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views"
+  }
+}

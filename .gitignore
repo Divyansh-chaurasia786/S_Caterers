@@ -26,5 +26,6 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 /s.caters
-/database.sqlite
-/database/database.sqlite
+# /database/database.sqlite
+.vercel
+scratch/

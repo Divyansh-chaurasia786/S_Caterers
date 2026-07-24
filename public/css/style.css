@@ -198,22 +198,63 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand-logo {
-  background: transparent;
-  padding: 0;
-  border: none;
+  background: radial-gradient(circle at 30% 30%, #201C1A 0%, #0c0a0a 100%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 6px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 0 0 3px rgba(198, 161, 91, 0.5),
+    0 1px 20px rgba(198, 161, 91, 0.25);
+  border: 2px solid var(--gold-line);
+  margin-top: -5px;
+  margin-bottom: -5px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.navbar-brand-logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 50%, transparent 50.1%, transparent 100%);
+  pointer-events: none;
+  z-index: 10;
 }
 
 .navbar-brand-logo:hover {
-  transform: translateY(-1px);
+  transform: translateY(-4px) scale(1.1) rotateX(12deg) rotateY(-8deg) !important;
+  box-shadow: 
+    0 2px 0 rgba(255, 255, 255, 0.3) inset,
+    0 8px 16px rgba(0, 0, 0, 0.55),
+    0 16px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 4px var(--gold),
+    0 2px 30px rgba(198, 161, 91, 0.45) !important;
 }
 
 .navbar-brand-logo img {
-  height: 55px;
-  width: auto;
+  height: auto;
+  width: 100%;
+  max-height: 40px;
+  object-fit: contain;
+  transform: translateZ(25px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar-brand-logo:hover img {
+  transform: translateZ(35px) scale(1.05) !important;
 }
 
 .nav-link-custom {
@@ -273,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content {
   position: relative;
   z-index: 5;
-  padding: 8rem 0;
+  padding: 6.5rem 0;
 }
 
 .hero h1 {
@@ -300,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Option A Wavy Overlay Masking System */
 .hero-image-col {
   position: relative;
-  min-height: 600px;
+  min-height: 520px;
 }
 
 .hero-image-wrap {
@@ -310,6 +351,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: calc(100% + 2px);
   z-index: 2;
+  overflow: hidden !important;
 }
 
 .hero-image-wrap img {
@@ -328,13 +370,29 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1.2s ease-in-out;
+  transition: opacity 2s ease-in-out;
   z-index: 1;
+}
+
+.hero-slide.slide-1 {
+  background-position: 80% center !important;
+}
+.hero-slide.slide-2 {
+  background-position: center center !important;
+}
+.hero-slide.slide-3 {
+  background-position: 25% center !important;
 }
 
 .hero-slide.active {
   opacity: 1;
+  z-index: 3;
+}
+
+.hero-slide.leaving {
+  opacity: 0;
   z-index: 2;
+  transition: opacity 2s ease-in-out;
 }
 
 /* The SVG Wavy Mask overlay */
@@ -354,10 +412,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wavy-mask-line {
-  fill: none;
-  stroke: url(#gold-gradient-hero);
-  stroke-width: 4;
-  filter: drop-shadow(0 0 6px rgba(197, 168, 128, 0.75));
+  display: none !important;
 }
 
 /* --- Promise Cards Section --- */
@@ -415,6 +470,15 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 35px rgba(197, 168, 128, 0.06);
   height: 320px;
   cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.3s ease !important;
+}
+
+.specialty-card:hover {
+  transform: translateY(-8px) scale(1.015) !important;
+  box-shadow: 0 20px 40px rgba(139, 107, 27, 0.12), 0 8px 24px rgba(44, 26, 17, 0.06) !important;
+  border-color: var(--gold) !important;
 }
 
 .specialty-img-wrap {
@@ -447,7 +511,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: background 0.4s ease;
+  transition: background 0.4s ease, padding 0.4s ease !important;
+}
+
+.specialty-card:hover .specialty-overlay {
+  background: linear-gradient(to top, 
+    rgba(122, 28, 43, 0.98) 0%, 
+    rgba(42, 36, 33, 0.7) 60%, 
+    rgba(42, 36, 33, 0.2) 100%
+  ) !important;
 }
 
 .specialty-title {
@@ -477,6 +549,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .specialty-card:hover .specialty-title {
   transform: translateY(-5px);
+}
+
+/* Active Spotlight State for Autoplay on Desktop */
+.specialty-card.active-spotlight {
+  transform: translateY(-8px) scale(1.015) !important;
+  box-shadow: 0 20px 40px rgba(139, 107, 27, 0.12), 0 8px 24px rgba(44, 26, 17, 0.06) !important;
+  border-color: var(--gold) !important;
+}
+.specialty-card.active-spotlight .specialty-img-wrap img {
+  transform: scale(1.1) !important;
+}
+.specialty-card.active-spotlight .specialty-overlay {
+  background: linear-gradient(to top, 
+    rgba(122, 28, 43, 0.98) 0%, 
+    rgba(42, 36, 33, 0.7) 60%, 
+    rgba(42, 36, 33, 0.2) 100%
+  ) !important;
+}
+.specialty-card.active-spotlight .specialty-title {
+  transform: translateY(-5px) !important;
+}
+.specialty-card.active-spotlight .specialty-desc {
+  opacity: 1 !important;
+  max-height: 120px !important;
 }
 
 /* --- Events Section --- */
@@ -600,15 +696,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 3rem 2.2rem;
   text-align: center;
   height: 100%;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.3s ease !important;
   position: relative;
   overflow: hidden;
 }
 
 .package-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(197, 168, 128, 0.2);
-  border-color: var(--gold);
+  transform: translateY(-8px) scale(1.015) !important;
+  box-shadow: 0 20px 40px rgba(139, 107, 27, 0.12), 0 8px 24px rgba(44, 26, 17, 0.06) !important;
+  border-color: var(--gold) !important;
 }
 
 .package-card::before {
@@ -630,11 +728,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
   color: var(--gold);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
 .package-card:hover .pkg-icon {
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg) !important;
 }
 
 .package-card .pkg-title {
@@ -1129,6 +1227,12 @@ footer a:hover {
   color: var(--gold-bright);
 }
 
+.footer-social {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+}
+
 .footer-social a {
   display: inline-flex;
   width: 42px;
@@ -1513,6 +1617,148 @@ footer a:hover {
     padding-right: 0 !important;
   }
 
+  /* About Us Page Mobile Optimizations (< 768px) */
+  .pillars-section {
+    padding: 24px 0 !important;
+    overflow: hidden !important;
+  }
+  .pillars-section .container {
+    overflow: visible !important; /* ensures bootstrap container doesn't clip row scroll */
+  }
+  .pillars-slider {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    padding: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important; /* clear row margins */
+  }
+  .pillars-slider > [class*="col-"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .pillars-slider > [class*="col-"]:nth-child(3) {
+    grid-column: 1 / -1 !important; /* span full width across both columns */
+  }
+  .pillars-section .pillar-card {
+    padding: 16px 12px !important;
+    background: #FFFDF9 !important;
+    border: 1px solid #E6D8C3 !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    height: 100% !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0 !important;
+  }
+  .pillars-section .pillar-card .pkg-icon {
+    font-size: 28px !important;
+    margin-bottom: 8px !important;
+    color: var(--wine) !important;
+  }
+  .pillars-section .pillar-card .pkg-title {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    margin-bottom: 6px !important;
+  }
+  .pillars-section .pillar-card .pkg-desc {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    color: #5A4A42 !important;
+    margin: 0 !important;
+  }
+
+  .about-hero {
+    padding: 40px 16px !important;
+  }
+
+  .jali-divider {
+    margin: 1.25rem 0 !important;
+  }
+
+  /* Milestones Book Mobile 3D Flip Styles */
+  .milestones-book-container {
+    max-width: 320px !important;
+    width: 90vw !important;
+    height: 320px !important;
+    margin: 0 auto !important;
+    perspective: 1200px !important;
+    box-shadow: 
+      0 12px 30px rgba(90,50,10,0.18),
+      0 2px 8px rgba(90,50,10,0.12),
+      inset 0 1px 0 rgba(255,255,255,0.6) !important;
+  }
+
+  .book-left .book-page-inner,
+  .book-flip-back {
+    padding: 14px 12px 10px 14px !important;
+  }
+
+  .book-chapter-label {
+    font-size: 0.55rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .book-year-display {
+    font-size: 1.85rem !important;
+    margin-bottom: -4px !important;
+  }
+
+  .book-title {
+    font-size: 0.85rem !important;
+    margin-bottom: 6px !important;
+    line-height: 1.25 !important;
+  }
+
+  .book-desc {
+    font-size: 0.7rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .book-page-number {
+    margin-top: 10px !important;
+    font-size: 0.55rem !important;
+  }
+
+  .book-img-caption {
+    font-size: 0.6rem !important;
+    padding: 10px 8px 4px !important;
+  }
+
+  .book-spine {
+    width: 12px !important;
+  }
+
+  .book-arrow-btn {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .book-timeline-nav {
+    margin-bottom: 16px !important;
+    gap: 4px !important;
+  }
+
+  .book-flip-panel {
+    transform-style: preserve-3d !important;
+    transform-origin: left center !important;
+  }
+
+  .book-flip-panel.flipping {
+    box-shadow: -5px 0 15px rgba(0,0,0,0.15) !important;
+  }
+
+  .journey-section {
+    overflow: hidden !important;
+  }
+
   /* Global Spacing and Typography Overrides */
   body {
     font-size: 0.9rem !important;
@@ -1547,16 +1793,113 @@ footer a:hover {
     line-height: 1.6 !important;
   }
 
+  .navbar-brand-logo {
+    width: 48px !important;
+    height: 48px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 5px !important;
+  }
   .navbar-brand-logo img {
-    height: 40px !important;
+    max-height: 32px !important;
+    height: auto !important;
+    width: auto !important;
   }
 
+  /* --- Mobile Compact Footer Refactor (screens <= 768px) --- */
   footer {
     background-color: #2A1B12 !important;
-    padding: 3.5rem 16px 32px !important; /* Prevents overflow and white spaces below */
+    padding: 20px 16px 16px 16px !important;
+    margin-top: 32px !important;
     overflow: hidden !important;
     width: 100% !important;
     margin-bottom: 0 !important;
+  }
+
+  footer .footer-logo {
+    height: 38px !important;
+    width: auto !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  /* Make brand summary/intro text visible and compact on mobile */
+  footer .footer-summary-text,
+  footer .footer-brand-text {
+    display: block !important;
+    font-size: 0.78rem !important; /* ~12.5px */
+    line-height: 1.35 !important;
+    color: #BDB0A6 !important;
+    margin: 6px 0 8px 0 !important;
+    max-width: 100% !important;
+  }
+
+  .footer-social {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .footer-social a {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.8rem !important;
+    margin-right: 0.4rem !important;
+  }
+
+  /* Keep EXPLORE and CUISINE side-by-side in a 2-column grid / 50% width layout */
+  .footer-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    row-gap: 14px !important;
+  }
+
+  .footer-container > .col-6 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-container > .col-md-6.col-lg-4:first-child {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  footer h6 {
+    font-size: 0.78rem !important;
+    margin-bottom: 0.4rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  footer a {
+    font-size: 0.8rem !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Compact Contact Us section */
+  .footer-contact {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-top: 2px !important;
+  }
+
+  .footer-contact h6 {
+    margin-bottom: 0.4rem !important;
+  }
+
+  .footer-contact > div {
+    gap: 6px !important;
+  }
+
+  .footer-contact p {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+  }
+
+  .footer-contact svg {
+    width: 13px !important;
+    height: 13px !important;
   }
 
   footer p, footer a {
@@ -1569,11 +1912,16 @@ footer a:hover {
     display: none !important;
   }
 
+  /* Footer bottom with extra clearance so floating WhatsApp button doesn't overlap text */
   .footer-bottom {
+    margin-top: 14px !important;
+    padding-top: 10px !important;
+    padding-bottom: 45px !important;
     justify-content: center !important;
-    text-align: center;
-    flex-direction: column;
-    gap: 0.75rem;
+    text-align: center !important;
+    flex-direction: column !important;
+    gap: 0.3rem !important;
+    font-size: 0.72rem !important;
   }
 
   /* Hero Section Overhaul (Mobile Portrait) */
@@ -1957,7 +2305,6 @@ footer a:hover {
     border-top-left-radius: 12px !important;
     border-top-right-radius: 12px !important;
   }
-  }
 
   /* Consultation Form Overrides */
   .booking-form-card, 
@@ -2209,6 +2556,7 @@ footer a:hover {
   .mobile-swipe-deck {
     display: flex !important;
     flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
     -webkit-overflow-scrolling: touch !important;
@@ -2306,6 +2654,9 @@ footer a:hover {
 
   /* FIX 2b: Keep specialty image visible */
   .specialty-img-wrap {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 2 !important;
     height: 160px !important;
     width: 100% !important;
     overflow: hidden !important;
@@ -2348,6 +2699,9 @@ footer a:hover {
     line-height: 1.4 !important;
     color: var(--ink-soft) !important;
     margin: 0 !important;
+    opacity: 1 !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   .gallery-card {
@@ -2386,6 +2740,82 @@ footer a:hover {
   .carousel-dot.active {
     opacity: 1 !important; /* Active dot: filled gold #8B6B1B */
     transform: scale(1.2) !important;
+  }
+
+  /* FAQ Refactoring on mobile */
+  #faqs-section {
+    padding: 28px 16px !important;
+  }
+  #faqs-section .faq-accordion {
+    width: 100% !important;
+  }
+  #faqs-section .faq-item {
+    background: #FFFDF9 !important;
+    border: 1px solid #E6D8C3 !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    padding: 14px 16px !important;
+    border-top: 1px solid #E6D8C3 !important; /* overrides first-child border-top */
+  }
+  #faqs-section .faq-trigger {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    color: #2A1B12 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+    border: none !important;
+    background: transparent !important;
+  }
+  #faqs-section .faq-panel .pb-4 {
+    padding-bottom: 8px !important;
+    padding-top: 10px !important;
+  }
+  #faqs-section .faq-panel p {
+    font-size: 13.5px !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+  }
+
+  /* Plan Your Celebration Refactoring on mobile */
+  .plan-celebration-section {
+    padding: 32px 16px !important;
+  }
+  .plan-celebration-section .d-flex {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  .plan-celebration-section .btn-gold {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #C59B27 !important;
+    color: #FFFDF9 !important;
+    border: none !important;
+    font-weight: 700 !important;
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 24px !important;
+    font-size: 15px !important;
+    box-shadow: none !important;
+  }
+  .plan-celebration-section .btn-outline-wine {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: 1px solid #8B6B1B !important;
+    color: #8B6B1B !important;
+    background: transparent !important;
+    width: 100% !important;
+    height: 44px !important;
+    margin-top: 10px !important;
+    margin-left: 0 !important;
+    border-radius: 22px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
   }
 }
 

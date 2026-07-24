@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+scratch
+tests
+README.md
+phpunit.xml
+vite.config.js
+package.json
+package-lock.json

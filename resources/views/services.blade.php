@@ -8,7 +8,12 @@
   <!-- SEO Meta Tags -->
   <meta name="description" content="Explore S. Caterers premium catering packages: Silver, Gold, and Royal banquets. Discover our Lakhnavi street food, BBQ grills, global live stations, and traditional Awadhi vegetarian delicacies.">
   <meta name="keywords" content="Catering Packages, S. Caterers Menu, Awadhi Food Lucknow, Lakhnavi Chaat, Pure Veg Catering Lucknow, Satvik Jain Catering">
-  <meta name="author" content="Amit Agrawal">
+  <meta name="author" content="Amit Agarwal">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo.png') }}">
+  <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.5">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=6.1">
   
   <style>
     /* Scoped Services Page Styles */
@@ -202,23 +207,24 @@
     }
     
     .menu-tab-btn {
-      background: #FFFFFF;
-      border: 1px solid rgba(198, 161, 91, 0.25);
-      color: var(--charcoal);
-      padding: 8px 24px;
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(198, 161, 91, 0.15);
+      color: #555555;
+      padding: 10px 24px;
       border-radius: 30px;
       font-size: 0.9rem;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.25s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .menu-tab-btn:hover,
     .menu-tab-btn.active {
       background: var(--wine);
-      color: var(--ivory);
+      color: #FFFFFF !important;
       border-color: var(--wine);
-      box-shadow: 0 6px 15px rgba(110, 20, 35, 0.15);
+      box-shadow: 0 4px 12px rgba(110, 20, 35, 0.25);
+      transform: translateY(-1px);
     }
     
     .menu-items-grid {
@@ -246,6 +252,29 @@
     .menu-item-row {
       border-bottom: 1px dashed rgba(198, 161, 91, 0.18);
       padding: 1.2rem 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      will-change: padding-left;
+    }
+    
+    .menu-item-row::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 15%;
+      bottom: 15%;
+      width: 0;
+      background: var(--gold);
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .menu-item-row:hover {
+      padding-left: 12px !important;
+    }
+
+    .menu-item-row:hover::before {
+      width: 4px;
     }
     
     .menu-item-row:last-child {
@@ -280,6 +309,111 @@
       margin-top: 4px;
     }
     
+    /* Premium hover effects on cards */
+    .pkg-custom-card {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                  border-color 0.3s ease !important;
+      will-change: transform, opacity, box-shadow;
+    }
+    .pkg-custom-card:hover {
+      transform: translateY(-8px) scale(1.015) !important;
+      box-shadow: 0 20px 40px rgba(139, 107, 27, 0.12), 0 8px 24px rgba(44, 26, 17, 0.06) !important;
+      border-color: var(--gold) !important;
+    }
+    .pkg-custom-card .pkg-img-wrap img {
+      transition: transform 0.5s ease-in-out !important;
+      will-change: transform;
+    }
+    .pkg-custom-card:hover .pkg-img-wrap img {
+      transform: scale(1.08) !important;
+    }
+    .pkg-custom-card .icon i {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .pkg-custom-card:hover .icon i {
+      transform: scale(1.15) rotate(5deg) !important;
+    }
+    .pkg-custom-card .select-package {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .pkg-custom-card:hover .select-package {
+      background-color: var(--wine) !important;
+      color: #FFFFFF !important;
+      border-color: var(--wine) !important;
+      box-shadow: 0 4px 12px rgba(110, 20, 35, 0.25) !important;
+    }
+
+    /* Scroll Entrance Animation Classes */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      will-change: transform, opacity;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Add-on services selection chips in form */
+    .addon-checkboxes-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.35s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .addon-checkboxes-grid.show {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 24px;
+    }
+    .addon-toggle-header {
+      transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .addon-toggle-header:hover {
+      border-color: var(--gold) !important;
+      box-shadow: 0 4px 10px rgba(139, 107, 27, 0.05);
+    }
+    .addon-toggle-header.active {
+      border-color: var(--wine) !important;
+      background: rgba(139, 20, 35, 0.02) !important;
+    }
+    .addon-chip {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .addon-chip input {
+      display: none !important; /* Hide native checkbox entirely */
+    }
+    .addon-chip span {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px dashed var(--gold-line);
+      border-radius: 20px;
+      background: #FFFDF9;
+      color: var(--charcoal);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+    .addon-chip input:checked + span {
+      background: var(--wine) !important;
+      color: #FFFFFF !important;
+      border-color: var(--wine) !important;
+      box-shadow: 0 4px 8px rgba(110, 20, 35, 0.15);
+      border-style: solid !important;
+    }
+
     /* Inquiry Form Container */
     .inquiry-form-section {
       background-color: #FFFFFF;
@@ -325,16 +459,287 @@
     }
     
     @media (max-width: 767.98px) {
-      .services-hero {
-        padding: 7.5rem 0 4.5rem !important;
+      .mobile-swipe-deck {
+        justify-content: flex-start !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
       }
-      .pkg-custom-card, 
-      .menu-items-grid, 
-      .inquiry-form-box {
-        padding: 1.5rem !important;
+      .services-hero {
+        padding: 28px 16px !important;
+      }
+      .services-hero h1 {
+        font-size: 25px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+      }
+      .services-hero p {
+        font-size: 0.85rem !important;
+        line-height: 1.45 !important;
+      }
+      .tab-content {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        min-height: 300px !important;
+      }
+      .tab-content > .tab-pane {
+        width: 100% !important;
+      }
+      .tab-content > .tab-pane.fade {
+        opacity: 0 !important;
+        transform: translateY(8px) !important;
+        transition: opacity 0.45s ease-in-out, transform 0.45s ease-in-out !important;
+      }
+      .tab-content > .tab-pane.active {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+      }
+      .pkg-tabs {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin: 0 auto 20px auto !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+      }
+      .pkg-tabs .nav-item {
+        flex: 1 !important;
+      }
+      .pkg-tabs .nav-link {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        border-radius: 20px !important;
+        padding: 8px 12px !important;
+        border: 1px solid #E6D8C3 !important;
+        background: #FFFDF9 !important;
+        color: #2A1B12 !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        transition: all 0.25s ease !important;
+      }
+      .pkg-tabs .nav-link.active {
+        background-color: var(--wine) !important;
+        color: #FFFFFF !important;
+        border-color: var(--wine) !important;
+        box-shadow: 0 4px 10px rgba(110, 20, 35, 0.15) !important;
       }
       .pkg-custom-card {
-        margin-bottom: 1.5rem;
+        padding: 16px !important;
+        margin-bottom: 20px !important;
+        border-radius: 16px !important;
+        background: #FFFDF9 !important;
+        border: 1px solid #E6D8C3 !important;
+        box-sizing: border-box !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-shadow: 0 4px 12px rgba(44, 26, 17, 0.04) !important;
+      }
+      .pkg-img-wrap {
+        margin: -16px -16px 12px -16px !important;
+        height: 140px !important;
+        border-top-left-radius: 16px !important;
+        border-top-right-radius: 16px !important;
+        overflow: hidden !important;
+      }
+      .pkg-img-wrap img {
+        width: 100% !important;
+        height: 140px !important;
+        object-fit: cover !important;
+        border-radius: 12px 12px 0 0 !important;
+        display: block !important;
+      }
+      .pkg-header {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      .pkg-header h3 {
+        font-size: 20px !important;
+        margin-bottom: 6px !important;
+        font-weight: 700 !important;
+        color: var(--charcoal) !important;
+      }
+      .pkg-header .desc {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+        color: #5A4A42 !important;
+        margin-bottom: 12px !important;
+      }
+      .pkg-features {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+      }
+      .pkg-features li {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-bottom: 8px !important;
+        font-size: 13px !important;
+        color: #2A1B12 !important;
+        text-align: left !important;
+      }
+      .pkg-features li i {
+        font-size: 14px !important;
+        color: #C59B27 !important;
+        margin-top: 0 !important;
+      }
+      .pkg-custom-card .pt-3 {
+        padding-top: 0 !important;
+        margin-top: auto !important;
+      }
+      .select-package {
+        width: 100% !important;
+        height: 42px !important;
+        margin-top: 12px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        border-radius: 21px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      /* Signature Food Galleries Mobile Layout Refactoring */
+      .menu-items-grid {
+        height: auto !important;
+        min-height: auto !important;
+        padding: 16px !important;
+        padding-bottom: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      .menu-showcase-section {
+        padding: 28px 16px !important;
+        margin-bottom: 0 !important;
+        position: relative !important;
+        z-index: 1 !important;
+      }
+      .menu-pane .row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .menu-pane .menu-item-row {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-bottom: none !important;
+        display: block !important;
+      }
+      .menu-pane .menu-item-name {
+        font-size: 14px !important;
+        font-weight: bold !important;
+        margin-bottom: 4px !important;
+        color: var(--wine) !important;
+        line-height: 1.25 !important;
+      }
+      .menu-pane .menu-item-desc {
+        font-size: 12px !important;
+        color: #5A4A42 !important;
+        line-height: 1.35 !important;
+        margin-top: 0 !important;
+      }
+
+      /* Inquiry Form Mobile Layout Refactoring */
+      .inquiry-form-section {
+        padding: 28px 16px !important;
+        margin-top: 0 !important;
+        position: relative !important;
+        z-index: 10 !important;
+      }
+      .inquiry-form-box {
+        padding: 24px 16px !important;
+        background: var(--ivory) !important;
+        border: 1px solid var(--gold-line) !important;
+        border-radius: 24px !important;
+        max-width: 100% !important;
+      }
+      .inquiry-form-box .text-center.mb-5 {
+        margin-bottom: 20px !important;
+      }
+      .inquiry-form-box h2.section-title {
+        font-size: 24px !important;
+        margin-bottom: 6px !important;
+      }
+      .inquiry-form-box p.text-muted {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0 !important;
+      }
+      .form-group-custom {
+        margin-bottom: 0 !important;
+      }
+      .form-group-custom label {
+        font-size: 11px !important;
+        margin-bottom: 4px !important;
+      }
+      .form-group-custom input:not([type="checkbox"]),
+      .form-group-custom select,
+      .form-group-custom textarea {
+        height: 44px !important;
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+        margin-bottom: 12px !important;
+        border-radius: 8px !important;
+        border: 1px solid #E6D8C3 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        background: #FFFFFF !important;
+      }
+      .form-group-custom textarea {
+        height: 80px !important;
+      }
+      .form-group-custom input[type="checkbox"] {
+        width: 18px !important;
+        height: 18px !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        flex-shrink: 0 !important;
+      }
+      .side-by-side-row {
+        display: flex !important;
+        gap: 10px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .side-by-side-row > div {
+        flex: 1 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      #inquiry button[type="submit"] {
+        background: #25D366 !important;
+        color: #FFF !important;
+        font-weight: 700 !important;
+        height: 48px !important;
+        border-radius: 24px !important;
+        font-size: 14px !important;
+        border: none !important;
+        margin-top: 12px !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        box-shadow: none !important;
       }
       /* Horizontally scrollable tabs with hidden scrollbar */
       .menu-tabs {
@@ -372,10 +777,11 @@
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('about') }}">About Us</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom active" href="{{ route('services') }}">Services</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('gallery') }}">Gallery</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
         <div class="d-flex mt-2 mt-lg-0">
-          <a href="https://wa.me/919839077960" target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
+          <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20catering%20packages%20and%20menu%20customizations." target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -404,10 +810,7 @@
       <div class="row g-4 justify-content-center d-none d-md-flex">
         <!-- Silver Menu -->
         <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card">
-            <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Silver Menu" loading="lazy">
-            </div>
+          <div class="pkg-custom-card animate-on-scroll">
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-seedling"></i></div>
               <h3>Silver Menu</h3>
@@ -428,10 +831,7 @@
 
         <!-- Gold Menu -->
         <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card">
-            <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Gold Menu" loading="lazy">
-            </div>
+          <div class="pkg-custom-card animate-on-scroll">
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
               <h3>Gold Menu</h3>
@@ -452,11 +852,8 @@
 
         <!-- Royal Menu -->
         <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card royal-active">
+          <div class="pkg-custom-card royal-active animate-on-scroll">
             <div class="royal-badge">Chef's Signature</div>
-            <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Royal Menu" loading="lazy">
-            </div>
             <div class="pkg-header">
               <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
               <h3>Royal Menu</h3>
@@ -476,27 +873,12 @@
         </div>
       </div>
 
-      <!-- Mobile View (Tabbed Layout) -->
+      <!-- Mobile View (Slider Layout) -->
       <div class="d-md-none">
-        <ul class="nav nav-pills pkg-tabs" id="servPkgTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="serv-tab-silver" data-bs-toggle="tab" data-bs-target="#serv-pane-silver" type="button" role="tab" aria-controls="serv-pane-silver" aria-selected="true">Silver</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="serv-tab-gold" data-bs-toggle="tab" data-bs-target="#serv-pane-gold" type="button" role="tab" aria-controls="serv-pane-gold" aria-selected="false">Gold</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="serv-tab-royal" data-bs-toggle="tab" data-bs-target="#serv-pane-royal" type="button" role="tab" aria-controls="serv-pane-royal" aria-selected="false">Royal</button>
-          </li>
-        </ul>
-        
-        <div class="tab-content" id="servPkgTabContent">
-          <!-- Silver Pane -->
-          <div class="tab-pane fade show active" id="serv-pane-silver" role="tabpanel" aria-labelledby="serv-tab-silver">
-            <div class="pkg-custom-card">
-              <div class="pkg-img-wrap">
-                <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Silver Menu" loading="lazy">
-              </div>
+        <div class="row g-4 mobile-swipe-deck" id="packages-swipe-deck">
+          <!-- Silver Menu -->
+          <div class="col-12">
+            <div class="pkg-custom-card animate-on-scroll">
               <div class="pkg-header">
                 <div class="icon"><i class="fa-solid fa-seedling"></i></div>
                 <h3>Silver Menu</h3>
@@ -515,12 +897,9 @@
             </div>
           </div>
           
-          <!-- Gold Pane -->
-          <div class="tab-pane fade" id="serv-pane-gold" role="tabpanel" aria-labelledby="serv-tab-gold">
-            <div class="pkg-custom-card">
-              <div class="pkg-img-wrap">
-                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Gold Menu" loading="lazy">
-              </div>
+          <!-- Gold Menu -->
+          <div class="col-12">
+            <div class="pkg-custom-card animate-on-scroll">
               <div class="pkg-header">
                 <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
                 <h3>Gold Menu</h3>
@@ -539,13 +918,10 @@
             </div>
           </div>
           
-          <!-- Royal Pane -->
-          <div class="tab-pane fade" id="serv-pane-royal" role="tabpanel" aria-labelledby="serv-tab-royal">
-            <div class="pkg-custom-card royal-active">
+          <!-- Royal Menu -->
+          <div class="col-12">
+            <div class="pkg-custom-card royal-active animate-on-scroll">
               <div class="royal-badge">Chef's Signature</div>
-              <div class="pkg-img-wrap">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Royal Menu" loading="lazy">
-              </div>
               <div class="pkg-header">
                 <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
                 <h3>Royal Menu</h3>
@@ -564,6 +940,8 @@
             </div>
           </div>
         </div>
+        <!-- Packages Pagination Dots -->
+        <div class="carousel-dots d-md-none" id="dots-packages" style="margin-top: 15px;"></div>
       </div>
     </div>
   </section>
@@ -577,10 +955,10 @@
         <p class="text-muted" style="max-width: 600px; margin: 0.5rem auto 0;">Enhance your catering experience with our interactive specialty live stations, overseen by our expert chefs.</p>
       </div>
 
-      <div class="row g-4 justify-content-center mobile-swipe-deck">
+      <div class="row g-4 justify-content-center mobile-swipe-deck" id="counters-swipe-deck">
         <!-- Craft Bar Lounge -->
         <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+          <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
               <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Craft Bar Lounge" loading="lazy">
             </div>
@@ -603,7 +981,7 @@
 
         <!-- Live Juice Counter -->
         <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+          <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
               <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=800&q=80" alt="Live Juice Counter" loading="lazy">
             </div>
@@ -624,43 +1002,45 @@
           </div>
         </div>
 
-        <!-- Chocolate Counter -->
+        <!-- Celebration Cake Lounge -->
         <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
+          <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
-              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="Chocolate Counter" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Celebration Cake Lounge" loading="lazy">
             </div>
             <div class="pkg-header">
-              <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-ice-cream"></i></div>
-              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Chocolate Fountain</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Multi-tiered Belgian chocolate cascade counter with eggless macarons, gold-dusted truffles, and fresh berry skewers.</p>
+              <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-cake-candles"></i></div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Celebration Cake Lounge</h3>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Delight guests with our multi-tiered custom designer cakes, gold-leaf pastries, and artisanal macarons crafted live by master pastry chefs.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Warm Belgian Chocolate Cascade Fountain</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>24k Gold Dusted Truffles &amp; Eggless Treats</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fresh Strawberries, Marshmallows &amp; Berries</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Live Chocolatier Dipping Station</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Custom Multi-Tier Designer Theme Cakes</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Live Cake Decoration &amp; Custom Frosting Station</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Warm Saffron &amp; Rose Infused Fusion Pastries</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>100% Eggless Premium Vegetarian Patisserie</span></li>
             </ul>
             <div class="mt-auto">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Chocolate Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Chocolate Counter</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Celebration Cake Lounge" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Cake Lounge</a>
             </div>
           </div>
         </div>
       </div>
+      <!-- Counters Pagination Dots -->
+      <div class="carousel-dots d-md-none" id="dots-counters" style="margin-top: 15px;"></div>
     </div>
   </section>
 
   <!-- ================= SIGNATURE FOOD GALLERIES ================= -->
   <section class="menu-showcase-section" id="menu-galleries">
     <div class="container">
-      <div class="section-title-wrap text-center mb-5">
+      <div class="section-title-wrap text-center mb-5 animate-on-scroll">
         <span class="eyebrow">OUR SPECIALTIES</span>
         <h2 class="section-title">Signature Food <span class="accent">Galleries</span></h2>
         <p class="text-muted" style="max-width: 600px; margin: 0.5rem auto 0;">Explore curated items selected from our menus. Toggle the tabs below to view signature items.</p>
       </div>
 
       <!-- Wok Filter Tabs -->
-      <div class="menu-tabs">
+      <div class="menu-tabs animate-on-scroll">
         <button class="menu-tab-btn active" onclick="switchTab('drinks')">Beverages & Shakes</button>
         <button class="menu-tab-btn" onclick="switchTab('starters')">Gourmet Starters</button>
         <button class="menu-tab-btn" onclick="switchTab('chaat')">Lakhnavi Chaat Street</button>
@@ -670,7 +1050,7 @@
       </div>
 
       <!-- Menu Grid Pane -->
-      <div class="menu-items-grid">
+      <div class="menu-items-grid animate-on-scroll">
         <!-- Beverages & Shakes -->
         <div class="menu-pane active" id="pane-drinks">
           <div class="row">
@@ -890,34 +1270,71 @@
               <input type="text" name="phone" id="inq-phone" placeholder="e.g. +91 98390 77960" required>
             </div>
             <div class="col-md-6 form-group-custom">
-              <label for="inq-date">Event Date</label>
-              <input type="date" name="event_date" id="inq-date" required>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6 form-group-custom">
-              <label for="inq-guests">Expected Guests</label>
-              <input type="number" name="guests" id="inq-guests" placeholder="e.g. 250" min="20" required>
-            </div>
-            <div class="col-md-6 form-group-custom">
               <label for="inq-package">Catering Package</label>
               <select name="package" id="inq-package" required>
                 <option value="" disabled selected>Choose a starting tier...</option>
                 <option value="Silver Menu">Silver Menu</option>
                 <option value="Gold Menu">Gold Menu</option>
                 <option value="Royal Menu">Royal Menu</option>
-                <option value="Craft Bar Counter">Craft Bar Lounge (Add-on)</option>
-                <option value="Live Juice Counter">Live Juice Counter (Add-on)</option>
-                <option value="Chocolate Counter">Chocolate Fountain (Add-on)</option>
-                <option value="Custom Event">Bespoke Custom Catering</option>
+                <option value="Custom Catering Service">Custom Catering Service</option>
               </select>
+            </div>
+          </div>
+
+          <div class="row side-by-side-row">
+            <div class="col-6 form-group-custom">
+              <label for="inq-date">Event Date</label>
+              <input type="date" name="event_date" id="inq-date" required>
+            </div>
+            <div class="col-6 form-group-custom">
+              <label for="inq-guests">Expected Guests</label>
+              <input type="number" name="guests" id="inq-guests" placeholder="e.g. 250" min="20" required>
             </div>
           </div>
 
           <div class="form-group-custom">
             <label for="inq-notes">Special Dietary Requests &amp; Notes</label>
             <textarea name="notes" id="inq-notes" rows="4" placeholder="Mention any specific requirements (e.g. 100% Satvik / Jain kitchen segregation, custom uniform theme, live teppanyaki preferences)..."></textarea>
+          </div>
+
+          <!-- Add-on Services Section -->
+          <div class="form-group-custom mb-3">
+            <div class="addon-toggle-header" id="addon-toggle-trigger" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 10px 14px; background: #FFFDF9; border: 1px solid #E6D8C3; border-radius: 10px; transition: all 0.3s ease; margin-bottom: 12px; user-select: none;">
+              <span style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--wine); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;">
+                <i class="fa-solid fa-circle-plus" style="color: var(--gold); font-size: 1.05rem;"></i> Select Add-on Services
+              </span>
+              <span style="font-size: 0.8rem; color: #8B6B1B; font-weight: 700;" class="toggle-status-text">TAP TO EXPAND</span>
+            </div>
+            <div class="addon-checkboxes-grid" id="addon-grid">
+              <label class="addon-chip">
+                <input type="checkbox" name="addons[]" value="Craft Bar Lounge">
+                <span>+ Craft Bar Lounge</span>
+              </label>
+              <label class="addon-chip">
+                <input type="checkbox" name="addons[]" value="Live Monin Juice Bar">
+                <span>+ Live Juice Bar</span>
+              </label>
+              <label class="addon-chip">
+                <input type="checkbox" name="addons[]" value="Celebration Cake Lounge">
+                <span>+ Celebration Cake Lounge</span>
+              </label>
+              <label class="addon-chip">
+                <input type="checkbox" name="addons[]" value="Live Pizza & Pasta Station">
+                <span>+ Live Italian Station</span>
+              </label>
+              <label class="addon-chip">
+                <input type="checkbox" name="addons[]" value="Lakhnavi Chaat Live">
+                <span>+ Lakhnavi Chaat Live</span>
+              </label>
+              <label class="addon-chip">
+                <input type="checkbox" name="addons[]" value="Espresso Coffee Hub">
+                <span>+ Live Coffee Station</span>
+              </label>
+              <label class="addon-chip">
+                <input type="checkbox" name="addons[]" value="Custom Add-on Service">
+                <span>+ Custom Add-on Service</span>
+              </label>
+            </div>
           </div>
 
           <div class="form-group-custom d-flex align-items-center gap-2 mb-4">
@@ -943,10 +1360,13 @@
         <!-- Logo Column -->
         <div class="col-md-6 col-lg-4">
           <img src="{{ asset('images/logo.png') }}" alt="S. Caterers Logo" class="footer-logo">
-          <p style="font-size: 0.88rem; line-height: 1.6; max-width: 320px;">Premium 100% vegetarian catering services by Amit Agrawal, serving royal taste and unmatched hospitality across Lucknow and the entire state of Uttar Pradesh (UP) since 1995.</p>
+          <p class="footer-summary-text" style="font-size: 0.88rem; line-height: 1.6; max-width: 320px;">Premium 100% vegetarian catering services by Amit Agarwal, serving royal taste and unmatched hospitality across Lucknow and the entire state of Uttar Pradesh (UP) since 1998.</p>
           <div class="footer-social mt-4">
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+            </a>
           </div>
         </div>
 
@@ -996,7 +1416,7 @@
       </div>
 
       <div class="footer-bottom d-flex flex-wrap justify-content-between">
-        <span>&copy; 2026 S. Caterers by Amit Agrawal. All rights reserved.</span>
+        <span>&copy; 2026 S. Caterers by Amit Agarwal. All rights reserved.</span>
         <span>Designed with devotion for exquisite tastes.</span>
       </div>
     </div>
@@ -1007,6 +1427,39 @@
 
   <!-- Interactive Tabs Logic -->
   <script>
+    // Toggle visibility of add-on services grid with smooth height transitions
+    function initAddonsToggle() {
+      const trigger = document.getElementById('addon-toggle-trigger');
+      if (trigger) {
+        if (trigger.dataset.addonInit) return;
+        trigger.dataset.addonInit = "true";
+        
+        trigger.addEventListener('click', () => {
+          const grid = document.getElementById('addon-grid');
+          if (!grid) return;
+          const statusText = trigger.querySelector('.toggle-status-text');
+          const icon = trigger.querySelector('i');
+          
+          const isShow = grid.classList.toggle('show');
+          trigger.classList.toggle('active');
+          
+          if (isShow) {
+            if (statusText) statusText.textContent = "TAP TO COLLAPSE";
+            if (icon) icon.className = "fa-solid fa-circle-minus";
+          } else {
+            if (statusText) statusText.textContent = "TAP TO EXPAND";
+            if (icon) icon.className = "fa-solid fa-circle-plus";
+          }
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAddonsToggle);
+    } else {
+      initAddonsToggle();
+    }
+
     function switchTab(tabId) {
       // Deactivate all tab buttons
       const buttons = document.querySelectorAll('.menu-tab-btn');
@@ -1018,23 +1471,119 @@
       
       // Activate target tab button
       const targetBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(tabId));
-      if (targetBtn) targetBtn.classList.add('active');
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+        
+        // Dynamically sync and scroll the active tab container so it centers on screen (mobile)
+        const container = document.querySelector('.menu-tabs');
+        if (container) {
+          const btnOffset = targetBtn.offsetLeft;
+          const btnWidth = targetBtn.offsetWidth;
+          const containerWidth = container.offsetWidth;
+          container.scrollTo({
+            left: btnOffset - (containerWidth / 2) + (btnWidth / 2),
+            behavior: 'smooth'
+          });
+        }
+      }
       
       // Activate target menu pane
       const targetPane = document.getElementById('pane-' + tabId);
       if (targetPane) targetPane.classList.add('active');
     }
 
-    // Auto-select package in inquiry form on click
-    document.querySelectorAll('.select-package').forEach(link => {
-      link.addEventListener('click', function(e) {
-        const pkgName = this.getAttribute('data-package');
-        const selectEl = document.getElementById('inq-package');
-        if (selectEl) {
-          selectEl.value = pkgName;
+    // Auto-sliding tabs for Specialties / Food Galleries section
+    function initSpecialtiesTabAutoplay() {
+      const tabButtons = document.querySelectorAll('.menu-tab-btn');
+      if (tabButtons.length === 0) return;
+
+      const tabIds = ['drinks', 'starters', 'chaat', 'global', 'main', 'sweets'];
+      let currentTabIndex = 0;
+      let autoplayInterval = null;
+      let resumeTimeout = null;
+      let isPaused = false;
+
+      const startAutoplay = () => {
+        if (autoplayInterval) clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(() => {
+          if (isPaused) return;
+          currentTabIndex = (currentTabIndex + 1) % tabIds.length;
+          switchTab(tabIds[currentTabIndex]);
+        }, 3500);
+      };
+
+      const stopAutoplay = () => {
+        if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+          autoplayInterval = null;
         }
+      };
+
+      const handleUserInteraction = () => {
+        isPaused = true;
+        stopAutoplay();
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+        // Resume autoplay after 7 seconds of inactivity
+        resumeTimeout = setTimeout(() => {
+          isPaused = false;
+          startAutoplay();
+        }, 7000);
+      };
+
+      // Listen for click on each tab button to update the index and handle user override
+      tabButtons.forEach((btn, idx) => {
+        btn.addEventListener('click', () => {
+          currentTabIndex = idx;
+          handleUserInteraction();
+        });
       });
-    });
+
+      // Pause on hover over the entire grid or tabs
+      const targetSection = document.getElementById('menu-galleries');
+      if (targetSection) {
+        targetSection.addEventListener('mouseenter', () => {
+          isPaused = true;
+          stopAutoplay();
+        });
+        targetSection.addEventListener('mouseleave', () => {
+          isPaused = false;
+          startAutoplay();
+        });
+        targetSection.addEventListener('touchstart', () => {
+          handleUserInteraction();
+        }, { passive: true });
+        targetSection.addEventListener('touchend', () => {
+          handleUserInteraction();
+        }, { passive: true });
+      }
+
+      startAutoplay();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSpecialtiesTabAutoplay);
+    } else {
+      initSpecialtiesTabAutoplay();
+    }
+
+    // Auto-select package in inquiry form on click
+    function initAutoSelectPackage() {
+      document.querySelectorAll('.select-package').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const pkgName = this.getAttribute('data-package');
+          const selectEl = document.getElementById('inq-package');
+          if (selectEl) {
+            selectEl.value = pkgName;
+          }
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAutoSelectPackage);
+    } else {
+      initAutoSelectPackage();
+    }
 
     // Intercept form submission, save to database via AJAX, then redirect to WhatsApp
     const form = document.querySelector('.inquiry-form-box form');
@@ -1050,6 +1599,8 @@
         const pkg = document.getElementById('inq-package').value;
         const notes = document.getElementById('inq-notes').value;
         const customize = document.getElementById('inq-customization').checked ? 'Yes' : 'No';
+        const addons = Array.from(document.querySelectorAll('input[name="addons[]"]:checked'))
+                            .map(cb => cb.value);
         
         // Prepare data to save in SQLite via AJAX
         const formData = new FormData(this);
@@ -1070,6 +1621,7 @@
                       `*Event Date:* ${date}\n` +
                       `*Expected Guests:* ${guests}\n` +
                       `*Package:* ${pkg}\n` +
+                      `*Add-on Services:* ${addons.length > 0 ? addons.join(', ') : 'None'}\n` +
                       `*Request Menu Customization:* ${customize}\n` +
                       `*Special Requests / Notes:* ${notes ? notes : 'None'}\n\n` +
                       `*(Note: I understand final pricing depends on menu selections & discussion)*`;
@@ -1080,7 +1632,7 @@
           window.open(waUrl, '_blank');
           
           // Show alert and reload page
-          alert("Thank you! Your catering inquiry has been saved, and you are being redirected to WhatsApp to chat with Amit Agrawal.");
+          alert("Thank you! Your catering inquiry has been saved, and you are being redirected to WhatsApp to chat with Amit Agarwal.");
           window.location.reload();
         }).catch(err => {
           console.error("Inquiry Save Error:", err);
@@ -1092,40 +1644,186 @@
                       `*Event Date:* ${date}\n` +
                       `*Expected Guests:* ${guests}\n` +
                       `*Package:* ${pkg}\n` +
+                      `*Add-on Services:* ${addons.length > 0 ? addons.join(', ') : 'None'}\n` +
                       `*Request Menu Customization:* ${customize}\n` +
                       `*Special Requests / Notes:* ${notes ? notes : 'None'}`;
           const waUrl = `https://wa.me/919839077960?text=${encodeURIComponent(msg)}`;
           window.open(waUrl, '_blank');
         });
-      // Auto-sliding catering packages tabs on mobile (Silver, Gold, Royal Menu)
-      document.addEventListener('DOMContentLoaded', () => {
-        const pkgTabButtons = [
-          document.getElementById('serv-tab-silver'),
-          document.getElementById('serv-tab-gold'),
-          document.getElementById('serv-tab-royal')
-        ].filter(btn => btn !== null);
-        
-        if (pkgTabButtons.length > 0) {
-          let currentPkgIndex = 0;
-          let pkgInterval = setInterval(() => {
-            currentPkgIndex = (currentPkgIndex + 1) % pkgTabButtons.length;
-            pkgTabButtons[currentPkgIndex].click();
-          }, 3000);
-          
-          pkgTabButtons.forEach((btn, index) => {
-            btn.addEventListener('click', () => {
-              clearInterval(pkgInterval);
-              currentPkgIndex = index;
-            });
-          });
-        }
       });
+
+      // Intersection Observer for Scroll Entrance animations
+      function initScrollAnimations() {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observerInstance) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observerInstance.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+          observer.observe(el);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
+      } else {
+        initScrollAnimations();
+      }
+
+      // Helper function to build and control a mobile slider carousel with dots
+      const setupMobileSlider = (deckId, dotsContainerId) => {
+        const deck = document.getElementById(deckId);
+        const dotsContainer = document.getElementById(dotsContainerId);
+        if (!deck || !dotsContainer) return;
+        
+        const cards = deck.children;
+        const totalCards = cards.length;
+        if (totalCards <= 1) return;
+
+        let intervalId = null;
+        let resumeTimeout = null;
+        let isUserInteracting = false;
+        
+        // Build pagination dots dynamically
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalCards; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('carousel-dot');
+          if (i === 0) dot.classList.add('active');
+          
+          dot.addEventListener('click', () => {
+            handleUserInteraction();
+            const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
+            deck.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
+          });
+          
+          dotsContainer.appendChild(dot);
+        }
+        
+        // Synchronize active dot status during scrolling
+        deck.addEventListener('scroll', () => {
+          const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
+          const activeIndex = Math.round(deck.scrollLeft / cardWidth);
+          const dots = dotsContainer.querySelectorAll('.carousel-dot');
+          dots.forEach((dot, idx) => {
+            if (idx === activeIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        });
+
+        // Robust handler for all manual interactions
+        const handleUserInteraction = () => {
+          isUserInteracting = true;
+          if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+          }
+          if (resumeTimeout) {
+            clearTimeout(resumeTimeout);
+          }
+          // Resume autoplay after 5 seconds of no interaction
+          resumeTimeout = setTimeout(() => {
+            isUserInteracting = false;
+            startAutoplay();
+          }, 5000);
+        };
+        
+        const startAutoplay = () => {
+          if (intervalId) clearInterval(intervalId);
+          intervalId = setInterval(() => {
+            if (isUserInteracting) return;
+            
+            const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(deck).gap || 16);
+            const maxScroll = deck.scrollWidth - deck.clientWidth;
+            
+            let currentIndex = Math.round(deck.scrollLeft / cardWidth);
+            let nextIndex = (currentIndex + 1) % totalCards;
+
+            if (deck.scrollLeft >= maxScroll - 15) {
+              deck.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              deck.scrollTo({ left: nextIndex * cardWidth, behavior: 'smooth' });
+            }
+          }, 3500); // Transitions every 3.5 seconds
+        };
+        
+        const pauseAutoplay = () => {
+          if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+          }
+          if (resumeTimeout) {
+            clearTimeout(resumeTimeout);
+            resumeTimeout = null;
+          }
+        };
+        
+        // Touch events handling
+        deck.addEventListener('touchstart', () => {
+          handleUserInteraction();
+        }, { passive: true });
+        
+        deck.addEventListener('touchmove', () => {
+          handleUserInteraction();
+        }, { passive: true });
+        
+        deck.addEventListener('touchend', () => {
+          handleUserInteraction();
+        }, { passive: true });
+        
+        // Mouse hover handling
+        deck.addEventListener('mouseenter', () => {
+          handleUserInteraction();
+        });
+        
+        deck.addEventListener('mouseleave', () => {
+          handleUserInteraction();
+        });
+        
+        // Initialize if viewport is mobile
+        if (window.innerWidth < 768) {
+          startAutoplay();
+        }
+        
+        window.addEventListener('resize', () => {
+          pauseAutoplay();
+          if (window.innerWidth < 768) {
+            startAutoplay();
+          }
+        });
+      };
+
+      const initMobileSliders = () => {
+        setupMobileSlider('packages-swipe-deck', 'dots-packages');
+        setupMobileSlider('counters-swipe-deck', 'dots-counters');
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileSliders);
+      } else {
+        initMobileSliders();
+      }
     }
   </script>
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/919839077960" class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919839077960?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+  <!-- Admin Verification Script -->
+  <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
 
 </body>
 </html>

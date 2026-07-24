@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: s-caterers
+    env: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "true"
+      - key: APP_KEY
+        value: "base64:LREC/2lhfmqQ/M2MSS2UsZuMWYcXlTGMGtedY7/Yd6U="
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /var/www/html/database/database.sqlite
+      - key: SESSION_DRIVER
+        value: file
+      - key: CACHE_STORE
+        value: file
