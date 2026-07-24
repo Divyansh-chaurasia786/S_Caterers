@@ -1,4 +1,7 @@
-FROM php:8.2-apache
+FROM php:8.3-apache
+
+# Set Composer environment variables
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # Install system dependencies & PHP extensions
 RUN apt-get update && apt-get install -y \
@@ -11,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     git \
     sqlite3 \
     libsqlite3-dev \
-    && docker-php-ext-configure geometry --with-freetype --with-jpeg || true \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg || true \
     && docker-php-ext-install pdo pdo_mysql pdo_sqlite gd zip
 
 # Enable Apache mod_rewrite
@@ -28,9 +31,9 @@ WORKDIR /var/www/html
 # Copy application files
 COPY . /var/www/html
 
-# Install Composer
+# Install Composer from official image & install dependencies
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs --no-scripts
 
 # Set file permissions for Laravel storage & bootstrap/cache
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public/images /var/www/html/public/videos /var/www/html/database \
