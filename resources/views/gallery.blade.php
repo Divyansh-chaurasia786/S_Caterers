@@ -506,45 +506,13 @@
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="tel:+916393998141" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
+              <a href="https://wa.me/916393998141" target="_blank" style="color: inherit; text-decoration: none;">+91 63939 98141</a>
             </p>
             
             <p style="font-size: 0.88rem; margin: 0; display: flex; align-items: center; gap: 8px;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <p>Providing magnificent pure-vegetarian catering, exquisite Lakhnavi chaat stalls, and imperial live counters for over 28 years in Lucknow and across North India.</p>
-          </div>
-        </div>
-        <div class="col-6 col-lg-2 ms-lg-auto">
-          <div class="footer-links">
-            <h6>Quick Links</h6>
-            <ul>
-              <li><a href="{{ route('home') }}">Home</a></li>
-              <li><a href="{{ route('about') }}">About Us</a></li>
-              <li><a href="{{ route('services') }}">Services</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="{{ route('contact') }}">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-6 col-lg-2">
-          <div class="footer-links">
-            <h6>Specialities</h6>
-            <ul>
-              <li><a href="{{ route('services') }}">Grand Weddings</a></li>
-              <li><a href="{{ route('services') }}">Lakhnavi Street Chaat</a></li>
-              <li><a href="{{ route('services') }}">Awadhi Korma &amp; Naan</a></li>
-              <li><a href="{{ route('services') }}">Satvik Puja Catering</a></li>
-              <li><a href="{{ route('services') }}">Gourmet Desserts</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="footer-contact-info">
-            <h6>Get In Touch</h6>
-            <p><i class="fa-solid fa-user me-2" style="color: var(--gold);"></i> Amit Agarwal (Founder)</p>
-            <p><i class="fa-solid fa-phone me-2" style="color: var(--gold);"></i> <a href="https://wa.me/916393998141" target="_blank" style="color: inherit; text-decoration: none;">+91 63939 98141</a></p>
-            <p><i class="fa-solid fa-location-dot me-2" style="color: var(--gold);"></i> Lucknow, Uttar Pradesh</p>
-            <p><i class="fa-solid fa-envelope me-2" style="color: var(--gold);"></i> <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a></p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:scatererslko@gmail.com" style="color: inherit; text-decoration: none;">scatererslko@gmail.com</a>
+            </p>
           </div>
         </div>
       </div>
