@@ -825,17 +825,34 @@
                 @endphp
 
                 @foreach($groupedImages as $categoryName => $catImages)
-                  <div class="category-accordion-item">
+                  @php
+                    $catSlug = Str::slug($categoryName);
+                  @endphp
+                  <div class="category-accordion-item" id="folder-item-{{ $catSlug }}">
                     <!-- Category Accordion Header -->
-                    <div class="category-accordion-header {{ $loop->first ? 'active' : '' }}" onclick="toggleAdminAccordion(this)">
-                      <div class="d-flex align-items-center gap-2">
+                    <div class="category-accordion-header {{ $loop->first ? 'active' : '' }}">
+                      <div class="d-flex align-items-center gap-2" onclick="toggleAdminAccordion(this.closest('.category-accordion-header'))" style="flex-grow: 1; cursor: pointer;">
                         <i class="fa-solid fa-folder-open text-warning fs-5"></i>
                         <span class="cat-title fw-bold" style="font-size: 0.98rem; color: var(--admin-wine-dark);">{{ $categoryName }}</span>
                         <span class="badge cat-count-badge" style="background: rgba(110, 20, 35, 0.1); color: var(--admin-wine); font-size: 0.75rem; border-radius: 20px; font-weight: 700;">
                           {{ $catImages->count() }} {{ Str::plural('Item', $catImages->count()) }}
                         </span>
                       </div>
-                      <i class="fa-solid fa-chevron-down chevron-icon"></i>
+
+                      <div class="d-flex align-items-center gap-2" onclick="event.stopPropagation();">
+                        <!-- Section Checkbox on Folder Bar -->
+                        <label class="d-flex align-items-center gap-1 mb-0 py-1 px-2" style="font-size: 0.8rem; font-weight: 700; color: var(--admin-wine-dark); background: rgba(255,255,255,0.85); border-radius: 6px; border: 1px solid var(--admin-border); cursor: pointer;" title="Select all items in {{ $categoryName }}" onclick="event.stopPropagation();">
+                          <input type="checkbox" class="form-check-input folder-section-checkbox" id="folder-cb-{{ $catSlug }}" onchange="toggleFolderSection(this, '{{ $catSlug }}')" style="cursor: pointer; transform: scale(1.15);">
+                          <span class="d-none d-sm-inline">Select Section</span>
+                        </label>
+
+                        <!-- Delete Folder Button -->
+                        <button type="button" class="btn btn-danger btn-sm px-2 py-1 btn-delete-folder" id="btn-delete-folder-{{ $catSlug }}" onclick="deleteFolderSection('{{ $catSlug }}', '{{ addslashes($categoryName) }}')" style="display: none; font-size: 0.78rem; font-weight: 700; border-radius: 6px;" title="Delete selected items in this folder">
+                          <i class="fa-solid fa-trash me-1"></i> Delete Section (<span id="folder-count-{{ $catSlug }}">0</span>)
+                        </button>
+
+                        <i class="fa-solid fa-chevron-down chevron-icon ms-1" onclick="toggleAdminAccordion(this.closest('.category-accordion-header'))"></i>
+                      </div>
                     </div>
 
                     <!-- Category Accordion Body -->
@@ -846,7 +863,7 @@
                             <div class="gallery-grid-card">
                               
                               <div class="card-thumb-wrap">
-                                <input type="checkbox" class="media-select-checkbox form-check-input" value="{{ $image->cloudinary_id ?? $image->id }}" onchange="updateSelectionState()" style="position: absolute; top: 10px; right: 10px; z-index: 20; transform: scale(1.35); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.4); border: 2px solid #fff;">
+                                <input type="checkbox" class="media-select-checkbox media-item-{{ $catSlug }} form-check-input" value="{{ $image->cloudinary_id ?? $image->id }}" data-category-slug="{{ $catSlug }}" onchange="updateFolderSelectionState('{{ $catSlug }}')" style="position: absolute; top: 10px; right: 10px; z-index: 20; transform: scale(1.35); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.4); border: 2px solid #fff;">
                                 <span class="category-badge-pill">
                                   @if($image->is_video)
                                     <i class="fa-solid fa-video me-1" style="color: var(--admin-gold);"></i>
@@ -1606,37 +1623,95 @@
       logoutForm.submit();
     }
 
-    // 10. Bulk Delete & Select All Handlers
+    // 10. Folder Section Selection & Bulk Delete Handlers
+    function toggleFolderSection(folderCb, catSlug) {
+      const items = document.querySelectorAll(`.media-item-${catSlug}`);
+      items.forEach(cb => cb.checked = folderCb.checked);
+      updateFolderSelectionState(catSlug);
+    }
+
+    function updateFolderSelectionState(catSlug) {
+      const totalInFolder = document.querySelectorAll(`.media-item-${catSlug}`).length;
+      const checkedInFolder = document.querySelectorAll(`.media-item-${catSlug}:checked`);
+      const count = checkedInFolder.length;
+
+      const folderCb = document.getElementById(`folder-cb-${catSlug}`);
+      if (folderCb) {
+        folderCb.checked = (count === totalInFolder && totalInFolder > 0);
+      }
+
+      const folderDeleteBtn = document.getElementById(`btn-delete-folder-${catSlug}`);
+      const folderCountText = document.getElementById(`folder-count-${catSlug}`);
+
+      if (folderCountText) folderCountText.textContent = count;
+      if (folderDeleteBtn) {
+        folderDeleteBtn.style.display = count > 0 ? 'inline-block' : 'none';
+      }
+
+      updateSelectionState();
+    }
+
+    async function deleteFolderSection(catSlug, catName) {
+      const checkedBoxes = document.querySelectorAll(`.media-item-${catSlug}:checked`);
+      const ids = Array.from(checkedBoxes).map(cb => cb.value);
+
+      if (ids.length === 0) {
+        alert(`Please select at least one media item in "${catName}" to delete.`);
+        return;
+      }
+
+      if (!confirm(`Are you sure you want to delete ${ids.length} selected item(s) from "${catName}"? This action cannot be undone.`)) {
+        return;
+      }
+
+      try {
+        const res = await fetch("{{ route('admin.bulk-delete') }}", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          body: JSON.stringify({ ids: ids })
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(data.message || `Deleted ${ids.length} items from "${catName}"!`);
+          window.location.reload();
+        } else {
+          alert(data.message || 'Folder section delete failed.');
+        }
+      } catch (e) {
+        alert('Delete section error: ' + e.message);
+      }
+    }
+
     function updateSelectionState() {
       const checkboxes = document.querySelectorAll('.media-select-checkbox:checked');
       const count = checkboxes.length;
       const btnDeleteSelected = document.getElementById('btn-delete-selected');
       const selectedCount = document.getElementById('selected-count');
 
-      const floatingBar = document.getElementById('floating-bulk-bar');
-      const floatingSelectedCount = document.getElementById('floating-selected-count');
-      const floatingBtnCount = document.getElementById('floating-btn-count');
-
       if (selectedCount) selectedCount.textContent = count;
-      if (floatingSelectedCount) floatingSelectedCount.textContent = count;
-      if (floatingBtnCount) floatingBtnCount.textContent = count;
 
       if (btnDeleteSelected) {
         btnDeleteSelected.style.display = count > 0 ? 'inline-block' : 'none';
-      }
-
-      if (floatingBar) {
-        if (count > 0) {
-          floatingBar.classList.add('show');
-        } else {
-          floatingBar.classList.remove('show');
-        }
       }
     }
 
     function toggleSelectAll(masterCheckbox) {
       const checkboxes = document.querySelectorAll('.media-select-checkbox');
       checkboxes.forEach(cb => cb.checked = masterCheckbox.checked);
+
+      const folderCbs = document.querySelectorAll('.folder-section-checkbox');
+      folderCbs.forEach(fcb => fcb.checked = masterCheckbox.checked);
+
+      // update all folder delete buttons
+      document.querySelectorAll('.btn-delete-folder').forEach(btn => {
+        const catSlug = btn.id.replace('btn-delete-folder-', '');
+        updateFolderSelectionState(catSlug);
+      });
+
       updateSelectionState();
     }
 
@@ -1711,6 +1786,11 @@
       checkboxes.forEach(cb => cb.checked = false);
       const master = document.getElementById('select-all-checkbox');
       if (master) master.checked = false;
+
+      const folderCbs = document.querySelectorAll('.folder-section-checkbox');
+      folderCbs.forEach(fcb => fcb.checked = false);
+
+      document.querySelectorAll('.btn-delete-folder').forEach(btn => btn.style.display = 'none');
       updateSelectionState();
     }
 
@@ -1726,30 +1806,5 @@
     @endif
   </script>
 
-  <!-- ================= FLOATING STICKY BULK DELETION BAR ================= -->
-  <div id="floating-bulk-bar" class="floating-bulk-bar">
-    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
-      <div class="d-flex align-items-center gap-2">
-        <i class="fa-solid fa-square-check text-warning fs-5"></i>
-        <span class="fw-bold text-white" style="font-size: 0.95rem;">
-          <span id="floating-selected-count" class="badge bg-warning text-dark px-2 py-1 fs-6 rounded-pill me-1">0</span> Items Selected
-        </span>
-      </div>
-
-      <div class="d-flex align-items-center gap-2">
-        <button type="button" class="btn btn-danger font-weight-bold px-4 py-2" onclick="deleteSelectedMedia()" style="border-radius: 30px; font-weight: 800; font-size: 0.92rem; box-shadow: 0 4px 15px rgba(220,53,69,0.4);">
-          <i class="fa-solid fa-trash me-2"></i> DELETE SELECTED (<span id="floating-btn-count">0</span>)
-        </button>
-
-        <button type="button" class="btn btn-outline-light btn-sm px-3 py-2" onclick="deleteAllMedia()" style="border-radius: 30px; font-size: 0.85rem; font-weight: 600;">
-          <i class="fa-solid fa-dumpster-fire me-1"></i> Delete ALL
-        </button>
-
-        <button type="button" class="btn btn-sm text-white-50 ms-2" onclick="clearAllSelections()" title="Cancel Selection">
-          <i class="fa-solid fa-xmark fs-5"></i>
-        </button>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
