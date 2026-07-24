@@ -518,40 +518,40 @@
         <!-- Gallery Item 1 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Live Gourmet Preparation" loading="lazy">
+            <img src="{{ asset('images/gallery/drive/live-counter-chinese.jpg') }}" alt="Live Chinese Noodles Counter" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
-              <span>Live Gourmet Setup</span>
+              <span>Live Chinese Counter</span>
             </div>
           </div>
         </div>
         <!-- Gallery Item 2 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" alt="Exquisite Plating" loading="lazy">
+            <img src="{{ asset('images/gallery/drive/fruit-art-pineapple-tower.jpg') }}" alt="Fruit Art Presentation" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
-              <span>Exquisite Plating Art</span>
+              <span>Exquisite Fruit Art</span>
             </div>
           </div>
         </div>
         <!-- Gallery Item 3 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1532635249-90c128818ec6?auto=format&fit=crop&w=800&q=80" alt="Premium Table Setup" loading="lazy">
+            <img src="{{ asset('images/gallery/drive/grand-wedding-hall-1.jpg') }}" alt="Grand Wedding Buffet Setup" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
-              <span>Premium Table Setup</span>
+              <span>Premium Banquet Setup</span>
             </div>
           </div>
         </div>
         <!-- Gallery Item 4 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Professional Butler Service" loading="lazy">
+            <img src="{{ asset('images/gallery/drive/event-guests-being-served.jpg') }}" alt="Guests Being Served at Event" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
-              <span>Fine-Dine Experience</span>
+              <span>Premium Event Service</span>
             </div>
           </div>
         </div>
