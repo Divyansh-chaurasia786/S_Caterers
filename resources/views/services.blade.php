@@ -739,18 +739,25 @@
       }
       .side-by-side-row {
         display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 12px !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         margin-bottom: 16px !important;
       }
       .side-by-side-row > div {
-        flex: 1 1 calc(50% - 6px) !important;
-        min-width: 130px !important;
+        flex: 1 1 50% !important;
+        width: 50% !important;
+        min-width: 0 !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
         margin-bottom: 0 !important;
+      }
+      .side-by-side-row label {
+        min-height: 28px !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        line-height: 1.2 !important;
       }
       .addon-toggle-header {
         padding: 12px 14px !important;
@@ -1319,11 +1326,11 @@
 
           <div class="row side-by-side-row">
             <div class="col-6 form-group-custom">
-              <label for="inq-date">Event Date</label>
-              <input type="date" name="event_date" id="inq-date" required>
+              <label for="inq-date">Event Date <span style="font-size:0.72rem;color:#777;font-weight:500;">(e.g. DD/MM/YYYY)</span></label>
+              <input type="date" name="event_date" id="inq-date" min="{{ date('Y-m-d') }}" placeholder="e.g. DD/MM/YYYY" required>
             </div>
             <div class="col-6 form-group-custom">
-              <label for="inq-guests">Expected Guests <span style="font-size:0.75rem;color:var(--wine);font-weight:600;">(min. 10)</span></label>
+              <label for="inq-guests">Expected Guests <span style="font-size:0.72rem;color:var(--wine);font-weight:600;">(min. 10)</span></label>
               <input type="number" name="guests" id="inq-guests" placeholder="e.g. 250" min="10" required>
             </div>
           </div>
@@ -1336,10 +1343,14 @@
           <!-- Add-on Services Section -->
           <div class="form-group-custom mb-3">
             <div class="addon-toggle-header" id="addon-toggle-trigger" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 10px 14px; background: #FFFDF9; border: 1px solid #E6D8C3; border-radius: 10px; transition: all 0.3s ease; margin-bottom: 12px; user-select: none;">
-              <span style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--wine); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;">
-                <i class="fa-solid fa-circle-plus" style="color: var(--gold); font-size: 1.05rem;"></i> Select Add-on Services <span style="font-size:0.75rem;color:#999;font-weight:500;text-transform:none;letter-spacing:0;">(Optional)</span>
-              </span>
-              <span style="font-size: 0.8rem; color: #8B6B1B; font-weight: 700;" class="toggle-status-text">TAP TO EXPAND</span>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-circle-plus" style="color: var(--gold); font-size: 1.1rem; flex-shrink: 0;"></i>
+                <div style="line-height: 1.25;">
+                  <span style="font-weight: 700; color: var(--wine); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; display: block;">Select Add-on Services</span>
+                  <span style="font-size: 0.72rem; color: #777; font-weight: 500;">(Optional extra counters)</span>
+                </div>
+              </div>
+              <span style="font-size: 0.75rem; color: #8B6B1B; font-weight: 700; background: #FFF3D6; padding: 4px 10px; border-radius: 12px; border: 1px solid #E6D8C3; flex-shrink: 0;" class="toggle-status-text">TAP TO EXPAND</span>
             </div>
             <div class="addon-checkboxes-grid" id="addon-grid">
               <label class="addon-chip">
@@ -1877,6 +1888,13 @@
         setupMobileSlider('packages-swipe-deck', 'dots-packages');
         setupMobileSlider('counters-swipe-deck', 'dots-counters');
       };
+
+      // Block past dates in date picker
+      const dateInput = document.getElementById('inq-date');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+      }
 
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initMobileSliders);
