@@ -1030,7 +1030,6 @@
               </div>
             </div>
           </div>
-        </div>
 
           <!-- VIP Menu (Mobile) -->
           <div class="col-12">
@@ -1056,6 +1055,8 @@
               </div>
             </div>
           </div>
+
+        </div>
         <!-- Packages Pagination Dots -->
         <div class="carousel-dots d-md-none" id="dots-packages" style="margin-top: 15px;"></div>
       </div>
