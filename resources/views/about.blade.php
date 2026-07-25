@@ -518,7 +518,7 @@
         <!-- Gallery Item 1 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="{{ asset('images/gallery/drive/live-counter-chinese.jpg') }}" alt="Live Chinese Noodles Counter" loading="lazy">
+            <img src="{{ asset('images/gallery/scaterers_photo_21.jpg') }}" alt="Live Chinese Noodles Counter" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
               <span>Live Chinese Counter</span>
@@ -528,7 +528,7 @@
         <!-- Gallery Item 2 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="{{ asset('images/gallery/drive/fruit-art-pineapple-tower.jpg') }}" alt="Fruit Art Presentation" loading="lazy">
+            <img src="{{ asset('images/gallery/scaterers_photo_05.jpg') }}" alt="Fruit Art Presentation" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
               <span>Exquisite Fruit Art</span>
@@ -538,7 +538,7 @@
         <!-- Gallery Item 3 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="{{ asset('images/gallery/drive/grand-wedding-hall-1.jpg') }}" alt="Grand Wedding Buffet Setup" loading="lazy">
+            <img src="{{ asset('images/gallery/scaterers_photo_01.jpg') }}" alt="Grand Wedding Buffet Setup" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
               <span>Premium Banquet Setup</span>
@@ -548,7 +548,7 @@
         <!-- Gallery Item 4 -->
         <div class="col-sm-6 col-lg-3">
           <div class="gallery-card">
-            <img src="{{ asset('images/gallery/drive/event-guests-being-served.jpg') }}" alt="Guests Being Served at Event" loading="lazy">
+            <img src="{{ asset('images/gallery/scaterers_photo_39.jpg') }}" alt="Guests Being Served at Event" loading="lazy">
             <div class="gallery-overlay">
               <i class="fa-solid fa-camera"></i>
               <span>Premium Event Service</span>
