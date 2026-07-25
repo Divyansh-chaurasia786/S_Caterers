@@ -971,6 +971,7 @@
                       <div class="gallery-grid-card">
                         
                         <div class="card-thumb-wrap">
+                          <input type="checkbox" class="media-select-checkbox form-check-input" value="{{ $image->cloudinary_id ?? $image->id }}" onchange="updateSelectionState()" style="position: absolute; top: 10px; right: 10px; z-index: 20; transform: scale(1.35); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.4); border: 2px solid #fff;">
                           @if($image->is_video)
                             <span class="badge position-absolute top-0 start-0 m-2 px-2 py-1 bg-dark bg-opacity-75 text-warning rounded-pill" style="font-size:0.68rem; z-index:5;"><i class="fa-solid fa-video me-1"></i> Video</span>
                           @endif

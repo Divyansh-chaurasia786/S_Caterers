@@ -326,63 +326,6 @@ class HomeController extends Controller
         }
 
         $allImages = $allImages->sortByDesc('created_at')->values();
-
-        // 4. Drive Local Fallback: Clean 26 UNIQUE, non-repeating Google Drive photos
-        $fallbackDriveImages = [
-            1  => ['Grand Weddings', 'Imperial Wedding Banquet Hall Setup'],
-            2  => ['Grand Weddings', 'Royal Wedding Buffet & Chandelier Lighting'],
-            3  => ['Grand Weddings', 'Gold & Ivory Luxury Banquet Counter'],
-            4  => ['Grand Weddings', 'Imperial Wedding Reception Hall'],
-            5  => ['Cuisine & Plating', 'Fresh Fruit Art & Carving Display'],
-            6  => ['Cuisine & Plating', 'Papaya & Melon Carving Display'],
-            7  => ['Live Counters', 'Rustic Rajasthani Live Food Counter'],
-            8  => ['Grand Weddings', 'Royal Golden Wedding Buffet Lane'],
-            9  => ['Cuisine & Plating', 'Watermelon Rose Carving Tower'],
-            10 => ['Cuisine & Plating', 'Layered Fruit Presentation Stand'],
-            13 => ['Live Counters', 'Lakhnavi Gol Gappe Live Counter'],
-            16 => ['Grand Weddings', 'Royal Golden Catering Decor'],
-            17 => ['Live Counters', 'Assorted Breads & Awadhi Naan Station'],
-            18 => ['Bar Lounge', 'S. Caterers Soft Drinks & Mocktail Bar'],
-            19 => ['Grand Weddings', 'Imperial Golden Buffet Presentation'],
-            20 => ['Grand Weddings', 'Luxurious Wedding Banquet Setup'],
-            21 => ['Live Counters', 'Live Chinese Wok & Noodle Station'],
-            22 => ['Grand Weddings', 'Golden Chandelier Catering Hall'],
-            23 => ['Bar Lounge', 'Royal Bar Lounge Uniformed Service'],
-            27 => ['Cuisine & Plating', 'Fresh Gourmet Salad Preparation'],
-            30 => ['Grand Weddings', 'Daytime Indoor Banquet Buffet'],
-            39 => ['Event Photos', 'Guest Hospitality & Service in Action'],
-            41 => ['Live Counters', 'Chef Live Cooking & Wok Tossing'],
-            45 => ['Live Counters', 'Outdoor Imperial Buffet Lane'],
-            46 => ['Grand Weddings', 'Blue & White Pure Veg Banquet Counter'],
-            47 => ['Event Photos', 'Staff Uniformed Hospitality Service'],
-        ];
-
-        $existingCloudIds = $allImages->pluck('cloudinary_id')->filter()->toArray();
-
-        foreach ($fallbackDriveImages as $num => $meta) {
-            $cId = 'sc_drive_' . sprintf("%02d", $num);
-            $localFile = 'images/gallery/scaterers_photo_' . sprintf("%02d", $num) . '.jpg';
-
-            if (in_array($cId, $existingCloudIds)) {
-                continue;
-            }
-
-            $imgModel = new \App\Models\GalleryImage();
-            $imgModel->forceFill([
-                'id'            => 1000 + $num,
-                'title'         => $meta[1],
-                'category'      => $meta[0],
-                'path'          => $localFile,
-                'cloudinary_id' => $cId,
-                'is_video'      => false,
-                'is_local'      => true,
-                'created_at'    => now()->subHours($num),
-                'updated_at'    => now()->subHours($num),
-            ]);
-            $allImages->push($imgModel);
-        }
-
-        $allImages = $allImages->sortByDesc('created_at')->values();
         $categories = $allImages->pluck('category')->unique()->filter()->values();
 
         return [$allImages, $categories];
