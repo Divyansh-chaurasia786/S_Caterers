@@ -994,126 +994,126 @@
       <div class="section-title-wrap text-center mb-5">
         <span class="eyebrow">TAILORED CATERING FOR EVERY EVENT</span>
         <h2 class="section-title">Events &amp; Occasions <span class="accent">We Cater</span></h2>
-        <p class="text-muted" style="max-width: 650px; margin: 0.5rem auto 0;">From lavish royal weddings to intimate birthday parties, roka ceremonies, and sacred pujas — S. Caterers delivers 100% pure vegetarian culinary excellence tailored for every celebration.</p>
+        <p class="text-muted" style="max-width: 650px; margin: 0.5rem auto 0;">S. Caterers provides 100% pure vegetarian catering excellence for all types of functions, ceremonies, and celebrations.</p>
       </div>
 
       <div class="row g-4 justify-content-center">
         <!-- 1. Weddings & Receptions -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_01.jpg') }}" alt="Weddings & Receptions" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-ring"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-ring me-1"></i> GRAND CELEBRATIONS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Weddings &amp; Receptions</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Royal Rajwada 100% pure veg feasts, imperial buffet lanes, white-glove silver thali service &amp; live chef counters.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Wedding &amp; Grand Reception">Book Wedding Catering</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill"><i class="fa-solid fa-crown me-1"></i> GRAND CELEBRATIONS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Weddings &amp; Receptions</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Royal Rajwada 100% pure veg feasts, imperial buffet lanes, white-glove thali service &amp; live chef counters.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Wedding &amp; Grand Reception">Book Wedding Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 2. Engagements & Roka -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_03.jpg') }}" alt="Engagements & Roka" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(198, 161, 91, 0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-heart"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-heart me-1"></i> INTIMATE CEREMONIES</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Engagements &amp; Roka</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Chic ring ceremony catering, mocktail bar lounges, live gourmet starter passes &amp; elegant dining decor.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Engagement &amp; Roka Ceremony">Book Engagement</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill"><i class="fa-solid fa-sparkles me-1"></i> INTIMATE CEREMONIES</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Engagements &amp; Roka</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Chic ring ceremony catering, mocktail bar lounges, live gourmet starter passes &amp; elegant dining decor.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Engagement &amp; Roka Ceremony">Book Engagement</a>
             </div>
           </div>
         </div>
 
         <!-- 3. Birthday Parties -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_13.jpg') }}" alt="Birthday Parties" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-cake-candles"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-cake-candles me-1"></i> MILESTONE PARTIES</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Birthday Parties</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Vibrant live Dilli chaat, wok-tossed Chinese noodles, live jalebi rabri counters &amp; custom mocktail bars.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Birthday Party &amp; Milestone">Book Birthday Catering</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill"><i class="fa-solid fa-party-horn me-1"></i> MILESTONE PARTIES</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Birthday Parties</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Vibrant live Dilli chaat, wok-tossed Chinese noodles, live jalebi rabri counters &amp; custom mocktail bars.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Birthday Party &amp; Milestone">Book Birthday Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 4. Baby Showers & Family Functions -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_05.jpg') }}" alt="Baby Showers & Family Milestones" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(198, 161, 91, 0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-baby"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-baby me-1"></i> TRADITIONAL MILESTONES</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Baby Showers (Godh Bharai)</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Traditional auspicious pure veg menus, exotic fruit art towers, traditional sweets &amp; family thali arrangements.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Baby Shower / Family Function">Book Family Catering</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill"><i class="fa-solid fa-hands-holding-child me-1"></i> FAMILY CEREMONIES</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Baby Showers (Godh Bharai)</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Traditional auspicious pure veg menus, exotic fruit art towers, traditional sweets &amp; family thali arrangements.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Baby Shower / Family Function">Book Family Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 5. Corporate Events & Seminars -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_30.jpg') }}" alt="Corporate Events & Seminars" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-briefcase"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-briefcase me-1"></i> BUSINESS GALAS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Corporate Events</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Executive luncheons, conference high-tea breaks, corporate galas &amp; high-speed professional buffet lanes.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Corporate Event / Seminar">Book Corporate Event</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill"><i class="fa-solid fa-building me-1"></i> BUSINESS GALAS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Corporate Events</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Executive luncheons, conference high-tea breaks, corporate galas &amp; high-speed professional buffet lanes.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Corporate Event / Seminar">Book Corporate Event</a>
             </div>
           </div>
         </div>
 
         <!-- 6. Grah Pravesh & Sacred Pujas -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_07.jpg') }}" alt="Grah Pravesh & Sacred Pujas" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(198, 161, 91, 0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-om"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-om me-1"></i> SACRED SATVIK FEASTS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Grah Pravesh &amp; Pujas</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">100% Pure Veg Integrity, no onion &amp; no garlic (Satvik/Jain) catering options crafted with absolute sanctity.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Grah Pravesh / Sacred Puja">Book Puja Catering</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill"><i class="fa-solid fa-fire-flame-curved me-1"></i> SATVIK FEASTS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Grah Pravesh &amp; Pujas</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">100% Pure Veg Integrity, no onion &amp; no garlic (Satvik/Jain) catering options crafted with absolute sanctity.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Grah Pravesh / Sacred Puja">Book Puja Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 7. Anniversaries & Social Gatherings -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_18.jpg') }}" alt="Anniversaries & Social Gatherings" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-champagne-glasses"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-champagne-glasses me-1"></i> SOCIAL GATHERINGS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Anniversaries &amp; Parties</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Bespoke fine dining, mocktail bar setups, live dessert stations &amp; customizable multi-course menus.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Anniversary / Social Gathering">Book Anniversary Catering</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill"><i class="fa-solid fa-glass-water me-1"></i> SOCIAL GATHERINGS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Anniversaries &amp; Parties</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Bespoke fine dining, mocktail bar setups, live dessert stations &amp; customizable multi-course menus.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Anniversary / Social Gathering">Book Anniversary Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 8. Any Custom Event -->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="border: 2px solid var(--gold) !important; background: #FFFDF9 !important;">
-            <div class="occasion-img-wrap">
-              <img src="{{ asset('images/gallery/scaterers_photo_39.jpg') }}" alt="Any Custom Event Catering" loading="lazy">
+          <div class="occasion-card h-100 animate-on-scroll" style="border: 2px solid var(--gold) !important; background: #FFFDF9 !important; border-radius: 16px !important; padding: 1.25rem !important;">
+            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: var(--gold); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-            <div class="occasion-content">
-              <span class="event-tag-pill" style="background: var(--gold) !important; color: #fff !important;"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> ANY EVENT TYPE</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; color: var(--wine);">Custom Events of Any Scale</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Tailored 100% pure vegetarian catering for any event, gathering size, venue, or theme. Complete custom solutions.</p>
-              <a href="#inquiry" class="btn-gold btn-sm mt-2 select-package" data-package="Custom Event Catering">Customize Your Event</a>
+            <div class="occasion-content p-0" style="gap: 6px !important;">
+              <span class="event-tag-pill" style="background: var(--gold) !important; color: #fff !important;"><i class="fa-solid fa-star me-1"></i> ANY EVENT TYPE</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px; color: var(--wine);">Custom Events of Any Scale</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Tailored 100% pure vegetarian catering for any event, gathering size, venue, or theme. Complete custom solutions.</p>
+              <a href="#inquiry" class="btn-gold btn-sm mt-3 w-100 select-package" data-package="Custom Event Catering">Customize Your Event</a>
             </div>
           </div>
         </div>
