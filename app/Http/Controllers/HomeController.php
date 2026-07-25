@@ -59,8 +59,7 @@ class HomeController extends Controller
 
     public function gallery()
     {
-        $images = GalleryImage::latest()->get();
-        $categories = GalleryImage::pluck('category')->unique()->filter()->values();
+        list($images, $categories) = $this->ensureDatabaseAndFetchImages();
         return view('gallery', compact('images', 'categories'));
     }
 
