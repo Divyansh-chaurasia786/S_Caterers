@@ -1072,9 +1072,9 @@
         <p class="text-muted" style="max-width: 650px; margin: 0.5rem auto 0; color: #333333 !important; font-weight: 500; font-size: 0.98rem; line-height: 1.6;">S. Caterers provides 100% pure vegetarian catering excellence for all types of functions, ceremonies, and celebrations.</p>
       </div>
 
-      <div class="row g-4 justify-content-center">
+      <div class="row g-4 mobile-swipe-deck" id="events-swipe-deck">
         <!-- 1. Weddings & Receptions -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12">
           <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-ring"></i>
@@ -1089,7 +1089,7 @@
         </div>
 
         <!-- 2. Engagements & Roka -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12">
           <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-heart"></i>
@@ -1104,7 +1104,7 @@
         </div>
 
         <!-- 3. Birthdays & Social Parties -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12">
           <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-cake-candles"></i>
@@ -1119,7 +1119,7 @@
         </div>
 
         <!-- 4. Corporate & Custom Events -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12">
           <div class="occasion-card h-100 animate-on-scroll" style="border: 2px solid #C6A15B !important; background: #FFFDF9 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(198, 161, 91, 0.15) !important;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(138, 107, 27, 0.3);">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -1134,6 +1134,8 @@
         </div>
 
       </div>
+      <!-- Events Pagination Dots -->
+      <div class="carousel-dots d-md-none" id="dots-events" style="margin-top: 15px;"></div>
     </div>
   </section>
 
@@ -2092,6 +2094,7 @@
       const initMobileSliders = () => {
         setupMobileSlider('packages-swipe-deck', 'dots-packages');
         setupMobileSlider('counters-swipe-deck', 'dots-counters');
+        setupMobileSlider('events-swipe-deck', 'dots-events');
       };
 
       // Block past dates in date picker
