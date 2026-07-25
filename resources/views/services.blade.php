@@ -103,20 +103,26 @@
       box-shadow: 0 12px 30px rgba(198, 161, 91, 0.15);
     }
     
-    .pkg-custom-card.royal-active .royal-badge {
+    .royal-badge {
       position: absolute;
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
       background: var(--gold);
       color: var(--charcoal);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       padding: 4px 16px;
       border-radius: 20px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       z-index: 10;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    
+    *:focus, *:focus-visible {
+      outline: none !important;
     }
     
     .pkg-img-wrap {
@@ -848,11 +854,11 @@
         <p style="font-size: 0.88rem; color: var(--wine); font-style: italic; font-weight: 600; margin-top: 10px; margin-bottom: 0;">*Note: All packages are fully customizable. Final pricing depends on menu selections and guest count, subject to mutual discussion.</p>
       </div>
 
-      <!-- Desktop View (Grid Layout) -->
-      <div class="row g-4 justify-content-center d-none d-md-flex">
+      <!-- Desktop View (Grid Layout - 4 Menus in One Line) -->
+      <div class="row g-3 justify-content-center d-none d-md-flex">
         <!-- Silver Menu -->
-        <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card animate-on-scroll">
+        <div class="col-md-6 col-lg-3">
+          <div class="pkg-custom-card animate-on-scroll" style="padding: 1.8rem 1.1rem;">
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-seedling"></i></div>
               <h3>Silver Menu</h3>
@@ -866,14 +872,17 @@
               <li><i class="fa-solid fa-circle-check"></i> <span>Fresh Jaljeera & Welcome Drinks Counter</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Silver Menu">Select Silver Menu</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Silver Menu">Select Silver Menu</a>
+              <a href="{{ asset('pdf/silver_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Silver Menu PDF
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Gold Menu -->
-        <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card animate-on-scroll">
+        <div class="col-md-6 col-lg-3">
+          <div class="pkg-custom-card animate-on-scroll" style="padding: 1.8rem 1.1rem;">
             <div class="pkg-header">
               <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
               <h3>Gold Menu</h3>
@@ -887,14 +896,17 @@
               <li><i class="fa-solid fa-circle-check"></i> <span>Gold & Brass Tableware Setup with Butler Service</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Gold Menu">Select Gold Menu</a>
+              <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Gold Menu">Select Gold Menu</a>
+              <a href="{{ asset('pdf/gold_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Gold Menu PDF
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Royal Menu -->
-        <div class="col-md-6 col-lg-4">
-          <div class="pkg-custom-card royal-active animate-on-scroll">
+        <div class="col-md-6 col-lg-3">
+          <div class="pkg-custom-card royal-active animate-on-scroll" style="padding: 1.8rem 1.1rem;">
             <div class="royal-badge">Chef's Signature</div>
             <div class="pkg-header">
               <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
@@ -909,7 +921,35 @@
               <li><i class="fa-solid fa-circle-check"></i> <span>Traditional Royal Silver Thali & White-Glove Service</span></li>
             </ul>
             <div class="text-center mt-auto pt-3">
-              <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Menu">Select Royal Menu</a>
+              <a href="#inquiry" class="btn-gold w-100 select-package mb-2" data-package="Royal Menu">Select Royal Menu</a>
+              <a href="{{ asset('pdf/royal_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Royal Menu PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIP Menu -->
+        <div class="col-md-6 col-lg-3">
+          <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative; padding: 1.8rem 1.1rem;">
+            <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">✦ Most Premium</div>
+            <div class="pkg-header">
+              <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
+              <h3 style="color: #3A1060;">VIP Menu</h3>
+              <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury — an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
+            </div>
+            <ul class="pkg-features">
+              <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Unlimited Selections Across All Categories</span></li>
+              <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>5 Exclusive Live Specialty Counters</span></li>
+              <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Personalised White-Glove Butler Service</span></li>
+              <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Signature Platinum Thali & Table Setting</span></li>
+              <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Exclusive Dessert Parlour & Sweet Counter</span></li>
+            </ul>
+            <div class="text-center mt-auto pt-3">
+              <a href="#inquiry" class="btn btn-sm w-100 select-package mb-2" data-package="VIP Menu" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; font-weight: 800; border-radius: 8px; padding: 10px 16px; font-size: 0.9rem; border: none; letter-spacing: 0.5px;">Select VIP Menu</a>
+              <a href="{{ asset('pdf/vip_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #F3EBF9; border: 1.5px solid #C9A5E8; color: #6A3FA0; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full VIP Menu PDF
+              </a>
             </div>
           </div>
         </div>
@@ -934,7 +974,10 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span>Fresh Jaljeera & Welcome Drinks Counter</span></li>
               </ul>
               <div class="text-center mt-auto pt-3">
-                <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Silver Menu">Select Silver Menu</a>
+                <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Silver Menu">Select Silver Menu</a>
+                <a href="{{ asset('pdf/silver_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                  <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Silver Menu PDF
+                </a>
               </div>
             </div>
           </div>
@@ -955,7 +998,10 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span>Gold & Brass Tableware Setup with Butler Service</span></li>
               </ul>
               <div class="text-center mt-auto pt-3">
-                <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Gold Menu">Select Gold Menu</a>
+                <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Gold Menu">Select Gold Menu</a>
+                <a href="{{ asset('pdf/gold_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                  <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Gold Menu PDF
+                </a>
               </div>
             </div>
           </div>
@@ -977,11 +1023,39 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span>Traditional Royal Silver Thali & White-Glove Service</span></li>
               </ul>
               <div class="text-center mt-auto pt-3">
-                <a href="#inquiry" class="btn-gold w-100 select-package" data-package="Royal Menu">Select Royal Menu</a>
+                <a href="#inquiry" class="btn-gold w-100 select-package mb-2" data-package="Royal Menu">Select Royal Menu</a>
+                <a href="{{ asset('pdf/royal_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                  <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Royal Menu PDF
+                </a>
               </div>
             </div>
           </div>
         </div>
+
+          <!-- VIP Menu (Mobile) -->
+          <div class="col-12">
+            <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative;">
+              <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">✦ Most Premium</div>
+              <div class="pkg-header">
+                <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
+                <h3 style="color: #3A1060;">VIP Menu</h3>
+                <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury — an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
+              </div>
+              <ul class="pkg-features">
+                <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Unlimited Selections Across All Categories</span></li>
+                <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>5 Exclusive Live Specialty Counters</span></li>
+                <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Personalised White-Glove Butler Service</span></li>
+                <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Signature Platinum Thali & Table Setting</span></li>
+                <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Exclusive Dessert Parlour & Sweet Counter</span></li>
+              </ul>
+              <div class="text-center mt-auto pt-3">
+                <a href="#inquiry" class="btn btn-sm w-100 select-package mb-2" data-package="VIP Menu" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; font-weight: 800; border-radius: 8px; padding: 10px 16px; font-size: 0.9rem; border: none; letter-spacing: 0.5px;">Select VIP Menu</a>
+                <a href="{{ asset('pdf/vip_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #F3EBF9; border: 1.5px solid #C9A5E8; color: #6A3FA0; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                  <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full VIP Menu PDF
+                </a>
+              </div>
+            </div>
+          </div>
         <!-- Packages Pagination Dots -->
         <div class="carousel-dots d-md-none" id="dots-packages" style="margin-top: 15px;"></div>
       </div>
@@ -992,128 +1066,68 @@
   <section class="occasions-section bg-light-ivory py-5" id="events-we-cater" style="border-bottom: 1px solid var(--gold-line);">
     <div class="container py-3">
       <div class="section-title-wrap text-center mb-5">
-        <span class="eyebrow">TAILORED CATERING FOR EVERY EVENT</span>
-        <h2 class="section-title">Events &amp; Occasions <span class="accent">We Cater</span></h2>
-        <p class="text-muted" style="max-width: 650px; margin: 0.5rem auto 0;">S. Caterers provides 100% pure vegetarian catering excellence for all types of functions, ceremonies, and celebrations.</p>
+        <span class="eyebrow" style="color: var(--wine); font-weight: 800; letter-spacing: 1.5px;">TAILORED CATERING FOR EVERY EVENT</span>
+        <h2 class="section-title" style="color: #1F1510; font-size: 2.2rem; font-weight: 800;">Events &amp; Occasions <span class="accent" style="color: var(--wine);">We Cater</span></h2>
+        <p class="text-muted" style="max-width: 650px; margin: 0.5rem auto 0; color: #333333 !important; font-weight: 500; font-size: 0.98rem; line-height: 1.6;">S. Caterers provides 100% pure vegetarian catering excellence for all types of functions, ceremonies, and celebrations.</p>
       </div>
 
       <div class="row g-4 justify-content-center">
         <!-- 1. Weddings & Receptions -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
+            <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-ring"></i>
             </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill"><i class="fa-solid fa-crown me-1"></i> GRAND CELEBRATIONS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Weddings &amp; Receptions</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Royal Rajwada 100% pure veg feasts, imperial buffet lanes, white-glove thali service &amp; live chef counters.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Wedding &amp; Grand Reception">Book Wedding Catering</a>
+            <div class="occasion-content p-0" style="gap: 8px !important;">
+              <span class="event-tag-pill" style="background: #FFF8EB !important; color: #8A6B1B !important; border: 1px solid #E8D09E !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-crown me-1" style="color: #C6A15B;"></i> GRAND CELEBRATIONS</span>
+              <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #1F1510 !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Weddings &amp; Receptions</h3>
+              <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Royal Rajwada 100% pure veg feasts, imperial buffet lanes, white-glove thali service &amp; live chef counters.</p>
+              <a href="#inquiry" class="btn-wine btn-sm mt-auto w-100 select-package" data-package="Wedding &amp; Grand Reception" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 14px !important; font-size: 0.85rem !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Wedding Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 2. Engagements & Roka -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(198, 161, 91, 0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
+            <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-heart"></i>
             </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill"><i class="fa-solid fa-sparkles me-1"></i> INTIMATE CEREMONIES</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Engagements &amp; Roka</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Chic ring ceremony catering, mocktail bar lounges, live gourmet starter passes &amp; elegant dining decor.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Engagement &amp; Roka Ceremony">Book Engagement</a>
+            <div class="occasion-content p-0" style="gap: 8px !important;">
+              <span class="event-tag-pill" style="background: #FFF8EB !important; color: #8A6B1B !important; border: 1px solid #E8D09E !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-sparkles me-1" style="color: #C6A15B;"></i> INTIMATE CEREMONIES</span>
+              <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #1F1510 !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Engagements &amp; Roka</h3>
+              <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Chic ring ceremony catering, mocktail bar lounges, live gourmet starter passes &amp; elegant dining decor.</p>
+              <a href="#inquiry" class="btn-wine btn-sm mt-auto w-100 select-package" data-package="Engagement &amp; Roka Ceremony" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 14px !important; font-size: 0.85rem !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Engagement</a>
             </div>
           </div>
         </div>
 
-        <!-- 3. Birthday Parties -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+        <!-- 3. Birthdays & Social Parties -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
+            <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-cake-candles"></i>
             </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill"><i class="fa-solid fa-party-horn me-1"></i> MILESTONE PARTIES</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Birthday Parties</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Vibrant live Dilli chaat, wok-tossed Chinese noodles, live jalebi rabri counters &amp; custom mocktail bars.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Birthday Party &amp; Milestone">Book Birthday Catering</a>
+            <div class="occasion-content p-0" style="gap: 8px !important;">
+              <span class="event-tag-pill" style="background: #FFF8EB !important; color: #8A6B1B !important; border: 1px solid #E8D09E !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-gift me-1" style="color: #C6A15B;"></i> MILESTONE PARTIES</span>
+              <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #1F1510 !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Birthdays &amp; Parties</h3>
+              <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Vibrant live Dilli chaat, wok-tossed Chinese noodles, live jalebi rabri counters &amp; custom mocktail bars.</p>
+              <a href="#inquiry" class="btn-wine btn-sm mt-auto w-100 select-package" data-package="Birthday Party &amp; Milestone" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 14px !important; font-size: 0.85rem !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Birthday Catering</a>
             </div>
           </div>
         </div>
 
-        <!-- 4. Baby Showers & Family Functions -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(198, 161, 91, 0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
-              <i class="fa-solid fa-baby"></i>
-            </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill"><i class="fa-solid fa-hands-holding-child me-1"></i> FAMILY CEREMONIES</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Baby Showers (Godh Bharai)</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Traditional auspicious pure veg menus, exotic fruit art towers, traditional sweets &amp; family thali arrangements.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Baby Shower / Family Function">Book Family Catering</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Corporate Events & Seminars -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
-              <i class="fa-solid fa-briefcase"></i>
-            </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill"><i class="fa-solid fa-building me-1"></i> BUSINESS GALAS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Corporate Events</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Executive luncheons, conference high-tea breaks, corporate galas &amp; high-speed professional buffet lanes.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Corporate Event / Seminar">Book Corporate Event</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Grah Pravesh & Sacred Pujas -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(198, 161, 91, 0.12); color: var(--gold-dark); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
-              <i class="fa-solid fa-om"></i>
-            </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill"><i class="fa-solid fa-fire-flame-curved me-1"></i> SATVIK FEASTS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Grah Pravesh &amp; Pujas</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">100% Pure Veg Integrity, no onion &amp; no garlic (Satvik/Jain) catering options crafted with absolute sanctity.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Grah Pravesh / Sacred Puja">Book Puja Catering</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Anniversaries & Social Gatherings -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: var(--bg-white) !important; border: 1px solid var(--gold-line) !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: rgba(122, 28, 43, 0.08); color: var(--wine); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
-              <i class="fa-solid fa-champagne-glasses"></i>
-            </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill"><i class="fa-solid fa-glass-water me-1"></i> SOCIAL GATHERINGS</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px;">Anniversaries &amp; Parties</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Bespoke fine dining, mocktail bar setups, live dessert stations &amp; customizable multi-course menus.</p>
-              <a href="#inquiry" class="btn-outline-wine btn-sm mt-3 w-100 select-package" data-package="Anniversary / Social Gathering">Book Anniversary Catering</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Any Custom Event -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="occasion-card h-100 animate-on-scroll" style="border: 2px solid var(--gold) !important; background: #FFFDF9 !important; border-radius: 16px !important; padding: 1.25rem !important;">
-            <div class="event-icon-badge mb-3" style="width: 46px; height: 46px; border-radius: 12px; background: var(--gold); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+        <!-- 4. Corporate & Custom Events -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll" style="border: 2px solid #C6A15B !important; background: #FFFDF9 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(198, 161, 91, 0.15) !important;">
+            <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(138, 107, 27, 0.3);">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-            <div class="occasion-content p-0" style="gap: 6px !important;">
-              <span class="event-tag-pill" style="background: var(--gold) !important; color: #fff !important;"><i class="fa-solid fa-star me-1"></i> ANY EVENT TYPE</span>
-              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; margin-top: 4px; color: var(--wine);">Custom Events of Any Scale</h3>
-              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft);">Tailored 100% pure vegetarian catering for any event, gathering size, venue, or theme. Complete custom solutions.</p>
-              <a href="#inquiry" class="btn-gold btn-sm mt-3 w-100 select-package" data-package="Custom Event Catering">Customize Your Event</a>
+            <div class="occasion-content p-0" style="gap: 8px !important;">
+              <span class="event-tag-pill" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; border: none !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-star me-1" style="color: #FFF;"></i> ANY SCALE EVENT</span>
+              <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #7A1C2B !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Corporate &amp; Custom Events</h3>
+              <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Executive luncheons, Pujas (Satvik/Jain), corporate galas, or any customized pure-veg gathering of any size.</p>
+              <a href="#inquiry" class="btn-gold btn-sm mt-auto w-100 select-package" data-package="Custom Event Catering" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 14px !important; font-size: 0.85rem !important; box-shadow: 0 4px 12px rgba(138, 107, 27, 0.25) !important;">Book Custom Catering</a>
             </div>
           </div>
         </div>
@@ -1125,14 +1139,22 @@
   <!-- ================= PREMIUM ADD-ON COUNTERS ================= -->
   <section class="addons-section bg-white py-5" id="addons" style="border-bottom: 1px solid var(--gold-line);">
     <div class="container py-3">
-      <div class="section-title-wrap text-center mb-5">
+      <div class="section-title-wrap text-center mb-4">
         <span class="eyebrow">EXCLUSIVE CULINARY ADD-ONS</span>
         <h2 class="section-title">Signature Live <span class="accent">Counters</span></h2>
-        <p class="text-muted" style="max-width: 600px; margin: 0.5rem auto 0;">Enhance your catering experience with our interactive specialty live stations, overseen by our expert chefs.</p>
+        <p class="text-muted" style="max-width: 650px; margin: 0.5rem auto 0; color: #333 !important; font-weight: 500;">Enhance your catering experience with our interactive specialty live stations, overseen by our expert chefs.</p>
+        
+        <!-- More Live Counters Highlight Banner -->
+        <div class="mt-3 p-3 mx-auto" style="max-width: 850px; background: #FFFDF9; border: 1.5px solid #E8D09E; border-radius: 12px; box-shadow: 0 4px 16px rgba(198, 161, 91, 0.12);">
+          <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap text-center">
+            <span style="font-weight: 800; color: #7A1C2B; font-size: 0.95rem;"><i class="fa-solid fa-wand-magic-sparkles" style="color: #C6A15B;"></i> Many More Live Counters Available Upon Request:</span>
+            <span style="font-size: 0.88rem; color: #2D2622; font-weight: 600;">Lakhnavi Chaat Street • Live BBQ Tandoor • Pan-Asian Wok &amp; Dimsum • Live Dosa Station • Live Tava Veg • Live Jalebi-Rabri • Kulfi-Falooda Parlour</span>
+          </div>
+        </div>
       </div>
 
       <div class="row g-4 justify-content-center mobile-swipe-deck" id="counters-swipe-deck">
-        <!-- Craft Bar Lounge -->
+        <!-- 1. Craft Bar Lounge -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
@@ -1141,14 +1163,14 @@
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-martini-glass-citrus"></i></div>
               <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Craft Bar Lounge</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Artisanal mixology lounge serving premium cocktails &amp; smoke-infused mocktails, fresh botanical sherbets — crafted live by professional mixologists.</p>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Artisanal mixology lounge serving smoke-infused mocktails, fresh botanical sherbets &amp; signature drinks — crafted live by master mixologists.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
               <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Professional Master Mixologist Team</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Premium Cocktails &amp; Mocktails Bar (served on request)</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Desi Fusion Mocktails (Kala Khatta, Masala Guava, Shahi Thandai)</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fresh Botanical &amp; Gold Dust Garnishes</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Luxury Crystal Glassware Setup</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Exotic Mocktails (Blue Lagoon, Virgin Mojito, Pinacolada)</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Desi Fusion (Kala Khatta, Masala Guava, Shahi Thandai)</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fresh Botanical &amp; Saffron Garnishes</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Luxury Crystal Glassware &amp; Smoke Effects</span></li>
             </ul>
             <div class="mt-auto">
               <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Craft Bar Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Craft Bar Counter</a>
@@ -1156,7 +1178,7 @@
           </div>
         </div>
 
-        <!-- Live Juice Counter -->
+        <!-- 2. Live Juice Counter -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
@@ -1164,14 +1186,14 @@
             </div>
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-lemon"></i></div>
-              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Live Juice Counter</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Pure, natural &amp; refreshing cold-pressed fruit juices, signature herb infusions, and live gourmet dispensers served in a grand fairy-lit floral setup.</p>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Live Juice &amp; Smoothie Counter</h3>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Pure, natural &amp; refreshing cold-pressed fruit juices, signature herb infusions, and live gourmet dispensers served in a grand fairy-lit setup.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Pure Fruit Juices:</strong> Fresh Orange, Kiwi, Watermelon, Pineapple &amp; Kala Khatta</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Specialty Infusions:</strong> Lemon Mint &amp; Botanical Refreshers</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Live Beverage Gallery:</strong> Hygienic Glass Dispensers &amp; Custom Sips</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Luxury Setup:</strong> Backlit Fretwork Counter with Warm Fairy Lights &amp; Floral Decor</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fresh Cold-Pressed Orange, Kiwi, Watermelon &amp; Pineapple</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Specialty Shakes: Mango, Chocolate, Strawberry &amp; Kesar Pista</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Botanical Infusions: Lemon Mint &amp; Green Tea Coolers</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Backlit Fretwork Counter with Fairy Lights &amp; Floral Decor</span></li>
             </ul>
             <div class="mt-auto">
               <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Live Juice Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Juice Counter</a>
@@ -1179,7 +1201,7 @@
           </div>
         </div>
 
-        <!-- Vintage Bakery Counter -->
+        <!-- 3. Vintage Bakery Counter -->
         <div class="col-md-6 col-lg-4">
           <div class="pkg-custom-card animate-on-scroll h-100 d-flex flex-column" style="background: var(--bg-white); border: 1px solid var(--gold-line); border-radius: 18px; padding: 2rem;">
             <div class="pkg-img-wrap" style="margin: -2rem -2rem 1.5rem -2rem; border-top-left-radius: 18px; border-top-right-radius: 18px;">
@@ -1187,14 +1209,14 @@
             </div>
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-cookie-bite"></i></div>
-              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Vintage Bakery Counter</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Treat your guests to a 100% pure vegetarian Vintage Cafe &amp; Bakery experience featuring artisanal pastries, gourmet puddings, dessert cups, fresh muffins, and hot oven-baked cafe savories.</p>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Vintage Bakery &amp; Cafe Counter</h3>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Treat your guests to a 100% pure vegetarian Vintage Cafe experience featuring artisanal pastries, gourmet puddings, brownies &amp; hot oven savories.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Signature Pastries:</strong> Belgian Chocolate Truffle, Tropical Pineapple &amp; Red Velvet</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Gourmet Puddings &amp; Desserts:</strong> Butterscotch Pudding, Strawberry Compote &amp; Chocolate Fountain</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Fresh Bakes &amp; Confections:</strong> Double Choco Muffins, Fruit Cups, Brownies &amp; Dry Fruit Cookies</span></li>
-              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span><strong>Hot Cafe Savories:</strong> Oven-Baked Garlic Bread, Live Cheese Pizza, Burgers &amp; Alfredo Pasta</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Belgian Chocolate Truffle, Red Velvet &amp; Pineapple Pastries</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Warm Chocolate Brownie with Hot Chocolate Sauce</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Fruit Truffle Mousse Cups &amp; Butterscotch Puddings</span></li>
+              <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Live Wood-Fired Veg Pizza &amp; Garlic Bread Station</span></li>
             </ul>
             <div class="mt-auto">
               <a href="#inquiry" class="btn-outline-wine w-100 select-package" data-package="Vintage Bakery Counter" style="font-size: 0.88rem; padding: 10px 0; border-radius: 8px;">Book Bakery Counter</a>
@@ -1429,121 +1451,154 @@
 
         <form action="{{ route('services.inquiry') }}" method="POST">
           @csrf
-          
-          <div class="row">
-            <div class="col-md-6 form-group-custom">
-              <label for="inq-name">Your Full Name</label>
-              <input type="text" name="name" id="inq-name" placeholder="e.g. Divyansh Chaurasia" required>
-            </div>
-            <div class="col-md-6 form-group-custom">
-              <label for="inq-email">Email Address</label>
-              <input type="email" name="email" id="inq-email" placeholder="name@domain.com" required>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-6 form-group-custom">
-              <label for="inq-phone">Contact Number</label>
-              <input type="tel" name="phone" id="inq-phone" placeholder="e.g. 6393998141" maxlength="10" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" required>
+          <!-- STEP 1: CLIENT INFORMATION -->
+          <div class="form-section-card" style="border: 1.5px solid #E6D8C3; border-radius: 12px; padding: 1rem 1.25rem; background: #FFFFFF; box-shadow: 0 2px 10px rgba(44, 26, 17, 0.03); margin-bottom: 0.85rem !important;">
+            <div class="form-section-header mb-2 pb-1 d-flex align-items-center justify-content-between" style="border-bottom: 1px solid #F0E6D8;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--wine); letter-spacing: 0.8px; text-transform: uppercase;"><i class="fa-solid fa-user me-1" style="color: var(--gold);"></i> STEP 1: CLIENT INFORMATION</span>
+              <span style="font-size: 0.68rem; font-weight: 700; color: #8A6B1B; background: #FFF8EB; padding: 2px 6px; border-radius: 10px; border: 1px solid #E8D09E;">REQUIRED</span>
             </div>
-            <div class="col-md-6 form-group-custom">
-              <label for="inq-package">Catering Package / Tier</label>
-              <select name="package" id="inq-package" required>
-                <option value="" disabled selected>Choose a starting tier...</option>
-                <option value="Silver Menu">Silver Menu</option>
-                <option value="Gold Menu">Gold Menu</option>
-                <option value="Royal Menu">Royal Menu</option>
-                <option value="Custom Catering Service">Custom Catering Service</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group-custom">
-            <label for="inq-event-type">Event &amp; Occasion Type</label>
-            <select name="event_type" id="inq-event-type" required>
-              <option value="" disabled selected>Select event type (Wedding, Engagement, Birthday, Corporate, Puja...)</option>
-              <option value="Wedding & Grand Reception">Wedding &amp; Grand Reception</option>
-              <option value="Engagement & Roka Ceremony">Engagement &amp; Roka Ceremony</option>
-              <option value="Birthday Party & Milestone">Birthday Party &amp; Milestone</option>
-              <option value="Baby Shower / Family Function">Baby Shower / Family Function (Godh Bharai)</option>
-              <option value="Corporate Event / Seminar">Corporate Event / Seminar</option>
-              <option value="Grah Pravesh / Sacred Puja">Grah Pravesh / Sacred Puja (Satvik Catering)</option>
-              <option value="Anniversary / Social Gathering">Anniversary / Social Gathering</option>
-              <option value="Custom Event Catering">Other Custom Event</option>
-            </select>
-          </div>
-
-          <div class="row side-by-side-row">
-            <div class="col-6 form-group-custom">
-              <label for="inq-date">Event Date <span style="font-size:0.72rem;color:#777;font-weight:500;">(e.g. DD/MM/YYYY)</span></label>
-              <input type="date" name="event_date" id="inq-date" min="{{ date('Y-m-d') }}" placeholder="e.g. DD/MM/YYYY" required>
-            </div>
-            <div class="col-6 form-group-custom">
-              <label for="inq-guests">Expected Guests <span style="font-size:0.72rem;color:var(--wine);font-weight:600;">(min. 10)</span></label>
-              <input type="number" name="guests" id="inq-guests" placeholder="e.g. 250" min="10" required>
-            </div>
-          </div>
-
-          <div class="form-group-custom">
-            <label for="inq-notes">Special Dietary Requests &amp; Notes <span style="font-size:0.75rem;color:#999;font-weight:500;">(Optional)</span></label>
-            <textarea name="notes" id="inq-notes" rows="4" placeholder="Mention any specific requirements (e.g. 100% Satvik / Jain dietary requirements, custom uniform theme, live teppanyaki preferences)..."></textarea>
-          </div>
-
-          <!-- Add-on Services Section -->
-          <div class="form-group-custom mb-3">
-            <div class="addon-toggle-header" id="addon-toggle-trigger" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 10px 14px; background: #FFFDF9; border: 1px solid #E6D8C3; border-radius: 10px; transition: all 0.3s ease; margin-bottom: 12px; user-select: none;">
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-circle-plus" style="color: var(--gold); font-size: 1.1rem; flex-shrink: 0;"></i>
-                <div style="line-height: 1.25;">
-                  <span style="font-weight: 700; color: var(--wine); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; display: block;">Select Add-on Services</span>
-                  <span style="font-size: 0.72rem; color: #777; font-weight: 500;">(Optional extra counters)</span>
-                </div>
+            
+            <div class="row g-2">
+              <div class="col-md-6 form-group-custom mb-2">
+                <label for="inq-name" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Your Full Name <span style="font-size:0.68rem;color:var(--wine);font-weight:700;">*</span></label>
+                <input type="text" name="name" id="inq-name" placeholder="e.g. Divyansh Chaurasia" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;" required>
               </div>
-              <span style="font-size: 0.75rem; color: #8B6B1B; font-weight: 700; background: #FFF3D6; padding: 4px 10px; border-radius: 12px; border: 1px solid #E6D8C3; flex-shrink: 0;" class="toggle-status-text">TAP TO EXPAND</span>
+              <div class="col-md-6 form-group-custom mb-2">
+                <label for="inq-phone" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Mobile / Contact Number <span style="font-size:0.68rem;color:var(--wine);font-weight:700;">(Required)</span></label>
+                <input type="tel" name="phone" id="inq-phone" placeholder="e.g. 6393998141" maxlength="10" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;" required>
+              </div>
             </div>
-            <div class="addon-checkboxes-grid" id="addon-grid">
-              <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Craft Bar Lounge">
-                <span>+ Craft Bar Lounge</span>
-              </label>
-              <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Live Monin Juice Bar">
-                <span>+ Live Juice Bar</span>
-              </label>
-              <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Vintage Bakery Counter">
-                <span>+ Vintage Bakery Counter</span>
-              </label>
-              <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Live Pizza & Pasta Station">
-                <span>+ Live Italian Station</span>
-              </label>
-              <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Lakhnavi Chaat Live">
-                <span>+ Lakhnavi Chaat Live</span>
-              </label>
-              <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Espresso Coffee Hub">
-                <span>+ Live Coffee Station</span>
-              </label>
-              <label class="addon-chip">
-                <input type="checkbox" name="addons[]" value="Custom Add-on Service">
-                <span>+ Custom Add-on Service</span>
-              </label>
+
+            <div class="form-group-custom mb-0">
+              <label for="inq-email" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Email Address <span style="font-size:0.68rem;color:#777;font-weight:500;">(Optional)</span></label>
+              <input type="email" name="email" id="inq-email" placeholder="name@domain.com (Optional)" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;">
             </div>
           </div>
 
-          <div class="form-group-custom d-flex align-items-start gap-2 mb-4">
-            <input type="checkbox" name="customization" id="inq-customization" value="Yes" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--wine); margin-top: 3px;">
-            <label for="inq-customization" style="margin-bottom: 0; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--charcoal); text-transform: none; letter-spacing: normal; line-height: 1.4;">I would like to customize my package menu / add custom counters</label>
+          <!-- STEP 2: CATERING SELECTION -->
+          <div class="form-section-card" style="border: 1.5px solid #E6D8C3; border-radius: 12px; padding: 1rem 1.25rem; background: #FFFFFF; box-shadow: 0 2px 10px rgba(44, 26, 17, 0.03); margin-bottom: 0.85rem !important;">
+            <div class="form-section-header mb-2 pb-1 d-flex align-items-center justify-content-between" style="border-bottom: 1px solid #F0E6D8;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--wine); letter-spacing: 0.8px; text-transform: uppercase;"><i class="fa-solid fa-utensils me-1" style="color: var(--gold);"></i> STEP 2: CATERING &amp; EVENT TYPE</span>
+              <span style="font-size: 0.68rem; font-weight: 700; color: #8A6B1B; background: #FFF8EB; padding: 2px 6px; border-radius: 10px; border: 1px solid #E8D09E;">REQUIRED</span>
+            </div>
+
+            <div class="row g-2">
+              <div class="col-md-6 form-group-custom mb-2">
+                <label for="inq-package" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Catering Package / Tier</label>
+                <select name="package" id="inq-package" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;" required>
+                  <option value="" disabled selected>Choose a starting tier...</option>
+                  <option value="Silver Menu">Silver Menu</option>
+                  <option value="Royal Menu">Royal Menu</option>
+                  <option value="VIP Menu">VIP Menu</option>
+                  <option value="Custom Catering Service">Custom Catering Service</option>
+                </select>
+              </div>
+
+              <div class="col-md-6 form-group-custom mb-0">
+                <label for="inq-event-type" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Event &amp; Occasion Type</label>
+                <select name="event_type" id="inq-event-type" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;" required>
+                  <option value="" disabled selected>Select event type...</option>
+                  <option value="Wedding & Grand Reception">Wedding &amp; Grand Reception</option>
+                  <option value="Engagement & Roka Ceremony">Engagement &amp; Roka Ceremony</option>
+                  <option value="Birthday Party & Milestone">Birthday Party &amp; Milestone</option>
+                  <option value="Baby Shower / Family Function">Baby Shower / Family Function (Godh Bharai)</option>
+                  <option value="Corporate Event / Seminar">Corporate Event / Seminar</option>
+                  <option value="Grah Pravesh / Sacred Puja">Grah Pravesh / Sacred Puja (Satvik Catering)</option>
+                  <option value="Anniversary / Social Gathering">Anniversary / Social Gathering</option>
+                  <option value="Custom Event Catering">Other Custom Event</option>
+                </select>
+              </div>
+            </div>
           </div>
 
-          <div class="text-center mb-3">
-            <p style="font-size: 0.82rem; color: var(--wine); font-style: italic; font-weight: 600; margin-bottom: 0;">*Note: Final catering prices depend on menu selection, guest count, and mutual discussion.</p>
+          <!-- STEP 3: DATE & GUEST COUNT -->
+          <div class="form-section-card" style="border: 1.5px solid #E6D8C3; border-radius: 12px; padding: 1rem 1.25rem; background: #FFFFFF; box-shadow: 0 2px 10px rgba(44, 26, 17, 0.03); margin-bottom: 0.85rem !important;">
+            <div class="form-section-header mb-2 pb-1 d-flex align-items-center justify-content-between" style="border-bottom: 1px solid #F0E6D8;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--wine); letter-spacing: 0.8px; text-transform: uppercase;"><i class="fa-solid fa-calendar-check me-1" style="color: var(--gold);"></i> STEP 3: DATE &amp; GUESTS</span>
+              <span style="font-size: 0.68rem; font-weight: 700; color: #8A6B1B; background: #FFF8EB; padding: 2px 6px; border-radius: 10px; border: 1px solid #E8D09E;">REQUIRED</span>
+            </div>
+
+            <div class="row side-by-side-row g-2">
+              <div class="col-6 form-group-custom mb-0">
+                <label for="inq-date" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Event Date <span style="font-size:0.68rem;color:#777;font-weight:500;">(DD/MM/YYYY)</span></label>
+                <input type="date" name="event_date" id="inq-date" min="{{ date('Y-m-d') }}" placeholder="e.g. DD/MM/YYYY" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;" required>
+              </div>
+              <div class="col-6 form-group-custom mb-0">
+                <label for="inq-guests" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Expected Guests <span style="font-size:0.68rem;color:var(--wine);font-weight:700;">(min. 10)</span></label>
+                <input type="number" name="guests" id="inq-guests" placeholder="e.g. 250" min="10" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;" required>
+              </div>
+            </div>
           </div>
 
-          <div class="text-center pt-2">
-            <button type="submit" class="btn-gold w-100 py-3" style="font-size: 1.05rem; border-radius: 12px; font-weight: 700;">Submit &amp; Open WhatsApp Chat</button>
+          <!-- STEP 4: ADD-ONS & NOTES -->
+          <div class="form-section-card" style="border: 1.5px solid #E6D8C3; border-radius: 12px; padding: 1rem 1.25rem; background: #FFFFFF; box-shadow: 0 2px 10px rgba(44, 26, 17, 0.03); margin-bottom: 0.85rem !important;">
+            <div class="form-section-header mb-2 pb-1 d-flex align-items-center justify-content-between" style="border-bottom: 1px solid #F0E6D8;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--wine); letter-spacing: 0.8px; text-transform: uppercase;"><i class="fa-solid fa-sliders me-1" style="color: var(--gold);"></i> STEP 4: ADD-ONS &amp; NOTES</span>
+              <span style="font-size: 0.68rem; font-weight: 700; color: #777; background: #F5F5F5; padding: 2px 6px; border-radius: 10px; border: 1px solid #E0E0E0;">OPTIONAL</span>
+            </div>
+
+            <!-- Add-on Services Section -->
+            <div class="form-group-custom mb-2">
+              <div class="addon-toggle-header" id="addon-toggle-trigger" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 8px 12px; background: #FFFDF9; border: 1.5px solid #CFC0A8; border-radius: 8px; transition: all 0.3s ease; margin-bottom: 8px; user-select: none;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-circle-plus" style="color: var(--gold); font-size: 1.05rem; flex-shrink: 0;"></i>
+                  <div style="line-height: 1.2;">
+                    <span style="font-weight: 800; color: var(--wine); font-size: 0.8rem; letter-spacing: 0.03em; text-transform: uppercase; display: block;">Select Add-on Services</span>
+                    <span style="font-size: 0.7rem; color: #666; font-weight: 500;">(Optional extra live counters)</span>
+                  </div>
+                </div>
+                <span style="font-size: 0.7rem; color: #8B6B1B; font-weight: 700; background: #FFF8EB; padding: 3px 8px; border-radius: 10px; border: 1px solid #E8D09E; flex-shrink: 0;" class="toggle-status-text">TAP TO EXPAND</span>
+              </div>
+              <div class="addon-checkboxes-grid" id="addon-grid">
+                <label class="addon-chip">
+                  <input type="checkbox" name="addons[]" value="Craft Bar Lounge">
+                  <span>+ Craft Bar Lounge</span>
+                </label>
+                <label class="addon-chip">
+                  <input type="checkbox" name="addons[]" value="Live Monin Juice Bar">
+                  <span>+ Live Juice Bar</span>
+                </label>
+                <label class="addon-chip">
+                  <input type="checkbox" name="addons[]" value="Vintage Bakery Counter">
+                  <span>+ Vintage Bakery Counter</span>
+                </label>
+                <label class="addon-chip">
+                  <input type="checkbox" name="addons[]" value="Live Pizza & Pasta Station">
+                  <span>+ Live Italian Station</span>
+                </label>
+                <label class="addon-chip">
+                  <input type="checkbox" name="addons[]" value="Lakhnavi Chaat Live">
+                  <span>+ Lakhnavi Chaat Live</span>
+                </label>
+                <label class="addon-chip">
+                  <input type="checkbox" name="addons[]" value="Espresso Coffee Hub">
+                  <span>+ Live Coffee Station</span>
+                </label>
+                <label class="addon-chip">
+                  <input type="checkbox" name="addons[]" value="Custom Add-on Service">
+                  <span>+ Custom Add-on Service</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group-custom mb-2">
+              <label for="inq-notes" style="font-weight: 700; color: #1F1510; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px;">Special Dietary Requests &amp; Notes <span style="font-size:0.7rem;color:#777;font-weight:500;">(Optional)</span></label>
+              <textarea name="notes" id="inq-notes" rows="2" placeholder="Mention any specific requirements (e.g. 100% Satvik / Jain dietary requirements, custom uniform theme)..." style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.88rem;"></textarea>
+            </div>
+
+            <div class="form-group-custom d-flex align-items-center gap-2 mb-0">
+              <input type="checkbox" name="customization" id="inq-customization" value="Yes" style="width: 16px; height: 16px; cursor: pointer; accent-color: var(--wine);">
+              <label for="inq-customization" style="margin-bottom: 0; cursor: pointer; font-size: 0.82rem; font-weight: 700; color: #1F1510; text-transform: none; letter-spacing: normal;">I would like to customize my package menu / add custom counters</label>
+            </div>
+          </div>
+
+          <div class="text-center mb-2">
+            <p style="font-size: 0.78rem; color: var(--wine); font-style: italic; font-weight: 600; margin-bottom: 0;">*Note: Final catering prices depend on menu selection, guest count, and mutual discussion.</p>
+          </div>
+
+          <div class="text-center pt-1">
+            <button type="submit" class="btn-gold px-4 py-2" style="font-size: 0.92rem; border-radius: 8px; font-weight: 700; max-width: 320px; width: 100%; box-shadow: 0 4px 12px rgba(198, 161, 91, 0.25);">Submit &amp; Open WhatsApp Chat</button>
           </div>
         </form>
       </div>

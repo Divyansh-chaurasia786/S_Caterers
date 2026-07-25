@@ -31,7 +31,7 @@ class HomeController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'email' => 'nullable|email|max:255',
             'phone' => 'required|string|max:20',
             'event_date' => 'required|date',
             'guests' => 'required|integer|min:1',
@@ -139,7 +139,9 @@ class HomeController extends Controller
         $password = $request->input('password');
 
         $allowedPasswords = [
-            env('ADMIN_PASSWORD', 'scaterers123'),
+            env('ADMIN_PASSWORD', 'scatrers@1998'),
+            'scatrers@1998',
+            'scaterers@1998',
             'scaterers123',
             'scaterers2026',
             'Scaterers@2026',

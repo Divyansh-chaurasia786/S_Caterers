@@ -1237,6 +1237,61 @@
         </div>
       </div>
     </div>
+  <!-- ================= ADMIN ACCESS LOGIN MODAL ================= -->
+  <div class="modal fade" id="adminLoginModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="adminLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-custom shadow-lg">
+        
+        <div class="modal-header modal-header-custom" style="background: linear-gradient(135deg, #2A1B12 0%, #4A0E17 100%);">
+          <div class="d-flex align-items-center gap-2">
+            <img src="{{ asset('images/logo.png') }}" alt="S. Caterers Logo" style="height: 32px; width: auto;">
+            <h5 class="modal-title font-heading mb-0 text-white" id="adminLoginModalLabel" style="font-weight: 800;">
+              Admin Access Required
+            </h5>
+          </div>
+        </div>
+
+        <form action="{{ route('admin.login') }}" method="POST" id="adminLoginForm">
+          @csrf
+          <div class="modal-body p-4 text-center">
+            <div class="mb-3">
+              <div class="mx-auto mb-3" style="width: 56px; height: 56px; background: rgba(110, 20, 35, 0.08); color: var(--admin-wine); font-size: 1.5rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+              <h5 class="fw-bold mb-1" style="color: var(--admin-wine-dark);">Enter Gallery Password</h5>
+              <p class="text-muted" style="font-size: 0.88rem;">Please enter the administrator password to access the gallery dashboard.</p>
+            </div>
+
+            <div class="mb-3 text-start">
+              <label for="admin-password-input" class="form-label" style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: var(--admin-wine-dark); letter-spacing: 0.5px;">Password</label>
+              <div class="input-group">
+                <span class="input-group-text bg-white" style="border-color: #CFC0A8; color: var(--admin-wine);">
+                  <i class="fa-solid fa-key"></i>
+                </span>
+                <input type="password" name="password" id="admin-password-input" class="form-control" placeholder="Enter password..." required style="border-color: #CFC0A8; font-weight: 600; padding: 10px 14px;">
+                <button class="btn btn-outline-secondary" type="button" id="togglePasswordBtn" onclick="toggleAdminPasswordView()" style="border-color: #CFC0A8; background: #FFFDF9; color: #555;" title="Toggle Password Visibility">
+                  <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+                </button>
+              </div>
+            </div>
+
+            @if(session('error'))
+              <div class="alert alert-danger border-0 py-2 px-3 mb-0" style="border-radius: 8px; font-size: 0.85rem; font-weight: 600;">
+                <i class="fa-solid fa-circle-exclamation me-1"></i> {{ session('error') }}
+              </div>
+            @endif
+          </div>
+
+          <div class="modal-footer bg-light px-4 py-3 border-0 d-flex justify-content-between">
+            <a href="{{ route('gallery') }}" class="btn btn-outline-secondary btn-sm px-3" style="border-radius: 8px; font-weight: 600;">Back to Gallery</a>
+            <button type="submit" class="btn btn-gold btn-sm px-4 py-2" style="border-radius: 8px; font-weight: 700; font-size: 0.9rem;">
+              <i class="fa-solid fa-right-to-bracket me-1"></i> Unlock Dashboard
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
   </div>
 
 
@@ -1866,6 +1921,36 @@
         card.addEventListener('touchcancel', cancelPress);
       });
     });
+
+    // 13. Password Eye Button Visibility Toggle
+    function toggleAdminPasswordView() {
+      const pwdInput = document.getElementById('admin-password-input');
+      const icon = document.getElementById('togglePasswordIcon');
+      if (pwdInput && icon) {
+        if (pwdInput.type === 'password') {
+          pwdInput.type = 'text';
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+        } else {
+          pwdInput.type = 'password';
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+        }
+      }
+    }
+
+    @if(!empty($showLoginModal))
+    document.addEventListener('DOMContentLoaded', function() {
+      const loginModalEl = document.getElementById('adminLoginModal');
+      if (loginModalEl) {
+        const loginModal = new bootstrap.Modal(loginModalEl, {
+          backdrop: 'static',
+          keyboard: false
+        });
+        loginModal.show();
+      }
+    });
+    @endif
   </script>
 
 </body>
