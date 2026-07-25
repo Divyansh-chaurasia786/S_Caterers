@@ -988,6 +988,140 @@
     </div>
   </section>
 
+  <!-- ================= EVENTS & OCCASIONS WE CATER ================= -->
+  <section class="occasions-section bg-light-ivory py-5" id="events-we-cater" style="border-bottom: 1px solid var(--gold-line);">
+    <div class="container py-3">
+      <div class="section-title-wrap text-center mb-5">
+        <span class="eyebrow">TAILORED CATERING FOR EVERY EVENT</span>
+        <h2 class="section-title">Events &amp; Occasions <span class="accent">We Cater</span></h2>
+        <p class="text-muted" style="max-width: 650px; margin: 0.5rem auto 0;">From lavish royal weddings to intimate birthday parties, roka ceremonies, and sacred pujas — S. Caterers delivers 100% pure vegetarian culinary excellence tailored for every celebration.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- 1. Weddings & Receptions -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_01.jpg') }}" alt="Weddings & Receptions" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill"><i class="fa-solid fa-ring me-1"></i> GRAND CELEBRATIONS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Weddings &amp; Receptions</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Royal Rajwada 100% pure veg feasts, imperial buffet lanes, white-glove silver thali service &amp; live chef counters.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Wedding &amp; Grand Reception">Book Wedding Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Engagements & Roka -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_03.jpg') }}" alt="Engagements & Roka" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill"><i class="fa-solid fa-heart me-1"></i> INTIMATE CEREMONIES</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Engagements &amp; Roka</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Chic ring ceremony catering, mocktail bar lounges, live gourmet starter passes &amp; elegant dining decor.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Engagement &amp; Roka Ceremony">Book Engagement</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Birthday Parties -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_13.jpg') }}" alt="Birthday Parties" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill"><i class="fa-solid fa-cake-candles me-1"></i> MILESTONE PARTIES</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Birthday Parties</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Vibrant live Dilli chaat, wok-tossed Chinese noodles, live jalebi rabri counters &amp; custom mocktail bars.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Birthday Party &amp; Milestone">Book Birthday Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Baby Showers & Family Functions -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_05.jpg') }}" alt="Baby Showers & Family Milestones" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill"><i class="fa-solid fa-baby me-1"></i> TRADITIONAL MILESTONES</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Baby Showers (Godh Bharai)</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Traditional auspicious pure veg menus, exotic fruit art towers, traditional sweets &amp; family thali arrangements.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Baby Shower / Family Function">Book Family Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Corporate Events & Seminars -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_30.jpg') }}" alt="Corporate Events & Seminars" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill"><i class="fa-solid fa-briefcase me-1"></i> BUSINESS GALAS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Corporate Events</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Executive luncheons, conference high-tea breaks, corporate galas &amp; high-speed professional buffet lanes.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Corporate Event / Seminar">Book Corporate Event</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Grah Pravesh & Sacred Pujas -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_07.jpg') }}" alt="Grah Pravesh & Sacred Pujas" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill"><i class="fa-solid fa-om me-1"></i> SACRED SATVIK FEASTS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Grah Pravesh &amp; Pujas</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">100% Pure Veg Integrity, no onion &amp; no garlic (Satvik/Jain) catering options crafted with absolute sanctity.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Grah Pravesh / Sacred Puja">Book Puja Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Anniversaries & Social Gatherings -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_18.jpg') }}" alt="Anniversaries & Social Gatherings" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill"><i class="fa-solid fa-champagne-glasses me-1"></i> SOCIAL GATHERINGS</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700;">Anniversaries &amp; Parties</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Bespoke fine dining, mocktail bar setups, live dessert stations &amp; customizable multi-course menus.</p>
+              <a href="#inquiry" class="btn-outline-wine btn-sm mt-2 select-package" data-package="Anniversary / Social Gathering">Book Anniversary Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Any Custom Event -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="occasion-card h-100 animate-on-scroll" style="border: 2px solid var(--gold) !important; background: #FFFDF9 !important;">
+            <div class="occasion-img-wrap">
+              <img src="{{ asset('images/gallery/scaterers_photo_39.jpg') }}" alt="Any Custom Event Catering" loading="lazy">
+            </div>
+            <div class="occasion-content">
+              <span class="event-tag-pill" style="background: var(--gold) !important; color: #fff !important;"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> ANY EVENT TYPE</span>
+              <h3 class="event-title" style="font-size: 1.1rem; font-weight: 700; color: var(--wine);">Custom Events of Any Scale</h3>
+              <p class="event-desc" style="font-size: 0.82rem; line-height: 1.45;">Tailored 100% pure vegetarian catering for any event, gathering size, venue, or theme. Complete custom solutions.</p>
+              <a href="#inquiry" class="btn-gold btn-sm mt-2 select-package" data-package="Custom Event Catering">Customize Your Event</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ================= PREMIUM ADD-ON COUNTERS ================= -->
   <section class="addons-section bg-white py-5" id="addons" style="border-bottom: 1px solid var(--gold-line);">
     <div class="container py-3">
@@ -1313,7 +1447,7 @@
               <input type="tel" name="phone" id="inq-phone" placeholder="e.g. 6393998141" maxlength="10" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" required>
             </div>
             <div class="col-md-6 form-group-custom">
-              <label for="inq-package">Catering Package</label>
+              <label for="inq-package">Catering Package / Tier</label>
               <select name="package" id="inq-package" required>
                 <option value="" disabled selected>Choose a starting tier...</option>
                 <option value="Silver Menu">Silver Menu</option>
@@ -1322,6 +1456,21 @@
                 <option value="Custom Catering Service">Custom Catering Service</option>
               </select>
             </div>
+          </div>
+
+          <div class="form-group-custom">
+            <label for="inq-event-type">Event &amp; Occasion Type</label>
+            <select name="event_type" id="inq-event-type" required>
+              <option value="" disabled selected>Select event type (Wedding, Engagement, Birthday, Corporate, Puja...)</option>
+              <option value="Wedding & Grand Reception">Wedding &amp; Grand Reception</option>
+              <option value="Engagement & Roka Ceremony">Engagement &amp; Roka Ceremony</option>
+              <option value="Birthday Party & Milestone">Birthday Party &amp; Milestone</option>
+              <option value="Baby Shower / Family Function">Baby Shower / Family Function (Godh Bharai)</option>
+              <option value="Corporate Event / Seminar">Corporate Event / Seminar</option>
+              <option value="Grah Pravesh / Sacred Puja">Grah Pravesh / Sacred Puja (Satvik Catering)</option>
+              <option value="Anniversary / Social Gathering">Anniversary / Social Gathering</option>
+              <option value="Custom Event Catering">Other Custom Event</option>
+            </select>
           </div>
 
           <div class="row side-by-side-row">
