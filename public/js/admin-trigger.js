@@ -105,18 +105,26 @@
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRF-TOKEN': csrfToken
+          'X-CSRF-TOKEN': csrfToken,
+          'X-Requested-With': 'XMLHttpRequest'
         },
         body: JSON.stringify({ password: pass })
       })
-      .then(response => {
-        if (!response.ok) {
-          return response.json().then(data => { throw new Error(data.message || 'Login failed') });
+      .then(async response => {
+        const text = await response.text();
+        let data;
+        try {
+          data = JSON.parse(text);
+        } catch (e) {
+          throw new Error('System error occurred. Please try again.');
         }
-        return response.json();
+        if (!response.ok || !data.success) {
+          throw new Error(data.message || 'Invalid access password.');
+        }
+        return data;
       })
       .then(data => {
-        window.location.href = '/admin/gallery';
+        window.location.href = data.redirect || '/admin/gallery';
       })
       .catch(err => {
         submitBtn.disabled = false;

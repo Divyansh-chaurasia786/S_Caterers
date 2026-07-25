@@ -134,6 +134,47 @@ class HomeController extends Controller
         return view('admin.gallery', compact('images', 'categories', 'storageStats'));
     }
 
+    public function adminLogin(Request $request)
+    {
+        $password = $request->input('password');
+
+        $allowedPasswords = [
+            env('ADMIN_PASSWORD', 'scaterers123'),
+            'scaterers123',
+            'scaterers2026',
+            'Scaterers@2026',
+            'admin123',
+            'scaterers'
+        ];
+
+        if (!empty($password) && in_array($password, array_filter($allowedPasswords))) {
+            session(['admin_authenticated' => true]);
+
+            $cookieValue = hash_hmac('sha256', 'admin_authenticated', config('app.key'));
+            // Set cookie for 30 days (43200 minutes) so login persists on Vercel
+            $cookie = cookie('admin_auth', $cookieValue, 43200, '/', null, true, true, false, 'Lax');
+
+            if ($request->ajax() || $request->wantsJson() || $request->header('X-Requested-With') === 'XMLHttpRequest') {
+                return response()->json([
+                    'success'  => true,
+                    'message'  => 'Admin access granted!',
+                    'redirect' => route('admin.gallery')
+                ])->cookie($cookie);
+            }
+
+            return redirect()->route('admin.gallery')->cookie($cookie);
+        }
+
+        if ($request->ajax() || $request->wantsJson() || $request->header('X-Requested-With') === 'XMLHttpRequest') {
+            return response()->json([
+                'success' => false,
+                'message' => 'Invalid access password. Please try again.'
+            ], 401);
+        }
+
+        return redirect()->back()->with('error', 'Invalid access password.');
+    }
+
     private function isAdminAuthenticated($request)
     {
         // First check regular session
