@@ -163,6 +163,11 @@ class HomeController extends Controller
 
     public function adminLogin(Request $request)
     {
+        // LPDoS Guard: Bound password input length to prevent Long Password Denial of Service
+        $request->validate([
+            'password' => 'required|string|max:255',
+        ]);
+
         $password = $request->input('password');
 
         $allowedPasswords = [
