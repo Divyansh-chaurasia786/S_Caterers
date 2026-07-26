@@ -26,11 +26,11 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 // Services - Package menus (Silver, Gold, Royal, VIP), live counters, event selector, inquiry form
 Route::get('/services', [HomeController::class, 'services'])->name('services');
-Route::post('/services/inquiry', [HomeController::class, 'submitInquiry'])->name('services.inquiry');
+Route::post('/services/inquiry', [HomeController::class, 'submitInquiry'])->middleware('throttle:15,1')->name('services.inquiry');
 
 // Contact - Office address (Sachan Complex, Krishna Nagar), phone, email, contact form, Google Map
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::post('/contact/submit', [HomeController::class, 'submitContact'])->name('contact.submit');
+Route::post('/contact/submit', [HomeController::class, 'submitContact'])->middleware('throttle:15,1')->name('contact.submit');
 
 // Live Media Gallery - Real-time Cloudinary API + SQLite fallback view
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
@@ -42,8 +42,8 @@ Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 // Admin Dashboard View (Renders password modal if not authenticated via session/cookie)
 Route::get('/admin/gallery', [HomeController::class, 'adminGallery'])->name('admin.gallery');
 
-// Admin Authentication Handler
-Route::post('/admin/gallery/login', [HomeController::class, 'adminLogin'])->name('admin.login');
+// Admin Authentication Handler (Throttled max 10 attempts per minute)
+Route::post('/admin/gallery/login', [HomeController::class, 'adminLogin'])->middleware('throttle:10,1')->name('admin.login');
 Route::post('/admin/gallery/logout', [HomeController::class, 'adminLogout'])->name('admin.logout');
 
 // Cloudinary Direct Upload & Signature Helpers
