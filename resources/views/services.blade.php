@@ -1632,10 +1632,10 @@
         <!-- Cuisine Column -->
         <div class="col-6 col-md-3 col-lg-2">
           <h6>Cuisine</h6>
-          <a href="#">Lakhnavi</a>
-          <a href="#">Mughlai</a>
-          <a href="#">Satvik / Jain</a>
-          <a href="#">Global Fusion</a>
+          <a href="{{ route('services') }}#packages">Lakhnavi</a>
+          <a href="{{ route('services') }}#packages">Mughlai</a>
+          <a href="{{ route('services') }}#packages">Satvik / Jain</a>
+          <a href="{{ route('services') }}#packages">Many More...</a>
         </div>
 
         <!-- Contact Column -->
