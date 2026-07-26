@@ -12,31 +12,49 @@ use Cloudinary\Configuration\Configuration;
 
 class HomeController extends Controller
 {
+    /**
+     * Display Homepage View.
+     */
     public function index()
     {
         return view('home');
     }
 
+    /**
+     * Display About Us Page.
+     * Highlights brand legacy (since 1998) and 100% Pure Veg integrity.
+     */
     public function about()
     {
         return view('about');
     }
 
+    /**
+     * Display Services & Packages Page.
+     */
     public function services()
     {
         return view('services');
     }
 
+    /**
+     * Submit Catering Consultation / Package Inquiry Form.
+     * 
+     * Form Rules & Rules:
+     * - Email is OPTIONAL (nullable)
+     * - Mobile number is REQUIRED (string|max:20)
+     * - Combines selected add-on live counters into notes before database persistence
+     */
     public function submitInquiry(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'nullable|email|max:255',
-            'phone' => 'required|string|max:20',
+            'name'       => 'required|string|max:255',
+            'email'      => 'nullable|email|max:255',
+            'phone'      => 'required|string|max:20',
             'event_date' => 'required|date',
-            'guests' => 'required|integer|min:1',
-            'package' => 'required|string|max:255',
-            'notes' => 'nullable|string|max:1000',
+            'guests'     => 'required|integer|min:1',
+            'package'    => 'required|string|max:255',
+            'notes'      => 'nullable|string|max:1000',
         ]);
 
         Inquiry::create(array_merge($validated, [
@@ -52,11 +70,21 @@ class HomeController extends Controller
         return redirect()->back()->with('success', 'Thank you! Your catering consultation request has been submitted successfully. Amit Agarwal and team will contact you shortly.');
     }
 
+    /**
+     * Display Contact Page with Interactive Map & Details.
+     */
     public function contact()
     {
         return view('contact');
     }
 
+    /**
+     * Display Public Media Gallery Page.
+     * 
+     * DEBUG NOTE: Uses safe `ensureDatabaseAndFetchImages()` helper instead of
+     * querying DB directly so that missing database tables or serverless Vercel
+     * environments never throw a 500 QueryException error.
+     */
     public function gallery()
     {
         list($images, $categories) = $this->ensureDatabaseAndFetchImages();

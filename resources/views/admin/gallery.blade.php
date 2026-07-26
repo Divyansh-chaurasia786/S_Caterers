@@ -1,4 +1,20 @@
 <!DOCTYPE html>
+<!--
+  =========================================================================
+  S. CATERERS - ADMIN GALLERY CONTROL DASHBOARD
+  =========================================================================
+  
+  DEVELOPER DEBUGGING GUIDE:
+  - Auth Password: scatrers@1998 (Handled by HomeController@adminLogin)
+  - Vercel Persistence: Uses 30-day signed cookie 'admin_auth' because Vercel
+    array session driver resets across serverless lambda instances.
+  - Direct Cloudinary Upload: Direct browser-to-Cloudinary signed upload flow
+    using HMAC signatures from route('admin.signature').
+  - Storage Limit: Monitored via $storageStats (25 GB free Cloudinary quota).
+  - Bulk Actions: Section checkboxes (.folder-section-checkbox) and card 
+    long-press gestures toggle selection mode for batch deletion.
+  =========================================================================
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">

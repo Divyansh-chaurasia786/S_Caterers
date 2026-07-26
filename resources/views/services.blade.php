@@ -845,6 +845,11 @@
   </section>
 
   <!-- ================= PACKAGES GRID ================= -->
+  <!-- DEBUG NOTE: 
+       Desktop View: Uses 4x col-lg-3 columns in a single row (Silver, Gold, Royal, VIP).
+       Mobile View: Uses .mobile-swipe-deck JS carousel with dots pagination.
+       Badge styling: .royal-badge requires position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  -->
   <section class="package-grid-section" id="packages">
     <div class="container">
       <div class="section-title-wrap text-center mb-5">
