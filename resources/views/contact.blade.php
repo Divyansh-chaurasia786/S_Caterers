@@ -378,6 +378,9 @@
 
             <form action="{{ route('contact.submit') }}" method="POST">
               @csrf
+              <!-- Bot Mitigation Honeypot & Time Check -->
+              <input type="text" name="website_url_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="form_load_time" value="{{ time() }}">
               
               <div class="row">
                 <div class="col-md-6 form-group-custom">

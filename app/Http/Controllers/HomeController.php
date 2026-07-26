@@ -47,6 +47,15 @@ class HomeController extends Controller
      */
     public function submitInquiry(Request $request)
     {
+        // ── Bot & Automated Script Mitigation ──────────────────────────
+        if (!$this->verifyBotProtections($request)) {
+            if ($request->ajax() || $request->wantsJson()) {
+                return response()->json(['success' => true, 'message' => 'Consultation request saved.']);
+            }
+            return redirect()->back()->with('success', 'Thank you! Your catering consultation request has been submitted successfully.');
+        }
+        // ───────────────────────────────────────────────────────────────
+
         $validated = $request->validate([
             'name'       => 'required|string|max:255',
             'email'      => 'nullable|email|max:255',
@@ -93,6 +102,15 @@ class HomeController extends Controller
 
     public function submitContact(Request $request)
     {
+        // ── Bot & Automated Script Mitigation ──────────────────────────
+        if (!$this->verifyBotProtections($request)) {
+            if ($request->ajax() || $request->wantsJson()) {
+                return response()->json(['success' => true, 'message' => 'Your message has been saved successfully.']);
+            }
+            return redirect()->back()->with('success', 'Thank you! Your message has been sent successfully.');
+        }
+        // ───────────────────────────────────────────────────────────────
+
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -108,6 +126,39 @@ class HomeController extends Controller
         }
 
         return redirect()->back()->with('success', 'Thank you! Your message has been sent successfully. Amit Agarwal and team will contact you shortly.');
+    }
+
+    /**
+     * Reusable Bot Protection & Automated Attack Verification Helper.
+     */
+    private function verifyBotProtections(Request $request): bool
+    {
+        // 1. Honeypot Validation: If hidden field 'website_url_hp' is filled, it's an automated bot
+        if ($request->filled('website_url_hp')) {
+            \Log::warning('Bot detected via Honeypot trap', ['ip' => $request->ip()]);
+            return false;
+        }
+
+        // 2. Time-Based Submission Check: Must take at least 2 seconds between form render and submit
+        if ($request->has('form_load_time')) {
+            $loadTime = (int) $request->input('form_load_time');
+            if (time() - $loadTime < 2) {
+                \Log::warning('Bot detected via instant submission (<2s)', ['ip' => $request->ip()]);
+                return false;
+            }
+        }
+
+        // 3. User-Agent / Headless Browser Inspection
+        $ua = strtolower($request->userAgent() ?? '');
+        $botAgents = ['curl', 'python-requests', 'scrapy', 'libwww-perl', 'go-http-client', 'winhttp', 'headlesschrome', 'puppeteer', 'phantomjs'];
+        foreach ($botAgents as $bot) {
+            if (str_contains($ua, $bot)) {
+                \Log::warning('Bot detected via suspicious User-Agent: ' . $ua, ['ip' => $request->ip()]);
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public function adminGallery()

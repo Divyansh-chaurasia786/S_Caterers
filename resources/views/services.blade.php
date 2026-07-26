@@ -1459,6 +1459,9 @@
 
         <form action="{{ route('services.inquiry') }}" method="POST">
           @csrf
+          <!-- Bot Mitigation Honeypot & Time Check -->
+          <input type="text" name="website_url_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="form_load_time" value="{{ time() }}">
 
           <!-- STEP 1: CLIENT INFORMATION -->
           <div class="form-section-card" style="border: 1.5px solid #E6D8C3; border-radius: 12px; padding: 1rem 1.25rem; background: #FFFFFF; box-shadow: 0 2px 10px rgba(44, 26, 17, 0.03); margin-bottom: 0.85rem !important;">
