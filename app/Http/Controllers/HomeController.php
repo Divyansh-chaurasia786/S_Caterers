@@ -184,6 +184,12 @@ class HomeController extends Controller
         if (!empty($password) && in_array($password, array_filter($allowedPasswords))) {
             session(['admin_authenticated' => true]);
 
+            \Log::info('Successful Admin Login', [
+                'ip'         => $request->ip(),
+                'user_agent' => $request->userAgent(),
+                'timestamp'  => now()->toDateTimeString(),
+            ]);
+
             $cookieValue = hash_hmac('sha256', 'admin_authenticated', config('app.key'));
             // Set cookie for 30 days (43200 minutes) so login persists on Vercel
             $cookie = cookie('admin_auth', $cookieValue, 43200, '/', null, true, true, false, 'Lax');
@@ -198,6 +204,12 @@ class HomeController extends Controller
 
             return redirect()->route('admin.gallery')->cookie($cookie);
         }
+
+        \Log::warning('Failed Admin Login Attempt', [
+            'ip'         => $request->ip(),
+            'user_agent' => $request->userAgent(),
+            'timestamp'  => now()->toDateTimeString(),
+        ]);
 
         if ($request->ajax() || $request->wantsJson() || $request->header('X-Requested-With') === 'XMLHttpRequest') {
             return response()->json([

@@ -28,11 +28,23 @@
       "dest": "/api/index.php"
     }
   ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ],
   "env": {
     "APP_KEY": "base64:LREC/2lhfmqQ/M2MSS2UsZuMWYcXlTGMGtedY7/Yd6U=",
     "APP_ENV": "production",
     "APP_URL": "https://s-caterers-new.vercel.app",
-    "APP_DEBUG": "true",
+    "APP_DEBUG": "false",
     "LOG_CHANNEL": "stderr",
     "DB_CONNECTION": "sqlite",
     "DB_DATABASE": "/tmp/database/database.sqlite",
