@@ -5,7 +5,7 @@
   =========================================================================
   
   DEVELOPER DEBUGGING GUIDE:
-  - Auth Password: scatrers@1998 (Handled by HomeController@adminLogin)
+  - Auth Password: Handled securely via environment variable ADMIN_PASSWORD and HomeController@adminLogin.
   - Vercel Persistence: Uses 30-day signed cookie 'admin_auth' because Vercel
     array session driver resets across serverless lambda instances.
   - Direct Cloudinary Upload: Direct browser-to-Cloudinary signed upload flow

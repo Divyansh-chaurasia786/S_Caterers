@@ -42,7 +42,7 @@ Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 // Admin Dashboard View (Renders password modal if not authenticated via session/cookie)
 Route::get('/admin/gallery', [HomeController::class, 'adminGallery'])->name('admin.gallery');
 
-// Admin Authentication (Password: scatrers@1998)
+// Admin Authentication Handler
 Route::post('/admin/gallery/login', [HomeController::class, 'adminLogin'])->name('admin.login');
 Route::post('/admin/gallery/logout', [HomeController::class, 'adminLogout'])->name('admin.logout');
 
