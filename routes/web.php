@@ -56,6 +56,9 @@ Route::get('/admin/gallery/export-db', [HomeController::class, 'exportDatabaseBa
 // Local & Cloud Media Upload Controller Handler
 Route::post('/admin/gallery/upload', [HomeController::class, 'adminUpload'])->name('admin.upload');
 
+// Package Menu PDF Update Controller Handler
+Route::post('/admin/gallery/update-pdf', [HomeController::class, 'updatePdf'])->name('admin.update-pdf');
+
 // Media CRUD Management Operations
 Route::post('/admin/gallery/update/{id}', [HomeController::class, 'adminUpdate'])->where('id', '.*')->name('admin.update');
 Route::post('/admin/gallery/delete/{id}', [HomeController::class, 'adminDelete'])->where('id', '.*')->name('admin.delete');

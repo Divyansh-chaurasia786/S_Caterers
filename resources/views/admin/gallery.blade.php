@@ -714,6 +714,56 @@
 
       </div>
 
+      <!-- Package Menu PDFs Management Section -->
+      <div class="admin-card mb-4" style="background: #FFFFFF; border: 1.5px solid var(--admin-border); border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(42, 27, 18, 0.04);">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 pb-2 border-bottom">
+          <div>
+            <h2 class="h5 mb-1 font-heading" style="font-weight: 800; color: var(--admin-wine);"><i class="fa-solid fa-file-pdf me-2" style="color: var(--admin-gold);"></i> Package Menu PDFs Management</h2>
+            <p class="text-muted small mb-0">Upload and update the official downloadable PDF menus for your catering packages (Silver, Gold, Royal, VIP).</p>
+          </div>
+          <span class="badge px-3 py-2" style="border-radius: 20px; font-weight: 700; font-size: 0.8rem; background: #FFF8EB; color: #8A6B1B; border: 1px solid #E8D09E;">4 Package Menus Active</span>
+        </div>
+
+        <div class="row g-3">
+          @foreach($pdfMenus ?? [] as $pdf)
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="p-3 h-100 d-flex flex-column justify-content-between" style="background: #FFFDF9; border: 1.5px solid #E8DFD1; border-radius: 12px; transition: all 0.2s ease;">
+                <div>
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="badge" style="{{ $pdf['badge_style'] }} font-weight: 700; font-size: 0.75rem; border-radius: 6px;">{{ $pdf['badge'] }}</span>
+                    <small class="text-muted" style="font-weight: 600; font-size: 0.75rem;"><i class="fa-solid fa-hard-drive me-1"></i>{{ $pdf['size'] }}</small>
+                  </div>
+                  <h3 class="h6 font-heading mb-1" style="font-weight: 700; color: #201C1A;">{{ $pdf['name'] }}</h3>
+                  <div class="text-muted small mb-3" style="font-size: 0.76rem;">
+                    <i class="fa-solid fa-clock me-1" style="color: var(--admin-gold);"></i> Updated: <strong>{{ $pdf['updated'] }}</strong>
+                  </div>
+                </div>
+
+                <div>
+                  <!-- Upload Form -->
+                  <form action="{{ route('admin.update-pdf') }}" method="POST" enctype="multipart/form-data" class="mb-2">
+                    @csrf
+                    <input type="hidden" name="menu_key" value="{{ $pdf['key'] }}">
+                    <div class="mb-2">
+                      <input type="file" name="pdf_file" class="form-control form-control-sm" accept=".pdf" required style="font-size: 0.78rem;">
+                    </div>
+                    <button type="submit" class="btn btn-wine btn-sm w-100 py-1" style="background: linear-gradient(135deg, #6E1423 0%, #4A0E17 100%); color: #fff; border: none; font-size: 0.8rem; font-weight: 700; border-radius: 8px;">
+                      <i class="fa-solid fa-cloud-arrow-up me-1"></i> Upload &amp; Replace PDF
+                    </button>
+                  </form>
+
+                  @if($pdf['exists'])
+                    <a href="{{ $pdf['url'] }}" target="_blank" class="btn btn-outline-secondary btn-sm w-100 py-1" style="font-size: 0.78rem; font-weight: 600; border-radius: 8px;">
+                      <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Preview PDF
+                    </a>
+                  @endif
+                </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+      </div>
+
       <div class="row g-4">
         <!-- Left Column: Upload New Image / Video -->
         <div class="col-lg-4">

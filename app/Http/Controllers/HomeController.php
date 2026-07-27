@@ -209,7 +209,103 @@ class HomeController extends Controller
         ];
         // ───────────────────────────────────────────────────────────────
 
-        return view('admin.gallery', compact('images', 'categories', 'storageStats'));
+        // ── Package Menu PDFs Status ───────────────────────────────────
+        $pdfMenus = [
+            [
+                'key'         => 'silver',
+                'name'        => 'Silver Choice Menu',
+                'badge'       => 'Silver',
+                'badge_style' => 'background: #6c757d; color: #fff;',
+                'filename'    => 'silver_choice_menu.pdf',
+                'url'         => asset('pdf/silver_choice_menu.pdf'),
+                'exists'      => file_exists(public_path('pdf/silver_choice_menu.pdf')),
+                'size'        => file_exists(public_path('pdf/silver_choice_menu.pdf')) ? round(filesize(public_path('pdf/silver_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
+                'updated'     => file_exists(public_path('pdf/silver_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/silver_choice_menu.pdf'))) : 'N/A',
+            ],
+            [
+                'key'         => 'gold',
+                'name'        => 'Gold Choice Menu',
+                'badge'       => 'Gold',
+                'badge_style' => 'background: #ffc107; color: #000;',
+                'filename'    => 'gold_choice_menu.pdf',
+                'url'         => asset('pdf/gold_choice_menu.pdf'),
+                'exists'      => file_exists(public_path('pdf/gold_choice_menu.pdf')),
+                'size'        => file_exists(public_path('pdf/gold_choice_menu.pdf')) ? round(filesize(public_path('pdf/gold_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
+                'updated'     => file_exists(public_path('pdf/gold_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/gold_choice_menu.pdf'))) : 'N/A',
+            ],
+            [
+                'key'         => 'royal',
+                'name'        => 'Royal Choice Menu',
+                'badge'       => 'Royal',
+                'badge_style' => 'background: #dc3545; color: #fff;',
+                'filename'    => 'royal_choice_menu.pdf',
+                'url'         => asset('pdf/royal_choice_menu.pdf'),
+                'exists'      => file_exists(public_path('pdf/royal_choice_menu.pdf')),
+                'size'        => file_exists(public_path('pdf/royal_choice_menu.pdf')) ? round(filesize(public_path('pdf/royal_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
+                'updated'     => file_exists(public_path('pdf/royal_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/royal_choice_menu.pdf'))) : 'N/A',
+            ],
+            [
+                'key'         => 'vip',
+                'name'        => 'VIP Choice Menu',
+                'badge'       => 'VIP Imperial',
+                'badge_style' => 'background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff;',
+                'filename'    => 'vip_choice_menu.pdf',
+                'url'         => asset('pdf/vip_choice_menu.pdf'),
+                'exists'      => file_exists(public_path('pdf/vip_choice_menu.pdf')),
+                'size'        => file_exists(public_path('pdf/vip_choice_menu.pdf')) ? round(filesize(public_path('pdf/vip_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
+                'updated'     => file_exists(public_path('pdf/vip_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/vip_choice_menu.pdf'))) : 'N/A',
+            ],
+        ];
+
+        return view('admin.gallery', compact('images', 'categories', 'storageStats', 'pdfMenus'));
+    }
+
+    /**
+     * Upload & Update Package Menu PDF Files (Silver, Gold, Royal, VIP)
+     */
+    public function updatePdf(Request $request)
+    {
+        if (!$this->isAdminAuthenticated($request)) {
+            return redirect()->route('admin.gallery')->with('error', 'Access Denied. Please login first.');
+        }
+
+        $request->validate([
+            'menu_key' => 'required|string|in:silver,gold,royal,vip',
+            'pdf_file' => 'required|file|mimes:pdf|max:20480',
+        ]);
+
+        $map = [
+            'silver' => 'silver_choice_menu.pdf',
+            'gold'   => 'gold_choice_menu.pdf',
+            'royal'  => 'royal_choice_menu.pdf',
+            'vip'    => 'vip_choice_menu.pdf',
+        ];
+
+        $names = [
+            'silver' => 'Silver Choice Menu',
+            'gold'   => 'Gold Choice Menu',
+            'royal'  => 'Royal Choice Menu',
+            'vip'    => 'VIP Choice Menu',
+        ];
+
+        $key = $request->input('menu_key');
+        $filename = $map[$key];
+        $destinationDir = public_path('pdf');
+
+        if (!is_dir($destinationDir)) {
+            mkdir($destinationDir, 0755, true);
+        }
+
+        $uploadedFile = $request->file('pdf_file');
+        $uploadedFile->move($destinationDir, $filename);
+
+        \Log::info('Package Menu PDF Updated by Admin', [
+            'menu_key' => $key,
+            'filename' => $filename,
+            'ip'       => $request->ip(),
+        ]);
+
+        return redirect()->route('admin.gallery')->with('success', "{$names[$key]} PDF updated successfully!");
     }
 
     public function adminLogin(Request $request)
