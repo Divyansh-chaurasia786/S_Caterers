@@ -21,6 +21,9 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
+  <!-- HTML2PDF Library for automatic PDF download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=6.1">
   
@@ -2146,8 +2149,11 @@
             <div style="color: #FFFFFF; font-size: 0.95rem; letter-spacing: 1.5px; font-weight: 600;">Artisanal Patisserie, Bakes &amp; Fine Banquet Selection</div>
           </div>
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printSilverMenu()" style="background: #E2E8F0; border: none; font-size: 0.82rem; border-radius: 6px; padding: 5px 12px; font-weight: 800; color: #1A202C !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print Menu
+            <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('silver')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
+            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printSilverMenu()" style="background: #E2E8F0; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #1A202C !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -2489,8 +2495,11 @@
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS SILVER MENU
           </div>
           <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('silver')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
             <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printSilverMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print Menu
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Silver Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
@@ -2519,8 +2528,11 @@
             <div style="color: #FFFFFF; font-size: 0.95rem; letter-spacing: 1.5px; font-weight: 600;">Pure Vegetarian Fine Dining Banquet Experience</div>
           </div>
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printGoldMenu()" style="background: #D4AF37; border: none; font-size: 0.82rem; border-radius: 6px; padding: 5px 12px; font-weight: 800; color: #0F0F0F !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print Menu
+            <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('gold')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
+            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printGoldMenu()" style="background: #D4AF37; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #0F0F0F !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -3126,8 +3138,11 @@
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS GOLD MENU
           </div>
           <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('gold')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
             <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printGoldMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print Menu
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Gold Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
@@ -3156,8 +3171,11 @@
             <div style="color: #FFFFFF; font-size: 0.95rem; letter-spacing: 1.5px; font-weight: 600;">Opulent VIP Rajwada Feast &amp; Live Interactive Stations</div>
           </div>
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printRoyalMenu()" style="background: #FFD700; border: none; font-size: 0.82rem; border-radius: 6px; padding: 5px 12px; font-weight: 800; color: #2D0008 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print Menu
+            <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('royal')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
+            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printRoyalMenu()" style="background: #FFD700; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #2D0008 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -3591,8 +3609,11 @@
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS ROYAL MENU
           </div>
           <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('royal')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
             <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printRoyalMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print Menu
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Royal Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
@@ -3621,8 +3642,11 @@
             <div style="color: #FFFFFF; font-size: 0.95rem; letter-spacing: 1.5px; font-weight: 600;">The Pinnacle of Vegetarian Banquet Luxury</div>
           </div>
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printVipMenu()" style="background: #FFD700; border: none; font-size: 0.82rem; border-radius: 6px; padding: 5px 12px; font-weight: 800; color: #1A0933 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print Menu
+            <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('vip')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
+            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printVipMenu()" style="background: #FFD700; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #1A0933 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -3968,8 +3992,11 @@
             <i class="fa-solid fa-gem me-1" style="color: #6A3FA0;"></i> S. CATERERS VIP MENU
           </div>
           <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('vip')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
             <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printVipMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print Menu
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('VIP Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; border: none;">
@@ -3998,8 +4025,11 @@
             <div style="color: #FFFFFF; font-size: 0.92rem; letter-spacing: 1.2px; font-weight: 600;">Call: 9839077960, 9415788950 | mail: amit1881970@yahoo.in</div>
           </div>
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printFullMenu()" style="background: #FFD700; border: none; font-size: 0.82rem; border-radius: 6px; padding: 5px 12px; font-weight: 800; color: #0F0F0F !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print Menu
+            <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('full')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
+            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printFullMenu()" style="background: #FFD700; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #0F0F0F !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -4494,8 +4524,11 @@
             <i class="fa-solid fa-book-open me-1 text-gold"></i> S. CATERERS MASTER FULL MENU
           </div>
           <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('full')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </button>
             <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printFullMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print Menu
+              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Full Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
@@ -4753,6 +4786,61 @@
       if (inquirySec) {
         inquirySec.scrollIntoView({ behavior: 'smooth' });
       }
+    }
+
+    // ===== AUTO PDF DOWNLOAD FUNCTION =====
+    function downloadMenuPdf(menuType) {
+      const menuMap = {
+        silver: { bodyId: 'silverMenuModalBody', title: 'SILVER CHOICE MENU', subtitle: 'Artisanal Patisserie, Bakes & Fine Banquet Selection', accentColor: '#C6A15B' },
+        gold:   { bodyId: 'goldMenuModalBody',   title: 'THE GOLD MENU',       subtitle: 'Pure Vegetarian Fine Dining Banquet Experience',         accentColor: '#D4AF37' },
+        royal:  { bodyId: 'royalMenuModalBody',  title: 'THE ROYAL CHOICE MENU', subtitle: 'Opulent VIP Rajwada Feast & Live Interactive Stations',  accentColor: '#FFD700' },
+        vip:    { bodyId: 'vipMenuModalBody',    title: 'VIP MENU',             subtitle: 'The Pinnacle of Vegetarian Banquet Luxury',               accentColor: '#9B59B6' },
+        full:   { bodyId: 'fullMenuModalBody',   title: 'MASTER FULL MENU',     subtitle: 'S. Caterers — Complete Vegetarian Banquet Collection',    accentColor: '#D4AF37' }
+      };
+
+      const cfg = menuMap[menuType];
+      if (!cfg) return;
+
+      const bodyEl = document.getElementById(cfg.bodyId);
+      if (!bodyEl) { alert('Menu content not found. Please open the menu first.'); return; }
+
+      // Build a clean wrapper for PDF rendering
+      const wrapper = document.createElement('div');
+      wrapper.style.cssText = 'font-family: Outfit, Plus Jakarta Sans, sans-serif; background: #fff; padding: 32px; width: 800px;';
+      wrapper.innerHTML = `
+        <div style="text-align:center; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 3px solid ${cfg.accentColor};">
+          <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #888; text-transform: uppercase; margin-bottom: 8px;">S. CATERERS BY AMIT AGARWAL</div>
+          <div style="font-size: 26px; font-weight: 900; letter-spacing: 3px; color: #1a1a1a; text-transform: uppercase; margin-bottom: 6px;">${cfg.title}</div>
+          <div style="font-size: 13px; font-weight: 600; color: #555; letter-spacing: 1px;">${cfg.subtitle}</div>
+          <div style="margin-top: 10px; font-size: 11px; color: #888;">Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in</div>
+        </div>
+        ${bodyEl.innerHTML}
+        <div style="text-align:center; margin-top: 28px; padding-top: 16px; border-top: 2px solid ${cfg.accentColor}; font-size: 11px; color: #888; letter-spacing: 1px;">
+          S. CATERERS — Premium Vegetarian Catering | scaterers.in
+        </div>
+      `;
+
+      const opt = {
+        margin:      [10, 10, 10, 10],
+        filename:    `S-Caterers-${cfg.title.replace(/\s+/g,'-')}.pdf`,
+        image:       { type: 'jpeg', quality: 0.95 },
+        html2canvas: { scale: 2, useCORS: true, logging: false },
+        jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      // Append wrapper off-screen so html2canvas can render it
+      wrapper.style.position = 'fixed';
+      wrapper.style.top = '-9999px';
+      wrapper.style.left = '-9999px';
+      document.body.appendChild(wrapper);
+
+      html2pdf().set(opt).from(wrapper).save().then(function() {
+        document.body.removeChild(wrapper);
+      }).catch(function(err) {
+        document.body.removeChild(wrapper);
+        console.error('PDF generation failed:', err);
+        alert('PDF download failed. Please try the Print option instead.');
+      });
     }
   </script>
 
