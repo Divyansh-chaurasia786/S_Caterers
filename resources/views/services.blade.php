@@ -4513,18 +4513,17 @@
 
   <script>
     /* ============================================================
-       INSTANT PDF DOWNLOAD — uses pre-loaded jsPDF (text-based,
-       no html2canvas, no new window, no CDN wait on click)
+       INSTANT PDF — jsPDF pre-loaded, text extracted from live DOM
        ============================================================ */
     function downloadMenuPdf(menuType) {
       if (!window.jspdf) { alert('PDF library not loaded yet. Please wait a moment and try again.'); return; }
 
       var menus = {
-        silver: { bodyId:'silverMenuModalBody', title:'SILVER CHOICE MENU',    sub:'Artisanal Patisserie, Bakes & Fine Banquet Selection',       file:'S-Caterers-Silver-Menu.pdf',      bg:[15,15,15],    acc:[198,161,91]  },
-        gold:   { bodyId:'goldMenuModalBody',   title:'THE GOLD MENU',         sub:'Pure Vegetarian Fine Dining Banquet Experience',             file:'S-Caterers-Gold-Menu.pdf',        bg:[15,15,15],    acc:[212,175,55]  },
-        royal:  { bodyId:'royalMenuModalBody',  title:'THE ROYAL CHOICE MENU', sub:'Opulent VIP Rajwada Feast & Live Interactive Stations',      file:'S-Caterers-Royal-Menu.pdf',       bg:[45,0,8],      acc:[255,215,0]   },
-        vip:    { bodyId:'vipMenuModalBody',    title:'VIP MENU',              sub:'The Pinnacle of Vegetarian Banquet Luxury',                  file:'S-Caterers-VIP-Menu.pdf',         bg:[26,9,51],     acc:[106,63,160]  },
-        full:   { bodyId:'fullMenuModalBody',   title:'MASTER FULL MENU',      sub:'Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in', file:'S-Caterers-Master-Full-Menu.pdf', bg:[15,15,15],    acc:[212,175,55]  }
+        silver: { bodyId:'silverMenuModalBody', title:'SILVER CHOICE MENU',    sub:'Artisanal Patisserie, Bakes & Fine Banquet Selection',       file:'S-Caterers-Silver-Menu.pdf',      bg:[15,15,15],  acc:[198,161,91] },
+        gold:   { bodyId:'goldMenuModalBody',   title:'THE GOLD MENU',         sub:'Pure Vegetarian Fine Dining Banquet Experience',             file:'S-Caterers-Gold-Menu.pdf',        bg:[15,15,15],  acc:[212,175,55] },
+        royal:  { bodyId:'royalMenuModalBody',  title:'THE ROYAL CHOICE MENU', sub:'Opulent VIP Rajwada Feast & Live Interactive Stations',      file:'S-Caterers-Royal-Menu.pdf',       bg:[45,0,8],    acc:[255,215,0]  },
+        vip:    { bodyId:'vipMenuModalBody',    title:'VIP MENU',              sub:'The Pinnacle of Vegetarian Banquet Luxury',                  file:'S-Caterers-VIP-Menu.pdf',         bg:[26,9,51],   acc:[106,63,160] },
+        full:   { bodyId:'fullMenuModalBody',   title:'MASTER FULL MENU',      sub:'Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in', file:'S-Caterers-Master-Full-Menu.pdf', bg:[15,15,15],  acc:[212,175,55] }
       };
 
       var m = menus[menuType];
@@ -4533,100 +4532,144 @@
       if (!bodyEl) { alert('Please open the menu popup first, then click Download PDF.'); return; }
 
       var jsPDF = window.jspdf.jsPDF;
-      var doc   = new jsPDF({ orientation:'p', unit:'mm', format:'a4' });
-      var pW    = doc.internal.pageSize.getWidth();   // 210
-      var pH    = doc.internal.pageSize.getHeight();  // 297
-      var ml    = 12, mr = 12;
-      var cW    = pW - ml - mr;
-      var y     = 14;
+      var doc = new jsPDF({ orientation:'p', unit:'mm', format:'a4' });
+      var pW = doc.internal.pageSize.getWidth();
+      var pH = doc.internal.pageSize.getHeight();
+      var ml = 12, mr = 12, cW = pW - ml - mr;
+      var y = 14;
+      var lineH = 4.5;
 
-      /* ---- HEADER ---- */
+      /* helper: add new page and reset y */
+      function checkPage(needed) {
+        if (y + needed > pH - 14) { doc.addPage(); y = 14; }
+      }
+
+      /* helper: draw section header bar */
+      function sectionBar(txt) {
+        checkPage(10);
+        doc.setFillColor(m.acc[0], m.acc[1], m.acc[2]);
+        doc.roundedRect(ml, y, cW, 8, 1.5, 1.5, 'F');
+        var lum = 0.299*m.acc[0] + 0.587*m.acc[1] + 0.114*m.acc[2];
+        doc.setTextColor(lum > 160 ? 30 : 255, lum > 160 ? 30 : 255, lum > 160 ? 30 : 255);
+        doc.setFontSize(9); doc.setFont('helvetica','bold');
+        doc.text(txt, ml+4, y+5.5);
+        y += 11;
+      }
+
+      /* ---- COVER HEADER ---- */
       doc.setFillColor(m.bg[0], m.bg[1], m.bg[2]);
-      doc.roundedRect(ml, y, cW, 26, 3, 3, 'F');
+      doc.roundedRect(ml, y, cW, 30, 3, 3, 'F');
       doc.setTextColor(m.acc[0], m.acc[1], m.acc[2]);
-      doc.setFontSize(14); doc.setFont('helvetica','bold');
-      doc.text('S. CATERERS BY AMIT AGARWAL', pW/2, y+9, {align:'center'});
-      doc.setFontSize(10); doc.setTextColor(220,220,220); doc.setFont('helvetica','normal');
-      doc.text(m.title, pW/2, y+16, {align:'center'});
-      doc.setFontSize(8);  doc.setTextColor(170,170,170);
-      doc.text(m.sub, pW/2, y+22, {align:'center'});
-      y += 32;
+      doc.setFontSize(15); doc.setFont('helvetica','bold');
+      doc.text('S. CATERERS BY AMIT AGARWAL', pW/2, y+10, {align:'center'});
+      doc.setFontSize(11); doc.setTextColor(230,230,230); doc.setFont('helvetica','bold');
+      doc.text(m.title, pW/2, y+18, {align:'center'});
+      doc.setFontSize(8);  doc.setTextColor(180,180,180); doc.setFont('helvetica','normal');
+      var subLines = doc.splitTextToSize(m.sub, cW - 8);
+      doc.text(subLines, pW/2, y+24, {align:'center'});
+      y += 36;
 
-      /* ---- EXTRACT SECTIONS ---- */
+      /* ---- WALK EVERY mb-4 SECTION ---- */
       var sections = bodyEl.querySelectorAll('div.mb-4');
-      if (sections.length === 0) sections = bodyEl.querySelectorAll('div.rounded-4, div.border');
 
       sections.forEach(function(sec) {
-        /* Section title */
-        var titleEl = sec.querySelector('h3,h4,h5,.h5,.h6,.h4,.h3');
-        if (!titleEl) return;
-        var title = titleEl.textContent.replace(/\s+/g,' ').trim().toUpperCase();
-        if (!title || title.length < 2) return;
 
-        /* Gather food items — try badges, col divs, li, then p */
-        var itemEls = sec.querySelectorAll('.badge, .rounded-pill');
-        var items = [];
-        if (itemEls.length > 0) {
-          itemEls.forEach(function(el){ var t=el.textContent.trim(); if(t) items.push(t); });
-        } else {
-          var colEls = sec.querySelectorAll('.col-6,.col-sm-6,.col-md-4,.col-md-6,.col-4');
-          if (colEls.length > 0) {
-            colEls.forEach(function(el){ var t=el.textContent.replace(/\s+/g,' ').trim(); if(t&&t.length<100) items.push(t); });
-          } else {
-            var liEls = sec.querySelectorAll('li,p');
-            liEls.forEach(function(el){ var t=el.textContent.replace(/\s+/g,' ').trim(); if(t&&t.length<100) items.push(t); });
-          }
-        }
-        /* Deduplicate */
-        var seen = {}; items = items.filter(function(it){ if(seen[it]) return false; seen[it]=true; return true; });
+        /* --- Section heading: h3.h5 --- */
+        var secTitleEl = sec.querySelector('h3.h5, h3');
+        var secTitle = secTitleEl ? secTitleEl.textContent.replace(/\s+/g,' ').trim() : '';
 
-        var rowsNeeded = Math.ceil(items.length / 2) * 5.5 + 14;
-        if (y + rowsNeeded > pH - 16) { doc.addPage(); y = 14; }
+        /* --- Section sub-label: small.text-muted directly inside header div --- */
+        var secSubEl = sec.querySelector(':scope > div > div > small, :scope > div > small');
+        var secSub   = secSubEl ? secSubEl.textContent.replace(/\s+/g,' ').trim() : '';
 
-        /* Section header bar */
-        doc.setFillColor(m.acc[0], m.acc[1], m.acc[2]);
-        doc.roundedRect(ml, y, cW, 7, 1.5, 1.5, 'F');
-        doc.setTextColor(m.bg[0] < 80 ? 255 : 20, m.bg[0] < 80 ? 255 : 20, m.bg[0] < 80 ? 255 : 20);
-        doc.setFontSize(8.5); doc.setFont('helvetica','bold');
-        doc.text(title, ml+3, y+4.8);
-        y += 10;
+        /* --- Sub-section headings (h4) inside this section --- */
+        var subHeadings = sec.querySelectorAll('h4.h6, h4');
 
-        /* Sub-label */
-        var subEl = sec.querySelector('small,.text-muted');
-        if (subEl) {
-          var sub = subEl.textContent.replace(/\s+/g,' ').trim();
-          if (sub && sub.length < 100) {
-            doc.setFontSize(7); doc.setTextColor(110,110,110); doc.setFont('helvetica','italic');
-            doc.text(sub, ml+2, y); y += 5;
+        if (secTitle) {
+          sectionBar(secTitle.toUpperCase());
+          if (secSub) {
+            doc.setFontSize(7.5); doc.setTextColor(100,100,100); doc.setFont('helvetica','italic');
+            var subL = doc.splitTextToSize(secSub, cW);
+            checkPage(subL.length * lineH + 3);
+            doc.text(subL, ml+2, y); y += subL.length * lineH + 3;
           }
         }
 
-        /* Items in 2 columns */
-        doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(40,40,40);
-        for (var i=0; i<items.length; i+=2) {
-          if (y > pH-16) { doc.addPage(); y=14; }
-          var leftTxt  = '\u2022 ' + items[i];
-          var rightTxt = items[i+1] ? '\u2022 ' + items[i+1] : '';
-          var leftLines  = doc.splitTextToSize(leftTxt,  cW/2 - 4);
-          var rightLines = doc.splitTextToSize(rightTxt, cW/2 - 4);
-          doc.text(leftLines,  ml+2,       y);
-          if (rightTxt) doc.text(rightLines, ml+cW/2+2, y);
-          var lh = Math.max(leftLines.length, rightLines.length) * 4.8;
-          y += lh + 1;
-        }
-        y += 5;
+        /* --- Item cards: each col-md-X div that has an h4 --- */
+        /* Strategy: find every item card = div with h4.h6 inside */
+        var cards = sec.querySelectorAll('.col-12, .col-md-6, .col-md-4, .col-md-3, .col-6, .col-4');
+
+        /* Group cards by their nearest h4 sub-heading if present */
+        var currentSubHead = '';
+
+        cards.forEach(function(card) {
+          /* Skip cards that are purely layout wrappers with no h4 inside */
+          var nameEl = card.querySelector('h4.h6, h4, h5');
+          if (!nameEl) return;
+
+          var name = nameEl.textContent.replace(/\s+/g,' ').trim();
+          if (!name || name.length < 2) return;
+
+          /* Category badge (PASTRY / PUDDING etc) */
+          var badgeEl = card.querySelector('.badge, .rounded-pill');
+          var badge   = badgeEl ? '[' + badgeEl.textContent.trim() + '] ' : '';
+
+          /* Description */
+          var descEl  = card.querySelector('p, .small');
+          var desc    = descEl ? descEl.textContent.replace(/\s+/g,' ').trim() : '';
+
+          /* Check if there is a sub-heading h4 BEFORE this card at section level */
+          /* (handles "DESSERT CUPS & MUFFINS" etc sub-groups) */
+          var prevH4 = null;
+          subHeadings.forEach(function(sh){
+            /* if sh comes before card in DOM order */
+            if (sec.compareDocumentPosition(sh) & Node.DOCUMENT_POSITION_PRECEDING ||
+                card.compareDocumentPosition(sh) & Node.DOCUMENT_POSITION_PRECEDING) {
+              prevH4 = sh;
+            }
+          });
+          var subHead = prevH4 ? prevH4.textContent.replace(/\s+/g,' ').trim() : '';
+          if (subHead && subHead !== currentSubHead) {
+            currentSubHead = subHead;
+            checkPage(8);
+            doc.setFontSize(8); doc.setFont('helvetica','bold'); doc.setTextColor(80,80,80);
+            doc.text('\u25b8 ' + subHead.toUpperCase(), ml+2, y); y += 6;
+          }
+
+          /* Print item */
+          var itemLine = badge + name;
+          var itemLines = doc.splitTextToSize(itemLine, cW - 6);
+          checkPage(itemLines.length * lineH + (desc ? lineH * 2 : 0) + 3);
+
+          doc.setFont('helvetica','bold'); doc.setFontSize(8.5); doc.setTextColor(30,30,30);
+          doc.text(itemLines, ml+4, y);
+          y += itemLines.length * lineH;
+
+          if (desc) {
+            var descLines = doc.splitTextToSize(desc, cW - 8);
+            doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(100,100,100);
+            doc.text(descLines, ml+6, y);
+            y += descLines.length * lineH;
+          }
+
+          /* Thin separator line */
+          doc.setDrawColor(220,220,220); doc.setLineWidth(0.2);
+          doc.line(ml+4, y+1, pW-mr-4, y+1);
+          y += 4;
+        });
+
+        y += 4; /* gap between sections */
       });
 
       /* ---- FOOTER on every page ---- */
-      var totalPages = doc.internal.getNumberOfPages();
-      for (var p=1; p<=totalPages; p++) {
+      var total = doc.internal.getNumberOfPages();
+      for (var p = 1; p <= total; p++) {
         doc.setPage(p);
-        doc.setDrawColor(m.acc[0], m.acc[1], m.acc[2]);
-        doc.setLineWidth(0.4);
-        doc.line(ml, pH-10, pW-mr, pH-10);
-        doc.setFontSize(7); doc.setTextColor(140,140,140); doc.setFont('helvetica','normal');
-        doc.text('S. CATERERS \u2014 Premium Vegetarian Catering | scaterers.in', pW/2, pH-5, {align:'center'});
-        doc.text('Page '+p+' of '+totalPages, pW-mr, pH-5, {align:'right'});
+        doc.setFillColor(m.bg[0], m.bg[1], m.bg[2]);
+        doc.rect(0, pH-10, pW, 10, 'F');
+        doc.setFontSize(7); doc.setTextColor(160,160,160); doc.setFont('helvetica','normal');
+        doc.text('S. CATERERS \u2014 Premium Vegetarian Catering | scaterers.in', pW/2, pH-3.5, {align:'center'});
+        doc.text('Page ' + p + ' / ' + total, pW-mr, pH-3.5, {align:'right'});
       }
 
       doc.save(m.file);
@@ -4635,18 +4678,19 @@
     function selectPackageFromModal(packageName) {
       var pkgSelect = document.getElementById('inq-package');
       if (pkgSelect) {
-        for (var i=0; i<pkgSelect.options.length; i++) {
+        for (var i = 0; i < pkgSelect.options.length; i++) {
           if (pkgSelect.options[i].value.toLowerCase().includes(packageName.toLowerCase())) {
             pkgSelect.options[i].selected = true; break;
           }
         }
       }
       var sec = document.getElementById('inquiry');
-      if (sec) { sec.scrollIntoView({ behavior:'smooth' }); }
+      if (sec) { sec.scrollIntoView({ behavior: 'smooth' }); }
     }
   </script>
 
   <!-- Admin Verification Script -->
   <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
+
 
 
