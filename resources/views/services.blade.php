@@ -21,8 +21,8 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- HTML2PDF Library for automatic PDF download -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <!-- jsPDF â€” pre-loaded once so PDF generation is instant on click -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=6.1">
@@ -950,11 +950,11 @@
         <!-- VIP Menu -->
         <div class="col-md-6 col-lg-3">
           <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative; padding: 1.8rem 1.1rem;">
-            <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">âœ¦ Most Premium</div>
+            <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">Ã¢Å“Â¦ Most Premium</div>
             <div class="pkg-header">
               <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
               <h3 style="color: #3A1060;">VIP Menu</h3>
-              <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury â€” an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
+              <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury Ã¢â‚¬â€ an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
             </div>
             <ul class="pkg-features">
               <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Unlimited Selections Across All Categories</span></li>
@@ -1052,11 +1052,11 @@
           <!-- VIP Menu (Mobile) -->
           <div class="col-12">
             <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative;">
-              <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">âœ¦ Most Premium</div>
+              <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">Ã¢Å“Â¦ Most Premium</div>
               <div class="pkg-header">
                 <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
                 <h3 style="color: #3A1060;">VIP Menu</h3>
-                <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury â€” an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
+                <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury Ã¢â‚¬â€ an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
               </div>
               <ul class="pkg-features">
                 <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Unlimited Selections Across All Categories</span></li>
@@ -1169,7 +1169,7 @@
         <div class="mt-3 p-3 mx-auto" style="max-width: 850px; background: #FFFDF9; border: 1.5px solid #E8D09E; border-radius: 12px; box-shadow: 0 4px 16px rgba(198, 161, 91, 0.12);">
           <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap text-center">
             <span style="font-weight: 800; color: #7A1C2B; font-size: 0.95rem;">Many More Live Counters Available Upon Request:</span>
-            <span style="font-size: 0.88rem; color: #2D2622; font-weight: 600;">Lakhnavi Chaat Street â€¢ Live BBQ Tandoor â€¢ Pan-Asian Wok &amp; Dimsum â€¢ Live Dosa Station â€¢ Live Tava Veg â€¢ Live Jalebi-Rabri â€¢ Kulfi-Falooda Parlour</span>
+            <span style="font-size: 0.88rem; color: #2D2622; font-weight: 600;">Lakhnavi Chaat Street Ã¢â‚¬Â¢ Live BBQ Tandoor Ã¢â‚¬Â¢ Pan-Asian Wok &amp; Dimsum Ã¢â‚¬Â¢ Live Dosa Station Ã¢â‚¬Â¢ Live Tava Veg Ã¢â‚¬Â¢ Live Jalebi-Rabri Ã¢â‚¬Â¢ Kulfi-Falooda Parlour</span>
           </div>
         </div>
       </div>
@@ -1184,7 +1184,7 @@
             <div class="pkg-header">
               <div class="icon mb-3" style="font-size: 2.2rem; color: var(--wine);"><i class="fa-solid fa-martini-glass-citrus"></i></div>
               <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--charcoal);">Craft Bar Lounge</h3>
-              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Artisanal mixology lounge serving smoke-infused mocktails, fresh botanical sherbets &amp; signature drinks â€” crafted live by master mixologists.</p>
+              <p class="desc" style="font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; margin-bottom: 1.5rem;">Artisanal mixology lounge serving smoke-infused mocktails, fresh botanical sherbets &amp; signature drinks Ã¢â‚¬â€ crafted live by master mixologists.</p>
             </div>
             <ul class="pkg-features" style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
               <li style="font-size: 0.88rem; margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--gold); margin-top: 3px;"></i> <span>Professional Master Mixologist Team</span></li>
@@ -1284,7 +1284,7 @@
             </div>
             <div class="col-md-6 menu-item-row">
               <div class="menu-item-name">Espresso & Cappuccino</div>
-              <div class="menu-item-desc">Freshly ground premium coffee beans brewed with thick, rich milk foam at our live cafÃ© stall.</div>
+              <div class="menu-item-desc">Freshly ground premium coffee beans brewed with thick, rich milk foam at our live cafÃƒÂ© stall.</div>
             </div>
             <div class="col-md-6 menu-item-row">
               <div class="menu-item-name">Kesar Pista & Mango Shakes</div>
@@ -2143,7 +2143,7 @@
           <div class="w-100 text-center">
             <div class="d-inline-flex align-items-center gap-2 mb-2 px-3 py-1 rounded-pill" style="background: rgba(226,232,240,0.15); border: 1px solid rgba(226,232,240,0.4);">
               <img src="{{ asset('images/logo.png') }}" alt="S. Caterers Logo" style="height: 24px; width: auto;">
-              <span style="color: #E2E8F0; font-size: 0.78rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;">S. CATERERS â€¢ PURE VEGETARIAN</span>
+              <span style="color: #E2E8F0; font-size: 0.78rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;">S. CATERERS Ã¢â‚¬Â¢ PURE VEGETARIAN</span>
             </div>
             <h2 class="modal-title font-heading h2 mb-1" id="silverMenuModalLabel" style="font-weight: 800; color: #E2E8F0; letter-spacing: 2px; text-transform: uppercase;">SILVER CHOICE MENU</h2>
             <div style="color: #FFFFFF; font-size: 0.95rem; letter-spacing: 1.5px; font-weight: 600;">Artisanal Patisserie, Bakes &amp; Fine Banquet Selection</div>
@@ -2481,7 +2481,7 @@
 
           <!-- FOOTER TAGLINE -->
           <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            PROUDLY SERVING LUCKNOW â€¢ SILVER CHOICE MENU
+            PROUDLY SERVING LUCKNOW Ã¢â‚¬Â¢ SILVER CHOICE MENU
           </div>
 
         </div>
@@ -2866,7 +2866,7 @@
               <div class="col-12 col-md-6">
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h5 class="h6 font-heading mb-1 text-uppercase" style="font-weight: 800; color: #1A1A1A;">MUSHROOM DO PYAZA</h5>
-                  <p class="text-muted small mb-0" style="font-size: 0.88rem; color: #555555 !important; line-height: 1.45;">SautÃ©ed button mushrooms cooked with a generous, caramelized double portion of onions.</p>
+                  <p class="text-muted small mb-0" style="font-size: 0.88rem; color: #555555 !important; line-height: 1.45;">SautÃƒÂ©ed button mushrooms cooked with a generous, caramelized double portion of onions.</p>
                 </div>
               </div>
               <div class="col-12 col-md-6">
@@ -2995,9 +2995,9 @@
               </div>
             </div>
             <div class="p-3 rounded-3" style="background: #FFFDF9; border: 1px solid #E8DFD1;">
-              <p class="mb-2 fw-semibold text-dark" style="font-size: 0.92rem;">â€¢ Naan | Butter Naan | Garlic Naan | Missi Roti | Tandoori Roti | Butter Roti</p>
-              <p class="mb-2 fw-semibold text-dark" style="font-size: 0.92rem;">â€¢ Laccha Paratha | Methi Paratha | Mirchi Paratha</p>
-              <p class="mb-0 fw-semibold text-dark" style="font-size: 0.92rem;">â€¢ Poori | Palak Poori | Kachori</p>
+              <p class="mb-2 fw-semibold text-dark" style="font-size: 0.92rem;">Ã¢â‚¬Â¢ Naan | Butter Naan | Garlic Naan | Missi Roti | Tandoori Roti | Butter Roti</p>
+              <p class="mb-2 fw-semibold text-dark" style="font-size: 0.92rem;">Ã¢â‚¬Â¢ Laccha Paratha | Methi Paratha | Mirchi Paratha</p>
+              <p class="mb-0 fw-semibold text-dark" style="font-size: 0.92rem;">Ã¢â‚¬Â¢ Poori | Palak Poori | Kachori</p>
             </div>
           </div>
 
@@ -3073,14 +3073,14 @@
             </div>
           </div>
 
-          <!-- XII. VIDAI MENU (EXTRA â‚¹50) -->
+          <!-- XII. VIDAI MENU (EXTRA Ã¢â€šÂ¹50) -->
           <div class="mb-4 p-3 p-md-4 rounded-4 bg-white border" style="border-color: #E8DFD1 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
             <div class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom" style="border-bottom-color: #E8DFD1 !important;">
               <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(198, 161, 91, 0.15); border: 1.5px solid #C6A15B; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-gift fs-5" style="color: #6E1423 !important;"></i>
               </div>
               <div>
-                <h3 class="h5 font-heading mb-0 text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 1px;">XII. VIDAI MENU (EXTRA â‚¹50)</h3>
+                <h3 class="h5 font-heading mb-0 text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 1px;">XII. VIDAI MENU (EXTRA Ã¢â€šÂ¹50)</h3>
                 <small class="text-muted fw-semibold">Optional farewell snacks for departing guests</small>
               </div>
             </div>
@@ -3118,7 +3118,7 @@
 
           <!-- FOOTER TAGLINE -->
           <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            PROUDLY SERVING LUCKNOW â€¢ THE GOLD MENU
+            PROUDLY SERVING LUCKNOW Ã¢â‚¬Â¢ THE GOLD MENU
           </div>
 
         </div>
@@ -3378,9 +3378,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-1 text-uppercase text-dark fw-bold">ITALIAN BISTRO</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Wood-Fired Pizza: Veg Loaded, Cheese Corn, Capsicum.</li>
-                    <li>â€¢ Gourmet Pasta: Alfredo (Creamy) &amp; Arrabbiata (Spicy).</li>
-                    <li>â€¢ Sides: Garlic Breads &amp; Live Saute Veg.</li>
+                    <li>Ã¢â‚¬Â¢ Wood-Fired Pizza: Veg Loaded, Cheese Corn, Capsicum.</li>
+                    <li>Ã¢â‚¬Â¢ Gourmet Pasta: Alfredo (Creamy) &amp; Arrabbiata (Spicy).</li>
+                    <li>Ã¢â‚¬Â¢ Sides: Garlic Breads &amp; Live Saute Veg.</li>
                   </ul>
                 </div>
               </div>
@@ -3389,8 +3389,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-1 text-uppercase text-dark fw-bold">YO! CHINA</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Wok Station: Burnt Garlic Noodles &amp; Singapore Rice.</li>
-                    <li>â€¢ Asian Gravy: Veg Balls in Hot Chinese Sauce.</li>
+                    <li>Ã¢â‚¬Â¢ Wok Station: Burnt Garlic Noodles &amp; Singapore Rice.</li>
+                    <li>Ã¢â‚¬Â¢ Asian Gravy: Veg Balls in Hot Chinese Sauce.</li>
                   </ul>
                 </div>
               </div>
@@ -3399,8 +3399,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-1 text-uppercase text-dark fw-bold">PUNJABI PIND</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Sarson Ka Saag: With Makke Ki Roti.</li>
-                    <li>â€¢ Stuffed Kulcha: Served with Pindi Chole.</li>
+                    <li>Ã¢â‚¬Â¢ Sarson Ka Saag: With Makke Ki Roti.</li>
+                    <li>Ã¢â‚¬Â¢ Stuffed Kulcha: Served with Pindi Chole.</li>
                   </ul>
                 </div>
               </div>
@@ -3409,8 +3409,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-1 text-uppercase text-dark fw-bold">AWADHI DASTARKHWAN</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Veg Galouti Kebab: With Khatti Chutney &amp; Onion Rings.</li>
-                    <li>â€¢ Ulte Tave Ka Paratha: Authentic Awadhi specialty.</li>
+                    <li>Ã¢â‚¬Â¢ Veg Galouti Kebab: With Khatti Chutney &amp; Onion Rings.</li>
+                    <li>Ã¢â‚¬Â¢ Ulte Tave Ka Paratha: Authentic Awadhi specialty.</li>
                   </ul>
                 </div>
               </div>
@@ -3419,8 +3419,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-1 text-uppercase text-dark fw-bold">SOUTH INDIAN</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Dosa Variety: Crispy Paper Dosa &amp; Masala Dosa.</li>
-                    <li>â€¢ Sides: Authentic Sambhar &amp; Coconut Chutney.</li>
+                    <li>Ã¢â‚¬Â¢ Dosa Variety: Crispy Paper Dosa &amp; Masala Dosa.</li>
+                    <li>Ã¢â‚¬Â¢ Sides: Authentic Sambhar &amp; Coconut Chutney.</li>
                   </ul>
                 </div>
               </div>
@@ -3444,10 +3444,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">PANEER (SELECT ONE)</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paneer Pasanda: Stuffed paneer sandwiches in rich golden gravy.</li>
-                    <li>â€¢ Kadhai Paneer: Wok-tossed with bell peppers and freshly ground spices.</li>
-                    <li>â€¢ Paneer Lababdar: Creamy, tangy tomato gravy with grated paneer.</li>
-                    <li>â€¢ Palak Paneer: Classic spinach preparation tempered with garlic.</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Pasanda: Stuffed paneer sandwiches in rich golden gravy.</li>
+                    <li>Ã¢â‚¬Â¢ Kadhai Paneer: Wok-tossed with bell peppers and freshly ground spices.</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Lababdar: Creamy, tangy tomato gravy with grated paneer.</li>
+                    <li>Ã¢â‚¬Â¢ Palak Paneer: Classic spinach preparation tempered with garlic.</li>
                   </ul>
                 </div>
               </div>
@@ -3456,9 +3456,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">MUSHROOM &amp; KOFTA</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Mushroom: Mutter Mushroom OR Do Pyaza.</li>
-                    <li>â€¢ Specials: Nargisi Kofta OR Mirchi Ka Salan.</li>
-                    <li>â€¢ Live Veg Takatak: 6 types of seasonal veggies prepared live on the Tava.</li>
+                    <li>Ã¢â‚¬Â¢ Mushroom: Mutter Mushroom OR Do Pyaza.</li>
+                    <li>Ã¢â‚¬Â¢ Specials: Nargisi Kofta OR Mirchi Ka Salan.</li>
+                    <li>Ã¢â‚¬Â¢ Live Veg Takatak: 6 types of seasonal veggies prepared live on the Tava.</li>
                   </ul>
                 </div>
               </div>
@@ -3467,10 +3467,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">REGIONAL FAVORITES</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Potato (Select One): Aloo Kali Mirch OR Dhaniya Aloo.</li>
-                    <li>â€¢ Dal (Select One): Dal Makhani (Creamy) OR Dal Tadka (Tempered).</li>
-                    <li>â€¢ Rice (Select One): Jeera Rice OR Veg Biryani.</li>
-                    <li>â€¢ Dry Veg (Select One): Mix Veg, Gobhi Musallam, Bhindi Crispy, OR Bhindi Masala.</li>
+                    <li>Ã¢â‚¬Â¢ Potato (Select One): Aloo Kali Mirch OR Dhaniya Aloo.</li>
+                    <li>Ã¢â‚¬Â¢ Dal (Select One): Dal Makhani (Creamy) OR Dal Tadka (Tempered).</li>
+                    <li>Ã¢â‚¬Â¢ Rice (Select One): Jeera Rice OR Veg Biryani.</li>
+                    <li>Ã¢â‚¬Â¢ Dry Veg (Select One): Mix Veg, Gobhi Musallam, Bhindi Crispy, OR Bhindi Masala.</li>
                   </ul>
                 </div>
               </div>
@@ -3479,8 +3479,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">ACCOMPANIMENTS &amp; BREADS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Yoghurt &amp; Salad: Dahi Vada, Pineapple Raita, Salad Bar, Papad Bar, Pickles.</li>
-                    <li>â€¢ Assorted Breads: Butter Naan, Missi Roti, Laccha Paratha, Garlic/Biscuit Naan, Methi/Mirchi Paratha, Poori, Palak Poori, Khasta Kachori.</li>
+                    <li>Ã¢â‚¬Â¢ Yoghurt &amp; Salad: Dahi Vada, Pineapple Raita, Salad Bar, Papad Bar, Pickles.</li>
+                    <li>Ã¢â‚¬Â¢ Assorted Breads: Butter Naan, Missi Roti, Laccha Paratha, Garlic/Biscuit Naan, Methi/Mirchi Paratha, Poori, Palak Poori, Khasta Kachori.</li>
                   </ul>
                 </div>
               </div>
@@ -3504,9 +3504,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold">HOT SWEETS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Classic Selection: Gulab Jamun OR Kala Jam.</li>
-                    <li>â€¢ Halwa (Select One): Gajar Halwa, Moong Dal Halwa, OR Beetroot Halwa.</li>
-                    <li>â€¢ Royal Treats (Select One): Imarti Rabdi, Malpua Rabdi, OR Shahi Tukda.</li>
+                    <li>Ã¢â‚¬Â¢ Classic Selection: Gulab Jamun OR Kala Jam.</li>
+                    <li>Ã¢â‚¬Â¢ Halwa (Select One): Gajar Halwa, Moong Dal Halwa, OR Beetroot Halwa.</li>
+                    <li>Ã¢â‚¬Â¢ Royal Treats (Select One): Imarti Rabdi, Malpua Rabdi, OR Shahi Tukda.</li>
                   </ul>
                 </div>
               </div>
@@ -3516,9 +3516,9 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold">SPECIALTY SELECTION</h4>
                   <p class="small text-muted mb-1 fw-bold">Choice of:</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Kulfi (Faluda or Stick)</li>
-                    <li>â€¢ Warm Kesariya Milk</li>
-                    <li>â€¢ Malai Makkhan</li>
+                    <li>Ã¢â‚¬Â¢ Kulfi (Faluda or Stick)</li>
+                    <li>Ã¢â‚¬Â¢ Warm Kesariya Milk</li>
+                    <li>Ã¢â‚¬Â¢ Malai Makkhan</li>
                   </ul>
                 </div>
               </div>
@@ -3545,14 +3545,14 @@
             </div>
           </div>
 
-          <!-- THE VIDAI MENU (EXTRA â‚¹50) -->
+          <!-- THE VIDAI MENU (EXTRA Ã¢â€šÂ¹50) -->
           <div class="mb-4 p-3 p-md-4 rounded-4 bg-white border" style="border-color: #E8DFD1 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
             <div class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom" style="border-bottom-color: #E8DFD1 !important;">
               <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(198, 161, 91, 0.15); border: 1.5px solid #C6A15B; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-gift fs-5" style="color: #6E1423 !important;"></i>
               </div>
               <div>
-                <h3 class="h5 font-heading mb-0 text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 1px;">THE VIDAI MENU (EXTRA â‚¹50)</h3>
+                <h3 class="h5 font-heading mb-0 text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 1px;">THE VIDAI MENU (EXTRA Ã¢â€šÂ¹50)</h3>
                 <small class="text-muted fw-semibold">Optional farewell snacks for departing guests</small>
               </div>
             </div>
@@ -3583,7 +3583,7 @@
 
           <!-- FOOTER TAGLINE -->
           <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            FOR BOOKINGS &amp; INQUIRIES: 63939 98141 â€¢ SCATERERSLKO@GMAIL.COM
+            FOR BOOKINGS &amp; INQUIRIES: 63939 98141 Ã¢â‚¬Â¢ SCATERERSLKO@GMAIL.COM
           </div>
 
         </div>
@@ -3655,9 +3655,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">COFFEE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Espresso | Cappuccino</li>
-                    <li>â€¢ Cafe Latte | Cafe Mocha</li>
-                    <li>â€¢ Hot Chocolate</li>
+                    <li>Ã¢â‚¬Â¢ Espresso | Cappuccino</li>
+                    <li>Ã¢â‚¬Â¢ Cafe Latte | Cafe Mocha</li>
+                    <li>Ã¢â‚¬Â¢ Hot Chocolate</li>
                   </ul>
                 </div>
               </div>
@@ -3666,8 +3666,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">TEA</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Kulhad Tea</li>
-                    <li>â€¢ Masala Green Tea</li>
+                    <li>Ã¢â‚¬Â¢ Kulhad Tea</li>
+                    <li>Ã¢â‚¬Â¢ Masala Green Tea</li>
                   </ul>
                 </div>
               </div>
@@ -3676,8 +3676,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">WELCOME SOUP</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Veg. Peeking Soup</li>
-                    <li>â€¢ Tomato Soup</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Peeking Soup</li>
+                    <li>Ã¢â‚¬Â¢ Tomato Soup</li>
                   </ul>
                 </div>
               </div>
@@ -3686,9 +3686,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">SHAKES</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Pineapple Shake | Vanilla Shake</li>
-                    <li>â€¢ Chocolate Shake | Strawberry Shake</li>
-                    <li>â€¢ Mango Shake</li>
+                    <li>Ã¢â‚¬Â¢ Pineapple Shake | Vanilla Shake</li>
+                    <li>Ã¢â‚¬Â¢ Chocolate Shake | Strawberry Shake</li>
+                    <li>Ã¢â‚¬Â¢ Mango Shake</li>
                   </ul>
                 </div>
               </div>
@@ -3697,9 +3697,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">MOCKTAILS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Green Mint Mojito | Royal Blue Sky | Pinacolada</li>
-                    <li>â€¢ Spiced Mango Pineapple | Virgin Mojito</li>
-                    <li>â€¢ Fresh Lime Soda | Cold Drink</li>
+                    <li>Ã¢â‚¬Â¢ Green Mint Mojito | Royal Blue Sky | Pinacolada</li>
+                    <li>Ã¢â‚¬Â¢ Spiced Mango Pineapple | Virgin Mojito</li>
+                    <li>Ã¢â‚¬Â¢ Fresh Lime Soda | Cold Drink</li>
                   </ul>
                 </div>
               </div>
@@ -3723,10 +3723,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">WELCOME VEG. SNACKS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Corn Cheese Nest | Honey Chilli Potato</li>
-                    <li>â€¢ Spinach Spring Roll | Crispy Corn</li>
-                    <li>â€¢ Paneer 65 | Mexican LollyPop</li>
-                    <li>â€¢ Mushroom Chilli | Crispy Paneer</li>
+                    <li>Ã¢â‚¬Â¢ Corn Cheese Nest | Honey Chilli Potato</li>
+                    <li>Ã¢â‚¬Â¢ Spinach Spring Roll | Crispy Corn</li>
+                    <li>Ã¢â‚¬Â¢ Paneer 65 | Mexican LollyPop</li>
+                    <li>Ã¢â‚¬Â¢ Mushroom Chilli | Crispy Paneer</li>
                   </ul>
                 </div>
               </div>
@@ -3735,8 +3735,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">GRILLED SNACKS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Dahi Kabab | Galoti Kabab</li>
-                    <li>â€¢ American Corn | Mushroom Kabab</li>
+                    <li>Ã¢â‚¬Â¢ Dahi Kabab | Galoti Kabab</li>
+                    <li>Ã¢â‚¬Â¢ American Corn | Mushroom Kabab</li>
                   </ul>
                 </div>
               </div>
@@ -3745,7 +3745,7 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">BAR SNACKS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paneer Masala | Papad | Salad</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Masala | Papad | Salad</li>
                   </ul>
                 </div>
               </div>
@@ -3754,9 +3754,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">LIVE BBQ</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paneer Mughlai Tikka | Achari Soya Chaap</li>
-                    <li>â€¢ Malai Soya Chaap | Mushroom Masala Tikka</li>
-                    <li>â€¢ Sweet N Savory Pineapple Tikka | Khatta Meetha Aloo Tikka</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Mughlai Tikka | Achari Soya Chaap</li>
+                    <li>Ã¢â‚¬Â¢ Malai Soya Chaap | Mushroom Masala Tikka</li>
+                    <li>Ã¢â‚¬Â¢ Sweet N Savory Pineapple Tikka | Khatta Meetha Aloo Tikka</li>
                   </ul>
                 </div>
               </div>
@@ -3766,7 +3766,7 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">DIMSUM COUNTER</h4>
                   <p class="small text-muted mb-1 fw-bold">Varieties-</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Vegetable Dimsum | Cheese Dimsum</li>
+                    <li>Ã¢â‚¬Â¢ Vegetable Dimsum | Cheese Dimsum</li>
                     <li class="fst-italic text-purple mt-1">(with - Red Garlic Chutney)</li>
                   </ul>
                 </div>
@@ -3776,8 +3776,8 @@
                 <div class="p-3 rounded-3 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">CHAAT COUNTER</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Golgappa with 2 type of water | Stuffed aloo tikka | Mattar Bowl tawa</li>
-                    <li>â€¢ Dahi fruit Papdi | Banarasi tamatar chaat | Veg. Omlet Sandwich with khatti mithi chutney</li>
+                    <li>Ã¢â‚¬Â¢ Golgappa with 2 type of water | Stuffed aloo tikka | Mattar Bowl tawa</li>
+                    <li>Ã¢â‚¬Â¢ Dahi fruit Papdi | Banarasi tamatar chaat | Veg. Omlet Sandwich with khatti mithi chutney</li>
                   </ul>
                 </div>
               </div>
@@ -3801,9 +3801,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">CHINESE CUISINE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Chilli Garlic Noodles</li>
-                    <li>â€¢ Paneer Schewan</li>
-                    <li>â€¢ Veg. Fried Rice with hot Garlic Sauce</li>
+                    <li>Ã¢â‚¬Â¢ Chilli Garlic Noodles</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Schewan</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Fried Rice with hot Garlic Sauce</li>
                   </ul>
                 </div>
               </div>
@@ -3812,8 +3812,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">JAPANESE CUISINE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Vegetarian Sushi Bowl</li>
-                    <li>â€¢ Sizzling Veggie Teppanyaki</li>
+                    <li>Ã¢â‚¬Â¢ Vegetarian Sushi Bowl</li>
+                    <li>Ã¢â‚¬Â¢ Sizzling Veggie Teppanyaki</li>
                   </ul>
                 </div>
               </div>
@@ -3822,8 +3822,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">MEXICAN &amp; PIZZA</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ PIZZA COUNTER</li>
-                    <li>â€¢ Veg. Quesadilla Wrap</li>
+                    <li>Ã¢â‚¬Â¢ PIZZA COUNTER</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Quesadilla Wrap</li>
                   </ul>
                 </div>
               </div>
@@ -3832,10 +3832,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">ITALIAN CUISINE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Spinach Tomato Tortellini | Penne with Spicy Tomato Cream Sauce</li>
-                    <li>â€¢ Pasta Al Rosa | Pesto Spaghetti Pasta</li>
-                    <li>â€¢ Cheese Spinach and Mushroom Lasagna</li>
-                    <li>â€¢ Grilled Paneer in Burnt Garlic Creamy Sauce | Baby Corn Pepper Stir Fry</li>
+                    <li>Ã¢â‚¬Â¢ Spinach Tomato Tortellini | Penne with Spicy Tomato Cream Sauce</li>
+                    <li>Ã¢â‚¬Â¢ Pasta Al Rosa | Pesto Spaghetti Pasta</li>
+                    <li>Ã¢â‚¬Â¢ Cheese Spinach and Mushroom Lasagna</li>
+                    <li>Ã¢â‚¬Â¢ Grilled Paneer in Burnt Garlic Creamy Sauce | Baby Corn Pepper Stir Fry</li>
                   </ul>
                 </div>
               </div>
@@ -3844,9 +3844,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">VEG. MUGHLAI</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Mushroom Kaleji | Rumali Roti</li>
-                    <li>â€¢ Veg. Biryani | Burani Raita</li>
-                    <li>â€¢ Green Chutney | Onion Rings</li>
+                    <li>Ã¢â‚¬Â¢ Mushroom Kaleji | Rumali Roti</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Biryani | Burani Raita</li>
+                    <li>Ã¢â‚¬Â¢ Green Chutney | Onion Rings</li>
                   </ul>
                 </div>
               </div>
@@ -3870,11 +3870,11 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">MAIN COURSE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paneer Lababdar | Paneer Tikka Masala Gravy</li>
-                    <li>â€¢ Nargisi Kofta | Kashmiri Dum Aloo | Methi Malai Corn</li>
-                    <li>â€¢ Veg. Jhal Frezi | Matar Angoor Kaju</li>
-                    <li>â€¢ Dal Bukhara | Dal Yellow Tadka Live</li>
-                    <li>â€¢ Jeera Rice | Matar Paneer Pulao</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Lababdar | Paneer Tikka Masala Gravy</li>
+                    <li>Ã¢â‚¬Â¢ Nargisi Kofta | Kashmiri Dum Aloo | Methi Malai Corn</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Jhal Frezi | Matar Angoor Kaju</li>
+                    <li>Ã¢â‚¬Â¢ Dal Bukhara | Dal Yellow Tadka Live</li>
+                    <li>Ã¢â‚¬Â¢ Jeera Rice | Matar Paneer Pulao</li>
                   </ul>
                 </div>
               </div>
@@ -3884,12 +3884,12 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">CURD STATION &amp; BREADS</h4>
                   <p class="small text-muted mb-1 fw-bold">CURD STATION</p>
                   <ul class="list-unstyled small text-muted mb-3 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Dahi Gujiya</li>
+                    <li>Ã¢â‚¬Â¢ Dahi Gujiya</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">BREADS</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Plain Naan | Butter Naan | Stuffed Naan</li>
-                    <li>â€¢ Laccha Paratha | Missi Roti | Biscuiti Roti</li>
+                    <li>Ã¢â‚¬Â¢ Plain Naan | Butter Naan | Stuffed Naan</li>
+                    <li>Ã¢â‚¬Â¢ Laccha Paratha | Missi Roti | Biscuiti Roti</li>
                   </ul>
                 </div>
               </div>
@@ -3914,13 +3914,13 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">COLD DESSERT</h4>
                   <p class="small text-muted mb-1 fw-bold">Ice Cream-</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ American Nuts | Kesar Pista | Butterscotch</li>
+                    <li>Ã¢â‚¬Â¢ American Nuts | Kesar Pista | Butterscotch</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">Kulfi Falooda-</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Kesariya | Mango | Paan</li>
+                    <li>Ã¢â‚¬Â¢ Kesariya | Mango | Paan</li>
                   </ul>
-                  <p class="small text-muted mb-0 fw-semibold">â€¢ Kesariya Chena rabdi in Terracota Pot</p>
+                  <p class="small text-muted mb-0 fw-semibold">Ã¢â‚¬Â¢ Kesariya Chena rabdi in Terracota Pot</p>
                 </div>
               </div>
 
@@ -3928,8 +3928,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">HOT DESSERT</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Kesariya Jaleba Mewa</li>
-                    <li>â€¢ Moong Badam Halwa</li>
+                    <li>Ã¢â‚¬Â¢ Kesariya Jaleba Mewa</li>
+                    <li>Ã¢â‚¬Â¢ Moong Badam Halwa</li>
                   </ul>
                 </div>
               </div>
@@ -3938,9 +3938,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">BAKERY DESSERT</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Brownie with hot chocolate sauce</li>
-                    <li>â€¢ Fruit Truffle Mousse</li>
-                    <li>â€¢ Chocolate Truffle Mousse</li>
+                    <li>Ã¢â‚¬Â¢ Brownie with hot chocolate sauce</li>
+                    <li>Ã¢â‚¬Â¢ Fruit Truffle Mousse</li>
+                    <li>Ã¢â‚¬Â¢ Chocolate Truffle Mousse</li>
                   </ul>
                 </div>
               </div>
@@ -3949,9 +3949,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FDFBFF; border-color: #E6D9F2 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #6A3FA0 !important;">END COURSE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Mineral Water Bottle 250ml</li>
-                    <li>â€¢ Premium Crockery</li>
-                    <li>â€¢ Premium Service</li>
+                    <li>Ã¢â‚¬Â¢ Mineral Water Bottle 250ml</li>
+                    <li>Ã¢â‚¬Â¢ Premium Crockery</li>
+                    <li>Ã¢â‚¬Â¢ Premium Service</li>
                   </ul>
                 </div>
               </div>
@@ -4028,10 +4028,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">MOCKTAILS- MONIN SYRUP</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Cold Drinks (Coke, Mirinda, Sprite)</li>
-                    <li>â€¢ Pink Lady | Blue Lagoon</li>
-                    <li>â€¢ Green Garden | Green Mint</li>
-                    <li>â€¢ Virgin Merry | Pine Colada | Majitos</li>
+                    <li>Ã¢â‚¬Â¢ Cold Drinks (Coke, Mirinda, Sprite)</li>
+                    <li>Ã¢â‚¬Â¢ Pink Lady | Blue Lagoon</li>
+                    <li>Ã¢â‚¬Â¢ Green Garden | Green Mint</li>
+                    <li>Ã¢â‚¬Â¢ Virgin Merry | Pine Colada | Majitos</li>
                   </ul>
                 </div>
               </div>
@@ -4041,12 +4041,12 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">SHAKES &amp; SLUSH</h4>
                   <p class="small text-muted mb-1 fw-bold">SHAKES</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Strawberry | Alphonso dream | Kiwi</li>
-                    <li>â€¢ Date | Banana | Chocklate | Keser Pista</li>
+                    <li>Ã¢â‚¬Â¢ Strawberry | Alphonso dream | Kiwi</li>
+                    <li>Ã¢â‚¬Â¢ Date | Banana | Chocklate | Keser Pista</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">SLUSH</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Orange, Lemon, Mango, Pineapple</li>
+                    <li>Ã¢â‚¬Â¢ Orange, Lemon, Mango, Pineapple</li>
                   </ul>
                 </div>
               </div>
@@ -4056,12 +4056,12 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">JUICES &amp; COFFEE</h4>
                   <p class="small text-muted mb-1 fw-bold">JUICES</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Variety of Fruit Juces (18 to 20 Type) by Delhi (Extra)</li>
+                    <li>Ã¢â‚¬Â¢ Variety of Fruit Juces (18 to 20 Type) by Delhi (Extra)</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">EXPRESSO COFFEE</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ CafÃ© Hut (Extra) | 2-3 Types Beans Coffee</li>
-                    <li>â€¢ Coffee | Cold Coffee</li>
+                    <li>Ã¢â‚¬Â¢ CafÃƒÂ© Hut (Extra) | 2-3 Types Beans Coffee</li>
+                    <li>Ã¢â‚¬Â¢ Coffee | Cold Coffee</li>
                   </ul>
                 </div>
               </div>
@@ -4070,7 +4070,7 @@
                 <div class="p-3 rounded-3 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">TEA &amp; BAKERY</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Lemon Tea | Ginger Tea | Elaichi Tea | Cookies</li>
+                    <li>Ã¢â‚¬Â¢ Lemon Tea | Ginger Tea | Elaichi Tea | Cookies</li>
                   </ul>
                 </div>
               </div>
@@ -4094,10 +4094,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">SOUPS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Cream of Tomato with bread Sticks</li>
-                    <li>â€¢ Veg. Sweet Corn</li>
-                    <li>â€¢ Veg. Peeking Soup with Noodles</li>
-                    <li>â€¢ Lemon Coriander</li>
+                    <li>Ã¢â‚¬Â¢ Cream of Tomato with bread Sticks</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Sweet Corn</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Peeking Soup with Noodles</li>
+                    <li>Ã¢â‚¬Â¢ Lemon Coriander</li>
                   </ul>
                 </div>
               </div>
@@ -4106,10 +4106,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">INDIAN SNACKS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paneer Tandoori | Veg. Shami Kabab</li>
-                    <li>â€¢ Idly Crispy | Corn Cheese Nest</li>
-                    <li>â€¢ Subz Kabab | Deluxe Cold Canopies</li>
-                    <li>â€¢ Hari Matar Samosa | Moong Ki Pakori | Finger Chips | Motiya Roll</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Tandoori | Veg. Shami Kabab</li>
+                    <li>Ã¢â‚¬Â¢ Idly Crispy | Corn Cheese Nest</li>
+                    <li>Ã¢â‚¬Â¢ Subz Kabab | Deluxe Cold Canopies</li>
+                    <li>Ã¢â‚¬Â¢ Hari Matar Samosa | Moong Ki Pakori | Finger Chips | Motiya Roll</li>
                   </ul>
                 </div>
               </div>
@@ -4118,10 +4118,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">GRILL SNACKS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Veg. Galawati Kabab</li>
-                    <li>â€¢ Veg. Kathi Roll</li>
-                    <li>â€¢ American Corn</li>
-                    <li>â€¢ Brockly Babycorn</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Galawati Kabab</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Kathi Roll</li>
+                    <li>Ã¢â‚¬Â¢ American Corn</li>
+                    <li>Ã¢â‚¬Â¢ Brockly Babycorn</li>
                   </ul>
                 </div>
               </div>
@@ -4130,9 +4130,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">CHINESE SNACKS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Veg. Dragon Roll | Veg. Tampura</li>
-                    <li>â€¢ Spring Roll | Chilly Honey Potato</li>
-                    <li>â€¢ Dry Chilli Paneer | Dry Manchurian</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Dragon Roll | Veg. Tampura</li>
+                    <li>Ã¢â‚¬Â¢ Spring Roll | Chilly Honey Potato</li>
+                    <li>Ã¢â‚¬Â¢ Dry Chilli Paneer | Dry Manchurian</li>
                   </ul>
                 </div>
               </div>
@@ -4141,10 +4141,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">WESTERN SNACKS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Maxican Lollypop</li>
-                    <li>â€¢ Backed Sekh Potato</li>
-                    <li>â€¢ Road of Mashroom</li>
-                    <li>â€¢ American Cheese Ball</li>
+                    <li>Ã¢â‚¬Â¢ Maxican Lollypop</li>
+                    <li>Ã¢â‚¬Â¢ Backed Sekh Potato</li>
+                    <li>Ã¢â‚¬Â¢ Road of Mashroom</li>
+                    <li>Ã¢â‚¬Â¢ American Cheese Ball</li>
                   </ul>
                 </div>
               </div>
@@ -4153,10 +4153,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">BAR BE QUE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paneer Kali Mirch Tikka</li>
-                    <li>â€¢ Paneer Masala Tikka</li>
-                    <li>â€¢ Mashroom Tikka | Stuffed Potato</li>
-                    <li>â€¢ Aloo Achari Tikka</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Kali Mirch Tikka</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Masala Tikka</li>
+                    <li>Ã¢â‚¬Â¢ Mashroom Tikka | Stuffed Potato</li>
+                    <li>Ã¢â‚¬Â¢ Aloo Achari Tikka</li>
                   </ul>
                 </div>
               </div>
@@ -4180,10 +4180,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">CHAAT</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Aloo Tikki (Chane Ki Dal Stuffed)</li>
-                    <li>â€¢ Pani Batasha (Atta &amp; Suji with 3 type of water)</li>
-                    <li>â€¢ Matar Tikiya Tawa | Hari Matar Tawa</li>
-                    <li>â€¢ Dahi Fruit Papdi (Delhi Chaat) | Rajkachori | Tawa Aloo Fry</li>
+                    <li>Ã¢â‚¬Â¢ Aloo Tikki (Chane Ki Dal Stuffed)</li>
+                    <li>Ã¢â‚¬Â¢ Pani Batasha (Atta &amp; Suji with 3 type of water)</li>
+                    <li>Ã¢â‚¬Â¢ Matar Tikiya Tawa | Hari Matar Tawa</li>
+                    <li>Ã¢â‚¬Â¢ Dahi Fruit Papdi (Delhi Chaat) | Rajkachori | Tawa Aloo Fry</li>
                   </ul>
                 </div>
               </div>
@@ -4193,13 +4193,13 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">DELHI, MURADABADI &amp; GUJRATI</h4>
                   <p class="small text-muted mb-1 fw-bold">DELHI SE (EXTRA)</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Fruit Kulia Chaat</li>
+                    <li>Ã¢â‚¬Â¢ Fruit Kulia Chaat</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">MURADABADI &amp; GUJRATI</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Muradabadi Dal (Butter, Jeera, Lemon with Green Chutney)</li>
-                    <li>â€¢ Moong Dal Chilla Green Chutney</li>
-                    <li>â€¢ Veg. Omlet Sandwich with Khatty Meethy Chutney</li>
+                    <li>Ã¢â‚¬Â¢ Muradabadi Dal (Butter, Jeera, Lemon with Green Chutney)</li>
+                    <li>Ã¢â‚¬Â¢ Moong Dal Chilla Green Chutney</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Omlet Sandwich with Khatty Meethy Chutney</li>
                   </ul>
                 </div>
               </div>
@@ -4208,10 +4208,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">SOUTH INDIAN</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paper Dosa Or Masala Dosa</li>
-                    <li>â€¢ Idli &amp; Sambhar Vada</li>
-                    <li>â€¢ Fusion Dosa with 4 type filling</li>
-                    <li>â€¢ Nariyal Chutney</li>
+                    <li>Ã¢â‚¬Â¢ Paper Dosa Or Masala Dosa</li>
+                    <li>Ã¢â‚¬Â¢ Idli &amp; Sambhar Vada</li>
+                    <li>Ã¢â‚¬Â¢ Fusion Dosa with 4 type filling</li>
+                    <li>Ã¢â‚¬Â¢ Nariyal Chutney</li>
                   </ul>
                 </div>
               </div>
@@ -4220,8 +4220,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">PATILEY SE (EXTRA)</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Matar Patilli</li>
-                    <li>â€¢ Bakery Kulcha (Delhi Se)</li>
+                    <li>Ã¢â‚¬Â¢ Matar Patilli</li>
+                    <li>Ã¢â‚¬Â¢ Bakery Kulcha (Delhi Se)</li>
                   </ul>
                 </div>
               </div>
@@ -4230,9 +4230,9 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">BAKERY &amp; SPECIALTY COUNTERS (EXTRA)</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Mr. Brown Bakery (Extra) | Domino's Pizza (Extra)</li>
-                    <li>â€¢ Hot N Juicy | American Corn Trolly</li>
-                    <li>â€¢ Fruit Display- Imported Fresh Fruits (Extra)</li>
+                    <li>Ã¢â‚¬Â¢ Mr. Brown Bakery (Extra) | Domino's Pizza (Extra)</li>
+                    <li>Ã¢â‚¬Â¢ Hot N Juicy | American Corn Trolly</li>
+                    <li>Ã¢â‚¬Â¢ Fruit Display- Imported Fresh Fruits (Extra)</li>
                   </ul>
                 </div>
               </div>
@@ -4257,13 +4257,13 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">SALAD &amp; CONTINENTAL</h4>
                   <p class="small text-muted mb-1 fw-bold">SALAD</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Multy Green Veg. Salad | Pasta Salad with Young Vegetable</li>
-                    <li>â€¢ Multy Sprouted Beans Salad | Red Cabbege Kimchi</li>
-                    <li>â€¢ Veg. Corn Salad | Russion Salad | Aloo Matar Chaat</li>
+                    <li>Ã¢â‚¬Â¢ Multy Green Veg. Salad | Pasta Salad with Young Vegetable</li>
+                    <li>Ã¢â‚¬Â¢ Multy Sprouted Beans Salad | Red Cabbege Kimchi</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Corn Salad | Russion Salad | Aloo Matar Chaat</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">CONTINENTAL</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Continental Veg. with Garlic Bread, Ginger Bread</li>
+                    <li>Ã¢â‚¬Â¢ Continental Veg. with Garlic Bread, Ginger Bread</li>
                   </ul>
                 </div>
               </div>
@@ -4273,14 +4273,14 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">CHINESE &amp; ITALIAN</h4>
                   <p class="small text-muted mb-1 fw-bold">CHINESE</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Singapuri Rice Noodles | Paneer Sezwan</li>
-                    <li>â€¢ Chilli Garlic Noodles with Spring Onion | Steamed Momos</li>
-                    <li>â€¢ Veg. Noodles | Manchurian | Chilli Paneer | Fried Rice | Paneer Saate</li>
+                    <li>Ã¢â‚¬Â¢ Singapuri Rice Noodles | Paneer Sezwan</li>
+                    <li>Ã¢â‚¬Â¢ Chilli Garlic Noodles with Spring Onion | Steamed Momos</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Noodles | Manchurian | Chilli Paneer | Fried Rice | Paneer Saate</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">ITALIAN</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Lazaniya | Pasta Live (Red Souce, White Souce)</li>
-                    <li>â€¢ Potato Rosety | Nachos with Salsa Sause</li>
+                    <li>Ã¢â‚¬Â¢ Lazaniya | Pasta Live (Red Souce, White Souce)</li>
+                    <li>Ã¢â‚¬Â¢ Potato Rosety | Nachos with Salsa Sause</li>
                   </ul>
                 </div>
               </div>
@@ -4289,10 +4289,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">VEG. MUGHLAI</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Kathi Kabab | Veg. Shami Kabab | Veg. Chaap</li>
-                    <li>â€¢ Mashroom Kaleji | Roomali Roti</li>
-                    <li>â€¢ Jackfruit Biryani | Burani Raita</li>
-                    <li>â€¢ Green Chutney | Onion Ring</li>
+                    <li>Ã¢â‚¬Â¢ Kathi Kabab | Veg. Shami Kabab | Veg. Chaap</li>
+                    <li>Ã¢â‚¬Â¢ Mashroom Kaleji | Roomali Roti</li>
+                    <li>Ã¢â‚¬Â¢ Jackfruit Biryani | Burani Raita</li>
+                    <li>Ã¢â‚¬Â¢ Green Chutney | Onion Ring</li>
                   </ul>
                 </div>
               </div>
@@ -4317,13 +4317,13 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">AGRA &amp; PUNJABI</h4>
                   <p class="small text-muted mb-1 fw-bold">AGRA SE</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Variety of Stuffed Parathas | Set Curd | Pickle</li>
+                    <li>Ã¢â‚¬Â¢ Variety of Stuffed Parathas | Set Curd | Pickle</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">PUNJABI</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Stuffed Kulcha | Chola | Pickle (Ginger &amp; Chilli)</li>
-                    <li>â€¢ Chutney (Onion &amp; Radish) | Makke Ki Roti Sarson Ka Saag</li>
-                    <li>â€¢ Gudh &amp; Butter (Extra)</li>
+                    <li>Ã¢â‚¬Â¢ Stuffed Kulcha | Chola | Pickle (Ginger &amp; Chilli)</li>
+                    <li>Ã¢â‚¬Â¢ Chutney (Onion &amp; Radish) | Makke Ki Roti Sarson Ka Saag</li>
+                    <li>Ã¢â‚¬Â¢ Gudh &amp; Butter (Extra)</li>
                   </ul>
                 </div>
               </div>
@@ -4332,10 +4332,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">RAJASTHANI</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Paneer Bhujia | Baigan Bharta | Rajma Rice</li>
-                    <li>â€¢ Daal Pachmeli | Kadhi Pakori | Gattey Ki Sabzi</li>
-                    <li>â€¢ Sanger Teet | Hara Moong | Baajra ki Khichdi</li>
-                    <li>â€¢ Baati-Chokha | Plain Rice | Tawa Roti-Aata &amp; Besani | Roasted Papad</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Bhujia | Baigan Bharta | Rajma Rice</li>
+                    <li>Ã¢â‚¬Â¢ Daal Pachmeli | Kadhi Pakori | Gattey Ki Sabzi</li>
+                    <li>Ã¢â‚¬Â¢ Sanger Teet | Hara Moong | Baajra ki Khichdi</li>
+                    <li>Ã¢â‚¬Â¢ Baati-Chokha | Plain Rice | Tawa Roti-Aata &amp; Besani | Roasted Papad</li>
                   </ul>
                 </div>
               </div>
@@ -4345,14 +4345,14 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">DAAL GHAR, RICE &amp; RAITA</h4>
                   <p class="small text-muted mb-1 fw-bold">DAAL GHAR &amp; RICE</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Daal Sultani Tadka | Daal Urd Chana | Daal Pachmeli | Daal Makhani</li>
-                    <li>â€¢ Veg. Pulao | Jeera Pulao | Mater Paneer Pulao | Shahi Pulao | Green Rice</li>
+                    <li>Ã¢â‚¬Â¢ Daal Sultani Tadka | Daal Urd Chana | Daal Pachmeli | Daal Makhani</li>
+                    <li>Ã¢â‚¬Â¢ Veg. Pulao | Jeera Pulao | Mater Paneer Pulao | Shahi Pulao | Green Rice</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">PICKLE &amp; RAITA COUNTERS</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Pickle Counter (6 to 8 Variety of Pickle)</li>
-                    <li>â€¢ Raita Counter Live (6 to 8 Variety of Raita)</li>
-                    <li>â€¢ Dahi Gujia | Papad Stall (6 to 8 Variety Fry Papad)</li>
+                    <li>Ã¢â‚¬Â¢ Pickle Counter (6 to 8 Variety of Pickle)</li>
+                    <li>Ã¢â‚¬Â¢ Raita Counter Live (6 to 8 Variety of Raita)</li>
+                    <li>Ã¢â‚¬Â¢ Dahi Gujia | Papad Stall (6 to 8 Variety Fry Papad)</li>
                   </ul>
                 </div>
               </div>
@@ -4376,10 +4376,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">PANEER SPECIALTIES</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Kadhai Paneer | Paneer Makhanwala</li>
-                    <li>â€¢ Matar Paneer | Palak Paneer | Methi Malai Paneer</li>
-                    <li>â€¢ Muglai Paneer | Paneer Lababdar (Golden Gravy)</li>
-                    <li>â€¢ Paneer Lazzatdar (Red Gravy)</li>
+                    <li>Ã¢â‚¬Â¢ Kadhai Paneer | Paneer Makhanwala</li>
+                    <li>Ã¢â‚¬Â¢ Matar Paneer | Palak Paneer | Methi Malai Paneer</li>
+                    <li>Ã¢â‚¬Â¢ Muglai Paneer | Paneer Lababdar (Golden Gravy)</li>
+                    <li>Ã¢â‚¬Â¢ Paneer Lazzatdar (Red Gravy)</li>
                   </ul>
                 </div>
               </div>
@@ -4389,14 +4389,14 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">CORN, MUSHROOM &amp; KOFTA</h4>
                   <p class="small text-muted mb-1 fw-bold">CORN &amp; MUSHROOM</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Matar Mashroom | Methi Malai Corn (White Gravy)</li>
-                    <li>â€¢ Palak Malai Corn | Corn Curry Mirchi Masala</li>
+                    <li>Ã¢â‚¬Â¢ Matar Mashroom | Methi Malai Corn (White Gravy)</li>
+                    <li>Ã¢â‚¬Â¢ Palak Malai Corn | Corn Curry Mirchi Masala</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">POTATO &amp; KOFTA</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Banarasi Dum Aloo | Kashmiri Dum Aloo (Orange Gravy)</li>
-                    <li>â€¢ Nawabganji Aloo | Lollypop Kofta (Brown Gravy)</li>
-                    <li>â€¢ Malai Kofta | Bulbul Kofta | Veg. Kofta | Tawa Veg.</li>
+                    <li>Ã¢â‚¬Â¢ Banarasi Dum Aloo | Kashmiri Dum Aloo (Orange Gravy)</li>
+                    <li>Ã¢â‚¬Â¢ Nawabganji Aloo | Lollypop Kofta (Brown Gravy)</li>
+                    <li>Ã¢â‚¬Â¢ Malai Kofta | Bulbul Kofta | Veg. Kofta | Tawa Veg.</li>
                   </ul>
                 </div>
               </div>
@@ -4406,15 +4406,15 @@
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">SEASONAL DRY VEG &amp; BREADS</h4>
                   <p class="small text-muted mb-1 fw-bold">SEASONAL &amp; DRY VEG.</p>
                   <ul class="list-unstyled small text-muted mb-2 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Afgani Gobhi Shimla | Gobhi Tukda Musallam</li>
-                    <li>â€¢ Gobhi Matar Gaajar | Hari Matar Dry</li>
-                    <li>â€¢ Kumbh Gobhi Hyderbadi (Green) | Veg. Jalfarezi</li>
-                    <li>â€¢ Bhindi Kurkuri | Mix Veg. | Bhindi Masala</li>
+                    <li>Ã¢â‚¬Â¢ Afgani Gobhi Shimla | Gobhi Tukda Musallam</li>
+                    <li>Ã¢â‚¬Â¢ Gobhi Matar Gaajar | Hari Matar Dry</li>
+                    <li>Ã¢â‚¬Â¢ Kumbh Gobhi Hyderbadi (Green) | Veg. Jalfarezi</li>
+                    <li>Ã¢â‚¬Â¢ Bhindi Kurkuri | Mix Veg. | Bhindi Masala</li>
                   </ul>
                   <p class="small text-muted mb-1 fw-bold">BREADS COUNTER</p>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Baby Naan | Butter Naan | Pudina Naan | Missi Roti</li>
-                    <li>â€¢ Chamcham Naan | Biscuty Roti | Laccha Paratha | Puri Kachori</li>
+                    <li>Ã¢â‚¬Â¢ Baby Naan | Butter Naan | Pudina Naan | Missi Roti</li>
+                    <li>Ã¢â‚¬Â¢ Chamcham Naan | Biscuty Roti | Laccha Paratha | Puri Kachori</li>
                   </ul>
                 </div>
               </div>
@@ -4438,11 +4438,11 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">ICE CREAM &amp; HOT SWEETS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Ice Cream 4 to 5 Variety &amp; Stick Candy</li>
-                    <li>â€¢ (Gloria Desert Counter Extra)</li>
-                    <li>â€¢ Kesaria Milk | Kesaria Jalebi | Mini Imarti</li>
-                    <li>â€¢ Gulab Jamun | Mini Malai Ghewar</li>
-                    <li>â€¢ Assorted Halwa Tawa (Moong, Badam, Carrot, Pista, Urd, Suji)</li>
+                    <li>Ã¢â‚¬Â¢ Ice Cream 4 to 5 Variety &amp; Stick Candy</li>
+                    <li>Ã¢â‚¬Â¢ (Gloria Desert Counter Extra)</li>
+                    <li>Ã¢â‚¬Â¢ Kesaria Milk | Kesaria Jalebi | Mini Imarti</li>
+                    <li>Ã¢â‚¬Â¢ Gulab Jamun | Mini Malai Ghewar</li>
+                    <li>Ã¢â‚¬Â¢ Assorted Halwa Tawa (Moong, Badam, Carrot, Pista, Urd, Suji)</li>
                   </ul>
                 </div>
               </div>
@@ -4451,10 +4451,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">KULFI &amp; TRADITIONAL</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Kulfi Faluda</li>
-                    <li>â€¢ Stick Kulfi</li>
-                    <li>â€¢ Kesaria Malai Gilory</li>
-                    <li>â€¢ Malai Pista Cake</li>
+                    <li>Ã¢â‚¬Â¢ Kulfi Faluda</li>
+                    <li>Ã¢â‚¬Â¢ Stick Kulfi</li>
+                    <li>Ã¢â‚¬Â¢ Kesaria Malai Gilory</li>
+                    <li>Ã¢â‚¬Â¢ Malai Pista Cake</li>
                   </ul>
                 </div>
               </div>
@@ -4463,10 +4463,10 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">SWEETS PARADISE</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Sweet Paradise | Chandramukhi</li>
-                    <li>â€¢ Cheena Malai | Cheena Kheer</li>
-                    <li>â€¢ Rasmalai | Spanj Rasgulla</li>
-                    <li>â€¢ Chappan Bhog Sweets (Extra)</li>
+                    <li>Ã¢â‚¬Â¢ Sweet Paradise | Chandramukhi</li>
+                    <li>Ã¢â‚¬Â¢ Cheena Malai | Cheena Kheer</li>
+                    <li>Ã¢â‚¬Â¢ Rasmalai | Spanj Rasgulla</li>
+                    <li>Ã¢â‚¬Â¢ Chappan Bhog Sweets (Extra)</li>
                   </ul>
                 </div>
               </div>
@@ -4475,8 +4475,8 @@
                 <div class="p-3 rounded-3 h-100 border" style="background: #FFFDF9; border-color: #E8DFD1 !important;">
                   <h4 class="h6 font-heading mb-2 text-uppercase text-dark fw-bold border-start border-3 ps-2" style="border-color: #C6A15B !important;">END COURSE INCLUSIONS</h4>
                   <ul class="list-unstyled small text-muted mb-0 ps-1" style="font-size: 0.88rem; line-height: 1.5;">
-                    <li>â€¢ Mineral Water 200ml. Bisleri Bottle</li>
-                    <li>â€¢ Pan Stall (Extra)</li>
+                    <li>Ã¢â‚¬Â¢ Mineral Water 200ml. Bisleri Bottle</li>
+                    <li>Ã¢â‚¬Â¢ Pan Stall (Extra)</li>
                   </ul>
                 </div>
               </div>
@@ -4485,7 +4485,7 @@
 
           <!-- FOOTER TAGLINE -->
           <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            S. CATERERS â€¢ KESHAV NAGAR, SITAPUR ROAD, LUCKNOW.<br>
+            S. CATERERS Ã¢â‚¬Â¢ KESHAV NAGAR, SITAPUR ROAD, LUCKNOW.<br>
             <span style="font-size: 0.8rem; color: #FFFFFF;">Call: 63939 98141 | mail: scatererslko@gmail.com</span>
           </div>
 
@@ -4512,63 +4512,141 @@
   </div>
 
   <script>
+    /* ============================================================
+       INSTANT PDF DOWNLOAD — uses pre-loaded jsPDF (text-based,
+       no html2canvas, no new window, no CDN wait on click)
+       ============================================================ */
     function downloadMenuPdf(menuType) {
+      if (!window.jspdf) { alert('PDF library not loaded yet. Please wait a moment and try again.'); return; }
+
       var menus = {
-        silver: { bodyId:'silverMenuModalBody', title:'SILVER CHOICE MENU',    subtitle:'Artisanal Patisserie, Bakes & Fine Banquet Selection',       filename:'S-Caterers-Silver-Menu.pdf', hdrBg:'#0f0f0f', hdrColor:'#E2E8F0', accent:'#C6A15B' },
-        gold:   { bodyId:'goldMenuModalBody',   title:'THE GOLD MENU',         subtitle:'Pure Vegetarian Fine Dining Banquet Experience',             filename:'S-Caterers-Gold-Menu.pdf',   hdrBg:'#0f0f0f', hdrColor:'#D4AF37', accent:'#C6A15B' },
-        royal:  { bodyId:'royalMenuModalBody',  title:'THE ROYAL CHOICE MENU', subtitle:'Opulent VIP Rajwada Feast & Live Interactive Stations',      filename:'S-Caterers-Royal-Menu.pdf',  hdrBg:'#2D0008', hdrColor:'#FFD700', accent:'#FFD700' },
-        vip:    { bodyId:'vipMenuModalBody',    title:'VIP MENU',              subtitle:'The Pinnacle of Vegetarian Banquet Luxury',                  filename:'S-Caterers-VIP-Menu.pdf',    hdrBg:'#1A0933', hdrColor:'#FFD700', accent:'#6A3FA0' },
-        full:   { bodyId:'fullMenuModalBody',   title:'MASTER FULL MENU',      subtitle:'Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in', filename:'S-Caterers-Master-Full-Menu.pdf', hdrBg:'#0f0f0f', hdrColor:'#FFD700', accent:'#D4AF37' }
+        silver: { bodyId:'silverMenuModalBody', title:'SILVER CHOICE MENU',    sub:'Artisanal Patisserie, Bakes & Fine Banquet Selection',       file:'S-Caterers-Silver-Menu.pdf',      bg:[15,15,15],    acc:[198,161,91]  },
+        gold:   { bodyId:'goldMenuModalBody',   title:'THE GOLD MENU',         sub:'Pure Vegetarian Fine Dining Banquet Experience',             file:'S-Caterers-Gold-Menu.pdf',        bg:[15,15,15],    acc:[212,175,55]  },
+        royal:  { bodyId:'royalMenuModalBody',  title:'THE ROYAL CHOICE MENU', sub:'Opulent VIP Rajwada Feast & Live Interactive Stations',      file:'S-Caterers-Royal-Menu.pdf',       bg:[45,0,8],      acc:[255,215,0]   },
+        vip:    { bodyId:'vipMenuModalBody',    title:'VIP MENU',              sub:'The Pinnacle of Vegetarian Banquet Luxury',                  file:'S-Caterers-VIP-Menu.pdf',         bg:[26,9,51],     acc:[106,63,160]  },
+        full:   { bodyId:'fullMenuModalBody',   title:'MASTER FULL MENU',      sub:'Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in', file:'S-Caterers-Master-Full-Menu.pdf', bg:[15,15,15],    acc:[212,175,55]  }
       };
+
       var m = menus[menuType];
       if (!m) return;
       var bodyEl = document.getElementById(m.bodyId);
       if (!bodyEl) { alert('Please open the menu popup first, then click Download PDF.'); return; }
-      var win = window.open('', '_blank', 'width=960,height=900');
-      var html = '<!DOCTYPE html><html lang="en"><head>' +
-        '<meta charset="UTF-8">' +
-        '<title>' + m.title + ' - S. Caterers</title>' +
-        '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">' +
-        '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">' +
-        '<style>body{font-family:Arial,sans-serif;padding:20px;background:#fff;color:#1a1a1a;margin:0;}' +
-        '.ph{text-align:center;background:' + m.hdrBg + ';color:#fff;padding:22px 20px;border-radius:8px;margin-bottom:20px;}' +
-        '.ph h1{color:' + m.hdrColor + ';font-size:22px;font-weight:900;margin:0 0 6px;text-transform:uppercase;letter-spacing:2px;}' +
-        '.ph p{color:#bbb;font-size:12px;margin:0;}' +
-        '.pf{text-align:center;border-top:2px solid ' + m.accent + ';margin-top:24px;padding-top:10px;font-size:11px;color:#888;}' +
-        '#ld{position:fixed;inset:0;background:rgba(255,255,255,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;gap:14px;}' +
-        '.sp{width:44px;height:44px;border:4px solid #eee;border-top-color:' + m.accent + ';border-radius:50%;animation:spin .8s linear infinite;}' +
-        '@keyframes spin{to{transform:rotate(360deg);}}</style></head><body>' +
-        '<div id="ld"><div class="sp"></div><div style="font-weight:700;color:#444;">Generating PDF, please wait...</div></div>' +
-        '<div id="pw"><div class="ph"><h1>S. CATERERS BY AMIT AGARWAL</h1><p>' + m.title + ' &mdash; ' + m.subtitle + '</p></div>' +
-        '<div>' + bodyEl.innerHTML + '</div>' +
-        '<div class="pf">S. CATERERS &mdash; Premium Vegetarian Catering &nbsp;|&nbsp; scaterers.in</div></div>' +
-        '<script>(function(){var s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";' +
-        's.onload=function(){var el=document.getElementById("pw");' +
-        'var opt={margin:[8,8,8,8],filename:"' + m.filename + '",image:{type:"jpeg",quality:.97},' +
-        'html2canvas:{scale:2,useCORS:true,allowTaint:true,logging:false,scrollX:0,scrollY:0},' +
-        'jsPDF:{unit:"mm",format:"a4",orientation:"portrait"}};' +
-        'html2pdf().set(opt).from(el).save().then(function(){document.getElementById("ld").innerHTML=' +
-        '"<div style=\"font-size:48px\">&#10003;</div><div style=\"font-weight:700;color:green\">PDF Downloaded! You may close this tab.</div>";});};' +
-        'document.head.appendChild(s);})();<\/script></body></html>';
-      win.document.write(html);
-      win.document.close();
+
+      var jsPDF = window.jspdf.jsPDF;
+      var doc   = new jsPDF({ orientation:'p', unit:'mm', format:'a4' });
+      var pW    = doc.internal.pageSize.getWidth();   // 210
+      var pH    = doc.internal.pageSize.getHeight();  // 297
+      var ml    = 12, mr = 12;
+      var cW    = pW - ml - mr;
+      var y     = 14;
+
+      /* ---- HEADER ---- */
+      doc.setFillColor(m.bg[0], m.bg[1], m.bg[2]);
+      doc.roundedRect(ml, y, cW, 26, 3, 3, 'F');
+      doc.setTextColor(m.acc[0], m.acc[1], m.acc[2]);
+      doc.setFontSize(14); doc.setFont('helvetica','bold');
+      doc.text('S. CATERERS BY AMIT AGARWAL', pW/2, y+9, {align:'center'});
+      doc.setFontSize(10); doc.setTextColor(220,220,220); doc.setFont('helvetica','normal');
+      doc.text(m.title, pW/2, y+16, {align:'center'});
+      doc.setFontSize(8);  doc.setTextColor(170,170,170);
+      doc.text(m.sub, pW/2, y+22, {align:'center'});
+      y += 32;
+
+      /* ---- EXTRACT SECTIONS ---- */
+      var sections = bodyEl.querySelectorAll('div.mb-4');
+      if (sections.length === 0) sections = bodyEl.querySelectorAll('div.rounded-4, div.border');
+
+      sections.forEach(function(sec) {
+        /* Section title */
+        var titleEl = sec.querySelector('h3,h4,h5,.h5,.h6,.h4,.h3');
+        if (!titleEl) return;
+        var title = titleEl.textContent.replace(/\s+/g,' ').trim().toUpperCase();
+        if (!title || title.length < 2) return;
+
+        /* Gather food items — try badges, col divs, li, then p */
+        var itemEls = sec.querySelectorAll('.badge, .rounded-pill');
+        var items = [];
+        if (itemEls.length > 0) {
+          itemEls.forEach(function(el){ var t=el.textContent.trim(); if(t) items.push(t); });
+        } else {
+          var colEls = sec.querySelectorAll('.col-6,.col-sm-6,.col-md-4,.col-md-6,.col-4');
+          if (colEls.length > 0) {
+            colEls.forEach(function(el){ var t=el.textContent.replace(/\s+/g,' ').trim(); if(t&&t.length<100) items.push(t); });
+          } else {
+            var liEls = sec.querySelectorAll('li,p');
+            liEls.forEach(function(el){ var t=el.textContent.replace(/\s+/g,' ').trim(); if(t&&t.length<100) items.push(t); });
+          }
+        }
+        /* Deduplicate */
+        var seen = {}; items = items.filter(function(it){ if(seen[it]) return false; seen[it]=true; return true; });
+
+        var rowsNeeded = Math.ceil(items.length / 2) * 5.5 + 14;
+        if (y + rowsNeeded > pH - 16) { doc.addPage(); y = 14; }
+
+        /* Section header bar */
+        doc.setFillColor(m.acc[0], m.acc[1], m.acc[2]);
+        doc.roundedRect(ml, y, cW, 7, 1.5, 1.5, 'F');
+        doc.setTextColor(m.bg[0] < 80 ? 255 : 20, m.bg[0] < 80 ? 255 : 20, m.bg[0] < 80 ? 255 : 20);
+        doc.setFontSize(8.5); doc.setFont('helvetica','bold');
+        doc.text(title, ml+3, y+4.8);
+        y += 10;
+
+        /* Sub-label */
+        var subEl = sec.querySelector('small,.text-muted');
+        if (subEl) {
+          var sub = subEl.textContent.replace(/\s+/g,' ').trim();
+          if (sub && sub.length < 100) {
+            doc.setFontSize(7); doc.setTextColor(110,110,110); doc.setFont('helvetica','italic');
+            doc.text(sub, ml+2, y); y += 5;
+          }
+        }
+
+        /* Items in 2 columns */
+        doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(40,40,40);
+        for (var i=0; i<items.length; i+=2) {
+          if (y > pH-16) { doc.addPage(); y=14; }
+          var leftTxt  = '\u2022 ' + items[i];
+          var rightTxt = items[i+1] ? '\u2022 ' + items[i+1] : '';
+          var leftLines  = doc.splitTextToSize(leftTxt,  cW/2 - 4);
+          var rightLines = doc.splitTextToSize(rightTxt, cW/2 - 4);
+          doc.text(leftLines,  ml+2,       y);
+          if (rightTxt) doc.text(rightLines, ml+cW/2+2, y);
+          var lh = Math.max(leftLines.length, rightLines.length) * 4.8;
+          y += lh + 1;
+        }
+        y += 5;
+      });
+
+      /* ---- FOOTER on every page ---- */
+      var totalPages = doc.internal.getNumberOfPages();
+      for (var p=1; p<=totalPages; p++) {
+        doc.setPage(p);
+        doc.setDrawColor(m.acc[0], m.acc[1], m.acc[2]);
+        doc.setLineWidth(0.4);
+        doc.line(ml, pH-10, pW-mr, pH-10);
+        doc.setFontSize(7); doc.setTextColor(140,140,140); doc.setFont('helvetica','normal');
+        doc.text('S. CATERERS \u2014 Premium Vegetarian Catering | scaterers.in', pW/2, pH-5, {align:'center'});
+        doc.text('Page '+p+' of '+totalPages, pW-mr, pH-5, {align:'right'});
+      }
+
+      doc.save(m.file);
     }
 
     function selectPackageFromModal(packageName) {
       var pkgSelect = document.getElementById('inq-package');
       if (pkgSelect) {
-        for (var i = 0; i < pkgSelect.options.length; i++) {
+        for (var i=0; i<pkgSelect.options.length; i++) {
           if (pkgSelect.options[i].value.toLowerCase().includes(packageName.toLowerCase())) {
-            pkgSelect.options[i].selected = true;
-            break;
+            pkgSelect.options[i].selected = true; break;
           }
         }
       }
       var sec = document.getElementById('inquiry');
-      if (sec) { sec.scrollIntoView({ behavior: 'smooth' }); }
+      if (sec) { sec.scrollIntoView({ behavior:'smooth' }); }
     }
   </script>
 
   <!-- Admin Verification Script -->
   <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
+
 
