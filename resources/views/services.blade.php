@@ -2246,11 +2246,9 @@
 
             <!-- Action buttons row -->
             <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
-              <a href="{{ asset('pdfs/silver-menu.pdf') }}" download="S-Caterers-silver-menu.pdf"
-                 class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#C6A15B;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(198,161,91,0.5);letter-spacing:0.5px;transition:all 0.2s;">
-                <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
-              </a>
+              <button onclick="shareMenu('silver')" class="d-inline-flex align-items-center gap-2 menu-dl-btn" style="background:#C6A15B;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 18px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(198,161,91,0.5);letter-spacing:0.5px;">
+                <i class="fa-solid fa-share-nodes" style="font-size:0.78rem;"></i> Share Menu
+              </button>
             </div>
           </div>
 
@@ -2595,9 +2593,9 @@
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS SILVER MENU
           </div>
           <div class="d-flex align-items-center gap-2">
-            <a href="{{ asset('pdfs/silver-menu.pdf') }}" download="S-Caterers-silver-menu.pdf" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
-              <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </a>
+            <button onclick="shareMenu('silver')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#C6A15B;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(198,161,91,0.4);">
+            <i class="fa-solid fa-share-nodes"></i> Share Menu
+          </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Silver Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Silver Menu Now
@@ -2649,11 +2647,9 @@
 
             <!-- Action buttons row -->
             <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
-              <a href="{{ asset('pdfs/gold-menu.pdf') }}" download="S-Caterers-gold-menu.pdf"
-                 class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#D4AF37;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(212,175,55,0.5);letter-spacing:0.5px;transition:all 0.2s;">
-                <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
-              </a>
+              <button onclick="shareMenu('gold')" class="d-inline-flex align-items-center gap-2 menu-dl-btn" style="background:#D4AF37;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 18px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(212,175,55,0.5);letter-spacing:0.5px;">
+                <i class="fa-solid fa-share-nodes" style="font-size:0.78rem;"></i> Share Menu
+              </button>
             </div>
           </div>
 
@@ -3262,9 +3258,9 @@
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS GOLD MENU
           </div>
           <div class="d-flex align-items-center gap-2">
-            <a href="{{ asset('pdfs/gold-menu.pdf') }}" download="S-Caterers-gold-menu.pdf" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
-              <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </a>
+            <button onclick="shareMenu('gold')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#D4AF37;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(212,175,55,0.4);">
+            <i class="fa-solid fa-share-nodes"></i> Share Menu
+          </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Gold Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Gold Menu Now
@@ -3316,11 +3312,9 @@
 
             <!-- Action buttons row -->
             <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
-              <a href="{{ asset('pdfs/royal-menu.pdf') }}" download="S-Caterers-royal-menu.pdf"
-                 class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#FFD700;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(255,215,0,0.5);letter-spacing:0.5px;transition:all 0.2s;">
-                <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
-              </a>
+              <button onclick="shareMenu('royal')" class="d-inline-flex align-items-center gap-2 menu-dl-btn" style="background:#FFD700;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 18px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(255,215,0,0.5);letter-spacing:0.5px;">
+                <i class="fa-solid fa-share-nodes" style="font-size:0.78rem;"></i> Share Menu
+              </button>
             </div>
           </div>
 
@@ -3755,9 +3749,9 @@
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS ROYAL MENU
           </div>
           <div class="d-flex align-items-center gap-2">
-            <a href="{{ asset('pdfs/royal-menu.pdf') }}" download="S-Caterers-royal-menu.pdf" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
-              <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </a>
+            <button onclick="shareMenu('royal')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#FFD700;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(255,215,0,0.4);">
+            <i class="fa-solid fa-share-nodes"></i> Share Menu
+          </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Royal Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Royal Menu Now
@@ -3809,11 +3803,9 @@
 
             <!-- Action buttons row -->
             <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
-              <a href="{{ asset('pdfs/vip-menu.pdf') }}" download="S-Caterers-vip-menu.pdf"
-                 class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#9B59B6;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(155,89,182,0.5);letter-spacing:0.5px;transition:all 0.2s;">
-                <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
-              </a>
+              <button onclick="shareMenu('vip')" class="d-inline-flex align-items-center gap-2 menu-dl-btn" style="background:#9B59B6;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 18px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(155,89,182,0.5);letter-spacing:0.5px;">
+                <i class="fa-solid fa-share-nodes" style="font-size:0.78rem;"></i> Share Menu
+              </button>
             </div>
           </div>
 
@@ -4160,9 +4152,9 @@
             <i class="fa-solid fa-gem me-1" style="color: #6A3FA0;"></i> S. CATERERS VIP MENU
           </div>
           <div class="d-flex align-items-center gap-2">
-            <a href="{{ asset('pdfs/vip-menu.pdf') }}" download="S-Caterers-vip-menu.pdf" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
-              <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </a>
+            <button onclick="shareMenu('vip')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#9B59B6;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(155,89,182,0.4);">
+            <i class="fa-solid fa-share-nodes"></i> Share Menu
+          </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('VIP Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book VIP Menu Now
@@ -4209,18 +4201,14 @@
 
             <!-- Subtitle -->
             <p class="text-center mb-2" style="color:rgba(255,255,255,0.7);font-size:0.82rem;letter-spacing:0.8px;font-weight:500;margin:0;">
-              S. Caterers Ã¢₹
+              S. Caterers — Complete Vegetarian Banquet Collection
             </p>
 
             <!-- Action buttons row -->
             <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
-              <a href="{{ asset('pdfs/Complete') }}" download="S-Caterers-Complete"
-                 class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#D4AF37;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(Collection 
-  master-full-menu.pdf 
-  Download,0.5);letter-spacing:0.5px;transition:all 0.2s;">
-                <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Vegetarian
-              </a>
+              <button onclick="shareMenu('full')" class="d-inline-flex align-items-center gap-2 menu-dl-btn" style="background:#D4AF37;color:#111;font-size:0.77rem;font-weight:800;padding:6px 18px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(212,175,55,0.5);letter-spacing:0.5px;">
+                <i class="fa-solid fa-share-nodes" style="font-size:0.78rem;"></i> Share Menu
+              </button>
             </div>
           </div>
 
@@ -4718,9 +4706,9 @@
             <i class="fa-solid fa-book-open me-1 text-gold"></i> S. CATERERS MASTER FULL MENU
           </div>
           <div class="d-flex align-items-center gap-2">
-            <a href="{{ asset('pdfs/master-full-menu.pdf') }}" download="S-Caterers-master-full-menu.pdf" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
-              <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </a>
+            <button onclick="shareMenu('full')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#D4AF37;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(212,175,55,0.4);">
+            <i class="fa-solid fa-share-nodes"></i> Share Menu
+          </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Full Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Custom Menu Now
@@ -4733,6 +4721,80 @@
   </div>
 
   <script>
+    /* ── SHARE MENU — deep-link sharing ─────────────────────────── */
+    function shareMenu(menuType) {
+      var names = {
+        silver: 'Silver Choice Menu',
+        gold:   'The Gold Menu',
+        royal:  'The Royal Choice Menu',
+        vip:    'VIP Menu',
+        full:   'Master Full Menu'
+      };
+      var base = window.location.origin + window.location.pathname.replace(/\/$/, '');
+      var url  = base + '?menu=' + menuType;
+      var title = 'S. Caterers — ' + (names[menuType] || 'Menu');
+      var text  = 'Check out the ' + (names[menuType] || 'Menu') +
+                  ' at S. Caterers by Amit Agarwal — Premium Pure Vegetarian Catering, Lucknow.';
+
+      if (navigator.share) {
+        navigator.share({ title: title, text: text, url: url })
+          .catch(function(){});
+      } else {
+        /* Fallback: copy to clipboard + show toast */
+        navigator.clipboard.writeText(url).then(function() {
+          showShareToast('Link copied! Share it with your guests.');
+        }).catch(function() {
+          /* Last fallback */
+          prompt('Copy this link and share it:', url);
+        });
+      }
+    }
+
+    /* Toast notification */
+    function showShareToast(msg) {
+      var t = document.createElement('div');
+      t.textContent = msg;
+      t.style.cssText = [
+        'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);',
+        'background:#1A1A1A;color:#D4AF37;padding:12px 24px;border-radius:50px;',
+        'font-size:0.85rem;font-weight:700;z-index:99999;',
+        'box-shadow:0 8px 30px rgba(0,0,0,0.4);letter-spacing:0.5px;',
+        'transition:opacity 0.4s ease;opacity:1;'
+      ].join('');
+      document.body.appendChild(t);
+      setTimeout(function(){ t.style.opacity='0'; setTimeout(function(){ t.remove(); }, 400); }, 2800);
+    }
+
+    /* ── DEEP-LINK: auto-open modal from ?menu=xxx URL param ─────── */
+    (function() {
+      var modalMap = {
+        silver: 'silverMenuModal',
+        gold:   'goldMenuModal',
+        royal:  'royalMenuModal',
+        vip:    'vipMenuModal',
+        full:   'fullMenuModal'
+      };
+      var params   = new URLSearchParams(window.location.search);
+      var menuKey  = params.get('menu');
+      var modalId  = menuKey ? modalMap[menuKey] : null;
+      if (!modalId) return;
+
+      function tryOpen() {
+        var el = document.getElementById(modalId);
+        if (el && window.bootstrap) {
+          new bootstrap.Modal(el).show();
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(tryOpen, 300); /* wait for Bootstrap to init */
+        });
+      } else {
+        setTimeout(tryOpen, 300);
+      }
+    })();
+
     function selectPackageFromModal(packageName) {
       var pkgSelect = document.getElementById('inq-package');
       if (pkgSelect) {
@@ -4746,6 +4808,7 @@
       if (sec) { sec.scrollIntoView({ behavior: 'smooth' }); }
     }
   </script>
+
 
   <!-- Admin Verification Script -->
   <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
