@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -40,13 +40,25 @@
       box-shadow: 0 25px 80px rgba(0,0,0,0.55) !important;
     }
 
-    /* Modal body */
+    /* Modal body — always scrollable, header never takes too much space */
     .menu-modal-body {
       background: #F7F4EF;
-      padding: 28px !important;
+      padding: 24px !important;
+      max-height: 65vh;
+      overflow-y: auto;
+    }
+    /* Custom scrollbar */
+    .menu-modal-body::-webkit-scrollbar { width: 5px; }
+    .menu-modal-body::-webkit-scrollbar-track { background: #EAE0D0; border-radius: 4px; }
+    .menu-modal-body::-webkit-scrollbar-thumb { background: #C6A15B; border-radius: 4px; }
+
+    /* Modal footer */
+    .menu-modal-footer {
+      background: #fff;
+      border-top: 2px solid #EAE0D0 !important;
+      padding: 12px 22px !important;
     }
 
-    /* Section card */
     .menu-section-card {
       background: #fff;
       border: 1px solid #EAE0D0 !important;
@@ -87,12 +99,6 @@
       box-shadow: 0 6px 20px rgba(198,161,91,0.6) !important;
     }
 
-    /* Modal footer */
-    .menu-modal-footer {
-      background: #fff;
-      border-top: 1px solid #EAE0D0 !important;
-      padding: 14px 24px !important;
-    }
 
     /* Scoped Services Page Styles */
 
@@ -2212,37 +2218,37 @@
           <!-- Subtle pattern overlay -->
           <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><circle cx=%2230%22 cy=%2230%22 r=%221%22 fill=%22rgba(255,255,255,0.04)%22/></svg>');"></div>
 
-          <div class="w-100 px-4 pt-4 pb-3" style="position:relative;z-index:1;">
+          <div class="w-100 px-4 pt-3 pb-2" style="position:relative;z-index:1;">
             <!-- Brand pill -->
-            <div class="d-flex align-items-center justify-content-center mb-3">
-              <div class="d-inline-flex align-items-center gap-2 px-3 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
-                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:20px;width:auto;filter:brightness(1.3);">
-                <span style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS Â· PURE VEGETARIAN</span>
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <div class="d-inline-flex align-items-center gap-2 px-2 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
+                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:18px;width:auto;filter:brightness(1.3);">
+                <span style="color:rgba(255,255,255,0.85);font-size:0.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS · PURE VEGETARIAN</span>
               </div>
             </div>
 
             <!-- Menu title -->
-            <h2 class="font-heading text-center mb-1" id="silverMenuModalLabel" style="font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;color:#C6A15B;letter-spacing:3px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 60px;">
+            <h2 class="font-heading text-center mb-1" id="silverMenuModalLabel" style="font-size:clamp(1.2rem,3.5vw,1.7rem);font-weight:900;color:#C6A15B;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 50px;">
               SILVER CHOICE MENU
             </h2>
 
             <!-- Decorative line -->
-            <div class="d-flex align-items-center justify-content-center gap-3 my-2">
+            <div class="d-flex align-items-center justify-content-center gap-3 my-1">
               <div style="height:1px;width:60px;background:linear-gradient(to right,transparent,#C6A15B);"></div>
               <div style="width:6px;height:6px;border-radius:50%;background:#C6A15B;box-shadow:0 0 8px #C6A15B;"></div>
               <div style="height:1px;width:60px;background:linear-gradient(to left,transparent,#C6A15B);"></div>
             </div>
 
             <!-- Subtitle -->
-            <p class="text-center mb-3" style="color:rgba(255,255,255,0.7);font-size:0.88rem;letter-spacing:1px;font-weight:500;margin:0;">
+            <p class="text-center mb-2" style="color:rgba(255,255,255,0.7);font-size:0.82rem;letter-spacing:0.8px;font-weight:500;margin:0;">
               Artisanal Patisserie, Bakes &amp; Fine Banquet Selection
             </p>
 
             <!-- Action buttons row -->
-            <div class="d-flex align-items-center justify-content-center gap-2 pb-1">
+            <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
               <a href="{{ asset('pdfs/silver-menu.pdf') }}" download="S-Caterers-silver-menu.pdf"
                  class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#C6A15B;color:#fff;font-size:0.8rem;font-weight:800;padding:8px 18px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(198,161,91,0.5);letter-spacing:0.5px;transition:all 0.2s;">
+                 style="background:#C6A15B;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(198,161,91,0.5);letter-spacing:0.5px;transition:all 0.2s;">
                 <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
               </a>
             </div>
@@ -2578,13 +2584,13 @@
 
           <!-- FOOTER TAGLINE -->
           <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            PROUDLY SERVING LUCKNOW ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ SILVER CHOICE MENU
+            PROUDLY SERVING LUCKNOW &nbsp;·&nbsp; SILVER CHOICE MENU
           </div>
 
         </div>
 
         <!-- Modal Footer -->
-        <div class="modal-footer bg-light px-4 py-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="modal-footer menu-modal-footer d-flex align-items-center justify-content-between flex-wrap gap-2">
           <div class="small text-muted fw-bold">
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS SILVER MENU
           </div>
@@ -2615,37 +2621,37 @@
           <!-- Subtle pattern overlay -->
           <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><circle cx=%2230%22 cy=%2230%22 r=%221%22 fill=%22rgba(255,255,255,0.04)%22/></svg>');"></div>
 
-          <div class="w-100 px-4 pt-4 pb-3" style="position:relative;z-index:1;">
+          <div class="w-100 px-4 pt-3 pb-2" style="position:relative;z-index:1;">
             <!-- Brand pill -->
-            <div class="d-flex align-items-center justify-content-center mb-3">
-              <div class="d-inline-flex align-items-center gap-2 px-3 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
-                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:20px;width:auto;filter:brightness(1.3);">
-                <span style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS Â· PURE VEGETARIAN</span>
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <div class="d-inline-flex align-items-center gap-2 px-2 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
+                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:18px;width:auto;filter:brightness(1.3);">
+                <span style="color:rgba(255,255,255,0.85);font-size:0.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS · PURE VEGETARIAN</span>
               </div>
             </div>
 
             <!-- Menu title -->
-            <h2 class="font-heading text-center mb-1" id="goldMenuModalLabel" style="font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;color:#D4AF37;letter-spacing:3px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 60px;">
+            <h2 class="font-heading text-center mb-1" id="goldMenuModalLabel" style="font-size:clamp(1.2rem,3.5vw,1.7rem);font-weight:900;color:#D4AF37;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 50px;">
               THE GOLD MENU
             </h2>
 
             <!-- Decorative line -->
-            <div class="d-flex align-items-center justify-content-center gap-3 my-2">
+            <div class="d-flex align-items-center justify-content-center gap-3 my-1">
               <div style="height:1px;width:60px;background:linear-gradient(to right,transparent,#D4AF37);"></div>
               <div style="width:6px;height:6px;border-radius:50%;background:#D4AF37;box-shadow:0 0 8px #D4AF37;"></div>
               <div style="height:1px;width:60px;background:linear-gradient(to left,transparent,#D4AF37);"></div>
             </div>
 
             <!-- Subtitle -->
-            <p class="text-center mb-3" style="color:rgba(255,255,255,0.7);font-size:0.88rem;letter-spacing:1px;font-weight:500;margin:0;">
+            <p class="text-center mb-2" style="color:rgba(255,255,255,0.7);font-size:0.82rem;letter-spacing:0.8px;font-weight:500;margin:0;">
               Pure Vegetarian Fine Dining Banquet Experience
             </p>
 
             <!-- Action buttons row -->
-            <div class="d-flex align-items-center justify-content-center gap-2 pb-1">
+            <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
               <a href="{{ asset('pdfs/gold-menu.pdf') }}" download="S-Caterers-gold-menu.pdf"
                  class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#D4AF37;color:#fff;font-size:0.8rem;font-weight:800;padding:8px 18px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(212,175,55,0.5);letter-spacing:0.5px;transition:all 0.2s;">
+                 style="background:#D4AF37;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(212,175,55,0.5);letter-spacing:0.5px;transition:all 0.2s;">
                 <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
               </a>
             </div>
@@ -3245,13 +3251,13 @@
 
           <!-- FOOTER TAGLINE -->
           <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            PROUDLY SERVING LUCKNOW ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ THE GOLD MENU
+            PROUDLY SERVING LUCKNOW &nbsp;·&nbsp; THE GOLD MENU
           </div>
 
         </div>
 
         <!-- Modal Footer -->
-        <div class="modal-footer bg-light px-4 py-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="modal-footer menu-modal-footer d-flex align-items-center justify-content-between flex-wrap gap-2">
           <div class="small text-muted fw-bold">
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS GOLD MENU
           </div>
@@ -3282,37 +3288,37 @@
           <!-- Subtle pattern overlay -->
           <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><circle cx=%2230%22 cy=%2230%22 r=%221%22 fill=%22rgba(255,255,255,0.04)%22/></svg>');"></div>
 
-          <div class="w-100 px-4 pt-4 pb-3" style="position:relative;z-index:1;">
+          <div class="w-100 px-4 pt-3 pb-2" style="position:relative;z-index:1;">
             <!-- Brand pill -->
-            <div class="d-flex align-items-center justify-content-center mb-3">
-              <div class="d-inline-flex align-items-center gap-2 px-3 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
-                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:20px;width:auto;filter:brightness(1.3);">
-                <span style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS Â· RAJWADA COLLECTION</span>
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <div class="d-inline-flex align-items-center gap-2 px-2 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
+                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:18px;width:auto;filter:brightness(1.3);">
+                <span style="color:rgba(255,255,255,0.85);font-size:0.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS · RAJWADA COLLECTION</span>
               </div>
             </div>
 
             <!-- Menu title -->
-            <h2 class="font-heading text-center mb-1" id="royalMenuModalLabel" style="font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;color:#FFD700;letter-spacing:3px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 60px;">
+            <h2 class="font-heading text-center mb-1" id="royalMenuModalLabel" style="font-size:clamp(1.2rem,3.5vw,1.7rem);font-weight:900;color:#FFD700;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 50px;">
               THE ROYAL CHOICE MENU
             </h2>
 
             <!-- Decorative line -->
-            <div class="d-flex align-items-center justify-content-center gap-3 my-2">
+            <div class="d-flex align-items-center justify-content-center gap-3 my-1">
               <div style="height:1px;width:60px;background:linear-gradient(to right,transparent,#FFD700);"></div>
               <div style="width:6px;height:6px;border-radius:50%;background:#FFD700;box-shadow:0 0 8px #FFD700;"></div>
               <div style="height:1px;width:60px;background:linear-gradient(to left,transparent,#FFD700);"></div>
             </div>
 
             <!-- Subtitle -->
-            <p class="text-center mb-3" style="color:rgba(255,255,255,0.7);font-size:0.88rem;letter-spacing:1px;font-weight:500;margin:0;">
+            <p class="text-center mb-2" style="color:rgba(255,255,255,0.7);font-size:0.82rem;letter-spacing:0.8px;font-weight:500;margin:0;">
               Opulent VIP Rajwada Feast &amp; Live Interactive Stations
             </p>
 
             <!-- Action buttons row -->
-            <div class="d-flex align-items-center justify-content-center gap-2 pb-1">
+            <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
               <a href="{{ asset('pdfs/royal-menu.pdf') }}" download="S-Caterers-royal-menu.pdf"
                  class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#FFD700;color:#fff;font-size:0.8rem;font-weight:800;padding:8px 18px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(255,215,0,0.5);letter-spacing:0.5px;transition:all 0.2s;">
+                 style="background:#FFD700;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(255,215,0,0.5);letter-spacing:0.5px;transition:all 0.2s;">
                 <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
               </a>
             </div>
@@ -3739,14 +3745,12 @@
           </div>
 
           <!-- FOOTER TAGLINE -->
-          <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            FOR BOOKINGS &amp; INQUIRIES: 63939 98141 ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ SCATERERSLKO@GMAIL.COM
-          </div>
+          <div class="text-center py-2 rounded-3" style="background:#2D0008;color:#FFD700;font-weight:800;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;">✦ BOOKINGS: 9839077960, 9415788950 &nbsp;·&nbsp; amit1881970@yahoo.in ✦</div>
 
         </div>
 
         <!-- Modal Footer -->
-        <div class="modal-footer bg-light px-4 py-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="modal-footer menu-modal-footer d-flex align-items-center justify-content-between flex-wrap gap-2">
           <div class="small text-muted fw-bold">
             <i class="fa-solid fa-crown me-1 text-gold"></i> S. CATERERS ROYAL MENU
           </div>
@@ -3777,37 +3781,37 @@
           <!-- Subtle pattern overlay -->
           <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><circle cx=%2230%22 cy=%2230%22 r=%221%22 fill=%22rgba(255,255,255,0.04)%22/></svg>');"></div>
 
-          <div class="w-100 px-4 pt-4 pb-3" style="position:relative;z-index:1;">
+          <div class="w-100 px-4 pt-3 pb-2" style="position:relative;z-index:1;">
             <!-- Brand pill -->
-            <div class="d-flex align-items-center justify-content-center mb-3">
-              <div class="d-inline-flex align-items-center gap-2 px-3 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
-                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:20px;width:auto;filter:brightness(1.3);">
-                <span style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS Â· PINNACLE COLLECTION</span>
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <div class="d-inline-flex align-items-center gap-2 px-2 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
+                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:18px;width:auto;filter:brightness(1.3);">
+                <span style="color:rgba(255,255,255,0.85);font-size:0.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS · PINNACLE COLLECTION</span>
               </div>
             </div>
 
             <!-- Menu title -->
-            <h2 class="font-heading text-center mb-1" id="vipMenuModalLabel" style="font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;color:#D7A8F0;letter-spacing:3px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 60px;">
+            <h2 class="font-heading text-center mb-1" id="vipMenuModalLabel" style="font-size:clamp(1.2rem,3.5vw,1.7rem);font-weight:900;color:#D7A8F0;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 50px;">
               VIP MENU
             </h2>
 
             <!-- Decorative line -->
-            <div class="d-flex align-items-center justify-content-center gap-3 my-2">
+            <div class="d-flex align-items-center justify-content-center gap-3 my-1">
               <div style="height:1px;width:60px;background:linear-gradient(to right,transparent,#9B59B6);"></div>
               <div style="width:6px;height:6px;border-radius:50%;background:#9B59B6;box-shadow:0 0 8px #9B59B6;"></div>
               <div style="height:1px;width:60px;background:linear-gradient(to left,transparent,#9B59B6);"></div>
             </div>
 
             <!-- Subtitle -->
-            <p class="text-center mb-3" style="color:rgba(255,255,255,0.7);font-size:0.88rem;letter-spacing:1px;font-weight:500;margin:0;">
+            <p class="text-center mb-2" style="color:rgba(255,255,255,0.7);font-size:0.82rem;letter-spacing:0.8px;font-weight:500;margin:0;">
               The Pinnacle of Vegetarian Banquet Luxury
             </p>
 
             <!-- Action buttons row -->
-            <div class="d-flex align-items-center justify-content-center gap-2 pb-1">
+            <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
               <a href="{{ asset('pdfs/vip-menu.pdf') }}" download="S-Caterers-vip-menu.pdf"
                  class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#9B59B6;color:#fff;font-size:0.8rem;font-weight:800;padding:8px 18px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(155,89,182,0.5);letter-spacing:0.5px;transition:all 0.2s;">
+                 style="background:#9B59B6;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(155,89,182,0.5);letter-spacing:0.5px;transition:all 0.2s;">
                 <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Download PDF
               </a>
             </div>
@@ -4146,14 +4150,12 @@
           </div>
 
           <!-- FOOTER TAGLINE -->
-          <div class="text-center py-3 rounded-3" style="background: #1A0933; color: #FFD700; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            CONTACT US - CALL: 63939 98141 | EMAIL: SCATERERSLKO@GMAIL.COM
-          </div>
+          <div class="text-center py-2 rounded-3" style="background:#1A0933;color:#D7A8F0;font-weight:800;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;">✦ CONTACT: 9839077960 &nbsp;·&nbsp; amit1881970@yahoo.in ✦</div>
 
         </div>
 
         <!-- Modal Footer -->
-        <div class="modal-footer bg-light px-4 py-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="modal-footer menu-modal-footer d-flex align-items-center justify-content-between flex-wrap gap-2">
           <div class="small text-muted fw-bold">
             <i class="fa-solid fa-gem me-1" style="color: #6A3FA0;"></i> S. CATERERS VIP MENU
           </div>
@@ -4184,37 +4186,37 @@
           <!-- Subtle pattern overlay -->
           <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><circle cx=%2230%22 cy=%2230%22 r=%221%22 fill=%22rgba(255,255,255,0.04)%22/></svg>');"></div>
 
-          <div class="w-100 px-4 pt-4 pb-3" style="position:relative;z-index:1;">
+          <div class="w-100 px-4 pt-3 pb-2" style="position:relative;z-index:1;">
             <!-- Brand pill -->
-            <div class="d-flex align-items-center justify-content-center mb-3">
-              <div class="d-inline-flex align-items-center gap-2 px-3 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
-                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:20px;width:auto;filter:brightness(1.3);">
-                <span style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS Â· COMPLETE COLLECTION</span>
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <div class="d-inline-flex align-items-center gap-2 px-2 py-1" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:50px;backdrop-filter:blur(10px);">
+                <img src="{{ asset('images/logo.png') }}" alt="S. Caterers" style="height:18px;width:auto;filter:brightness(1.3);">
+                <span style="color:rgba(255,255,255,0.85);font-size:0.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;">S. CATERERS · COMPLETE COLLECTION</span>
               </div>
             </div>
 
             <!-- Menu title -->
-            <h2 class="font-heading text-center mb-1" id="Banquet" style="font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;color:#FFD700;letter-spacing:3px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 60px;">
+            <h2 class="font-heading text-center mb-1" id="Banquet" style="font-size:clamp(1.2rem,3.5vw,1.7rem);font-weight:900;color:#FFD700;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0 50px;">
               MASTER FULL MENU
             </h2>
 
             <!-- Decorative line -->
-            <div class="d-flex align-items-center justify-content-center gap-3 my-2">
+            <div class="d-flex align-items-center justify-content-center gap-3 my-1">
               <div style="height:1px;width:60px;background:linear-gradient(to right,transparent,#D4AF37);"></div>
               <div style="width:6px;height:6px;border-radius:50%;background:#D4AF37;box-shadow:0 0 8px #D4AF37;"></div>
               <div style="height:1px;width:60px;background:linear-gradient(to left,transparent,#D4AF37);"></div>
             </div>
 
             <!-- Subtitle -->
-            <p class="text-center mb-3" style="color:rgba(255,255,255,0.7);font-size:0.88rem;letter-spacing:1px;font-weight:500;margin:0;">
+            <p class="text-center mb-2" style="color:rgba(255,255,255,0.7);font-size:0.82rem;letter-spacing:0.8px;font-weight:500;margin:0;">
               S. Caterers Ã¢â‚¬
             </p>
 
             <!-- Action buttons row -->
-            <div class="d-flex align-items-center justify-content-center gap-2 pb-1">
+            <div class="d-flex align-items-center justify-content-center gap-2 pb-0">
               <a href="{{ asset('pdfs/Complete') }}" download="S-Caterers-Complete"
                  class="d-inline-flex align-items-center gap-2 menu-dl-btn"
-                 style="background:#D4AF37;color:#fff;font-size:0.8rem;font-weight:800;padding:8px 18px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(Collection 
+                 style="background:#D4AF37;color:#fff;font-size:0.77rem;font-weight:800;padding:6px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(Collection 
   master-full-menu.pdf 
   Download,0.5);letter-spacing:0.5px;transition:all 0.2s;">
                 <i class="fa-solid fa-download" style="font-size:0.78rem;"></i> Vegetarian
@@ -4711,7 +4713,7 @@
         </div>
 
         <!-- Modal Footer -->
-        <div class="modal-footer bg-light px-4 py-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="modal-footer menu-modal-footer d-flex align-items-center justify-content-between flex-wrap gap-2">
           <div class="small text-muted fw-bold">
             <i class="fa-solid fa-book-open me-1 text-gold"></i> S. CATERERS MASTER FULL MENU
           </div>
@@ -4747,6 +4749,7 @@
 
   <!-- Admin Verification Script -->
   <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
+
 
 
 
