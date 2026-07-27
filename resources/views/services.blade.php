@@ -99,6 +99,21 @@
       box-shadow: 0 6px 20px rgba(198,161,91,0.6) !important;
     }
 
+    /* Package select highlight animation */
+    @keyframes selectPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(198,161,91,0.9); border-color: #C6A15B; background: rgba(198,161,91,0.12); }
+      30%  { box-shadow: 0 0 0 8px rgba(198,161,91,0.3); border-color: #C6A15B; background: rgba(198,161,91,0.18); }
+      60%  { box-shadow: 0 0 0 4px rgba(198,161,91,0.15); border-color: #C6A15B; background: rgba(198,161,91,0.10); }
+      100% { box-shadow: 0 0 0 8px rgba(198,161,91,0.25); border-color: #C6A15B; background: rgba(198,161,91,0.14); }
+    }
+    .pkg-select-highlight {
+      animation: selectPulse 0.6s ease-out forwards;
+      border: 2px solid #C6A15B !important;
+      border-radius: 8px !important;
+      outline: none !important;
+      transition: all 0.3s ease;
+    }
+
 
     /* Scoped Services Page Styles */
 
@@ -4779,6 +4794,14 @@
           setTimeout(function() {
             var sec = document.getElementById('inquiry');
             if (sec) { sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            /* Highlight the select for 2 seconds */
+            setTimeout(function() {
+              var sel = document.getElementById('inq-package');
+              if (sel) {
+                sel.classList.add('pkg-select-highlight');
+                setTimeout(function() { sel.classList.remove('pkg-select-highlight'); }, 2000);
+              }
+            }, 500); /* after scroll settles */
           }, 380); /* wait for modal close animation */
           return;
         }
