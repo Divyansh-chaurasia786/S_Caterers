@@ -1155,7 +1155,7 @@
         <!-- More Live Counters Highlight Banner -->
         <div class="mt-3 p-3 mx-auto" style="max-width: 850px; background: #FFFDF9; border: 1.5px solid #E8D09E; border-radius: 12px; box-shadow: 0 4px 16px rgba(198, 161, 91, 0.12);">
           <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap text-center">
-            <span style="font-weight: 800; color: #7A1C2B; font-size: 0.95rem;"><i class="fa-solid fa-wand-magic-sparkles" style="color: #C6A15B;"></i> Many More Live Counters Available Upon Request:</span>
+            <span style="font-weight: 800; color: #7A1C2B; font-size: 0.95rem;">Many More Live Counters Available Upon Request:</span>
             <span style="font-size: 0.88rem; color: #2D2622; font-weight: 600;">Lakhnavi Chaat Street • Live BBQ Tandoor • Pan-Asian Wok &amp; Dimsum • Live Dosa Station • Live Tava Veg • Live Jalebi-Rabri • Kulfi-Falooda Parlour</span>
           </div>
         </div>
