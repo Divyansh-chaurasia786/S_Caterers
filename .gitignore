@@ -34,3 +34,7 @@ composer.phar
 scratch/
 
 .vercel
+
+# Allow pre-built menu PDFs
+!public/pdfs
+!public/pdfs/**
