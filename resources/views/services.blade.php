@@ -4761,61 +4761,100 @@
     // ===== AUTO PDF DOWNLOAD FUNCTION =====
     function downloadMenuPdf(menuType) {
       const menuMap = {
-        silver: { bodyId: 'silverMenuModalBody', title: 'SILVER CHOICE MENU',    subtitle: 'Artisanal Patisserie, Bakes & Fine Banquet Selection',         accentColor: '#C6A15B' },
-        gold:   { bodyId: 'goldMenuModalBody',   title: 'THE GOLD MENU',         subtitle: 'Pure Vegetarian Fine Dining Banquet Experience',               accentColor: '#D4AF37' },
-        royal:  { bodyId: 'royalMenuModalBody',  title: 'THE ROYAL CHOICE MENU', subtitle: 'Opulent VIP Rajwada Feast & Live Interactive Stations',         accentColor: '#FFD700' },
-        vip:    { bodyId: 'vipMenuModalBody',    title: 'VIP MENU',              subtitle: 'The Pinnacle of Vegetarian Banquet Luxury',                     accentColor: '#9B59B6' },
-        full:   { bodyId: 'fullMenuModalBody',   title: 'MASTER FULL MENU',      subtitle: 'S. Caterers — Complete Vegetarian Banquet Collection',           accentColor: '#D4AF37' }
+        silver: { bodyId: 'silverMenuModalBody', title: 'SILVER CHOICE MENU',    subtitle: 'Artisanal Patisserie, Bakes & Fine Banquet Selection',        accentColor: '#C6A15B' },
+        gold:   { bodyId: 'goldMenuModalBody',   title: 'THE GOLD MENU',         subtitle: 'Pure Vegetarian Fine Dining Banquet Experience',              accentColor: '#D4AF37' },
+        royal:  { bodyId: 'royalMenuModalBody',  title: 'THE ROYAL CHOICE MENU', subtitle: 'Opulent VIP Rajwada Feast & Live Interactive Stations',        accentColor: '#FFD700' },
+        vip:    { bodyId: 'vipMenuModalBody',    title: 'VIP MENU',              subtitle: 'The Pinnacle of Vegetarian Banquet Luxury',                    accentColor: '#9B59B6' },
+        full:   { bodyId: 'fullMenuModalBody',   title: 'MASTER FULL MENU',      subtitle: 'S. Caterers — Complete Vegetarian Banquet Collection',         accentColor: '#D4AF37' }
       };
 
-      const cfg = menuMap[menuType];
+      var cfg = menuMap[menuType];
       if (!cfg) return;
 
-      const bodyEl = document.getElementById(cfg.bodyId);
-      if (!bodyEl) { alert('Menu content not found. Please open the menu first.'); return; }
+      var bodyEl = document.getElementById(cfg.bodyId);
+      if (!bodyEl) { alert('Please open the menu popup first, then click Download PDF.'); return; }
 
-      // Build header element
-      const header = document.createElement('div');
-      header.style.cssText = 'text-align:center; padding:24px 32px 20px; border-bottom:3px solid ' + cfg.accentColor + '; font-family:Arial,sans-serif; background:#fff;';
-      header.innerHTML =
-        '<div style="font-size:11px;font-weight:800;letter-spacing:2px;color:#888;text-transform:uppercase;margin-bottom:8px;">S. CATERERS BY AMIT AGARWAL</div>' +
-        '<div style="font-size:24px;font-weight:900;letter-spacing:3px;color:#1a1a1a;text-transform:uppercase;margin-bottom:6px;">' + cfg.title + '</div>' +
-        '<div style="font-size:13px;font-weight:600;color:#555;letter-spacing:1px;">' + cfg.subtitle + '</div>' +
-        '<div style="margin-top:10px;font-size:11px;color:#888;">Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in</div>';
+      // --- 1. Inject a branded header at the top of the live modal body ---
+      var hdr = document.createElement('div');
+      hdr.id = '__pdf_hdr__';
+      hdr.style.cssText = [
+        'text-align:center',
+        'padding:20px 24px 16px',
+        'margin-bottom:8px',
+        'background:#fff',
+        'border-bottom:3px solid ' + cfg.accentColor,
+        'font-family:Arial,Helvetica,sans-serif'
+      ].join(';');
+      hdr.innerHTML =
+        '<div style="font-size:10px;font-weight:800;letter-spacing:2px;color:#999;text-transform:uppercase;margin-bottom:6px;">S. CATERERS BY AMIT AGARWAL</div>' +
+        '<div style="font-size:22px;font-weight:900;letter-spacing:2px;color:#111;text-transform:uppercase;margin-bottom:4px;">' + cfg.title + '</div>' +
+        '<div style="font-size:12px;font-weight:600;color:#555;letter-spacing:0.5px;margin-bottom:4px;">' + cfg.subtitle + '</div>' +
+        '<div style="font-size:10px;color:#999;">Call: 9839077960, 9415788950 &nbsp;|&nbsp; Email: amit1881970@yahoo.in</div>';
+      bodyEl.insertBefore(hdr, bodyEl.firstChild);
 
-      // Deep-clone the live modal body so all computed styles are intact
-      const bodyClone = bodyEl.cloneNode(true);
-      bodyClone.style.cssText = 'padding:0 32px; background:#fff;';
-      bodyClone.removeAttribute('id');
+      // --- 2. Inject a branded footer at the bottom ---
+      var ftr = document.createElement('div');
+      ftr.id = '__pdf_ftr__';
+      ftr.style.cssText = [
+        'text-align:center',
+        'padding:12px 24px',
+        'margin-top:8px',
+        'background:#fff',
+        'border-top:2px solid ' + cfg.accentColor,
+        'font-size:10px',
+        'color:#999',
+        'letter-spacing:0.5px',
+        'font-family:Arial,Helvetica,sans-serif'
+      ].join(';');
+      ftr.textContent = 'S. CATERERS — Premium Vegetarian Catering | scaterers.in';
+      bodyEl.appendChild(ftr);
 
-      // Footer element
-      const footer = document.createElement('div');
-      footer.style.cssText = 'text-align:center;padding:16px 32px;border-top:2px solid ' + cfg.accentColor + ';font-size:11px;color:#888;letter-spacing:1px;font-family:Arial,sans-serif;background:#fff;';
-      footer.textContent = 'S. CATERERS — Premium Vegetarian Catering | scaterers.in';
+      // --- 3. Temporarily remove the scrollable constraint so full height is captured ---
+      var prevMaxH   = bodyEl.style.maxHeight;
+      var prevOvFlow = bodyEl.style.overflow;
+      var prevOvY    = bodyEl.style.overflowY;
+      bodyEl.style.maxHeight  = 'none';
+      bodyEl.style.overflow   = 'visible';
+      bodyEl.style.overflowY  = 'visible';
 
-      // Outer container: position absolute at 0,0 so html2canvas can paint it, but hidden from view
-      const container = document.createElement('div');
-      container.style.cssText = 'position:absolute;left:0;top:0;width:794px;z-index:-9999;opacity:0;pointer-events:none;background:#fff;';
-      container.appendChild(header);
-      container.appendChild(bodyClone);
-      container.appendChild(footer);
-      document.body.appendChild(container);
+      // --- 4. Scroll to top so html2canvas origin is correct ---
+      bodyEl.scrollTop = 0;
 
-      const filename = 'S-Caterers-' + cfg.title.replace(/\s+/g, '-') + '.pdf';
-      const opt = {
-        margin:      [8, 8, 8, 8],
+      var filename = 'S-Caterers-' + cfg.title.replace(/\s+/g, '-') + '.pdf';
+      var opt = {
+        margin:      [6, 6, 6, 6],
         filename:    filename,
-        image:       { type: 'jpeg', quality: 0.95 },
-        html2canvas: { scale: 2, useCORS: true, allowTaint: true, logging: false },
-        jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        image:       { type: 'jpeg', quality: 0.97 },
+        html2canvas: {
+          scale:       2,
+          useCORS:     true,
+          allowTaint:  true,
+          logging:     false,
+          scrollX:     0,
+          scrollY:     -window.scrollY,
+          windowWidth: document.documentElement.scrollWidth
+        },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
       };
 
-      html2pdf().set(opt).from(container).save()
-        .then(function() {
-          document.body.removeChild(container);
+      // --- 5. Capture the live element directly ---
+      html2pdf().set(opt).from(bodyEl).save()
+        .then(function () {
+          // Restore element
+          bodyEl.removeChild(document.getElementById('__pdf_hdr__'));
+          bodyEl.removeChild(document.getElementById('__pdf_ftr__'));
+          bodyEl.style.maxHeight  = prevMaxH;
+          bodyEl.style.overflow   = prevOvFlow;
+          bodyEl.style.overflowY  = prevOvY;
         })
-        .catch(function(err) {
-          document.body.removeChild(container);
+        .catch(function (err) {
+          var h = document.getElementById('__pdf_hdr__');
+          var f = document.getElementById('__pdf_ftr__');
+          if (h) bodyEl.removeChild(h);
+          if (f) bodyEl.removeChild(f);
+          bodyEl.style.maxHeight  = prevMaxH;
+          bodyEl.style.overflow   = prevOvFlow;
+          bodyEl.style.overflowY  = prevOvY;
           console.error('PDF generation failed:', err);
           alert('PDF download failed. Please try again.');
         });
