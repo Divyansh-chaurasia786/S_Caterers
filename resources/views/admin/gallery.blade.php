@@ -633,7 +633,8 @@
         </div>
         
         <div class="d-flex align-items-center gap-2">
-          <a href="{{ route('admin.export-db') }}" class="header-nav-btn" style="background: rgba(198,161,91,0.2); border-color: var(--admin-gold); color: #FFFFFF;" title="Download MySQL-compatible SQL Database Backup for Hostinger"><i class="fa-solid fa-download me-1 text-gold"></i> Backup DB (.sql)</a>
+          <a href="{{ route('admin.pdf') }}" class="header-nav-btn" style="background: rgba(198,161,91,0.25); border-color: var(--admin-gold); color: #FFFFFF;" title="Manage and Upload Package Menu PDFs"><i class="fa-solid fa-file-pdf me-1 text-gold"></i> Manage PDF Menus</a>
+          <a href="{{ route('admin.export-db') }}" class="header-nav-btn" title="Download MySQL-compatible SQL Database Backup for Hostinger"><i class="fa-solid fa-download me-1 text-gold"></i> Backup DB (.sql)</a>
           <a href="{{ route('gallery') }}" class="header-nav-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Gallery</a>
           <a href="#" class="header-nav-btn" onclick="logoutAdmin(event)"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </div>

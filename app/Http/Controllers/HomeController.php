@@ -209,55 +209,131 @@ class HomeController extends Controller
         ];
         // ───────────────────────────────────────────────────────────────
 
-        // ── Package Menu PDFs Status ───────────────────────────────────
-        $pdfMenus = [
-            [
-                'key'         => 'silver',
+        $pdfMenus = $this->getPdfMenus();
+
+        return view('admin.gallery', compact('images', 'categories', 'storageStats', 'pdfMenus'));
+    }
+
+    private function ensurePdfTableExists()
+    {
+        try {
+            if (!\Illuminate\Support\Facades\Schema::hasTable('package_pdfs')) {
+                \Illuminate\Support\Facades\Schema::create('package_pdfs', function ($table) {
+                    $table->id();
+                    $table->string('menu_key')->unique();
+                    $table->string('name');
+                    $table->text('pdf_url');
+                    $table->string('file_size')->nullable();
+                    $table->timestamps();
+                });
+            }
+        } catch (\Throwable $e) {}
+    }
+
+    public function getPdfMenus()
+    {
+        $this->ensurePdfTableExists();
+
+        $defaults = [
+            'silver' => [
                 'name'        => 'Silver Choice Menu',
                 'badge'       => 'Silver',
                 'badge_style' => 'background: #6c757d; color: #fff;',
                 'filename'    => 'silver_choice_menu.pdf',
                 'url'         => asset('pdf/silver_choice_menu.pdf'),
-                'exists'      => file_exists(public_path('pdf/silver_choice_menu.pdf')),
-                'size'        => file_exists(public_path('pdf/silver_choice_menu.pdf')) ? round(filesize(public_path('pdf/silver_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
-                'updated'     => file_exists(public_path('pdf/silver_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/silver_choice_menu.pdf'))) : 'N/A',
             ],
-            [
-                'key'         => 'gold',
+            'gold' => [
                 'name'        => 'Gold Choice Menu',
                 'badge'       => 'Gold',
                 'badge_style' => 'background: #ffc107; color: #000;',
                 'filename'    => 'gold_choice_menu.pdf',
                 'url'         => asset('pdf/gold_choice_menu.pdf'),
-                'exists'      => file_exists(public_path('pdf/gold_choice_menu.pdf')),
-                'size'        => file_exists(public_path('pdf/gold_choice_menu.pdf')) ? round(filesize(public_path('pdf/gold_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
-                'updated'     => file_exists(public_path('pdf/gold_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/gold_choice_menu.pdf'))) : 'N/A',
             ],
-            [
-                'key'         => 'royal',
+            'royal' => [
                 'name'        => 'Royal Choice Menu',
                 'badge'       => 'Royal',
                 'badge_style' => 'background: #dc3545; color: #fff;',
                 'filename'    => 'royal_choice_menu.pdf',
                 'url'         => asset('pdf/royal_choice_menu.pdf'),
-                'exists'      => file_exists(public_path('pdf/royal_choice_menu.pdf')),
-                'size'        => file_exists(public_path('pdf/royal_choice_menu.pdf')) ? round(filesize(public_path('pdf/royal_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
-                'updated'     => file_exists(public_path('pdf/royal_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/royal_choice_menu.pdf'))) : 'N/A',
             ],
-            [
-                'key'         => 'vip',
+            'vip' => [
                 'name'        => 'VIP Choice Menu',
                 'badge'       => 'VIP Imperial',
                 'badge_style' => 'background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff;',
                 'filename'    => 'vip_choice_menu.pdf',
                 'url'         => asset('pdf/vip_choice_menu.pdf'),
-                'exists'      => file_exists(public_path('pdf/vip_choice_menu.pdf')),
-                'size'        => file_exists(public_path('pdf/vip_choice_menu.pdf')) ? round(filesize(public_path('pdf/vip_choice_menu.pdf')) / 1024, 1) . ' KB' : 'N/A',
-                'updated'     => file_exists(public_path('pdf/vip_choice_menu.pdf')) ? date('d M Y, h:i A', filemtime(public_path('pdf/vip_choice_menu.pdf'))) : 'N/A',
             ],
         ];
 
-        return view('admin.gallery', compact('images', 'categories', 'storageStats', 'pdfMenus'));
+        $dbItems = [];
+        try {
+            $dbItems = \Illuminate\Support\Facades\DB::table('package_pdfs')->get()->keyBy('menu_key');
+        } catch (\Throwable $e) {}
+
+        $pdfMenus = [];
+        foreach ($defaults as $key => $def) {
+            $url     = $def['url'];
+            $size    = 'N/A';
+            $updated = 'N/A';
+
+            if (isset($dbItems[$key])) {
+                $url     = $dbItems[$key]->pdf_url;
+                $size    = $dbItems[$key]->file_size ?? 'Cloud PDF';
+                $updated = date('d M Y, h:i A', strtotime($dbItems[$key]->updated_at));
+            } else {
+                $localPath = public_path('pdf/' . $def['filename']);
+                if (file_exists($localPath)) {
+                    $size    = round(filesize($localPath) / 1024, 1) . ' KB';
+                    $updated = date('d M Y, h:i A', filemtime($localPath));
+                }
+            }
+
+            $pdfMenus[] = array_merge($def, [
+                'key'     => $key,
+                'url'     => $url,
+                'exists'  => true,
+                'size'    => $size,
+                'updated' => $updated,
+            ]);
+        }
+
+        return $pdfMenus;
+    }
+
+    public function adminPdf()
+    {
+        $authenticated = $this->isAdminAuthenticated(request());
+
+        if (!$authenticated) {
+            return view('admin.pdf', [
+                'pdfMenus'       => $this->getPdfMenus(),
+                'showLoginModal' => true,
+            ]);
+        }
+
+        $pdfMenus = $this->getPdfMenus();
+        return view('admin.pdf', compact('pdfMenus'));
+    }
+
+    public function viewPdf($key)
+    {
+        $map = [
+            'silver' => 'silver_choice_menu.pdf',
+            'gold'   => 'gold_choice_menu.pdf',
+            'royal'  => 'royal_choice_menu.pdf',
+            'vip'    => 'vip_choice_menu.pdf',
+        ];
+
+        if (!array_key_exists($key, $map)) {
+            return redirect()->route('home');
+        }
+
+        $pdfMenus = collect($this->getPdfMenus())->keyBy('key');
+        if (isset($pdfMenus[$key]) && !empty($pdfMenus[$key]['url'])) {
+            return redirect()->away($pdfMenus[$key]['url']);
+        }
+
+        return redirect()->away(asset('pdf/' . $map[$key]));
     }
 
     /**
@@ -266,46 +342,113 @@ class HomeController extends Controller
     public function updatePdf(Request $request)
     {
         if (!$this->isAdminAuthenticated($request)) {
-            return redirect()->route('admin.gallery')->with('error', 'Access Denied. Please login first.');
+            return redirect()->back()->with('error', 'Access Denied. Please login first.');
         }
 
-        $request->validate([
-            'menu_key' => 'required|string|in:silver,gold,royal,vip',
-            'pdf_file' => 'required|file|mimes:pdf|max:20480',
-        ]);
+        try {
+            $request->validate([
+                'menu_key' => 'required|string|in:silver,gold,royal,vip',
+                'pdf_file' => 'required|file|mimes:pdf|max:25600',
+            ]);
 
-        $map = [
-            'silver' => 'silver_choice_menu.pdf',
-            'gold'   => 'gold_choice_menu.pdf',
-            'royal'  => 'royal_choice_menu.pdf',
-            'vip'    => 'vip_choice_menu.pdf',
-        ];
+            $map = [
+                'silver' => 'silver_choice_menu.pdf',
+                'gold'   => 'gold_choice_menu.pdf',
+                'royal'  => 'royal_choice_menu.pdf',
+                'vip'    => 'vip_choice_menu.pdf',
+            ];
 
-        $names = [
-            'silver' => 'Silver Choice Menu',
-            'gold'   => 'Gold Choice Menu',
-            'royal'  => 'Royal Choice Menu',
-            'vip'    => 'VIP Choice Menu',
-        ];
+            $names = [
+                'silver' => 'Silver Choice Menu',
+                'gold'   => 'Gold Choice Menu',
+                'royal'  => 'Royal Choice Menu',
+                'vip'    => 'VIP Choice Menu',
+            ];
 
-        $key = $request->input('menu_key');
-        $filename = $map[$key];
-        $destinationDir = public_path('pdf');
+            $key = $request->input('menu_key');
+            $filename = $map[$key];
+            $uploadedFile = $request->file('pdf_file');
+            $fileSizeBytes = $uploadedFile->getSize();
+            $fileSizeFormatted = round($fileSizeBytes / 1024, 1) . ' KB';
+            $pdfUrl = null;
 
-        if (!is_dir($destinationDir)) {
-            mkdir($destinationDir, 0755, true);
+            // 1. Try Cloudinary Upload First (Serverless Compatible)
+            try {
+                $cloudName = env('CLOUDINARY_CLOUD_NAME', 'dbmyeqafj');
+                $apiKey    = env('CLOUDINARY_API_KEY', '499981468335259');
+                $apiSecret = env('CLOUDINARY_API_SECRET', 'XkCkx8xN3cm2p4ceZgYw0xXWEl0');
+
+                $cloudinary = new Cloudinary(
+                    Configuration::instance([
+                        'cloud' => [
+                            'cloud_name' => $cloudName,
+                            'api_key'    => $apiKey,
+                            'api_secret' => $apiSecret,
+                        ],
+                        'url' => ['secure' => true],
+                    ])
+                );
+
+                $uploadRes = $cloudinary->uploadApi()->upload($uploadedFile->getRealPath(), [
+                    'folder'        => 's-caterers-pdf',
+                    'public_id'     => $key . '_choice_menu',
+                    'resource_type' => 'raw',
+                    'overwrite'     => true,
+                ]);
+
+                if (isset($uploadRes['secure_url'])) {
+                    $pdfUrl = $uploadRes['secure_url'];
+                }
+            } catch (\Throwable $cloudEx) {
+                \Log::warning('Cloudinary PDF Upload failed', ['error' => $cloudEx->getMessage()]);
+            }
+
+            // 2. Try Local File Save if local directory is writable
+            $localDir = public_path('pdf');
+            if (is_writable($localDir) || is_writable(public_path())) {
+                try {
+                    if (!is_dir($localDir)) {
+                        @mkdir($localDir, 0755, true);
+                    }
+                    $uploadedFile->move($localDir, $filename);
+                    if (!$pdfUrl) {
+                        $pdfUrl = asset('pdf/' . $filename);
+                    }
+                } catch (\Throwable $localEx) {
+                    \Log::warning('Local PDF save failed', ['error' => $localEx->getMessage()]);
+                }
+            }
+
+            if (!$pdfUrl) {
+                $pdfUrl = asset('pdf/' . $filename);
+            }
+
+            // 3. Save URL & Metadata to SQLite DB
+            $this->ensurePdfTableExists();
+            try {
+                \Illuminate\Support\Facades\DB::table('package_pdfs')->updateOrInsert(
+                    ['menu_key' => $key],
+                    [
+                        'name'       => $names[$key],
+                        'pdf_url'    => $pdfUrl,
+                        'file_size'  => $fileSizeFormatted,
+                        'updated_at' => now(),
+                    ]
+                );
+            } catch (\Throwable $dbEx) {}
+
+            \Log::info('Package Menu PDF Updated', [
+                'menu_key' => $key,
+                'pdf_url'  => $pdfUrl,
+                'ip'       => $request->ip(),
+            ]);
+
+            return redirect()->back()->with('success', "{$names[$key]} PDF updated successfully!");
+
+        } catch (\Throwable $e) {
+            \Log::error('PDF Upload Error', ['exception' => $e->getMessage()]);
+            return redirect()->back()->with('error', 'Failed to upload PDF: ' . $e->getMessage());
         }
-
-        $uploadedFile = $request->file('pdf_file');
-        $uploadedFile->move($destinationDir, $filename);
-
-        \Log::info('Package Menu PDF Updated by Admin', [
-            'menu_key' => $key,
-            'filename' => $filename,
-            'ip'       => $request->ip(),
-        ]);
-
-        return redirect()->route('admin.gallery')->with('success', "{$names[$key]} PDF updated successfully!");
     }
 
     public function adminLogin(Request $request)

@@ -56,8 +56,15 @@ Route::get('/admin/gallery/export-db', [HomeController::class, 'exportDatabaseBa
 // Local & Cloud Media Upload Controller Handler
 Route::post('/admin/gallery/upload', [HomeController::class, 'adminUpload'])->name('admin.upload');
 
+// Package Menu PDF Control Dashboard
+Route::get('/admin/pdf', [HomeController::class, 'adminPdf'])->name('admin.pdf');
+
 // Package Menu PDF Update Controller Handler
 Route::post('/admin/gallery/update-pdf', [HomeController::class, 'updatePdf'])->name('admin.update-pdf');
+Route::post('/admin/pdf/update', [HomeController::class, 'updatePdf']);
+
+// Public Dynamic PDF Viewer/Redirect Route
+Route::get('/pdf-menu/{key}', [HomeController::class, 'viewPdf'])->name('pdf.view');
 
 // Media CRUD Management Operations
 Route::post('/admin/gallery/update/{id}', [HomeController::class, 'adminUpdate'])->where('id', '.*')->name('admin.update');
