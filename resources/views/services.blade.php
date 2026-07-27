@@ -878,9 +878,9 @@
             </ul>
             <div class="text-center mt-auto pt-3">
               <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Silver Menu">Select Silver Menu</a>
-              <a href="{{ route('pdf.view', ['key' => 'silver']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
-                <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Silver Menu PDF
-              </a>
+              <button type="button" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" data-bs-toggle="modal" data-bs-target="#silverMenuModal" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <i class="fa-solid fa-utensils" style="color: #C6A15B; font-size: 1rem;"></i> View Full Silver Menu
+              </button>
             </div>
           </div>
         </div>
@@ -980,9 +980,9 @@
               </ul>
               <div class="text-center mt-auto pt-3">
                 <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Silver Menu">Select Silver Menu</a>
-                <a href="{{ route('pdf.view', ['key' => 'silver']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
-                  <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Silver Menu PDF
-                </a>
+                <button type="button" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" data-bs-toggle="modal" data-bs-target="#silverMenuModal" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                  <i class="fa-solid fa-utensils" style="color: #C6A15B; font-size: 1rem;"></i> View Full Silver Menu
+                </button>
               </div>
             </div>
           </div>
@@ -2119,6 +2119,338 @@
   <a href="https://wa.me/916393998141?text=Hello%20S.%20Caterers!%20I%20would%20like%20to%20inquire%20about%20your%20pure%20vegetarian%20catering%20services." class="floating-whatsapp-cta" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+  <!-- ================= SILVER MENU FULL POPUP MODAL ================= -->
+  <div class="modal fade" id="silverMenuModal" tabindex="-1" aria-labelledby="silverMenuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content" style="border-radius: 20px; border: 2px solid #C6A15B; overflow: hidden; background: #FFFFFF; box-shadow: 0 10px 40px rgba(0,0,0,0.25);">
+        
+        <!-- Modal Header -->
+        <div class="modal-header text-white p-4" style="background: linear-gradient(135deg, #1A1A1A 0%, #3A1017 60%, #6E1423 100%); border-bottom: 3px solid #C6A15B; position: relative;">
+          <div>
+            <span class="badge mb-2" style="background: #C6A15B; color: #000; font-size: 0.78rem; font-weight: 800; letter-spacing: 1px; padding: 5px 12px; border-radius: 20px;">S. CATERERS BY AMIT AGARWAL</span>
+            <h2 class="modal-title font-heading h3 mb-1" id="silverMenuModalLabel" style="font-weight: 800; color: #FFFFFF;">Silver Choice Menu — Full Detailed Selection</h2>
+            <p class="mb-0 text-gold-light small" style="color: #E7C589; font-size: 0.88rem;"><i class="fa-solid fa-crown me-1"></i> 100% Pure Vegetarian Fine Dining Banquet • Call: 9839077960, 9415788950</p>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body p-4" style="background: #FDFBF7;">
+          
+          <div class="row g-4">
+            <!-- WELCOME DRINK -->
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white h-100 rounded-3 border" style="border-color: #E8DFD1 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <h3 class="h6 font-heading mb-3 pb-2 border-bottom text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 0.5px;">
+                  <i class="fa-solid fa-glass-water me-2 text-gold"></i> Welcome Drink
+                </h3>
+                
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Mocktails- Monin Syrup</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Cold Drinks (Coke, Mirinda, Sprite)</li>
+                    <li>• Pink Lady</li>
+                    <li>• Blue Lagoon</li>
+                    <li>• Green Garden</li>
+                    <li>• Green Mint</li>
+                    <li>• Virgin Merry</li>
+                    <li>• Pine Colada</li>
+                    <li>• Majitos</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Shakes</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Strawberry</li>
+                    <li>• Alphonso dream</li>
+                    <li>• Kiwi</li>
+                    <li>• Date</li>
+                    <li>• Banana</li>
+                    <li>• Chocklate</li>
+                    <li>• Keser Pista</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Slush & Juices</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Slush (Orange, Lemon, Mango, Pineapple)</li>
+                    <li>• Variety of Fruit Juices (18 to 20 Type by Delhi) (Extra)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Expresso Coffee & Tea / Bakery</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Café Hut (Extra) | 2-3 Types Beans Coffee | Coffee | Cold Coffee</li>
+                    <li>• Lemon Tea | Ginger Tea | Elaichi Tea | Cookies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- APPETIZERS & SOUPS -->
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white h-100 rounded-3 border" style="border-color: #E8DFD1 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <h3 class="h6 font-heading mb-3 pb-2 border-bottom text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 0.5px;">
+                  <i class="fa-solid fa-bowl-food me-2 text-gold"></i> Appetizers & Soups
+                </h3>
+                
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Soups</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Cream of Tomato with bread Sticks</li>
+                    <li>• Veg. Sweet Corn</li>
+                    <li>• Veg. Peeking Soup with Noodles</li>
+                    <li>• Lemon Coriander</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Indian Snacks</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Paneer Tandoori | Veg. Shami Kabab | Idly Crispy | Corn Cheese Nest</li>
+                    <li>• Subz Kabab | Deluxe Cold Canopies | Hari Matar Samosa | Moong Ki Pakori</li>
+                    <li>• Finger Chips | Motiya Roll</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Grill & Bar Be Que Snacks</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Veg. Galawati Kabab | Veg. Kathi Roll | American Corn | Brockly Babycorn</li>
+                    <li>• Paneer Kali Mirch Tikka | Paneer Masala Tikka | Mashroom Tikka | Stuffed Potato | Aloo Achari Tikka</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Chinese & Western Snacks</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Veg. Dragon Roll | Veg. Tampura | Spring Roll | Chilly Honey Potato | Dry Chilli Paneer | Dry Manchurian</li>
+                    <li>• Maxican Lollypop | Backed Sekh Potato | Road of Mashroom | American Cheese Ball</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- CHAAT & STREET FLAVORS -->
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white h-100 rounded-3 border" style="border-color: #E8DFD1 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <h3 class="h6 font-heading mb-3 pb-2 border-bottom text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 0.5px;">
+                  <i class="fa-solid fa-utensils me-2 text-gold"></i> Chaat & Street Flavors
+                </h3>
+                
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Chaat Specialties</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Aloo Tikki (Chane Ki Dal Stuffed)</li>
+                    <li>• Pani Batasha (Atta & Suji with 3 type of water)</li>
+                    <li>• Matar Tikiya Tawa | Hari Matar Tawa | Dahi Fruit Papdi (Delhi Chaat)</li>
+                    <li>• Rajkachori | Tawa Aloo Fry</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Delhi, Muradabadi & Gujrati Counters</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Fruit Kulia Chaat</li>
+                    <li>• Muradabadi Dal (Butter, Jeera, Lemon with Green Chutney)</li>
+                    <li>• Moong Dal Chilla Green Chutney | Veg. Omlet Sandwich with Khatty Meethy Chutney</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">South Indian & Bakery Counters</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Paper Dosa Or Masala Dosa | Idli & Sambhar Vada | Fusion Dosa (4 fillings) | Nariyal Chutney</li>
+                    <li>• Matar Patilli | Bakery Kulcha (Delhi Se)</li>
+                    <li>• Mr. Brown Bakery | Domino's Pizza | Hot N Juicy | American Corn Trolly | Fruit Display (Imported)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- GLOBAL & REGIONAL SPECIALTIES -->
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white h-100 rounded-3 border" style="border-color: #E8DFD1 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <h3 class="h6 font-heading mb-3 pb-2 border-bottom text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 0.5px;">
+                  <i class="fa-solid fa-earth-asia me-2 text-gold"></i> Global & Regional Specialties
+                </h3>
+                
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Salad & Continental</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Multy Green Veg. Salad | Pasta Salad | Multy Sprouted Beans Salad | Red Cappege Kimchi | Veg. Corn Salad | Russion Salad | Aloo Matar Chaat</li>
+                    <li>• Continental Veg. with Garlic Bread, Ginger Bread</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Chinese & Italian</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Singapuri Rice Noodles | Paneer Sezwan | Chilli Garlic Noodles | Steamed Momos | Veg. Noodles | Manchurian | Chilli Paneer | Fried Rice | Paneer Saate</li>
+                    <li>• Lazaniya | Pasta Live (Red & White Sauce) | Potato Rosty | Nachos with Salsa Sause</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Veg. Mughlai</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Kathi Kabab | Veg. Shami Kabab | Veg. Chaap | Mashroom Kaleji</li>
+                    <li>• Roomali Roti | Jackfruit Biryani | Burani Raita | Green Chutney | Onion Ring</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- REGIONAL CUISINES & MAIN COURSE -->
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white h-100 rounded-3 border" style="border-color: #E8DFD1 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <h3 class="h6 font-heading mb-3 pb-2 border-bottom text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 0.5px;">
+                  <i class="fa-solid fa-fire-flame-curry me-2 text-gold"></i> Regional Cuisines & Main Course
+                </h3>
+                
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Agra Se & Punjabi</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Variety of Stuffed Parathas | Set Curd | Pickle</li>
+                    <li>• Stuffed Kulcha | Chola | Pickle (Ginger & Chilli) | Chutney (Onion & Radish) | Makke Ki Roti Sarson Ka Saag | Gudh & Butter (Extra)</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Rajasthani Special</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Paneer Bhujia | Baigan Bharta | Rajma Rice | Daal Pachmeli | Kadhi Pakori | Gattey Ki Sabzi | Sanger Teet | Hara Moong | Baajra ki Khichdi | Baati-Chokha | Plain Rice | Tawa Roti-Aata & Besani | Roasted Papad</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Daal Ghar & Rice Counter</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Daal Sultani Tadka | Daal Urd Chana | Daal Pachmeli | Daal Makhani</li>
+                    <li>• Veg. Pulao | Jeera Pulao | Mater Paneer Pulao | Shahi Pulao | Green Rice</li>
+                    <li>• Pickle Counter (6-8 Variety) | Raita Counter Live (6-8 Variety) | Dahi Gujia | Papad Stall (6-8 Variety)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- VEGETABLES & CURRIES -->
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white h-100 rounded-3 border" style="border-color: #E8DFD1 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <h3 class="h6 font-heading mb-3 pb-2 border-bottom text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 0.5px;">
+                  <i class="fa-solid fa-plate-wheat me-2 text-gold"></i> Vegetables & Curries
+                </h3>
+                
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Paneer Specialties</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Kadhai Paneer | Paneer Makhanwala | Matar Paneer | Palak Paneer | Methi Malai Paneer | Muglai Paneer | Paneer Lababdar | Paneer Lazzatdar</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Corn, Mushroom, Potato & Kofta</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Matar Mashroom | Methi Malai Corn | Palak Malai Corn | Corn Curry Mirchi Masala</li>
+                    <li>• Banarasi Dum Aloo | Kashmiri Dum Aloo | Nawabganji Aloo | Lollypop Kofta | Malai Kofta | Bulbul Kofta | Veg. Kofta</li>
+                  </ul>
+                </div>
+
+                <div class="mb-3">
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Seasonal & Dry Veg.</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Afgani Gobhi Shimla | Gobhi Tukda Musallam | Gobhi Matar Gaajar | Hari Matar Dry | Kumbh Gobhi Hyderbadi | Veg. Jalfarezi | Bhindi Kurkuri | Mix Veg. | Bhindi Masala | Tawa Veg.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="small fw-bold text-dark text-uppercase mb-1">Breads Counter</h4>
+                  <ul class="list-unstyled small text-muted mb-0 ps-2">
+                    <li>• Baby Naan | Butter Naan | Pudina Naan | Missi Roti | Chamcham Naan | Biscuty Roti | Laccha Paratha | Puri Kachori</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- DESSERTS & FINALE -->
+            <div class="col-12">
+              <div class="p-3 bg-white rounded-3 border" style="border-color: #E8DFD1 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+                <h3 class="h6 font-heading mb-3 pb-2 border-bottom text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 0.5px;">
+                  <i class="fa-solid fa-ice-cream me-2 text-gold"></i> Desserts & Finale
+                </h3>
+                
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <h4 class="small fw-bold text-dark text-uppercase mb-1">Ice Cream & Hot Sweets</h4>
+                    <ul class="list-unstyled small text-muted mb-0 ps-2">
+                      <li>• Ice Cream 4 to 5 Variety & Stick Candy</li>
+                      <li>• Gloria Desert Counter (Extra)</li>
+                      <li>• Kesaria Milk | Kesaria Jalebi | Mini Imarti</li>
+                      <li>• Gulab Jamun | Mini Malai Ghewar</li>
+                      <li>• Assorted Halwa Tawa (Moong, Badam, Carrot, Pista, Urd, Suji)</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <h4 class="small fw-bold text-dark text-uppercase mb-1">Kulfi & Sweets Paradise</h4>
+                    <ul class="list-unstyled small text-muted mb-0 ps-2">
+                      <li>• Kulfi Faluda | Stick Kulfi | Kesaria Malai Gilory | Malai Pista Cake</li>
+                      <li>• Sweet Paradise | Chandramukhi | Cheena Malai | Cheena Kheer | Rasmalai | Spanj Rasgulla | Chappan Bhog Sweets (Extra)</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <h4 class="small fw-bold text-dark text-uppercase mb-1">End Course Inclusions</h4>
+                    <ul class="list-unstyled small text-muted mb-0 ps-2">
+                      <li>• Mineral Water 200ml. Bisleri Bottle</li>
+                      <li>• Pan Stall (Extra)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer bg-light px-4 py-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <div class="small text-muted fw-bold">
+            <i class="fa-solid fa-phone me-1 text-gold"></i> Direct Contact: 6393998141 | 9839077960
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
+            <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Silver Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
+              <i class="fa-solid fa-calendar-check me-1"></i> Book Silver Menu Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectPackageFromModal(packageName) {
+      const pkgSelect = document.getElementById('inq-package');
+      if (pkgSelect) {
+        for (let opt of pkgSelect.options) {
+          if (opt.value.toLowerCase().includes(packageName.toLowerCase())) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+      const inquirySec = document.getElementById('inquiry');
+      if (inquirySec) {
+        inquirySec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
 
   <!-- Admin Verification Script -->
   <script src="{{ asset('js/admin-trigger.js') }}?v=1.0" data-csrf="{{ csrf_token() }}"></script>
