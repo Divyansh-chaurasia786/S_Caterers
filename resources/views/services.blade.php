@@ -878,7 +878,7 @@
             </ul>
             <div class="text-center mt-auto pt-3">
               <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Silver Menu">Select Silver Menu</a>
-              <a href="{{ asset('pdf/silver_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+              <a href="{{ route('pdf.view', ['key' => 'silver']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                 <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Silver Menu PDF
               </a>
             </div>
@@ -902,7 +902,7 @@
             </ul>
             <div class="text-center mt-auto pt-3">
               <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Gold Menu">Select Gold Menu</a>
-              <a href="{{ asset('pdf/gold_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+              <a href="{{ route('pdf.view', ['key' => 'gold']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                 <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Gold Menu PDF
               </a>
             </div>
@@ -927,7 +927,7 @@
             </ul>
             <div class="text-center mt-auto pt-3">
               <a href="#inquiry" class="btn-gold w-100 select-package mb-2" data-package="Royal Menu">Select Royal Menu</a>
-              <a href="{{ asset('pdf/royal_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+              <a href="{{ route('pdf.view', ['key' => 'royal']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                 <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Royal Menu PDF
               </a>
             </div>
@@ -952,7 +952,7 @@
             </ul>
             <div class="text-center mt-auto pt-3">
               <a href="#inquiry" class="btn btn-sm w-100 select-package mb-2" data-package="VIP Menu" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; font-weight: 800; border-radius: 8px; padding: 10px 16px; font-size: 0.9rem; border: none; letter-spacing: 0.5px;">Select VIP Menu</a>
-              <a href="{{ asset('pdf/vip_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #F3EBF9; border: 1.5px solid #C9A5E8; color: #6A3FA0; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+              <a href="{{ route('pdf.view', ['key' => 'vip']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #F3EBF9; border: 1.5px solid #C9A5E8; color: #6A3FA0; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                 <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full VIP Menu PDF
               </a>
             </div>
@@ -980,7 +980,7 @@
               </ul>
               <div class="text-center mt-auto pt-3">
                 <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Silver Menu">Select Silver Menu</a>
-                <a href="{{ asset('pdf/silver_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <a href="{{ route('pdf.view', ['key' => 'silver']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                   <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Silver Menu PDF
                 </a>
               </div>
@@ -1004,7 +1004,7 @@
               </ul>
               <div class="text-center mt-auto pt-3">
                 <a href="#inquiry" class="btn-outline-wine w-100 select-package mb-2" data-package="Gold Menu">Select Gold Menu</a>
-                <a href="{{ asset('pdf/gold_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <a href="{{ route('pdf.view', ['key' => 'gold']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                   <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Gold Menu PDF
                 </a>
               </div>
@@ -1029,7 +1029,7 @@
               </ul>
               <div class="text-center mt-auto pt-3">
                 <a href="#inquiry" class="btn-gold w-100 select-package mb-2" data-package="Royal Menu">Select Royal Menu</a>
-                <a href="{{ asset('pdf/royal_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <a href="{{ route('pdf.view', ['key' => 'royal']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #FFF8EB; border: 1.5px solid #E8D09E; color: #8A6B1B; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                   <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full Royal Menu PDF
                 </a>
               </div>
@@ -1054,7 +1054,7 @@
               </ul>
               <div class="text-center mt-auto pt-3">
                 <a href="#inquiry" class="btn btn-sm w-100 select-package mb-2" data-package="VIP Menu" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; font-weight: 800; border-radius: 8px; padding: 10px 16px; font-size: 0.9rem; border: none; letter-spacing: 0.5px;">Select VIP Menu</a>
-                <a href="{{ asset('pdf/vip_choice_menu.pdf') }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #F3EBF9; border: 1.5px solid #C9A5E8; color: #6A3FA0; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
+                <a href="{{ route('pdf.view', ['key' => 'vip']) }}" target="_blank" class="btn btn-sm w-100 d-inline-flex align-items-center justify-content-center gap-2" style="background: #F3EBF9; border: 1.5px solid #C9A5E8; color: #6A3FA0; font-weight: 700; font-size: 0.82rem; border-radius: 8px; padding: 8px 12px; transition: all 0.3s ease;">
                   <i class="fa-solid fa-file-pdf" style="color: #D9534F; font-size: 1rem;"></i> View Full VIP Menu PDF
                 </a>
               </div>

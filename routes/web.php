@@ -63,8 +63,24 @@ Route::get('/admin/pdf', [HomeController::class, 'adminPdf'])->name('admin.pdf')
 Route::post('/admin/gallery/update-pdf', [HomeController::class, 'updatePdf'])->name('admin.update-pdf');
 Route::post('/admin/pdf/update', [HomeController::class, 'updatePdf']);
 
-// Public Dynamic PDF Viewer/Redirect Route
+// Public Dynamic PDF Viewer/Redirect Routes
 Route::get('/pdf-menu/{key}', [HomeController::class, 'viewPdf'])->name('pdf.view');
+Route::get('/pdf/{filename}', function ($filename) {
+    $map = [
+        'silver_choice_menu.pdf' => 'silver',
+        'gold_choice_menu.pdf'   => 'gold',
+        'royal_choice_menu.pdf'  => 'royal',
+        'vip_choice_menu.pdf'    => 'vip',
+    ];
+    if (isset($map[$filename])) {
+        return app(HomeController::class)->viewPdf($map[$filename]);
+    }
+    $localFile = public_path('pdf/' . $filename);
+    if (file_exists($localFile)) {
+        return response()->file($localFile);
+    }
+    return redirect()->route('home');
+});
 
 // Media CRUD Management Operations
 Route::post('/admin/gallery/update/{id}', [HomeController::class, 'adminUpdate'])->where('id', '.*')->name('admin.update');
