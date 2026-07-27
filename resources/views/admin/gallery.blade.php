@@ -633,7 +633,6 @@
         </div>
         
         <div class="d-flex align-items-center gap-2">
-          <a href="{{ route('admin.pdf') }}" class="header-nav-btn" style="background: rgba(198,161,91,0.25); border-color: var(--admin-gold); color: #FFFFFF;" title="Manage and Upload Package Menu PDFs"><i class="fa-solid fa-file-pdf me-1 text-gold"></i> Manage PDF Menus</a>
           <a href="{{ route('admin.export-db') }}" class="header-nav-btn" title="Download MySQL-compatible SQL Database Backup for Hostinger"><i class="fa-solid fa-download me-1 text-gold"></i> Backup DB (.sql)</a>
           <a href="{{ route('gallery') }}" class="header-nav-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Gallery</a>
           <a href="#" class="header-nav-btn" onclick="logoutAdmin(event)"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
@@ -715,54 +714,6 @@
 
       </div>
 
-      <!-- Package Menu PDFs Management Section -->
-      <div class="admin-card mb-4" style="background: #FFFFFF; border: 1.5px solid var(--admin-border); border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(42, 27, 18, 0.04);">
-        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 pb-2 border-bottom">
-          <div>
-            <h2 class="h5 mb-1 font-heading" style="font-weight: 800; color: var(--admin-wine);"><i class="fa-solid fa-file-pdf me-2" style="color: var(--admin-gold);"></i> Package Menu PDFs Management</h2>
-            <p class="text-muted small mb-0">Upload and update the official downloadable PDF menus for your catering packages (Silver, Gold, Royal, VIP).</p>
-          </div>
-          <span class="badge px-3 py-2" style="border-radius: 20px; font-weight: 700; font-size: 0.8rem; background: #FFF8EB; color: #8A6B1B; border: 1px solid #E8D09E;">4 Package Menus Active</span>
-        </div>
-
-        <div class="row g-3">
-          @foreach($pdfMenus ?? [] as $pdf)
-            <div class="col-12 col-md-6 col-xl-3">
-              <div class="p-3 h-100 d-flex flex-column justify-content-between" style="background: #FFFDF9; border: 1.5px solid #E8DFD1; border-radius: 12px; transition: all 0.2s ease;">
-                <div>
-                  <div class="d-flex align-items-center justify-content-between mb-2">
-                    <span class="badge" style="{{ $pdf['badge_style'] }} font-weight: 700; font-size: 0.75rem; border-radius: 6px;">{{ $pdf['badge'] }}</span>
-                    <small class="text-muted" style="font-weight: 600; font-size: 0.75rem;"><i class="fa-solid fa-hard-drive me-1"></i>{{ $pdf['size'] }}</small>
-                  </div>
-                  <h3 class="h6 font-heading mb-1" style="font-weight: 700; color: #201C1A;">{{ $pdf['name'] }}</h3>
-                  <div class="text-muted small mb-3" style="font-size: 0.76rem;">
-                    <i class="fa-solid fa-clock me-1" style="color: var(--admin-gold);"></i> Updated: <strong>{{ $pdf['updated'] }}</strong>
-                  </div>
-                </div>
-
-                <div>
-                  <!-- Upload Form -->
-                  <form action="{{ route('admin.update-pdf') }}" method="POST" enctype="multipart/form-data" class="mb-2">
-                    @csrf
-                    <input type="hidden" name="menu_key" value="{{ $pdf['key'] }}">
-                    <div class="mb-2">
-                      <input type="file" name="pdf_file" class="form-control form-control-sm" accept=".pdf" required style="font-size: 0.78rem;">
-                    </div>
-                    <button type="submit" class="btn btn-wine btn-sm w-100 py-1" style="background: linear-gradient(135deg, #6E1423 0%, #4A0E17 100%); color: #fff; border: none; font-size: 0.8rem; font-weight: 700; border-radius: 8px;">
-                      <i class="fa-solid fa-cloud-arrow-up me-1"></i> Upload &amp; Replace PDF
-                    </button>
-                  </form>
-
-                  @if($pdf['exists'])
-                    <a href="{{ $pdf['url'] }}" target="_blank" class="btn btn-outline-secondary btn-sm w-100 py-1" style="font-size: 0.78rem; font-weight: 600; border-radius: 8px;">
-                      <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Preview PDF
-                    </a>
-                  @endif
-                </div>
-              </div>
-            </div>
-          @endforeach
-        </div>
       </div>
 
       <div class="row g-4">
@@ -1015,7 +966,7 @@
 
                                   <button type="button" 
                                           class="btn-action-base btn-delete-grid" 
-                                          onclick="openDeleteModal({{ $image->id }}, '{{ addslashes($image->title) }}', '{{ Str::startsWith($image->path, 'http') ? $image->path : asset($image->path) }}', '{{ route('admin.delete', $image->id) }}', {{ $image->is_video ? 'true' : 'false' }})">
+                                          onclick="openDeleteModal({{ $image->id }}, '{{ addslashes($image->title) }}', '{{ Str::startsWith($image->path, 'http') ? $image->path : asset($image->path) }}', '{{ route('admin.delete', $image->id) }}', {{ $image->is_video ? 'true' : 'false' }}, '{{ $image->cloudinary_id }}')">
                                     <i class="fa-solid fa-trash-can"></i> Delete
                                   </button>
                                 </div>
@@ -1096,7 +1047,7 @@
 
                             <button type="button" 
                                     class="btn-action-base btn-delete-grid" 
-                                    onclick="openDeleteModal({{ $image->id }}, '{{ addslashes($image->title) }}', '{{ Str::startsWith($image->path, 'http') ? $image->path : asset($image->path) }}', '{{ route('admin.delete', $image->id) }}', {{ $image->is_video ? 'true' : 'false' }})">
+                                    onclick="openDeleteModal({{ $image->id }}, '{{ addslashes($image->title) }}', '{{ Str::startsWith($image->path, 'http') ? $image->path : asset($image->path) }}', '{{ route('admin.delete', $image->id) }}', {{ $image->is_video ? 'true' : 'false' }}, '{{ $image->cloudinary_id }}')">
                               <i class="fa-solid fa-trash-can"></i> Delete
                             </button>
                           </div>
@@ -1267,6 +1218,8 @@
 
           <form id="delete-modal-form" action="" method="POST" class="m-0">
             @csrf
+            <input type="hidden" name="cloudinary_id" id="modal-del-cloudinary-id" value="">
+            <input type="hidden" name="media_path" id="modal-del-media-path" value="">
             <button type="submit" class="btn btn-danger px-4 py-2" style="border-radius: 10px; font-weight: 700; font-size: 0.9rem;">
               <i class="fa-solid fa-trash-can me-1"></i> Yes, Delete Item
             </button>
@@ -1741,7 +1694,7 @@
     }
 
     // 8. Delete Confirmation Modal Trigger
-    function openDeleteModal(id, title, mediaPath, deleteUrl, isVideo = false) {
+    function openDeleteModal(id, title, mediaPath, deleteUrl, isVideo = false, cloudinaryId = '') {
       document.getElementById('modal-del-title').textContent = title;
       const thumbWrap = document.getElementById('modal-del-thumb-container');
       if (isVideo) {
@@ -1750,6 +1703,11 @@
         thumbWrap.innerHTML = `<img src="${mediaPath}" alt="Thumbnail" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; border: 1px solid var(--admin-border);" onerror="this.onerror=null; this.src='{{ asset('images/logo.png') }}';">`;
       }
       document.getElementById('delete-modal-form').action = deleteUrl;
+
+      const cIdInput = document.getElementById('modal-del-cloudinary-id');
+      if (cIdInput) cIdInput.value = cloudinaryId || id;
+      const pathInput = document.getElementById('modal-del-media-path');
+      if (pathInput) pathInput.value = mediaPath;
 
       const deleteModal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
       deleteModal.show();

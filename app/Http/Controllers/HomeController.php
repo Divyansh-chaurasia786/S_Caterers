@@ -209,246 +209,7 @@ class HomeController extends Controller
         ];
         // ───────────────────────────────────────────────────────────────
 
-        $pdfMenus = $this->getPdfMenus();
-
-        return view('admin.gallery', compact('images', 'categories', 'storageStats', 'pdfMenus'));
-    }
-
-    private function ensurePdfTableExists()
-    {
-        try {
-            if (!\Illuminate\Support\Facades\Schema::hasTable('package_pdfs')) {
-                \Illuminate\Support\Facades\Schema::create('package_pdfs', function ($table) {
-                    $table->id();
-                    $table->string('menu_key')->unique();
-                    $table->string('name');
-                    $table->text('pdf_url');
-                    $table->string('file_size')->nullable();
-                    $table->timestamps();
-                });
-            }
-        } catch (\Throwable $e) {}
-    }
-
-    public function getPdfMenus()
-    {
-        $this->ensurePdfTableExists();
-
-        $defaults = [
-            'silver' => [
-                'name'        => 'Silver Choice Menu',
-                'badge'       => 'Silver',
-                'badge_style' => 'background: #6c757d; color: #fff;',
-                'filename'    => 'silver_choice_menu.pdf',
-                'url'         => asset('pdf/silver_choice_menu.pdf'),
-            ],
-            'gold' => [
-                'name'        => 'Gold Choice Menu',
-                'badge'       => 'Gold',
-                'badge_style' => 'background: #ffc107; color: #000;',
-                'filename'    => 'gold_choice_menu.pdf',
-                'url'         => asset('pdf/gold_choice_menu.pdf'),
-            ],
-            'royal' => [
-                'name'        => 'Royal Choice Menu',
-                'badge'       => 'Royal',
-                'badge_style' => 'background: #dc3545; color: #fff;',
-                'filename'    => 'royal_choice_menu.pdf',
-                'url'         => asset('pdf/royal_choice_menu.pdf'),
-            ],
-            'vip' => [
-                'name'        => 'VIP Choice Menu',
-                'badge'       => 'VIP Imperial',
-                'badge_style' => 'background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff;',
-                'filename'    => 'vip_choice_menu.pdf',
-                'url'         => asset('pdf/vip_choice_menu.pdf'),
-            ],
-        ];
-
-        $dbItems = [];
-        try {
-            $dbItems = \Illuminate\Support\Facades\DB::table('package_pdfs')->get()->keyBy('menu_key');
-        } catch (\Throwable $e) {}
-
-        $pdfMenus = [];
-        foreach ($defaults as $key => $def) {
-            $url     = $def['url'];
-            $size    = 'N/A';
-            $updated = 'N/A';
-
-            if (isset($dbItems[$key])) {
-                $url     = $dbItems[$key]->pdf_url;
-                $size    = $dbItems[$key]->file_size ?? 'Cloud PDF';
-                $updated = date('d M Y, h:i A', strtotime($dbItems[$key]->updated_at));
-            } else {
-                $localPath = public_path('pdf/' . $def['filename']);
-                if (file_exists($localPath)) {
-                    $size    = round(filesize($localPath) / 1024, 1) . ' KB';
-                    $updated = date('d M Y, h:i A', filemtime($localPath));
-                }
-            }
-
-            $pdfMenus[] = array_merge($def, [
-                'key'     => $key,
-                'url'     => $url,
-                'exists'  => true,
-                'size'    => $size,
-                'updated' => $updated,
-            ]);
-        }
-
-        return $pdfMenus;
-    }
-
-    public function adminPdf()
-    {
-        $authenticated = $this->isAdminAuthenticated(request());
-
-        if (!$authenticated) {
-            return view('admin.pdf', [
-                'pdfMenus'       => $this->getPdfMenus(),
-                'showLoginModal' => true,
-            ]);
-        }
-
-        $pdfMenus = $this->getPdfMenus();
-        return view('admin.pdf', compact('pdfMenus'));
-    }
-
-    public function viewPdf($key)
-    {
-        $map = [
-            'silver' => 'silver_choice_menu.pdf',
-            'gold'   => 'gold_choice_menu.pdf',
-            'royal'  => 'royal_choice_menu.pdf',
-            'vip'    => 'vip_choice_menu.pdf',
-        ];
-
-        if (!array_key_exists($key, $map)) {
-            return redirect()->route('home');
-        }
-
-        $pdfMenus = collect($this->getPdfMenus())->keyBy('key');
-        if (isset($pdfMenus[$key]) && !empty($pdfMenus[$key]['url'])) {
-            return redirect()->away($pdfMenus[$key]['url']);
-        }
-
-        return redirect()->away(asset('pdf/' . $map[$key]));
-    }
-
-    /**
-     * Upload & Update Package Menu PDF Files (Silver, Gold, Royal, VIP)
-     */
-    public function updatePdf(Request $request)
-    {
-        if (!$this->isAdminAuthenticated($request)) {
-            return redirect()->back()->with('error', 'Access Denied. Please login first.');
-        }
-
-        try {
-            $request->validate([
-                'menu_key' => 'required|string|in:silver,gold,royal,vip',
-                'pdf_file' => 'required|file|mimes:pdf|max:25600',
-            ]);
-
-            $map = [
-                'silver' => 'silver_choice_menu.pdf',
-                'gold'   => 'gold_choice_menu.pdf',
-                'royal'  => 'royal_choice_menu.pdf',
-                'vip'    => 'vip_choice_menu.pdf',
-            ];
-
-            $names = [
-                'silver' => 'Silver Choice Menu',
-                'gold'   => 'Gold Choice Menu',
-                'royal'  => 'Royal Choice Menu',
-                'vip'    => 'VIP Choice Menu',
-            ];
-
-            $key = $request->input('menu_key');
-            $filename = $map[$key];
-            $uploadedFile = $request->file('pdf_file');
-            $fileSizeBytes = $uploadedFile->getSize();
-            $fileSizeFormatted = round($fileSizeBytes / 1024, 1) . ' KB';
-            $pdfUrl = null;
-
-            // 1. Try Cloudinary Upload First (Serverless Compatible)
-            try {
-                $cloudName = env('CLOUDINARY_CLOUD_NAME', 'dbmyeqafj');
-                $apiKey    = env('CLOUDINARY_API_KEY', '499981468335259');
-                $apiSecret = env('CLOUDINARY_API_SECRET', 'XkCkx8xN3cm2p4ceZgYw0xXWEl0');
-
-                $cloudinary = new Cloudinary(
-                    Configuration::instance([
-                        'cloud' => [
-                            'cloud_name' => $cloudName,
-                            'api_key'    => $apiKey,
-                            'api_secret' => $apiSecret,
-                        ],
-                        'url' => ['secure' => true],
-                    ])
-                );
-
-                $uploadRes = $cloudinary->uploadApi()->upload($uploadedFile->getRealPath(), [
-                    'folder'        => 's-caterers-pdf',
-                    'public_id'     => $key . '_choice_menu',
-                    'resource_type' => 'raw',
-                    'overwrite'     => true,
-                ]);
-
-                if (isset($uploadRes['secure_url'])) {
-                    $pdfUrl = $uploadRes['secure_url'];
-                }
-            } catch (\Throwable $cloudEx) {
-                \Log::warning('Cloudinary PDF Upload failed', ['error' => $cloudEx->getMessage()]);
-            }
-
-            // 2. Try Local File Save if local directory is writable
-            $localDir = public_path('pdf');
-            if (is_writable($localDir) || is_writable(public_path())) {
-                try {
-                    if (!is_dir($localDir)) {
-                        @mkdir($localDir, 0755, true);
-                    }
-                    $uploadedFile->move($localDir, $filename);
-                    if (!$pdfUrl) {
-                        $pdfUrl = asset('pdf/' . $filename);
-                    }
-                } catch (\Throwable $localEx) {
-                    \Log::warning('Local PDF save failed', ['error' => $localEx->getMessage()]);
-                }
-            }
-
-            if (!$pdfUrl) {
-                $pdfUrl = asset('pdf/' . $filename);
-            }
-
-            // 3. Save URL & Metadata to SQLite DB
-            $this->ensurePdfTableExists();
-            try {
-                \Illuminate\Support\Facades\DB::table('package_pdfs')->updateOrInsert(
-                    ['menu_key' => $key],
-                    [
-                        'name'       => $names[$key],
-                        'pdf_url'    => $pdfUrl,
-                        'file_size'  => $fileSizeFormatted,
-                        'updated_at' => now(),
-                    ]
-                );
-            } catch (\Throwable $dbEx) {}
-
-            \Log::info('Package Menu PDF Updated', [
-                'menu_key' => $key,
-                'pdf_url'  => $pdfUrl,
-                'ip'       => $request->ip(),
-            ]);
-
-            return redirect()->back()->with('success', "{$names[$key]} PDF updated successfully!");
-
-        } catch (\Throwable $e) {
-            \Log::error('PDF Upload Error', ['exception' => $e->getMessage()]);
-            return redirect()->back()->with('error', 'Failed to upload PDF: ' . $e->getMessage());
-        }
+        return view('admin.gallery', compact('images', 'categories', 'storageStats'));
     }
 
     public function adminLogin(Request $request)
@@ -912,7 +673,13 @@ class HomeController extends Controller
 
     public function adminDelete($id)
     {
-        if (!$this->isAdminAuthenticated(request())) {
+        $request = request();
+        $isAjax  = $request->ajax() || $request->wantsJson() || $request->header('X-Requested-With') === 'XMLHttpRequest';
+
+        if (!$this->isAdminAuthenticated($request)) {
+            if ($isAjax) {
+                return response()->json(['success' => false, 'message' => 'Access Denied. Please login first.'], 403);
+            }
             return redirect()->route('admin.gallery')->with('error', 'Access Denied. Please login first.');
         }
 
@@ -921,22 +688,41 @@ class HomeController extends Controller
             $apiKey    = env('CLOUDINARY_API_KEY', '499981468335259');
             $apiSecret = env('CLOUDINARY_API_SECRET', 'XkCkx8xN3cm2p4ceZgYw0xXWEl0');
 
-            $cId = request('cloudinary_id') ?? $id;
+            $cId       = $request->input('cloudinary_id') ?? $id;
+            $mediaPath = $request->input('media_path', '');
 
-            if (is_numeric($id)) {
-                try {
-                    $image = GalleryImage::find($id);
-                    if ($image) {
-                        $cId = $image->cloudinary_id ?? $image->id;
-                        if ($image->is_local && File::exists(public_path($image->path))) {
-                            @File::delete(public_path($image->path));
-                        }
-                        $image->delete();
+            // 1. Search local DB record first
+            $image = null;
+            try {
+                $image = GalleryImage::where('id', $id)
+                    ->orWhere('cloudinary_id', $id)
+                    ->orWhere('id', $cId)
+                    ->orWhere('cloudinary_id', $cId)
+                    ->first();
+
+                if ($image) {
+                    if (!empty($image->cloudinary_id)) {
+                        $cId = $image->cloudinary_id;
                     }
-                } catch (\Throwable $ex) {}
+                    if (empty($mediaPath) && !empty($image->path)) {
+                        $mediaPath = $image->path;
+                    }
+                    if ($image->is_local && !empty($image->path) && File::exists(public_path($image->path))) {
+                        @File::delete(public_path($image->path));
+                    }
+                    $image->delete();
+                }
+            } catch (\Throwable $ex) {}
+
+            // 2. Extract Cloudinary Public ID from URL if $cId is numeric or empty
+            if ((empty($cId) || is_numeric($cId)) && !empty($mediaPath)) {
+                if (preg_match('#/upload/(?:v\d+/)?(s-caterers-gallery/[^.]+)(\.[a-z0-9]+)?#i', $mediaPath, $m)) {
+                    $cId = urldecode($m[1]);
+                }
             }
 
-            if (!empty($cId)) {
+            // 3. Destroy from Cloudinary API
+            if (!empty($cId) && !is_numeric($cId)) {
                 foreach (['image', 'video'] as $resType) {
                     $destroyUrl = "https://api.cloudinary.com/v1_1/{$cloudName}/{$resType}/destroy";
                     $timestamp  = time();
@@ -959,9 +745,16 @@ class HomeController extends Controller
                 }
             }
 
+            if ($isAjax) {
+                return response()->json(['success' => true, 'message' => 'Media item deleted successfully!']);
+            }
+
             return redirect()->route('admin.gallery')->with('success', 'Media item deleted successfully!');
         } catch (\Throwable $e) {
             \Log::error('Delete Gallery Image Error: ' . $e->getMessage());
+            if ($isAjax) {
+                return response()->json(['success' => false, 'message' => 'Could not delete media: ' . $e->getMessage()], 500);
+            }
             return redirect()->route('admin.gallery')->with('error', 'Could not delete media: ' . $e->getMessage());
         }
     }
@@ -969,7 +762,7 @@ class HomeController extends Controller
     public function adminBulkDelete(Request $request)
     {
         if (!$this->isAdminAuthenticated($request)) {
-            return response()->json(['success' => false, 'message' => 'Access Denied.'], 403);
+            return response()->json(['success' => false, 'message' => 'Access Denied. Please login first.'], 403);
         }
 
         try {
@@ -980,44 +773,103 @@ class HomeController extends Controller
             $apiKey    = env('CLOUDINARY_API_KEY', '499981468335259');
             $apiSecret = env('CLOUDINARY_API_SECRET', 'XkCkx8xN3cm2p4ceZgYw0xXWEl0');
 
+            list($allMedia) = $this->ensureDatabaseAndFetchImages();
+
             if ($deleteAll) {
-                list($allMedia) = $this->ensureDatabaseAndFetchImages();
-                $ids = $allMedia->pluck('cloudinary_id')->filter()->toArray();
+                $targetItems = $allMedia;
+            } else {
+                $strIds = array_map('strval', (array)$ids);
+                $targetItems = $allMedia->filter(function($item) use ($strIds) {
+                    return in_array((string)$item->id, $strIds) || 
+                           (!empty($item->cloudinary_id) && in_array((string)$item->cloudinary_id, $strIds));
+                });
             }
 
-            if (empty($ids)) {
-                return response()->json(['success' => false, 'message' => 'No media items selected for deletion.']);
+            if ($targetItems->isEmpty() && !$deleteAll) {
+                $strIds = array_filter(array_map('strval', (array)$ids));
+                if (empty($strIds)) {
+                    return response()->json(['success' => false, 'message' => 'No media items selected for deletion.']);
+                }
+                $deletedCount = 0;
+                foreach ($strIds as $cId) {
+                    if (empty($cId)) continue;
+                    if (!is_numeric($cId)) {
+                        foreach (['image', 'video'] as $resType) {
+                            $destroyUrl = "https://api.cloudinary.com/v1_1/{$cloudName}/{$resType}/destroy";
+                            $timestamp  = time();
+                            $signature  = sha1("public_id={$cId}&timestamp={$timestamp}" . $apiSecret);
+
+                            $ch = curl_init($destroyUrl);
+                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                            curl_setopt($ch, CURLOPT_POST, true);
+                            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+                                'public_id' => $cId,
+                                'api_key'   => $apiKey,
+                                'timestamp' => $timestamp,
+                                'signature' => $signature,
+                            ]));
+                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+                            curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+                            curl_exec($ch);
+                            curl_close($ch);
+                        }
+                    }
+                    try {
+                        GalleryImage::where('id', $cId)->orWhere('cloudinary_id', $cId)->delete();
+                    } catch (\Throwable $e) {}
+                    $deletedCount++;
+                }
+                return response()->json([
+                    'success' => true,
+                    'message' => "Successfully deleted {$deletedCount} media items!",
+                ]);
             }
 
             $deletedCount = 0;
-            foreach ($ids as $cId) {
-                if (empty($cId)) continue;
+            foreach ($targetItems as $item) {
+                $cId       = $item->cloudinary_id ?? $item->id;
+                $mediaPath = $item->path ?? '';
 
-                // Delete from Cloudinary API
-                foreach (['image', 'video'] as $resType) {
-                    $destroyUrl = "https://api.cloudinary.com/v1_1/{$cloudName}/{$resType}/destroy";
-                    $timestamp  = time();
-                    $signature  = sha1("public_id={$cId}&timestamp={$timestamp}" . $apiSecret);
-
-                    $ch = curl_init($destroyUrl);
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_POST, true);
-                    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
-                        'public_id' => $cId,
-                        'api_key'   => $apiKey,
-                        'timestamp' => $timestamp,
-                        'signature' => $signature,
-                    ]));
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-                    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-                    curl_exec($ch);
-                    curl_close($ch);
+                // Extract Cloudinary public_id from URL if $cId is numeric
+                if ((empty($cId) || is_numeric($cId)) && !empty($mediaPath)) {
+                    if (preg_match('#/upload/(?:v\d+/)?(s-caterers-gallery/[^.]+)(\.[a-z0-9]+)?#i', $mediaPath, $m)) {
+                        $cId = urldecode($m[1]);
+                    }
                 }
 
-                // Delete local SQLite record if present
+                // Delete local file if present
+                if (!empty($mediaPath) && File::exists(public_path($mediaPath))) {
+                    @File::delete(public_path($mediaPath));
+                }
+
+                // Delete from Cloudinary API if public ID exists and is string
+                if (!empty($cId) && !is_numeric($cId)) {
+                    foreach (['image', 'video'] as $resType) {
+                        $destroyUrl = "https://api.cloudinary.com/v1_1/{$cloudName}/{$resType}/destroy";
+                        $timestamp  = time();
+                        $signature  = sha1("public_id={$cId}&timestamp={$timestamp}" . $apiSecret);
+
+                        $ch = curl_init($destroyUrl);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($ch, CURLOPT_POST, true);
+                        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+                            'public_id' => $cId,
+                            'api_key'   => $apiKey,
+                            'timestamp' => $timestamp,
+                            'signature' => $signature,
+                        ]));
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+                        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+                        curl_exec($ch);
+                        curl_close($ch);
+                    }
+                }
+
+                // Delete DB record
                 try {
-                    GalleryImage::where('cloudinary_id', $cId)->orWhere('id', $cId)->delete();
+                    GalleryImage::where('id', $item->id)->orWhere('cloudinary_id', $item->cloudinary_id)->delete();
                 } catch (\Throwable $e) {}
 
                 $deletedCount++;
