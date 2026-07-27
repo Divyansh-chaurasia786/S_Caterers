@@ -2579,12 +2579,6 @@
               </div>
             </div>
           </div>
-
-          <!-- FOOTER TAGLINE -->
-          <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            PROUDLY SERVING LUCKNOW &nbsp;·&nbsp; SILVER CHOICE MENU
-          </div>
-
         </div>
 
         <!-- Modal Footer -->
@@ -2597,9 +2591,7 @@
             <i class="fa-solid fa-share-nodes"></i> Share Menu
           </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Silver Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
-              <i class="fa-solid fa-calendar-check me-1"></i> Book Silver Menu Now
-            </a>
+            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Silver Menu', 'silverMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Silver Menu Now</button>
           </div>
         </div>
 
@@ -3244,12 +3236,6 @@
               </div>
             </div>
           </div>
-
-          <!-- FOOTER TAGLINE -->
-          <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            PROUDLY SERVING LUCKNOW &nbsp;·&nbsp; THE GOLD MENU
-          </div>
-
         </div>
 
         <!-- Modal Footer -->
@@ -3262,9 +3248,7 @@
             <i class="fa-solid fa-share-nodes"></i> Share Menu
           </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Gold Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
-              <i class="fa-solid fa-calendar-check me-1"></i> Book Gold Menu Now
-            </a>
+            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Gold Menu', 'goldMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Gold Menu Now</button>
           </div>
         </div>
 
@@ -3737,10 +3721,6 @@
               </div>
             </div>
           </div>
-
-          <!-- FOOTER TAGLINE -->
-          <div class="text-center py-2 rounded-3" style="background:#2D0008;color:#FFD700;font-weight:800;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;">✦ BOOKINGS: 9839077960, 9415788950 &nbsp;·&nbsp; amit1881970@yahoo.in ✦</div>
-
         </div>
 
         <!-- Modal Footer -->
@@ -3753,9 +3733,7 @@
             <i class="fa-solid fa-share-nodes"></i> Share Menu
           </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Royal Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
-              <i class="fa-solid fa-calendar-check me-1"></i> Book Royal Menu Now
-            </a>
+            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Royal Menu', 'royalMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Royal Menu Now</button>
           </div>
         </div>
 
@@ -4140,10 +4118,6 @@
               </div>
             </div>
           </div>
-
-          <!-- FOOTER TAGLINE -->
-          <div class="text-center py-2 rounded-3" style="background:#1A0933;color:#D7A8F0;font-weight:800;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;">✦ CONTACT: 9839077960 &nbsp;·&nbsp; amit1881970@yahoo.in ✦</div>
-
         </div>
 
         <!-- Modal Footer -->
@@ -4156,9 +4130,7 @@
             <i class="fa-solid fa-share-nodes"></i> Share Menu
           </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <a href="#inquiry" class="btn px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('VIP Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; border: none;">
-              <i class="fa-solid fa-calendar-check me-1"></i> Book VIP Menu Now
-            </a>
+            <button type="button" class="btn px-4 py-2 fw-bold" onclick="bookMenuFromModal('VIP Menu', 'vipMenuModal')"><i class="fa-solid fa-calendar-check me-1"></i> Book VIP Menu Now</button>
           </div>
         </div>
 
@@ -4691,13 +4663,6 @@
               </div>
             </div>
           </div>
-
-          <!-- FOOTER TAGLINE -->
-          <div class="text-center py-3 rounded-3" style="background: #0F0F0F; color: #D4AF37; font-weight: 800; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase;">
-            S. CATERERS ’• KESHAV NAGAR, SITAPUR ROAD, LUCKNOW.<br>
-            <span style="font-size: 0.8rem; color: #FFFFFF;">Call: 63939 98141 | mail: scatererslko@gmail.com</span>
-          </div>
-
         </div>
 
         <!-- Modal Footer -->
@@ -4710,9 +4675,7 @@
             <i class="fa-solid fa-share-nodes"></i> Share Menu
           </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Full Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
-              <i class="fa-solid fa-calendar-check me-1"></i> Book Custom Menu Now
-            </a>
+            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Full Menu', 'fullMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Custom Menu Now</button>
           </div>
         </div>
 
@@ -4795,17 +4758,39 @@
       }
     })();
 
-    function selectPackageFromModal(packageName) {
+    function bookMenuFromModal(packageName, modalId) {
+      /* 1. Select the package in the form dropdown */
       var pkgSelect = document.getElementById('inq-package');
       if (pkgSelect) {
         for (var i = 0; i < pkgSelect.options.length; i++) {
           if (pkgSelect.options[i].value.toLowerCase().includes(packageName.toLowerCase())) {
-            pkgSelect.options[i].selected = true; break;
+            pkgSelect.options[i].selected = true;
+            break;
           }
         }
       }
+
+      /* 2. Close the modal first, then scroll after animation ends (350ms) */
+      var modalEl = document.getElementById(modalId);
+      if (modalEl && window.bootstrap) {
+        var bsModal = bootstrap.Modal.getInstance(modalEl);
+        if (bsModal) {
+          bsModal.hide();
+          setTimeout(function() {
+            var sec = document.getElementById('inquiry');
+            if (sec) { sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+          }, 380); /* wait for modal close animation */
+          return;
+        }
+      }
+      /* Fallback: just scroll */
       var sec = document.getElementById('inquiry');
-      if (sec) { sec.scrollIntoView({ behavior: 'smooth' }); }
+      if (sec) { sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    }
+
+    /* Keep old name as alias for any remaining references */
+    function selectPackageFromModal(packageName) {
+      bookMenuFromModal(packageName, '');
     }
   </script>
 
