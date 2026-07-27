@@ -2152,9 +2152,6 @@
             <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('silver')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
             </button>
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printSilverMenu()" style="background: #E2E8F0; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #1A202C !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print
-            </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
         </div>
@@ -2498,9 +2495,6 @@
             <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('silver')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
             </button>
-            <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printSilverMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print
-            </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Silver Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Silver Menu Now
@@ -2530,9 +2524,6 @@
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
             <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('gold')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </button>
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printGoldMenu()" style="background: #D4AF37; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #0F0F0F !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -3141,9 +3132,6 @@
             <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('gold')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
             </button>
-            <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printGoldMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print
-            </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Gold Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Gold Menu Now
@@ -3173,9 +3161,6 @@
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
             <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('royal')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </button>
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printRoyalMenu()" style="background: #FFD700; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #2D0008 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -3612,9 +3597,6 @@
             <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('royal')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
             </button>
-            <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printRoyalMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print
-            </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Royal Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Royal Menu Now
@@ -3644,9 +3626,6 @@
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
             <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('vip')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </button>
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printVipMenu()" style="background: #FFD700; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #1A0933 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -3995,9 +3974,6 @@
             <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('vip')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
             </button>
-            <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printVipMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print
-            </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('VIP Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book VIP Menu Now
@@ -4027,9 +4003,6 @@
           <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-2">
             <button type="button" class="btn btn-sm fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('full')" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #fff !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </button>
-            <button type="button" class="btn btn-sm fw-bold text-dark d-inline-flex align-items-center gap-1" onclick="printFullMenu()" style="background: #FFD700; border: none; font-size: 0.78rem; border-radius: 6px; padding: 5px 10px; font-weight: 800; color: #0F0F0F !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-              <i class="fa-solid fa-print"></i> Print
             </button>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.1rem; opacity: 0.9;"></button>
           </div>
@@ -4527,9 +4500,6 @@
             <button type="button" class="btn fw-bold d-inline-flex align-items-center gap-1" onclick="downloadMenuPdf('full')" style="border-radius: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none; padding: 8px 14px;">
               <i class="fa-solid fa-file-pdf"></i> Download PDF
             </button>
-            <button type="button" class="btn btn-outline-dark px-3 py-2 fw-bold d-inline-flex align-items-center gap-1" onclick="printFullMenu()" style="border-radius: 8px; font-size: 0.85rem;">
-              <i class="fa-solid fa-print"></i> Print
-            </button>
             <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
             <a href="#inquiry" class="btn btn-gold px-4 py-2 fw-bold" data-bs-dismiss="modal" onclick="selectPackageFromModal('Full Menu')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;">
               <i class="fa-solid fa-calendar-check me-1"></i> Book Custom Menu Now
@@ -4791,11 +4761,11 @@
     // ===== AUTO PDF DOWNLOAD FUNCTION =====
     function downloadMenuPdf(menuType) {
       const menuMap = {
-        silver: { bodyId: 'silverMenuModalBody', title: 'SILVER CHOICE MENU', subtitle: 'Artisanal Patisserie, Bakes & Fine Banquet Selection', accentColor: '#C6A15B' },
-        gold:   { bodyId: 'goldMenuModalBody',   title: 'THE GOLD MENU',       subtitle: 'Pure Vegetarian Fine Dining Banquet Experience',         accentColor: '#D4AF37' },
-        royal:  { bodyId: 'royalMenuModalBody',  title: 'THE ROYAL CHOICE MENU', subtitle: 'Opulent VIP Rajwada Feast & Live Interactive Stations',  accentColor: '#FFD700' },
-        vip:    { bodyId: 'vipMenuModalBody',    title: 'VIP MENU',             subtitle: 'The Pinnacle of Vegetarian Banquet Luxury',               accentColor: '#9B59B6' },
-        full:   { bodyId: 'fullMenuModalBody',   title: 'MASTER FULL MENU',     subtitle: 'S. Caterers — Complete Vegetarian Banquet Collection',    accentColor: '#D4AF37' }
+        silver: { bodyId: 'silverMenuModalBody', title: 'SILVER CHOICE MENU',    subtitle: 'Artisanal Patisserie, Bakes & Fine Banquet Selection',         accentColor: '#C6A15B' },
+        gold:   { bodyId: 'goldMenuModalBody',   title: 'THE GOLD MENU',         subtitle: 'Pure Vegetarian Fine Dining Banquet Experience',               accentColor: '#D4AF37' },
+        royal:  { bodyId: 'royalMenuModalBody',  title: 'THE ROYAL CHOICE MENU', subtitle: 'Opulent VIP Rajwada Feast & Live Interactive Stations',         accentColor: '#FFD700' },
+        vip:    { bodyId: 'vipMenuModalBody',    title: 'VIP MENU',              subtitle: 'The Pinnacle of Vegetarian Banquet Luxury',                     accentColor: '#9B59B6' },
+        full:   { bodyId: 'fullMenuModalBody',   title: 'MASTER FULL MENU',      subtitle: 'S. Caterers — Complete Vegetarian Banquet Collection',           accentColor: '#D4AF37' }
       };
 
       const cfg = menuMap[menuType];
@@ -4804,43 +4774,51 @@
       const bodyEl = document.getElementById(cfg.bodyId);
       if (!bodyEl) { alert('Menu content not found. Please open the menu first.'); return; }
 
-      // Build a clean wrapper for PDF rendering
-      const wrapper = document.createElement('div');
-      wrapper.style.cssText = 'font-family: Outfit, Plus Jakarta Sans, sans-serif; background: #fff; padding: 32px; width: 800px;';
-      wrapper.innerHTML = `
-        <div style="text-align:center; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 3px solid ${cfg.accentColor};">
-          <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #888; text-transform: uppercase; margin-bottom: 8px;">S. CATERERS BY AMIT AGARWAL</div>
-          <div style="font-size: 26px; font-weight: 900; letter-spacing: 3px; color: #1a1a1a; text-transform: uppercase; margin-bottom: 6px;">${cfg.title}</div>
-          <div style="font-size: 13px; font-weight: 600; color: #555; letter-spacing: 1px;">${cfg.subtitle}</div>
-          <div style="margin-top: 10px; font-size: 11px; color: #888;">Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in</div>
-        </div>
-        ${bodyEl.innerHTML}
-        <div style="text-align:center; margin-top: 28px; padding-top: 16px; border-top: 2px solid ${cfg.accentColor}; font-size: 11px; color: #888; letter-spacing: 1px;">
-          S. CATERERS — Premium Vegetarian Catering | scaterers.in
-        </div>
-      `;
+      // Build header element
+      const header = document.createElement('div');
+      header.style.cssText = 'text-align:center; padding:24px 32px 20px; border-bottom:3px solid ' + cfg.accentColor + '; font-family:Arial,sans-serif; background:#fff;';
+      header.innerHTML =
+        '<div style="font-size:11px;font-weight:800;letter-spacing:2px;color:#888;text-transform:uppercase;margin-bottom:8px;">S. CATERERS BY AMIT AGARWAL</div>' +
+        '<div style="font-size:24px;font-weight:900;letter-spacing:3px;color:#1a1a1a;text-transform:uppercase;margin-bottom:6px;">' + cfg.title + '</div>' +
+        '<div style="font-size:13px;font-weight:600;color:#555;letter-spacing:1px;">' + cfg.subtitle + '</div>' +
+        '<div style="margin-top:10px;font-size:11px;color:#888;">Call: 9839077960, 9415788950 | Email: amit1881970@yahoo.in</div>';
 
+      // Deep-clone the live modal body so all computed styles are intact
+      const bodyClone = bodyEl.cloneNode(true);
+      bodyClone.style.cssText = 'padding:0 32px; background:#fff;';
+      bodyClone.removeAttribute('id');
+
+      // Footer element
+      const footer = document.createElement('div');
+      footer.style.cssText = 'text-align:center;padding:16px 32px;border-top:2px solid ' + cfg.accentColor + ';font-size:11px;color:#888;letter-spacing:1px;font-family:Arial,sans-serif;background:#fff;';
+      footer.textContent = 'S. CATERERS — Premium Vegetarian Catering | scaterers.in';
+
+      // Outer container: position absolute at 0,0 so html2canvas can paint it, but hidden from view
+      const container = document.createElement('div');
+      container.style.cssText = 'position:absolute;left:0;top:0;width:794px;z-index:-9999;opacity:0;pointer-events:none;background:#fff;';
+      container.appendChild(header);
+      container.appendChild(bodyClone);
+      container.appendChild(footer);
+      document.body.appendChild(container);
+
+      const filename = 'S-Caterers-' + cfg.title.replace(/\s+/g, '-') + '.pdf';
       const opt = {
-        margin:      [10, 10, 10, 10],
-        filename:    `S-Caterers-${cfg.title.replace(/\s+/g,'-')}.pdf`,
+        margin:      [8, 8, 8, 8],
+        filename:    filename,
         image:       { type: 'jpeg', quality: 0.95 },
-        html2canvas: { scale: 2, useCORS: true, logging: false },
+        html2canvas: { scale: 2, useCORS: true, allowTaint: true, logging: false },
         jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' }
       };
 
-      // Append wrapper off-screen so html2canvas can render it
-      wrapper.style.position = 'fixed';
-      wrapper.style.top = '-9999px';
-      wrapper.style.left = '-9999px';
-      document.body.appendChild(wrapper);
-
-      html2pdf().set(opt).from(wrapper).save().then(function() {
-        document.body.removeChild(wrapper);
-      }).catch(function(err) {
-        document.body.removeChild(wrapper);
-        console.error('PDF generation failed:', err);
-        alert('PDF download failed. Please try the Print option instead.');
-      });
+      html2pdf().set(opt).from(container).save()
+        .then(function() {
+          document.body.removeChild(container);
+        })
+        .catch(function(err) {
+          document.body.removeChild(container);
+          console.error('PDF generation failed:', err);
+          alert('PDF download failed. Please try again.');
+        });
     }
   </script>
 
