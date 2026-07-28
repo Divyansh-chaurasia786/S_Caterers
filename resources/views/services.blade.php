@@ -1704,7 +1704,7 @@
             <div class="pkg-header">
               <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
               <h3 style="color: #3A1060;">VIP Menu</h3>
-              <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury ’¢₹ an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
+              <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury &mdash; an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
             </div>
             <ul class="pkg-features">
               <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Unlimited Selections Across All Categories</span></li>
@@ -1806,7 +1806,7 @@
               <div class="pkg-header">
                 <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
                 <h3 style="color: #3A1060;">VIP Menu</h3>
-                <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury ’¢₹ an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
+                <p class="desc" style="color: #5A3080;">The pinnacle of vegetarian banquet luxury &mdash; an all-inclusive ultra-premium menu with exclusive counters, personalised service, and extraordinary presentation.</p>
               </div>
               <ul class="pkg-features">
                 <li><i class="fa-solid fa-circle-check" style="color: #6A3FA0;"></i> <span>Unlimited Selections Across All Categories</span></li>
@@ -3944,14 +3944,14 @@
             </div>
           </div>
 
-          <!-- XII. VIDAI MENU (EXTRA ’¢¢₹Ã…Â¡€š¹50) -->
+          <!-- XII. VIDAI MENU (EXTRA &#8377;50) -->
           <div class="menu-section-card p-3 p-md-4" style="border-color: #E8DFD1 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
             <div class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom" style="border-bottom-color: #E8DFD1 !important;">
               <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(198, 161, 91, 0.15); border: 1.5px solid #C6A15B; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-gift fs-5" style="color: #6E1423 !important;"></i>
               </div>
               <div>
-                <h3 class="h5 font-heading mb-0 text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 1px;">XII. VIDAI MENU (EXTRA ’¢¢₹Ã…Â¡€š¹50)</h3>
+                <h3 class="h5 font-heading mb-0 text-uppercase" style="color: #6E1423; font-weight: 800; letter-spacing: 1px;">XII. VIDAI MENU (EXTRA &#8377;50)</h3>
                 <small class="text-muted fw-semibold">Optional farewell snacks for departing guests</small>
               </div>
             </div>
