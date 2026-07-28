@@ -419,16 +419,17 @@
 
     /* Package select highlight animation */
     @keyframes selectPulse {
-      0%   { box-shadow: 0 0 0 0 rgba(198,161,91,0.9); border-color: #C6A15B; background: rgba(198,161,91,0.12); }
-      30%  { box-shadow: 0 0 0 8px rgba(198,161,91,0.3); border-color: #C6A15B; background: rgba(198,161,91,0.18); }
-      60%  { box-shadow: 0 0 0 4px rgba(198,161,91,0.15); border-color: #C6A15B; background: rgba(198,161,91,0.10); }
-      100% { box-shadow: 0 0 0 8px rgba(198,161,91,0.25); border-color: #C6A15B; background: rgba(198,161,91,0.14); }
+      0%   { box-shadow: 0 0 0 0 rgba(198,161,91,0.9); border-color: #C6A15B; background: rgba(198,161,91,0.30); }
+      30%  { box-shadow: 0 0 0 10px rgba(198,161,91,0.4); border-color: #C6A15B; background: rgba(198,161,91,0.35); }
+      60%  { box-shadow: 0 0 0 4px rgba(198,161,91,0.25); border-color: #C6A15B; background: rgba(198,161,91,0.20); }
+      100% { box-shadow: 0 0 0 8px rgba(198,161,91,0.35); border-color: #C6A15B; background: rgba(198,161,91,0.28); }
     }
     .pkg-select-highlight {
-      animation: selectPulse 0.6s ease-out forwards;
-      border: 2px solid #C6A15B !important;
+      animation: selectPulse 1.2s ease-in-out infinite alternate !important;
+      border: 2.5px solid #C6A15B !important;
       border-radius: 8px !important;
       outline: none !important;
+      background: #FFF9EE !important;
       transition: all 0.3s ease;
     }
 
@@ -1919,8 +1920,10 @@
                 <select name="package" id="inq-package" style="border: 1.5px solid #CFC0A8; border-radius: 8px; padding: 8px 12px; background: #FFFDF9; color: #1F1510; font-weight: 600; width: 100%; font-size: 0.9rem;" required>
                   <option value="" disabled selected>Choose a starting tier...</option>
                   <option value="Silver Menu">Silver Menu</option>
+                  <option value="Gold Menu">Gold Menu</option>
                   <option value="Royal Menu">Royal Menu</option>
                   <option value="VIP Menu">VIP Menu</option>
+                  <option value="Full Menu">Master Full Menu</option>
                   <option value="Custom Catering Service">Custom Catering Service</option>
                 </select>
               </div>
@@ -5087,41 +5090,53 @@
     })();
 
     function bookMenuFromModal(packageName, modalId) {
-      /* 1. Select the package in the form dropdown */
+      /* 1. Auto-select option in form dropdown */
       var pkgSelect = document.getElementById('inq-package');
-      if (pkgSelect) {
+      if (pkgSelect && packageName) {
+        var cleanTarget = packageName.toLowerCase().replace('package', '').replace('choice', '').replace('master', '').trim();
         for (var i = 0; i < pkgSelect.options.length; i++) {
-          if (pkgSelect.options[i].value.toLowerCase().includes(packageName.toLowerCase())) {
-            pkgSelect.options[i].selected = true;
+          var optVal = pkgSelect.options[i].value.toLowerCase();
+          var optText = pkgSelect.options[i].text.toLowerCase();
+          if (optVal.includes(cleanTarget) || optText.includes(cleanTarget)) {
+            pkgSelect.selectedIndex = i;
+            pkgSelect.dispatchEvent(new Event('change', { bubbles: true }));
             break;
           }
         }
       }
 
-      /* 2. Close the modal first, then scroll after animation ends (350ms) */
-      var modalEl = document.getElementById(modalId);
-      if (modalEl && window.bootstrap) {
-        var bsModal = bootstrap.Modal.getInstance(modalEl);
-        if (bsModal) {
-          bsModal.hide();
-          setTimeout(function() {
-            var sec = document.getElementById('inquiry');
-            if (sec) { sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-            /* Highlight the select for 2 seconds */
-            setTimeout(function() {
-              var sel = document.getElementById('inq-package');
-              if (sel) {
-                sel.classList.add('pkg-select-highlight');
-                setTimeout(function() { sel.classList.remove('pkg-select-highlight'); }, 2000);
-              }
-            }, 500); /* after scroll settles */
-          }, 380); /* wait for modal close animation */
-          return;
+      /* 2. Close active modal */
+      if (modalId) {
+        var modalEl = document.getElementById(modalId);
+        if (modalEl && window.bootstrap) {
+          try {
+            var bsModal = bootstrap.Modal.getInstance(modalEl) || bootstrap.Modal.getOrCreateInstance(modalEl);
+            if (bsModal) bsModal.hide();
+          } catch(e) {}
         }
       }
-      /* Fallback: just scroll */
-      var sec = document.getElementById('inquiry');
-      if (sec) { sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      document.querySelectorAll('.modal.show').forEach(function(m) {
+        try {
+          var inst = bootstrap.Modal.getInstance(m) || bootstrap.Modal.getOrCreateInstance(m);
+          if (inst) inst.hide();
+        } catch(e) {}
+      });
+
+      /* 3. Smooth scroll to form & highlight dropdown for 2.5s */
+      setTimeout(function() {
+        var sec = document.getElementById('inquiry');
+        if (sec) {
+          sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        setTimeout(function() {
+          if (pkgSelect) {
+            pkgSelect.classList.add('pkg-select-highlight');
+            setTimeout(function() {
+              pkgSelect.classList.remove('pkg-select-highlight');
+            }, 2500); /* 2.5 seconds highlight duration */
+          }
+        }, 300);
+      }, 250);
     }
 
     /* Keep old name as alias for any remaining references */
