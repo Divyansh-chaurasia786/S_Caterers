@@ -78,119 +78,202 @@
       padding-right: 52px !important; /* leave space for close btn */
     }
 
-    /* ── MOBILE RESPONSIVE OVERRIDES (≤ 575px) ─────────────────── */
+    /* ═══════════════════════════════════════════════════════════════
+       MOBILE MENU REDESIGN  (≤ 575px)
+       Goal: full-screen, compact header, readable list, sticky footer
+    ═══════════════════════════════════════════════════════════════ */
     @media (max-width: 575.98px) {
 
-      /* Full-screen modal on phones */
+      /* 1. Full-screen modal — no margins, no rounded corners */
       .modal-xl.modal-dialog {
         margin: 0 !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        height: 100% !important;
-        max-height: 100% !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+        height: 100dvh !important;
+        max-height: 100dvh !important;
       }
-      .modal-xl .modal-content,
       .menu-modal-content {
         border-radius: 0 !important;
+        border: none !important;
         height: 100dvh !important;
         max-height: 100dvh !important;
         display: flex !important;
         flex-direction: column !important;
+        overflow: hidden !important;
       }
 
-      /* Compact modal header on mobile */
-      .menu-modal-content .w-100.px-4.pt-3.pb-2 {
-        padding: 10px 14px 8px !important;
+      /* 2. HEADER — slim single row: title left, close right */
+      .menu-modal-content .modal-header {
+        padding: 0 !important;
+        min-height: unset !important;
+        flex-shrink: 0 !important;
+        overflow: visible !important;
       }
-      .menu-modal-content .modal-header > .w-100 {
-        padding-right: 46px !important;
-      }
-
-      /* Brand pill — hide on very small screens */
-      .menu-modal-content .d-inline-flex.align-items-center.gap-2.px-2.py-1 {
+      /* Hide everything except the title h2 and close btn */
+      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center,
+      .menu-modal-content .modal-header p,
+      .menu-modal-content .modal-header .menu-dl-btn,
+      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.gap-2,
+      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.my-1 {
         display: none !important;
       }
-      .menu-modal-content .d-flex.align-items-center.justify-content-center.mb-2 {
-        margin-bottom: 4px !important;
+      /* Content wrapper: single row, vertically centred */
+      .menu-modal-content .w-100.px-4.pt-3.pb-2 {
+        padding: 0 50px 0 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        min-height: 56px !important;
+      }
+      /* Title: left-aligned, one line */
+      .menu-modal-content .modal-header h2 {
+        font-size: 0.95rem !important;
+        letter-spacing: 1.2px !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        text-align: left !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      /* Close button — vertically centred, right side */
+      .menu-close-btn {
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        right: 10px !important;
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 1rem !important;
       }
 
-      /* Title — much smaller on mobile */
-      .menu-modal-content .modal-header h2 {
-        font-size: 1.1rem !important;
-        letter-spacing: 1.5px !important;
-        margin: 0 40px !important;
+      /* 3. BODY — fill all remaining space, smooth scroll */
+      .menu-modal-body {
+        flex: 1 1 auto !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        max-height: unset !important;
+        padding: 12px 12px 4px !important;
+        background: #FAF8F5 !important;
+      }
+
+      /* 4. SECTION CARDS — flat, edge-to-edge, minimal spacing */
+      .menu-section-card {
+        border-radius: 10px !important;
+        margin-bottom: 12px !important;
+        padding: 0 !important;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.06) !important;
+      }
+      /* Section header row */
+      .menu-section-card > .d-flex.align-items-center.gap-3 {
+        padding: 10px 12px !important;
+        margin-bottom: 0 !important;
+      }
+      /* Section icon box — smaller */
+      .menu-section-card > .d-flex > div[style*="width: 44px"] {
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+        border-radius: 8px !important;
+      }
+      .menu-section-card > .d-flex > div[style*="width: 44px"] i {
+        font-size: 0.9rem !important;
+      }
+      /* Section title */
+      .menu-section-card h3.h5 {
+        font-size: 0.82rem !important;
+        letter-spacing: 0.8px !important;
+      }
+      .menu-section-card p.text-muted {
+        font-size: 0.75rem !important;
+        margin-bottom: 0 !important;
+      }
+
+      /* 5. ITEM GRID — single full-width column, no grid gaps */
+      .menu-section-card .row.g-3 { margin: 0 !important; gap: 0 !important; }
+      .menu-section-card .row.g-3 > [class*="col-"] {
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+      }
+
+      /* 6. ITEM CARDS — compact horizontal list style */
+      .menu-item-card {
+        border-radius: 0 !important;
+        border: none !important;
+        border-bottom: 1px solid #EDE8DF !important;
+        padding: 9px 12px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+      }
+      .menu-item-card:last-child { border-bottom: none !important; }
+      .menu-item-card:hover { transform: none !important; box-shadow: none !important; }
+      /* Item name */
+      .menu-item-card h5.h6 {
+        font-size: 0.8rem !important;
+        margin-bottom: 2px !important;
+        font-weight: 700 !important;
         line-height: 1.2 !important;
       }
+      /* Item description */
+      .menu-item-card p.text-muted {
+        font-size: 0.73rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
 
-      /* Decorative line — tighter */
-      .menu-modal-content .my-1 { margin-top: 3px !important; margin-bottom: 3px !important; }
-
-      /* Subtitle — smaller */
-      .menu-modal-content .modal-header p {
+      /* Sub-section titles inside section body */
+      .menu-section-card h4.h6 {
         font-size: 0.72rem !important;
-        margin-bottom: 6px !important;
-        letter-spacing: 0.3px !important;
+        padding: 8px 12px 4px !important;
+        margin: 0 !important;
+        letter-spacing: 0.5px !important;
       }
 
-      /* Share button — compact */
-      .menu-modal-content .menu-dl-btn {
-        font-size: 0.72rem !important;
-        padding: 5px 14px !important;
+      /* Bullet lists inside cards */
+      .menu-section-card ul.list-unstyled li {
+        font-size: 0.75rem !important;
+        line-height: 1.35 !important;
+        padding: 3px 12px !important;
       }
 
-      /* Modal body — max height fills remaining screen */
-      .menu-modal-body {
-        max-height: calc(100dvh - 200px) !important;
-        padding: 14px !important;
-        flex: 1 !important;
-        overflow-y: auto !important;
-      }
-
-      /* Section cards — tighter on mobile */
-      .menu-section-card.p-3.p-md-4 {
-        padding: 12px !important;
-      }
-
-      /* Item cards — full width single col on mobile */
-      .menu-item-card {
-        padding: 10px !important;
-      }
-
-      /* Modal footer — compact, no text wrap */
+      /* 7. FOOTER — sticky, single row, compact */
       .menu-modal-footer {
-        padding: 8px 10px !important;
         flex-shrink: 0 !important;
+        padding: 8px 10px !important;
+        border-top: 1px solid #E8DFD1 !important;
+        background: #fff !important;
       }
-      .menu-modal-footer .small {
-        font-size: 0.68rem !important;
-      }
-      .menu-modal-footer .d-flex.align-items-center.gap-2 {
+      .menu-modal-footer > div:first-child { display: none !important; } /* hide label on mobile */
+      .menu-modal-footer > div:last-child {
+        width: 100% !important;
         gap: 6px !important;
       }
-      /* Footer buttons — smaller on mobile */
       .menu-modal-footer .btn,
       .menu-modal-footer button {
-        font-size: 0.68rem !important;
-        padding: 6px 10px !important;
+        font-size: 0.72rem !important;
+        padding: 8px 0 !important;
+        flex: 1 1 0 !important;
         white-space: nowrap !important;
-      }
-      /* Hide crown icon label text, keep icon */
-      .menu-modal-footer .small .fa-crown,
-      .menu-modal-footer .small .fa-gem,
-      .menu-modal-footer .small .fa-scroll {
-        display: inline !important;
+        text-align: center !important;
+        justify-content: center !important;
+        border-radius: 8px !important;
       }
     }
 
-    /* ── TABLET (576px–767px) ────────────────────────────────────── */
+    /* ── TABLET (576px–767px) — moderate compaction ─────────────── */
     @media (min-width: 576px) and (max-width: 767.98px) {
       .menu-modal-content .modal-header h2 {
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
         margin: 0 46px !important;
       }
-      .menu-modal-body {
-        max-height: 60vh !important;
-      }
+      .menu-modal-body { max-height: 60vh !important; }
       .menu-modal-footer .btn,
       .menu-modal-footer button {
         font-size: 0.75rem !important;
