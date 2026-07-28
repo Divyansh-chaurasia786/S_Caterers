@@ -777,11 +777,37 @@
       overflow: hidden !important;
       cursor: pointer !important;
       box-sizing: border-box !important;
-    }
+    /* Custom Event Card (Card 4 Signature Gold Styling) */
     .occasion-card.custom-card {
       border: 2px solid #C6A15B !important;
       background: #FFFDF9 !important;
       box-shadow: 0 10px 30px rgba(198, 161, 91, 0.15) !important;
+    }
+    .occasion-card.custom-card .event-icon-badge {
+      background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 6px 16px rgba(138, 107, 27, 0.3) !important;
+    }
+    .occasion-card.custom-card .event-tag-pill {
+      background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+    }
+    .occasion-card.custom-card .event-title {
+      color: #7A1C2B !important;
+    }
+    .occasion-card.custom-card a.select-package,
+    .occasion-card.custom-card .btn-gold,
+    .occasion-card.custom-card .btn-wine {
+      background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 14px rgba(138, 107, 27, 0.25) !important;
+    }
+    .occasion-card.custom-card:hover a.select-package,
+    .occasion-card.custom-card:hover .btn-gold,
+    .occasion-card.custom-card:hover .btn-wine {
+      background: linear-gradient(135deg, #D4AF37 0%, #9B7820 100%) !important;
+      box-shadow: 0 8px 22px rgba(138, 107, 27, 0.4) !important;
     }
     .occasion-card:hover {
       transform: translateY(-8px) !important;
@@ -1024,9 +1050,9 @@
         display: none !important;
       }
       .mobile-swipe-deck > [class*="col-"] {
-        flex: 0 0 85% !important;
-        max-width: 85% !important;
-        width: 85% !important;
+        flex: 0 0 88% !important;
+        max-width: 88% !important;
+        width: 88% !important;
         scroll-snap-align: center !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -1034,9 +1060,9 @@
         flex-direction: column !important;
       }
       .occasion-card {
-        padding: 1.6rem 1.25rem 1.6rem 1.25rem !important;
+        padding: 1.5rem 1.15rem 1.5rem 1.15rem !important;
         height: 100% !important;
-        min-height: 335px !important;
+        min-height: 330px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1113,11 +1139,6 @@
         justify-content: center !important;
         text-align: center !important;
         padding: 0 12px !important;
-        font-size: 0.82rem !important;
-        font-weight: 800 !important;
-        border-radius: 12px !important;
-        margin-top: auto !important;
-        flex-shrink: 0 !important;
         box-sizing: border-box !important;
         position: relative !important;
         z-index: 2 !important;
@@ -1809,20 +1830,21 @@
 
         <!-- 4. Corporate & Custom Events -->
         <div class="col-12 col-md-6 col-lg-6">
-          <div class="occasion-card animate-on-scroll select-package" data-event="Custom Event Catering">
+          <div class="occasion-card animate-on-scroll select-package custom-card" data-event="Custom Event Catering">
             <div class="card-top-header">
               <div class="event-icon-badge">
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
               </div>
-              <span class="event-tag-pill"><i class="fa-solid fa-star me-1" style="color: #C6A15B;"></i> ANY SCALE EVENT</span>
+              <span class="event-tag-pill"><i class="fa-solid fa-star me-1" style="color: #FFF;"></i> ANY SCALE EVENT</span>
             </div>
             <div class="occasion-content">
               <h3 class="event-title">Corporate &amp; Custom Events</h3>
               <p class="event-desc">Executive luncheons, Pujas (Satvik/Jain), corporate galas, or any customized pure-veg gathering of any size.</p>
-              <a href="#inquiry" class="btn-wine select-package" data-event="Custom Event Catering" data-package="Custom Event Catering">Book Custom Catering</a>
+              <a href="#inquiry" class="btn-gold select-package" data-event="Custom Event Catering" data-package="Custom Event Catering">Book Custom Catering</a>
             </div>
           </div>
         </div>
+
 
 
 
