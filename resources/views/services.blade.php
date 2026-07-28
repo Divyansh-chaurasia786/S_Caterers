@@ -514,21 +514,30 @@
     }
     
     .royal-badge {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--gold);
-      color: var(--charcoal);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 16px;
-      border-radius: 20px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      z-index: 10;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      position: absolute !important;
+      top: -14px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+      color: #FFFFFF !important;
+      font-size: 0.72rem !important;
+      font-weight: 800 !important;
+      padding: 6px 18px !important;
+      border-radius: 20px !important;
+      letter-spacing: 0.6px !important;
+      text-transform: uppercase !important;
+      z-index: 10 !important;
+      white-space: nowrap !important;
+      box-shadow: 0 4px 14px rgba(198, 161, 91, 0.4) !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+    }
+    .royal-badge.vip-badge {
+      background: linear-gradient(135deg, #4B1F82 0%, #6A3FA0 100%) !important;
+      color: #FFD700 !important;
+      box-shadow: 0 4px 14px rgba(75, 31, 130, 0.4) !important;
+      border: 1px solid rgba(255, 215, 0, 0.4) !important;
     }
     
     *:focus, *:focus-visible {
@@ -1665,8 +1674,8 @@
 
         <!-- Royal Menu -->
         <div class="col-md-6 col-lg-3">
-          <div class="pkg-custom-card royal-active animate-on-scroll" style="padding: 1.8rem 1.1rem;">
-            <div class="royal-badge">Chef's Signature</div>
+          <div class="pkg-custom-card royal-active animate-on-scroll" style="padding: 1.8rem 1.1rem; overflow: visible !important; position: relative !important;">
+            <div class="royal-badge"><i class="fa-solid fa-crown me-1" style="color: #FFD700;"></i> Chef's Signature</div>
             <div class="pkg-header">
               <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
               <h3>Royal Menu</h3>
@@ -1690,8 +1699,8 @@
 
         <!-- VIP Menu -->
         <div class="col-md-6 col-lg-3">
-          <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative; padding: 1.8rem 1.1rem;">
-            <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">’¢Ã¢₹Å“€š¦ Most Premium</div>
+          <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative !important; overflow: visible !important; padding: 1.8rem 1.1rem;">
+            <div class="royal-badge vip-badge"><i class="fa-solid fa-gem me-1" style="color: #FFD700;"></i> Most Premium</div>
             <div class="pkg-header">
               <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
               <h3 style="color: #3A1060;">VIP Menu</h3>
@@ -1767,8 +1776,8 @@
           
           <!-- Royal Menu -->
           <div class="col-12">
-            <div class="pkg-custom-card royal-active animate-on-scroll">
-              <div class="royal-badge">Chef's Signature</div>
+            <div class="pkg-custom-card royal-active animate-on-scroll" style="overflow: visible !important; position: relative !important;">
+              <div class="royal-badge"><i class="fa-solid fa-crown me-1" style="color: #FFD700;"></i> Chef's Signature</div>
               <div class="pkg-header">
                 <div class="icon" style="color: var(--gold);"><i class="fa-solid fa-crown"></i></div>
                 <h3>Royal Menu</h3>
@@ -1792,8 +1801,8 @@
 
           <!-- VIP Menu (Mobile) -->
           <div class="col-12">
-            <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative;">
-              <div class="royal-badge" style="background: linear-gradient(135deg, #4B1F82, #6A3FA0); color: #FFD700;">’¢Ã¢₹Å“€š¦ Most Premium</div>
+            <div class="pkg-custom-card animate-on-scroll" style="border: 2px solid #6A3FA0; background: linear-gradient(160deg, #F9F5FF 0%, #F3EBF9 100%); position: relative !important; overflow: visible !important;">
+              <div class="royal-badge vip-badge"><i class="fa-solid fa-gem me-1" style="color: #FFD700;"></i> Most Premium</div>
               <div class="pkg-header">
                 <div class="icon" style="color: #6A3FA0;"><i class="fa-solid fa-gem"></i></div>
                 <h3 style="color: #3A1060;">VIP Menu</h3>
