@@ -1065,9 +1065,9 @@
         flex-direction: column !important;
       }
       .occasion-card {
-        padding: 1.5rem 1.2rem 1.5rem 1.2rem !important;
+        padding: 2.2rem 1.25rem 1.6rem 1.25rem !important;
         height: 100% !important;
-        min-height: 330px !important;
+        min-height: 350px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1084,8 +1084,8 @@
         align-items: center !important;
         justify-content: space-between !important;
         width: 100% !important;
-        margin-top: 0 !important;
-        margin-bottom: 14px !important;
+        margin-top: 4px !important;
+        margin-bottom: 16px !important;
         position: relative !important;
         top: 0 !important;
       }
