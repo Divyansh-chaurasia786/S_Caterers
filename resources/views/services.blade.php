@@ -75,6 +75,127 @@
       padding-right: 52px !important; /* leave space for close btn */
     }
 
+    /* ── MOBILE RESPONSIVE OVERRIDES (≤ 575px) ─────────────────── */
+    @media (max-width: 575.98px) {
+
+      /* Full-screen modal on phones */
+      .modal-xl.modal-dialog {
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+      }
+      .modal-xl .modal-content,
+      .menu-modal-content {
+        border-radius: 0 !important;
+        height: 100dvh !important;
+        max-height: 100dvh !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      /* Compact modal header on mobile */
+      .menu-modal-content .w-100.px-4.pt-3.pb-2 {
+        padding: 10px 14px 8px !important;
+      }
+      .menu-modal-content .modal-header > .w-100 {
+        padding-right: 46px !important;
+      }
+
+      /* Brand pill — hide on very small screens */
+      .menu-modal-content .d-inline-flex.align-items-center.gap-2.px-2.py-1 {
+        display: none !important;
+      }
+      .menu-modal-content .d-flex.align-items-center.justify-content-center.mb-2 {
+        margin-bottom: 4px !important;
+      }
+
+      /* Title — much smaller on mobile */
+      .menu-modal-content .modal-header h2 {
+        font-size: 1.1rem !important;
+        letter-spacing: 1.5px !important;
+        margin: 0 40px !important;
+        line-height: 1.2 !important;
+      }
+
+      /* Decorative line — tighter */
+      .menu-modal-content .my-1 { margin-top: 3px !important; margin-bottom: 3px !important; }
+
+      /* Subtitle — smaller */
+      .menu-modal-content .modal-header p {
+        font-size: 0.72rem !important;
+        margin-bottom: 6px !important;
+        letter-spacing: 0.3px !important;
+      }
+
+      /* Share button — compact */
+      .menu-modal-content .menu-dl-btn {
+        font-size: 0.72rem !important;
+        padding: 5px 14px !important;
+      }
+
+      /* Modal body — max height fills remaining screen */
+      .menu-modal-body {
+        max-height: calc(100dvh - 200px) !important;
+        padding: 14px !important;
+        flex: 1 !important;
+        overflow-y: auto !important;
+      }
+
+      /* Section cards — tighter on mobile */
+      .menu-section-card.p-3.p-md-4 {
+        padding: 12px !important;
+      }
+
+      /* Item cards — full width single col on mobile */
+      .menu-item-card {
+        padding: 10px !important;
+      }
+
+      /* Modal footer — compact, no text wrap */
+      .menu-modal-footer {
+        padding: 8px 10px !important;
+        flex-shrink: 0 !important;
+      }
+      .menu-modal-footer .small {
+        font-size: 0.68rem !important;
+      }
+      .menu-modal-footer .d-flex.align-items-center.gap-2 {
+        gap: 6px !important;
+      }
+      /* Footer buttons — smaller on mobile */
+      .menu-modal-footer .btn,
+      .menu-modal-footer button {
+        font-size: 0.68rem !important;
+        padding: 6px 10px !important;
+        white-space: nowrap !important;
+      }
+      /* Hide crown icon label text, keep icon */
+      .menu-modal-footer .small .fa-crown,
+      .menu-modal-footer .small .fa-gem,
+      .menu-modal-footer .small .fa-scroll {
+        display: inline !important;
+      }
+    }
+
+    /* ── TABLET (576px–767px) ────────────────────────────────────── */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .menu-modal-content .modal-header h2 {
+        font-size: 1.3rem !important;
+        margin: 0 46px !important;
+      }
+      .menu-modal-body {
+        max-height: 60vh !important;
+      }
+      .menu-modal-footer .btn,
+      .menu-modal-footer button {
+        font-size: 0.75rem !important;
+        padding: 7px 12px !important;
+        white-space: nowrap !important;
+      }
+    }
+
     /* Modal body — always scrollable, header never takes too much space */
     .menu-modal-body {
       background: #F7F4EF;
@@ -2638,10 +2759,10 @@
           </div>
           <div class="d-flex align-items-center gap-2">
             <button onclick="shareMenu('silver')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#C6A15B;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(198,161,91,0.4);">
-            <i class="fa-solid fa-share-nodes"></i> Share Menu
+            <i class="fa-solid fa-share-nodes"></i> <span class="d-none d-sm-inline">Share Menu</span><span class="d-inline d-sm-none">Share</span>
           </button>
-            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Silver Menu', 'silverMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Silver Menu Now</button>
+            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;"><span class="d-none d-sm-inline">Close Window</span><span class="d-inline d-sm-none">Close</span></button>
+            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Silver Menu', 'silverMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> <span class="d-none d-sm-inline">Book Silver Menu Now</span><span class="d-inline d-sm-none">Book Silver</span></button>
           </div>
         </div>
 
@@ -3295,10 +3416,10 @@
           </div>
           <div class="d-flex align-items-center gap-2">
             <button onclick="shareMenu('gold')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#D4AF37;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(212,175,55,0.4);">
-            <i class="fa-solid fa-share-nodes"></i> Share Menu
+            <i class="fa-solid fa-share-nodes"></i> <span class="d-none d-sm-inline">Share Menu</span><span class="d-inline d-sm-none">Share</span>
           </button>
-            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Gold Menu', 'goldMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Gold Menu Now</button>
+            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;"><span class="d-none d-sm-inline">Close Window</span><span class="d-inline d-sm-none">Close</span></button>
+            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Gold Menu', 'goldMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> <span class="d-none d-sm-inline">Book Gold Menu Now</span><span class="d-inline d-sm-none">Book Gold</span></button>
           </div>
         </div>
 
@@ -3780,10 +3901,10 @@
           </div>
           <div class="d-flex align-items-center gap-2">
             <button onclick="shareMenu('royal')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#FFD700;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(255,215,0,0.4);">
-            <i class="fa-solid fa-share-nodes"></i> Share Menu
+            <i class="fa-solid fa-share-nodes"></i> <span class="d-none d-sm-inline">Share Menu</span><span class="d-inline d-sm-none">Share</span>
           </button>
-            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Royal Menu', 'royalMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Royal Menu Now</button>
+            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;"><span class="d-none d-sm-inline">Close Window</span><span class="d-inline d-sm-none">Close</span></button>
+            <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Royal Menu', 'royalMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> <span class="d-none d-sm-inline">Book Royal Menu Now</span><span class="d-inline d-sm-none">Book Royal</span></button>
           </div>
         </div>
 
@@ -4177,10 +4298,10 @@
           </div>
           <div class="d-flex align-items-center gap-2">
             <button onclick="shareMenu('vip')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#9B59B6;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(155,89,182,0.4);">
-            <i class="fa-solid fa-share-nodes"></i> Share Menu
+            <i class="fa-solid fa-share-nodes"></i> <span class="d-none d-sm-inline">Share Menu</span><span class="d-inline d-sm-none">Share</span>
           </button>
-            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
-            <button type="button" class="btn px-4 py-2 fw-bold" onclick="bookMenuFromModal('VIP Menu', 'vipMenuModal')"><i class="fa-solid fa-calendar-check me-1"></i> Book VIP Menu Now</button>
+            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;"><span class="d-none d-sm-inline">Close Window</span><span class="d-inline d-sm-none">Close</span></button>
+            <button type="button" class="btn px-4 py-2 fw-bold" onclick="bookMenuFromModal('VIP Menu', 'vipMenuModal')"><i class="fa-solid fa-calendar-check me-1"></i> <span class="d-none d-sm-inline">Book VIP Menu Now</span><span class="d-inline d-sm-none">Book VIP</span></button>
           </div>
         </div>
 
@@ -4722,9 +4843,9 @@
           </div>
           <div class="d-flex align-items-center gap-2">
             <button onclick="shareMenu('full')" class="btn fw-bold d-inline-flex align-items-center gap-1" style="border-radius:8px;font-size:0.82rem;background:#D4AF37;color:#fff;border:none;padding:8px 16px;box-shadow:0 4px 12px rgba(212,175,55,0.4);">
-            <i class="fa-solid fa-share-nodes"></i> Share Menu
+            <i class="fa-solid fa-share-nodes"></i> <span class="d-none d-sm-inline">Share Menu</span><span class="d-inline d-sm-none">Share</span>
           </button>
-            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;">Close Window</button>
+            <button type="button" class="btn btn-outline-secondary px-3 py-2 fw-bold" data-bs-dismiss="modal" style="border-radius: 8px;"><span class="d-none d-sm-inline">Close Window</span><span class="d-inline d-sm-none">Close</span></button>
             <button type="button" class="btn btn-gold px-4 py-2 fw-bold" onclick="bookMenuFromModal('Full Menu', 'fullMenuModal')" style="border-radius: 8px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #fff; border: none;"><i class="fa-solid fa-calendar-check me-1"></i> Book Custom Menu Now</button>
           </div>
         </div>
