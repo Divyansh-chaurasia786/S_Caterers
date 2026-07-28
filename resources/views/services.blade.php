@@ -1006,6 +1006,22 @@
         opacity: 1 !important;
         background: #7A1C2B !important;
       }
+    }
+
+    /* Desktop Mode: occasion-card buttons half / compact width */
+    @media (min-width: 768px) {
+      .occasion-card .occasion-footer a,
+      .occasion-card a.select-package {
+        width: auto !important;
+        max-width: max-content !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 24px !important;
+        font-size: 0.88rem !important;
+      }
+    }
+
       .services-hero {
         padding: 28px 16px !important;
       }
