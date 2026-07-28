@@ -109,14 +109,14 @@
         flex-shrink: 0 !important;
         overflow: visible !important;
       }
-      /* Content wrapper becomes a flex row */
+      /* Content wrapper becomes a flex row with right space for close btn */
       .menu-modal-content .w-100.px-4.pt-3.pb-2 {
-        padding: 0 12px 0 12px !important;
+        padding: 0 48px 0 12px !important;
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
         min-height: 56px !important;
-        gap: 10px !important;
+        gap: 8px !important;
       }
       /* --- Brand pill row → LEFT logo --- */
       .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.mb-2 {
@@ -158,38 +158,24 @@
       .menu-modal-content .modal-header p {
         display: none !important;
       }
-      /* --- Action row → RIGHT share button --- */
-      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.gap-2.pb-0 {
-        display: flex !important;
-        flex-shrink: 0 !important;
-        padding: 0 !important;
-        order: 3 !important;
+      /* --- Header Share button → HIDE on mobile --- */
+      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.gap-2.pb-0,
+      .menu-modal-content .modal-header .menu-dl-btn {
+        display: none !important;
       }
-      /* Share button: PERFECT CIRCLE, icon only */
-      .menu-modal-content .menu-dl-btn {
+      /* --- Close button (✕) → SHOW on mobile right --- */
+      .menu-close-btn {
         display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        right: 10px !important;
         width: 36px !important;
         height: 36px !important;
         min-width: 36px !important;
         max-width: 36px !important;
-        padding: 0 !important;
-        font-size: 0 !important;
-        line-height: 0 !important;
-        border-radius: 50% !important;
-        box-shadow: none !important;
-        letter-spacing: 0 !important;
-        flex-shrink: 0 !important;
-      }
-      .menu-modal-content .menu-dl-btn i {
-        font-size: 0.9rem !important;
-        margin: 0 !important;
-        line-height: 1 !important;
-      }
-      /* Close button — HIDE on mobile */
-      .menu-close-btn {
-        display: none !important;
+        font-size: 1rem !important;
+        z-index: 200 !important;
       }
 
       /* 3. BODY — fill all remaining space, smooth scroll */
