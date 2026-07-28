@@ -1060,7 +1060,7 @@
         flex-direction: column !important;
       }
       .occasion-card {
-        padding: 1.5rem 1.15rem 1.5rem 1.15rem !important;
+        padding: 1.5rem 1.2rem 1.5rem 1.2rem !important;
         height: 100% !important;
         min-height: 330px !important;
         display: flex !important;
@@ -1087,20 +1087,31 @@
       .occasion-card .event-icon-badge {
         width: 44px !important;
         height: 44px !important;
-        font-size: 1.15rem !important;
-        margin: 0 !important;
         border-radius: 12px !important;
+        background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important;
+        color: #D4AF37 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.15rem !important;
+        box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25) !important;
+        margin: 0 !important;
         flex-shrink: 0 !important;
-        box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;
         position: static !important;
       }
       .occasion-card .event-tag-pill {
+        background: #FFF8EB !important;
+        color: #8A6B1B !important;
+        border: 1px solid #E8D09E !important;
         font-size: 0.68rem !important;
         font-weight: 800 !important;
+        letter-spacing: 0.4px !important;
         padding: 5px 10px !important;
+        border-radius: 20px !important;
+        display: inline-flex !important;
+        align-items: center !important;
         margin: 0 !important;
         white-space: nowrap !important;
-        border-radius: 20px !important;
         position: static !important;
       }
       .occasion-card .occasion-content {
@@ -1116,7 +1127,7 @@
         font-weight: 800 !important;
         text-align: center !important;
         margin: 6px 0 8px 0 !important;
-        font-family: 'Playfair Display', serif !important;
+        font-family: 'Playfair Display', Georgia, serif !important;
         color: #1F1510 !important;
       }
       .occasion-card .event-desc {
@@ -1130,6 +1141,12 @@
       .occasion-card a.select-package,
       .occasion-card .btn-wine,
       .occasion-card .btn-gold {
+        background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important;
+        color: #FFFFFF !important;
+        text-decoration: none !important;
+        font-weight: 800 !important;
+        border: none !important;
+        border-radius: 12px !important;
         width: 100% !important;
         height: 48px !important;
         min-height: 48px !important;
@@ -1139,9 +1156,42 @@
         justify-content: center !important;
         text-align: center !important;
         padding: 0 12px !important;
+        font-size: 0.84rem !important;
+        letter-spacing: 0.3px !important;
+        box-shadow: 0 4px 14px rgba(122, 28, 43, 0.25) !important;
+        margin-top: auto !important;
+        flex-shrink: 0 !important;
         box-sizing: border-box !important;
+        white-space: nowrap !important;
         position: relative !important;
         z-index: 2 !important;
+      }
+
+      /* Custom Card Gold Mobile Overrides */
+      .occasion-card.custom-card {
+        background: #FFFDF9 !important;
+        border: 2px solid #C6A15B !important;
+        box-shadow: 0 6px 22px rgba(198, 161, 91, 0.15) !important;
+      }
+      .occasion-card.custom-card .event-icon-badge {
+        background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 4px 12px rgba(138, 107, 27, 0.3) !important;
+      }
+      .occasion-card.custom-card .event-tag-pill {
+        background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+        color: #FFFFFF !important;
+        border: none !important;
+      }
+      .occasion-card.custom-card .event-title {
+        color: #7A1C2B !important;
+      }
+      .occasion-card.custom-card a.select-package,
+      .occasion-card.custom-card .btn-gold,
+      .occasion-card.custom-card .btn-wine {
+        background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 4px 14px rgba(138, 107, 27, 0.25) !important;
       }
 
       /* Pagination dots styling */
