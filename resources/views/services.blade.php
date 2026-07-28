@@ -883,11 +883,76 @@
       -moz-appearance: textfield;
     }
     
+    /* Mobile Horizontal Swipe Decks (Packages, Events, Live Counters) */
     @media (max-width: 767.98px) {
       .mobile-swipe-deck {
-        justify-content: flex-start !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
         padding-left: 16px !important;
         padding-right: 16px !important;
+        padding-bottom: 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        gap: 16px !important;
+        scrollbar-width: none !important;
+      }
+      .mobile-swipe-deck::-webkit-scrollbar {
+        display: none !important;
+      }
+      .mobile-swipe-deck > [class*="col-"] {
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        width: 85% !important;
+        scroll-snap-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .occasion-card {
+        padding: 1.25rem !important;
+        height: 100% !important;
+        min-height: 260px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+        background: #FFFFFF !important;
+        border-radius: 16px !important;
+      }
+      .occasion-card .event-title {
+        font-size: 1.15rem !important;
+        margin: 6px 0 !important;
+      }
+      .occasion-card .event-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+      }
+
+      /* Pagination dots styling */
+      .carousel-dots {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-top: 14px !important;
+      }
+      .carousel-dot {
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 50% !important;
+        background: #C6A15B !important;
+        opacity: 0.35 !important;
+        transition: all 0.3s ease !important;
+        cursor: pointer !important;
+        display: inline-block !important;
+      }
+      .carousel-dot.active {
+        width: 22px !important;
+        border-radius: 10px !important;
+        opacity: 1 !important;
+        background: #7A1C2B !important;
       }
       .services-hero {
         padding: 28px 16px !important;
