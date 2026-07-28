@@ -111,12 +111,12 @@
       }
       /* Content wrapper becomes a flex row */
       .menu-modal-content .w-100.px-4.pt-3.pb-2 {
-        padding: 0 50px 0 10px !important;
+        padding: 0 12px 0 12px !important;
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
-        min-height: 54px !important;
-        gap: 6px !important;
+        min-height: 56px !important;
+        gap: 10px !important;
       }
       /* --- Brand pill row → LEFT logo --- */
       .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.mb-2 {
@@ -133,9 +133,9 @@
         backdrop-filter: none !important;
       }
       .menu-modal-content .modal-header img {
-        height: 26px !important;
+        height: 34px !important;
         width: auto !important;
-        filter: brightness(1.4) !important;
+        filter: brightness(1.5) !important;
       }
       /* Hide the text inside pill */
       .menu-modal-content .modal-header .d-inline-flex.gap-2 span {
@@ -145,9 +145,9 @@
       .menu-modal-content .modal-header h2 {
         flex: 1 1 auto !important;
         text-align: center !important;
-        font-size: 0.82rem !important;
+        font-size: 0.8rem !important;
         letter-spacing: 1.5px !important;
-        line-height: 1.1 !important;
+        line-height: 1.2 !important;
         margin: 0 !important;
         order: 2 !important;
         white-space: normal !important;
@@ -158,39 +158,38 @@
       .menu-modal-content .modal-header p {
         display: none !important;
       }
-      /* --- Action row → RIGHT share icon --- */
+      /* --- Action row → RIGHT share button --- */
       .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.gap-2.pb-0 {
         display: flex !important;
         flex-shrink: 0 !important;
         padding: 0 !important;
         order: 3 !important;
       }
-      /* Share button: icon only, compact */
+      /* Share button: PERFECT CIRCLE, icon only */
       .menu-modal-content .menu-dl-btn {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        padding: 7px 9px !important;
-        font-size: 0 !important;        /* hide text */
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
+        padding: 0 !important;
+        font-size: 0 !important;
         line-height: 0 !important;
         border-radius: 50% !important;
-        min-width: 32px !important;
-        height: 32px !important;
         box-shadow: none !important;
         letter-spacing: 0 !important;
+        flex-shrink: 0 !important;
       }
       .menu-modal-content .menu-dl-btn i {
-        font-size: 0.88rem !important;
+        font-size: 0.9rem !important;
         margin: 0 !important;
+        line-height: 1 !important;
       }
-      /* Close button — vertically centred at right edge */
+      /* Close button — HIDE on mobile */
       .menu-close-btn {
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        right: 8px !important;
-        width: 32px !important;
-        height: 32px !important;
-        font-size: 0.95rem !important;
+        display: none !important;
       }
 
       /* 3. BODY — fill all remaining space, smooth scroll */
