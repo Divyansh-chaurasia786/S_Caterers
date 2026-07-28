@@ -765,7 +765,7 @@
       background: #FFFFFF !important;
       border: 1.5px solid #E6D8C3 !important;
       border-radius: 20px !important;
-      padding: 2.2rem 2rem !important;
+      padding: 2rem !important;
       box-shadow: 0 10px 30px rgba(44, 26, 17, 0.06) !important;
       transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
       display: flex !important;
@@ -788,9 +788,16 @@
       box-shadow: 0 20px 45px rgba(122, 28, 43, 0.12), 0 8px 24px rgba(198, 161, 91, 0.15) !important;
       border-color: #C6A15B !important;
     }
+    .occasion-card .card-top-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      margin-bottom: 1.25rem !important;
+    }
     .occasion-card .event-icon-badge {
-      width: 54px !important;
-      height: 54px !important;
+      width: 52px !important;
+      height: 52px !important;
       border-radius: 14px !important;
       background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important;
       color: #D4AF37 !important;
@@ -800,18 +807,11 @@
       font-size: 1.35rem !important;
       box-shadow: 0 6px 16px rgba(122, 28, 43, 0.22) !important;
       transition: transform 0.35s ease !important;
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 0 !important;
       flex-shrink: 0 !important;
     }
     .occasion-card:hover .event-icon-badge {
       transform: scale(1.08) rotate(4deg) !important;
-    }
-    .occasion-card .occasion-content {
-      display: flex !important;
-      flex-direction: column !important;
-      flex: 1 1 auto !important;
-      justify-content: space-between !important;
-      width: 100% !important;
     }
     .occasion-card .event-tag-pill {
       background: #FFF8EB !important;
@@ -824,16 +824,24 @@
       border-radius: 20px !important;
       display: inline-flex !important;
       align-items: center !important;
-      align-self: flex-start !important;
-      margin-bottom: 0.75rem !important;
+      margin-bottom: 0 !important;
+    }
+    .occasion-card .occasion-content {
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 1 auto !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      text-align: center !important;
     }
     .occasion-card .event-title {
       font-size: 1.35rem !important;
       font-weight: 800 !important;
       color: #1F1510 !important;
-      margin: 0 0 0.6rem 0 !important;
+      margin: 6px 0 8px 0 !important;
       font-family: 'Playfair Display', Georgia, serif !important;
       line-height: 1.3 !important;
+      text-align: center !important;
     }
     .occasion-card .event-desc {
       font-size: 0.92rem !important;
@@ -841,6 +849,7 @@
       line-height: 1.65 !important;
       color: #4A3E39 !important;
       margin-bottom: 1.5rem !important;
+      text-align: center !important;
     }
     .occasion-card a.select-package,
     .occasion-card .btn-wine,
@@ -855,10 +864,13 @@
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
+      text-align: center !important;
       font-size: 0.9rem !important;
       letter-spacing: 0.4px !important;
       box-shadow: 0 4px 14px rgba(122, 28, 43, 0.2) !important;
       margin-top: auto !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
       transition: all 0.3s ease !important;
       box-sizing: border-box !important;
     }
@@ -868,6 +880,7 @@
       box-shadow: 0 8px 20px rgba(122, 28, 43, 0.35) !important;
       transform: translateY(-2px) !important;
     }
+
 
 
     /* Scroll Entrance Animation Classes */
@@ -1027,7 +1040,7 @@
       .occasion-card {
         padding: 1.25rem 1.15rem 1.25rem 1.15rem !important;
         height: 100% !important;
-        min-height: 270px !important;
+        min-height: 290px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1038,13 +1051,25 @@
         box-sizing: border-box !important;
         overflow: visible !important;
       }
+      .occasion-card .card-top-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+      }
       .occasion-card .event-icon-badge {
         width: 46px !important;
         height: 46px !important;
-        font-size: 1.2rem !important;
-        margin-bottom: 12px !important;
+        font-size: 1.15rem !important;
+        margin-bottom: 0 !important;
         border-radius: 12px !important;
         flex-shrink: 0 !important;
+      }
+      .occasion-card .event-tag-pill {
+        font-size: 0.68rem !important;
+        padding: 4px 10px !important;
+        margin-bottom: 0 !important;
       }
       .occasion-card .occasion-content {
         display: flex !important;
@@ -1052,15 +1077,18 @@
         flex: 1 1 auto !important;
         justify-content: space-between !important;
         width: 100% !important;
+        text-align: center !important;
       }
       .occasion-card .event-title {
         font-size: 1.2rem !important;
-        margin: 6px 0 !important;
+        text-align: center !important;
+        margin: 6px 0 6px 0 !important;
       }
       .occasion-card .event-desc {
         font-size: 0.85rem !important;
         line-height: 1.5 !important;
         margin-bottom: 1rem !important;
+        text-align: center !important;
         color: #4A3E39 !important;
       }
       .occasion-card a.select-package,
@@ -1070,7 +1098,8 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        padding: 12px 16px !important;
+        text-align: center !important;
+        padding: 11px 16px !important;
         font-size: 0.88rem !important;
         font-weight: 800 !important;
         border-radius: 12px !important;
@@ -1717,11 +1746,13 @@
         <!-- 1. Weddings & Receptions -->
         <div class="col-12 col-md-6 col-lg-6">
           <div class="occasion-card animate-on-scroll select-package" data-event="Wedding &amp; Grand Reception">
-            <div class="event-icon-badge">
-              <i class="fa-solid fa-ring"></i>
+            <div class="card-top-header">
+              <div class="event-icon-badge">
+                <i class="fa-solid fa-ring"></i>
+              </div>
+              <span class="event-tag-pill"><i class="fa-solid fa-crown me-1" style="color: #C6A15B;"></i> GRAND CELEBRATIONS</span>
             </div>
             <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-crown me-1" style="color: #C6A15B;"></i> GRAND CELEBRATIONS</span>
               <h3 class="event-title">Weddings &amp; Receptions</h3>
               <p class="event-desc">Royal Rajwada 100% pure veg feasts, imperial buffet lanes, white-glove thali service &amp; live chef counters.</p>
               <a href="#inquiry" class="btn-wine select-package" data-event="Wedding &amp; Grand Reception" data-package="Wedding &amp; Grand Reception">Book Wedding Catering</a>
@@ -1732,11 +1763,13 @@
         <!-- 2. Engagements & Roka -->
         <div class="col-12 col-md-6 col-lg-6">
           <div class="occasion-card animate-on-scroll select-package" data-event="Engagement &amp; Roka Ceremony">
-            <div class="event-icon-badge">
-              <i class="fa-solid fa-heart"></i>
+            <div class="card-top-header">
+              <div class="event-icon-badge">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <span class="event-tag-pill"><i class="fa-solid fa-sparkles me-1" style="color: #C6A15B;"></i> INTIMATE CEREMONIES</span>
             </div>
             <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-sparkles me-1" style="color: #C6A15B;"></i> INTIMATE CEREMONIES</span>
               <h3 class="event-title">Engagements &amp; Roka</h3>
               <p class="event-desc">Chic ring ceremony catering, mocktail bar lounges, live gourmet starter passes &amp; elegant dining decor.</p>
               <a href="#inquiry" class="btn-wine select-package" data-event="Engagement &amp; Roka Ceremony" data-package="Engagement &amp; Roka Ceremony">Book Engagement Catering</a>
@@ -1747,11 +1780,13 @@
         <!-- 3. Birthdays & Social Parties -->
         <div class="col-12 col-md-6 col-lg-6">
           <div class="occasion-card animate-on-scroll select-package" data-event="Birthday Party &amp; Milestone">
-            <div class="event-icon-badge">
-              <i class="fa-solid fa-cake-candles"></i>
+            <div class="card-top-header">
+              <div class="event-icon-badge">
+                <i class="fa-solid fa-cake-candles"></i>
+              </div>
+              <span class="event-tag-pill"><i class="fa-solid fa-gift me-1" style="color: #C6A15B;"></i> MILESTONE PARTIES</span>
             </div>
             <div class="occasion-content">
-              <span class="event-tag-pill"><i class="fa-solid fa-gift me-1" style="color: #C6A15B;"></i> MILESTONE PARTIES</span>
               <h3 class="event-title">Birthdays &amp; Parties</h3>
               <p class="event-desc">Vibrant live Dilli chaat, wok-tossed Chinese noodles, live jalebi rabri counters &amp; custom mocktail bars.</p>
               <a href="#inquiry" class="btn-wine select-package" data-event="Birthday Party &amp; Milestone" data-package="Birthday Party &amp; Milestone">Book Birthday Catering</a>
@@ -1762,17 +1797,20 @@
         <!-- 4. Corporate & Custom Events -->
         <div class="col-12 col-md-6 col-lg-6">
           <div class="occasion-card animate-on-scroll select-package custom-card" data-event="Custom Event Catering">
-            <div class="event-icon-badge" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; box-shadow: 0 6px 16px rgba(138, 107, 27, 0.3) !important;">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div class="card-top-header">
+              <div class="event-icon-badge" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; box-shadow: 0 6px 16px rgba(138, 107, 27, 0.3) !important;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <span class="event-tag-pill" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; border: none !important;"><i class="fa-solid fa-star me-1" style="color: #FFF;"></i> ANY SCALE EVENT</span>
             </div>
             <div class="occasion-content">
-              <span class="event-tag-pill" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; border: none !important;"><i class="fa-solid fa-star me-1" style="color: #FFF;"></i> ANY SCALE EVENT</span>
               <h3 class="event-title" style="color: #7A1C2B !important;">Corporate &amp; Custom Events</h3>
               <p class="event-desc">Executive luncheons, Pujas (Satvik/Jain), corporate galas, or any customized pure-veg gathering of any size.</p>
               <a href="#inquiry" class="btn-gold select-package" data-event="Custom Event Catering" data-package="Custom Event Catering" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; box-shadow: 0 4px 14px rgba(138, 107, 27, 0.25) !important;">Book Custom Catering</a>
             </div>
           </div>
         </div>
+
 
 
 
