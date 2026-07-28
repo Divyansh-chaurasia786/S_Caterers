@@ -2383,10 +2383,10 @@
   <!-- ================= SILVER MENU FULL POPUP MODAL ================= -->
   <div class="modal fade" id="silverMenuModal" tabindex="-1" aria-labelledby="silverMenuModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #CBD5E0; overflow: hidden; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
+      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #CBD5E0; overflow: visible; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3); position: relative;">
         
                 <!-- Modal Header -->
-        <div class="modal-header p-0" style="background: linear-gradient(160deg,#0F0F0F 0%,#1A1A2E 40%,#16213E 100%); border-bottom: none; position: relative; overflow: hidden;">
+        <div class="modal-header p-0" style="background: linear-gradient(160deg,#0F0F0F 0%,#1A1A2E 40%,#16213E 100%); border-bottom: none; position: relative;">
           <!-- Decorative top accent strip -->
           <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#C6A15B;"></div>
           <!-- Subtle pattern overlay -->
@@ -2775,10 +2775,10 @@
   <!-- ================= GOLD MENU FULL POPUP MODAL ================= -->
   <div class="modal fade" id="goldMenuModal" tabindex="-1" aria-labelledby="goldMenuModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #C6A15B; overflow: hidden; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
+      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #C6A15B; overflow: visible; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3); position: relative;">
         
                 <!-- Modal Header -->
-        <div class="modal-header p-0" style="background: linear-gradient(160deg,#0F0F0F 0%,#1C1700 40%,#2A2000 100%); border-bottom: none; position: relative; overflow: hidden;">
+        <div class="modal-header p-0" style="background: linear-gradient(160deg,#0F0F0F 0%,#1C1700 40%,#2A2000 100%); border-bottom: none; position: relative;">
           <!-- Decorative top accent strip -->
           <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#D4AF37;"></div>
           <!-- Subtle pattern overlay -->
@@ -3431,10 +3431,10 @@
   <!-- ================= ROYAL MENU FULL POPUP MODAL ================= -->
   <div class="modal fade" id="royalMenuModal" tabindex="-1" aria-labelledby="royalMenuModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #D4AF37; overflow: hidden; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
+      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #D4AF37; overflow: visible; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3); position: relative;">
         
                 <!-- Modal Header -->
-        <div class="modal-header p-0" style="background: linear-gradient(160deg,#2D0008 0%,#1A000A 40%,#3D0010 100%); border-bottom: none; position: relative; overflow: hidden;">
+        <div class="modal-header p-0" style="background: linear-gradient(160deg,#2D0008 0%,#1A000A 40%,#3D0010 100%); border-bottom: none; position: relative;">
           <!-- Decorative top accent strip -->
           <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#FFD700;"></div>
           <!-- Subtle pattern overlay -->
@@ -3915,10 +3915,10 @@
   <!-- ================= VIP MENU FULL POPUP MODAL ================= -->
   <div class="modal fade" id="vipMenuModal" tabindex="-1" aria-labelledby="vipMenuModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #6A3FA0; overflow: hidden; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
+      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #6A3FA0; overflow: visible; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3); position: relative;">
         
                 <!-- Modal Header -->
-        <div class="modal-header p-0" style="background: linear-gradient(160deg,#1A0933 0%,#0D001A 40%,#2A0845 100%); border-bottom: none; position: relative; overflow: hidden;">
+        <div class="modal-header p-0" style="background: linear-gradient(160deg,#1A0933 0%,#0D001A 40%,#2A0845 100%); border-bottom: none; position: relative;">
           <!-- Decorative top accent strip -->
           <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#9B59B6;"></div>
           <!-- Subtle pattern overlay -->
@@ -4311,10 +4311,10 @@
   <!-- ================= MASTER FULL MENU POPUP MODAL ================= -->
   <div class="modal fade" id="fullMenuModal" tabindex="-1" aria-labelledby="fullMenuModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #D4AF37; overflow: hidden; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3);">
+      <div class="modal-content menu-modal-content" style="border-radius: 24px; border: 2px solid #D4AF37; overflow: visible; background: #FFFFFF; box-shadow: 0 15px 50px rgba(0,0,0,0.3); position: relative;">
         
                 <!-- Modal Header -->
-        <div class="modal-header p-0" style="background: linear-gradient(160deg,#0F0F0F 0%,#1A1400 40%,#261E00 100%); border-bottom: none; position: relative; overflow: hidden;">
+        <div class="modal-header p-0" style="background: linear-gradient(160deg,#0F0F0F 0%,#1A1400 40%,#261E00 100%); border-bottom: none; position: relative;">
           <!-- Decorative top accent strip -->
           <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#D4AF37;"></div>
           <!-- Subtle pattern overlay -->
