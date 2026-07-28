@@ -1500,7 +1500,7 @@
       <div class="row g-4 mobile-swipe-deck" id="events-swipe-deck">
         <!-- 1. Weddings & Receptions -->
         <div class="col-12 col-md-6 col-lg-6">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
+          <div class="occasion-card h-100 animate-on-scroll select-package" data-event="Wedding &amp; Grand Reception" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important; cursor: pointer;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-ring"></i>
             </div>
@@ -1508,14 +1508,14 @@
               <span class="event-tag-pill" style="background: #FFF8EB !important; color: #8A6B1B !important; border: 1px solid #E8D09E !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-crown me-1" style="color: #C6A15B;"></i> GRAND CELEBRATIONS</span>
               <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #1F1510 !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Weddings &amp; Receptions</h3>
               <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Royal Rajwada 100% pure veg feasts, imperial buffet lanes, white-glove thali service &amp; live chef counters.</p>
-              <a href="#inquiry" class="btn-wine btn-sm mt-auto select-package" data-package="Wedding &amp; Grand Reception" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Wedding Catering</a>
+              <a href="#inquiry" class="btn-wine btn-sm mt-auto select-package" data-event="Wedding &amp; Grand Reception" data-package="Wedding &amp; Grand Reception" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Wedding Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 2. Engagements & Roka -->
         <div class="col-12 col-md-6 col-lg-6">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
+          <div class="occasion-card h-100 animate-on-scroll select-package" data-event="Engagement &amp; Roka Ceremony" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important; cursor: pointer;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-heart"></i>
             </div>
@@ -1523,14 +1523,14 @@
               <span class="event-tag-pill" style="background: #FFF8EB !important; color: #8A6B1B !important; border: 1px solid #E8D09E !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-sparkles me-1" style="color: #C6A15B;"></i> INTIMATE CEREMONIES</span>
               <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #1F1510 !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Engagements &amp; Roka</h3>
               <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Chic ring ceremony catering, mocktail bar lounges, live gourmet starter passes &amp; elegant dining decor.</p>
-              <a href="#inquiry" class="btn-wine btn-sm mt-auto select-package" data-package="Engagement &amp; Roka Ceremony" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Engagement Catering</a>
+              <a href="#inquiry" class="btn-wine btn-sm mt-auto select-package" data-event="Engagement &amp; Roka Ceremony" data-package="Engagement &amp; Roka Ceremony" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Engagement Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 3. Birthdays & Social Parties -->
         <div class="col-12 col-md-6 col-lg-6">
-          <div class="occasion-card h-100 animate-on-scroll" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important;">
+          <div class="occasion-card h-100 animate-on-scroll select-package" data-event="Birthday Party &amp; Milestone" style="background: #FFFFFF !important; border: 1.5px solid #E6D8C3 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(44, 26, 17, 0.08) !important; cursor: pointer;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #D4AF37; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.25);">
               <i class="fa-solid fa-cake-candles"></i>
             </div>
@@ -1538,14 +1538,14 @@
               <span class="event-tag-pill" style="background: #FFF8EB !important; color: #8A6B1B !important; border: 1px solid #E8D09E !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-gift me-1" style="color: #C6A15B;"></i> MILESTONE PARTIES</span>
               <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #1F1510 !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Birthdays &amp; Parties</h3>
               <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Vibrant live Dilli chaat, wok-tossed Chinese noodles, live jalebi rabri counters &amp; custom mocktail bars.</p>
-              <a href="#inquiry" class="btn-wine btn-sm mt-auto select-package" data-package="Birthday Party &amp; Milestone" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Birthday Catering</a>
+              <a href="#inquiry" class="btn-wine btn-sm mt-auto select-package" data-event="Birthday Party &amp; Milestone" data-package="Birthday Party &amp; Milestone" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;">Book Birthday Catering</a>
             </div>
           </div>
         </div>
 
         <!-- 4. Corporate & Custom Events -->
         <div class="col-12 col-md-6 col-lg-6">
-          <div class="occasion-card h-100 animate-on-scroll" style="border: 2px solid #C6A15B !important; background: #FFFDF9 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(198, 161, 91, 0.15) !important;">
+          <div class="occasion-card h-100 animate-on-scroll select-package" data-event="Custom Event Catering" style="border: 2px solid #C6A15B !important; background: #FFFDF9 !important; border-radius: 16px !important; padding: 1.5rem !important; box-shadow: 0 8px 24px rgba(198, 161, 91, 0.15) !important; cursor: pointer;">
             <div class="event-icon-badge mb-3" style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; box-shadow: 0 4px 12px rgba(138, 107, 27, 0.3);">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
@@ -1553,10 +1553,11 @@
               <span class="event-tag-pill" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; border: none !important; font-size: 0.72rem !important; font-weight: 800 !important; padding: 4px 10px !important; border-radius: 20px !important; display: inline-flex; align-items: center; align-self: flex-start;"><i class="fa-solid fa-star me-1" style="color: #FFF;"></i> ANY SCALE EVENT</span>
               <h3 class="event-title" style="font-size: 1.2rem !important; font-weight: 800 !important; color: #7A1C2B !important; margin: 6px 0 !important; font-family: 'Playfair Display', serif;">Corporate &amp; Custom Events</h3>
               <p class="event-desc" style="font-size: 0.88rem !important; font-weight: 500 !important; line-height: 1.6 !important; color: #2D2622 !important; margin-bottom: 1rem !important;">Executive luncheons, Pujas (Satvik/Jain), corporate galas, or any customized pure-veg gathering of any size.</p>
-              <a href="#inquiry" class="btn-gold btn-sm mt-auto select-package" data-package="Custom Event Catering" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(138, 107, 27, 0.25) !important;">Book Custom Catering</a>
+              <a href="#inquiry" class="btn-gold btn-sm mt-auto select-package" data-event="Custom Event Catering" data-package="Custom Event Catering" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; font-weight: 700 !important; border: none !important; border-radius: 10px !important; padding: 10px 24px !important; width: auto !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; font-size: 0.85rem !important; white-space: nowrap !important; box-shadow: 0 4px 12px rgba(138, 107, 27, 0.25) !important;">Book Custom Catering</a>
             </div>
           </div>
         </div>
+
 
       </div>
       <!-- Events Pagination Dots -->
@@ -2251,15 +2252,81 @@
       maybeInitSpecialtiesAutoplay();
     }
 
-    // Auto-select package in inquiry form on click
+    // Auto-select package or event type in inquiry form on click & highlight for 2.5s
     function initAutoSelectPackage() {
-      document.querySelectorAll('.select-package').forEach(link => {
+      document.querySelectorAll('.select-package, [data-event], [data-package]').forEach(link => {
         link.addEventListener('click', function(e) {
-          const pkgName = this.getAttribute('data-package');
-          const selectEl = document.getElementById('inq-package');
-          if (selectEl) {
-            selectEl.value = pkgName;
+          const rawTarget = this.getAttribute('data-event') || this.getAttribute('data-package');
+          if (!rawTarget) return;
+
+          const term = rawTarget.toLowerCase().replace(/&amp;/g, '&').replace(/[^a-z0-9 ]/g, ' ').trim();
+          let targetEl = null;
+
+          // 1. Try matching in Event Type select (#inq-event-type)
+          const eventSelect = document.getElementById('inq-event-type');
+          if (eventSelect) {
+            for (let i = 0; i < eventSelect.options.length; i++) {
+              const optVal = eventSelect.options[i].value.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+              const optText = eventSelect.options[i].text.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+              if (
+                optVal.includes(term) || optText.includes(term) || term.includes(optVal.trim()) ||
+                (term.includes('wedding') && optVal.includes('wedding')) ||
+                (term.includes('engagement') && optVal.includes('engagement')) ||
+                (term.includes('birthday') && optVal.includes('birthday')) ||
+                (term.includes('custom') && optVal.includes('custom'))
+              ) {
+                eventSelect.selectedIndex = i;
+                eventSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                targetEl = eventSelect;
+                break;
+              }
+            }
           }
+
+          // 2. If not matched in Event Type select, try Package select (#inq-package)
+          if (!targetEl) {
+            const pkgSelect = document.getElementById('inq-package');
+            if (pkgSelect) {
+              const cleanTerm = term.replace('package', '').replace('choice', '').replace('master', '').trim();
+              for (let i = 0; i < pkgSelect.options.length; i++) {
+                const optVal = pkgSelect.options[i].value.toLowerCase();
+                const optText = pkgSelect.options[i].text.toLowerCase();
+                if (optVal.includes(cleanTerm) || optText.includes(cleanTerm) || cleanTerm.includes(optVal)) {
+                  pkgSelect.selectedIndex = i;
+                  pkgSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                  targetEl = pkgSelect;
+                  break;
+                }
+              }
+              // If it's an add-on counter like Craft Bar Counter, select Custom Catering Service
+              if (!targetEl && (term.includes('counter') || term.includes('bar') || term.includes('bakery') || term.includes('juice'))) {
+                for (let i = 0; i < pkgSelect.options.length; i++) {
+                  if (pkgSelect.options[i].value.toLowerCase().includes('custom')) {
+                    pkgSelect.selectedIndex = i;
+                    pkgSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                    targetEl = pkgSelect;
+                    break;
+                  }
+                }
+              }
+            }
+          }
+
+          // 3. Smooth scroll to form & apply 2.5s highlight
+          setTimeout(() => {
+            const sec = document.getElementById('inquiry');
+            if (sec) {
+              sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            if (targetEl) {
+              setTimeout(() => {
+                targetEl.classList.add('pkg-select-highlight');
+                setTimeout(() => {
+                  targetEl.classList.remove('pkg-select-highlight');
+                }, 2500); // 2.5 seconds pulse highlight
+              }, 350);
+            }
+          }, 50);
         });
       });
     }
