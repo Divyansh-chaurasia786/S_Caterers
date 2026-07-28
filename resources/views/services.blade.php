@@ -1034,9 +1034,9 @@
         flex-direction: column !important;
       }
       .occasion-card {
-        padding: 1.4rem 1.2rem 1.4rem 1.2rem !important;
+        padding: 1.5rem 1.25rem 1.5rem 1.25rem !important;
         height: 100% !important;
-        min-height: 320px !important;
+        min-height: 330px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1053,24 +1053,28 @@
         align-items: center !important;
         justify-content: space-between !important;
         width: 100% !important;
-        margin-bottom: 12px !important;
+        margin-top: 0 !important;
+        margin-bottom: 14px !important;
         position: relative !important;
         top: 0 !important;
       }
       .occasion-card .event-icon-badge {
-        width: 44px !important;
-        height: 44px !important;
+        width: 42px !important;
+        height: 42px !important;
         font-size: 1.1rem !important;
         margin: 0 !important;
         border-radius: 12px !important;
         flex-shrink: 0 !important;
         box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;
+        position: static !important;
       }
       .occasion-card .event-tag-pill {
         font-size: 0.65rem !important;
-        padding: 4px 10px !important;
+        padding: 5px 10px !important;
         margin: 0 !important;
         white-space: nowrap !important;
+        border-radius: 20px !important;
+        position: static !important;
       }
       .occasion-card .occasion-content {
         display: flex !important;
@@ -1096,11 +1100,14 @@
       .occasion-card .btn-wine,
       .occasion-card .btn-gold {
         width: 100% !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
-        padding: 10px 14px !important;
+        padding: 0 12px !important;
         font-size: 0.82rem !important;
         font-weight: 800 !important;
         border-radius: 12px !important;
