@@ -1002,12 +1002,12 @@
         overflow-y: visible !important;
         scroll-snap-type: x mandatory !important;
         -webkit-overflow-scrolling: touch !important;
-        padding-left: 4% !important;
-        padding-right: 4% !important;
-        padding-bottom: 24px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-bottom: 20px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        gap: 14px !important;
+        gap: 16px !important;
         scrollbar-width: none !important;
         align-items: stretch !important;
       }
@@ -1015,9 +1015,9 @@
         display: none !important;
       }
       .mobile-swipe-deck > [class*="col-"] {
-        flex: 0 0 92% !important;
-        max-width: 92% !important;
-        width: 92% !important;
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        width: 85% !important;
         scroll-snap-align: center !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -1025,9 +1025,9 @@
         flex-direction: column !important;
       }
       .occasion-card {
-        padding: 1.25rem 1.15rem 1.4rem 1.15rem !important;
+        padding: 1.25rem 1.15rem 1.25rem 1.15rem !important;
         height: 100% !important;
-        min-height: 330px !important;
+        min-height: 270px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1036,7 +1036,7 @@
         border-radius: 18px !important;
         border: 1.5px solid #E6D8C3 !important;
         box-sizing: border-box !important;
-        overflow: hidden !important;
+        overflow: visible !important;
       }
       .occasion-card .event-icon-badge {
         width: 46px !important;
