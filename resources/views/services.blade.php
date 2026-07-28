@@ -1059,9 +1059,9 @@
         top: 0 !important;
       }
       .occasion-card .event-icon-badge {
-        width: 42px !important;
-        height: 42px !important;
-        font-size: 1.1rem !important;
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.15rem !important;
         margin: 0 !important;
         border-radius: 12px !important;
         flex-shrink: 0 !important;
@@ -1069,7 +1069,8 @@
         position: static !important;
       }
       .occasion-card .event-tag-pill {
-        font-size: 0.65rem !important;
+        font-size: 0.68rem !important;
+        font-weight: 800 !important;
         padding: 5px 10px !important;
         margin: 0 !important;
         white-space: nowrap !important;
@@ -1086,13 +1087,17 @@
       }
       .occasion-card .event-title {
         font-size: 1.2rem !important;
+        font-weight: 800 !important;
         text-align: center !important;
-        margin: 4px 0 6px 0 !important;
+        margin: 6px 0 8px 0 !important;
+        font-family: 'Playfair Display', serif !important;
+        color: #1F1510 !important;
       }
       .occasion-card .event-desc {
-        font-size: 0.84rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 1rem !important;
+        font-size: 0.85rem !important;
+        font-weight: 500 !important;
+        line-height: 1.55 !important;
+        margin-bottom: 1.2rem !important;
         text-align: center !important;
         color: #4A3E39 !important;
       }
@@ -1100,9 +1105,9 @@
       .occasion-card .btn-wine,
       .occasion-card .btn-gold {
         width: 100% !important;
-        height: 48px !important;
-        min-height: 48px !important;
-        max-height: 48px !important;
+        height: 46px !important;
+        min-height: 46px !important;
+        max-height: 46px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -1804,20 +1809,21 @@
 
         <!-- 4. Corporate & Custom Events -->
         <div class="col-12 col-md-6 col-lg-6">
-          <div class="occasion-card animate-on-scroll select-package custom-card" data-event="Custom Event Catering">
+          <div class="occasion-card animate-on-scroll select-package" data-event="Custom Event Catering">
             <div class="card-top-header">
-              <div class="event-icon-badge" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; box-shadow: 0 6px 16px rgba(138, 107, 27, 0.3) !important;">
+              <div class="event-icon-badge">
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
               </div>
-              <span class="event-tag-pill" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; color: #FFFFFF !important; border: none !important;"><i class="fa-solid fa-star me-1" style="color: #FFF;"></i> ANY SCALE EVENT</span>
+              <span class="event-tag-pill"><i class="fa-solid fa-star me-1" style="color: #C6A15B;"></i> ANY SCALE EVENT</span>
             </div>
             <div class="occasion-content">
-              <h3 class="event-title" style="color: #7A1C2B !important;">Corporate &amp; Custom Events</h3>
+              <h3 class="event-title">Corporate &amp; Custom Events</h3>
               <p class="event-desc">Executive luncheons, Pujas (Satvik/Jain), corporate galas, or any customized pure-veg gathering of any size.</p>
-              <a href="#inquiry" class="btn-gold select-package" data-event="Custom Event Catering" data-package="Custom Event Catering" style="background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important; box-shadow: 0 4px 14px rgba(138, 107, 27, 0.25) !important;">Book Custom Catering</a>
+              <a href="#inquiry" class="btn-wine select-package" data-event="Custom Event Catering" data-package="Custom Event Catering">Book Custom Catering</a>
             </div>
           </div>
         </div>
+
 
 
 
