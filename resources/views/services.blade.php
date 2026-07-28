@@ -990,11 +990,6 @@
       padding: 12px 16px;
       border: 1.5px solid rgba(198, 161, 91, 0.25);
       border-radius: 10px;
-      background: #FFFFFF;
-      font-size: 0.95rem;
-      color: var(--charcoal);
-      outline: none;
-      transition: border-color 0.25s ease;
     }
     /* Hide number input spinner arrows */
     .form-group-custom input[type="number"]::-webkit-outer-spin-button,
@@ -1017,7 +1012,8 @@
         -webkit-overflow-scrolling: touch !important;
         padding-left: 16px !important;
         padding-right: 16px !important;
-        padding-bottom: 20px !important;
+        padding-top: 10px !important;
+        padding-bottom: 24px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         gap: 16px !important;
@@ -1038,9 +1034,9 @@
         flex-direction: column !important;
       }
       .occasion-card {
-        padding: 1.25rem 1.15rem 1.25rem 1.15rem !important;
+        padding: 1.4rem 1.2rem 1.4rem 1.2rem !important;
         height: 100% !important;
-        min-height: 290px !important;
+        min-height: 320px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1049,27 +1045,32 @@
         border-radius: 18px !important;
         border: 1.5px solid #E6D8C3 !important;
         box-sizing: border-box !important;
-        overflow: visible !important;
+        position: relative !important;
+        overflow: hidden !important;
       }
       .occasion-card .card-top-header {
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
         width: 100% !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 12px !important;
+        position: relative !important;
+        top: 0 !important;
       }
       .occasion-card .event-icon-badge {
-        width: 46px !important;
-        height: 46px !important;
-        font-size: 1.15rem !important;
-        margin-bottom: 0 !important;
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.1rem !important;
+        margin: 0 !important;
         border-radius: 12px !important;
         flex-shrink: 0 !important;
+        box-shadow: 0 4px 12px rgba(122, 28, 43, 0.2) !important;
       }
       .occasion-card .event-tag-pill {
-        font-size: 0.68rem !important;
+        font-size: 0.65rem !important;
         padding: 4px 10px !important;
-        margin-bottom: 0 !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
       }
       .occasion-card .occasion-content {
         display: flex !important;
@@ -1082,10 +1083,10 @@
       .occasion-card .event-title {
         font-size: 1.2rem !important;
         text-align: center !important;
-        margin: 6px 0 6px 0 !important;
+        margin: 4px 0 6px 0 !important;
       }
       .occasion-card .event-desc {
-        font-size: 0.85rem !important;
+        font-size: 0.84rem !important;
         line-height: 1.5 !important;
         margin-bottom: 1rem !important;
         text-align: center !important;
@@ -1099,8 +1100,8 @@
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
-        padding: 11px 16px !important;
-        font-size: 0.88rem !important;
+        padding: 10px 14px !important;
+        font-size: 0.82rem !important;
         font-weight: 800 !important;
         border-radius: 12px !important;
         margin-top: auto !important;
