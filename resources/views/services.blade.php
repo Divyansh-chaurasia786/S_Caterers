@@ -2254,77 +2254,37 @@
 
     // Auto-select package or event type in inquiry form on click & highlight for 2.5s
     function initAutoSelectPackage() {
-      document.querySelectorAll('.select-package, [data-event], [data-package]').forEach(link => {
+      document.querySelectorAll('.select-package, [data-event], [data-package]').forEach(function(link) {
         link.addEventListener('click', function(e) {
-          const rawTarget = this.getAttribute('data-event') || this.getAttribute('data-package');
+          var rawTarget = this.getAttribute('data-event') || this.getAttribute('data-package');
           if (!rawTarget) return;
 
-          const term = rawTarget.toLowerCase().replace(/&amp;/g, '&').replace(/[^a-z0-9 ]/g, ' ').trim();
-          let targetEl = null;
+          var eventSelect = document.getElementById('inq-event-type');
+          var pkgSelect = document.getElementById('inq-package');
 
-          // 1. Try matching in Event Type select (#inq-event-type)
-          const eventSelect = document.getElementById('inq-event-type');
-          if (eventSelect) {
-            for (let i = 0; i < eventSelect.options.length; i++) {
-              const optVal = eventSelect.options[i].value.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
-              const optText = eventSelect.options[i].text.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
-              if (
-                optVal.includes(term) || optText.includes(term) || term.includes(optVal.trim()) ||
-                (term.includes('wedding') && optVal.includes('wedding')) ||
-                (term.includes('engagement') && optVal.includes('engagement')) ||
-                (term.includes('birthday') && optVal.includes('birthday')) ||
-                (term.includes('custom') && optVal.includes('custom'))
-              ) {
-                eventSelect.selectedIndex = i;
-                eventSelect.dispatchEvent(new Event('change', { bubbles: true }));
-                targetEl = eventSelect;
-                break;
-              }
-            }
+          var targetEl = null;
+
+          if (eventSelect && selectOptionInDropdown(eventSelect, rawTarget)) {
+            targetEl = eventSelect;
+          } else if (pkgSelect && selectOptionInDropdown(pkgSelect, rawTarget)) {
+            targetEl = pkgSelect;
+          } else if (pkgSelect) {
+            selectOptionInDropdown(pkgSelect, 'Custom Catering Service');
+            targetEl = pkgSelect;
           }
 
-          // 2. If not matched in Event Type select, try Package select (#inq-package)
-          if (!targetEl) {
-            const pkgSelect = document.getElementById('inq-package');
-            if (pkgSelect) {
-              const cleanTerm = term.replace('package', '').replace('choice', '').replace('master', '').trim();
-              for (let i = 0; i < pkgSelect.options.length; i++) {
-                const optVal = pkgSelect.options[i].value.toLowerCase();
-                const optText = pkgSelect.options[i].text.toLowerCase();
-                if (optVal.includes(cleanTerm) || optText.includes(cleanTerm) || cleanTerm.includes(optVal)) {
-                  pkgSelect.selectedIndex = i;
-                  pkgSelect.dispatchEvent(new Event('change', { bubbles: true }));
-                  targetEl = pkgSelect;
-                  break;
-                }
-              }
-              // If it's an add-on counter like Craft Bar Counter, select Custom Catering Service
-              if (!targetEl && (term.includes('counter') || term.includes('bar') || term.includes('bakery') || term.includes('juice'))) {
-                for (let i = 0; i < pkgSelect.options.length; i++) {
-                  if (pkgSelect.options[i].value.toLowerCase().includes('custom')) {
-                    pkgSelect.selectedIndex = i;
-                    pkgSelect.dispatchEvent(new Event('change', { bubbles: true }));
-                    targetEl = pkgSelect;
-                    break;
-                  }
-                }
-              }
-            }
-          }
-
-          // 3. Smooth scroll to form & apply 2.5s highlight
-          setTimeout(() => {
-            const sec = document.getElementById('inquiry');
+          setTimeout(function() {
+            var sec = document.getElementById('inquiry');
             if (sec) {
               sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
             if (targetEl) {
-              setTimeout(() => {
+              setTimeout(function() {
                 targetEl.classList.add('pkg-select-highlight');
-                setTimeout(() => {
+                setTimeout(function() {
                   targetEl.classList.remove('pkg-select-highlight');
-                }, 2500); // 2.5 seconds pulse highlight
-              }, 350);
+                }, 2500);
+              }, 300);
             }
           }, 50);
         });
@@ -5156,20 +5116,42 @@
       }
     })();
 
+    /* Helper to reliably select option in a <select> element by value or label text */
+    function selectOptionInDropdown(selectEl, targetString) {
+      if (!selectEl || !targetString) return false;
+      function norm(str) {
+        return str.toLowerCase().replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+      }
+      var needle = norm(targetString);
+      for (var i = 0; i < selectEl.options.length; i++) {
+        var val = norm(selectEl.options[i].value);
+        var txt = norm(selectEl.options[i].text);
+        var isMatch = (
+          val === needle || txt === needle ||
+          val.includes(needle) || needle.includes(val) ||
+          txt.includes(needle) || needle.includes(txt) ||
+          (needle.includes('wedding') && (val.includes('wedding') || txt.includes('wedding'))) ||
+          (needle.includes('engagement') && (val.includes('engagement') || txt.includes('engagement'))) ||
+          (needle.includes('birthday') && (val.includes('birthday') || txt.includes('birthday'))) ||
+          (needle.includes('custom') && (val.includes('custom') || txt.includes('custom')))
+        );
+
+        if (isMatch) {
+          selectEl.options[i].selected = true;
+          selectEl.selectedIndex = i;
+          selectEl.value = selectEl.options[i].value;
+          selectEl.dispatchEvent(new Event('change', { bubbles: true }));
+          return true;
+        }
+      }
+      return false;
+    }
+
     function bookMenuFromModal(packageName, modalId) {
       /* 1. Auto-select option in form dropdown */
       var pkgSelect = document.getElementById('inq-package');
       if (pkgSelect && packageName) {
-        var cleanTarget = packageName.toLowerCase().replace('package', '').replace('choice', '').replace('master', '').trim();
-        for (var i = 0; i < pkgSelect.options.length; i++) {
-          var optVal = pkgSelect.options[i].value.toLowerCase();
-          var optText = pkgSelect.options[i].text.toLowerCase();
-          if (optVal.includes(cleanTarget) || optText.includes(cleanTarget)) {
-            pkgSelect.selectedIndex = i;
-            pkgSelect.dispatchEvent(new Event('change', { bubbles: true }));
-            break;
-          }
-        }
+        selectOptionInDropdown(pkgSelect, packageName);
       }
 
       /* 2. Close active modal */
