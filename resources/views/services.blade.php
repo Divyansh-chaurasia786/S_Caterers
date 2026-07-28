@@ -2252,6 +2252,40 @@
       maybeInitSpecialtiesAutoplay();
     }
 
+
+    // Helper to reliably select option in a <select> element by value or label text
+    window.selectOptionInDropdown = function(selectEl, targetString) {
+      if (!selectEl || !targetString) return false;
+      function norm(str) {
+        return str.toLowerCase().replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+      }
+      var needle = norm(targetString);
+      for (var i = 0; i < selectEl.options.length; i++) {
+        var val = norm(selectEl.options[i].value);
+        var txt = norm(selectEl.options[i].text);
+        var isMatch = (
+          val === needle || txt === needle ||
+          (val.length > 0 && (val.includes(needle) || needle.includes(val))) ||
+          (txt.length > 0 && (txt.includes(needle) || needle.includes(txt))) ||
+          (needle.includes('wedding') && (val.includes('wedding') || txt.includes('wedding'))) ||
+          (needle.includes('engagement') && (val.includes('engagement') || txt.includes('engagement'))) ||
+          (needle.includes('birthday') && (val.includes('birthday') || txt.includes('birthday'))) ||
+          (needle.includes('custom') && (val.includes('custom') || txt.includes('custom') || val.includes('other') || txt.includes('other')))
+        );
+
+        if (isMatch) {
+          for (var j = 0; j < selectEl.options.length; j++) {
+            selectEl.options[j].selected = (j === i);
+          }
+          selectEl.selectedIndex = i;
+          selectEl.value = selectEl.options[i].value;
+          selectEl.dispatchEvent(new Event('change', { bubbles: true }));
+          return true;
+        }
+      }
+      return false;
+    };
+
     // Auto-select package or event type in inquiry form on click & highlight for 2.5s
     function initAutoSelectPackage() {
       document.querySelectorAll('.select-package, [data-event], [data-package]').forEach(function(link) {
@@ -5115,37 +5149,6 @@
         setTimeout(tryOpen, 300);
       }
     })();
-
-    /* Helper to reliably select option in a <select> element by value or label text */
-    function selectOptionInDropdown(selectEl, targetString) {
-      if (!selectEl || !targetString) return false;
-      function norm(str) {
-        return str.toLowerCase().replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-      }
-      var needle = norm(targetString);
-      for (var i = 0; i < selectEl.options.length; i++) {
-        var val = norm(selectEl.options[i].value);
-        var txt = norm(selectEl.options[i].text);
-        var isMatch = (
-          val === needle || txt === needle ||
-          val.includes(needle) || needle.includes(val) ||
-          txt.includes(needle) || needle.includes(txt) ||
-          (needle.includes('wedding') && (val.includes('wedding') || txt.includes('wedding'))) ||
-          (needle.includes('engagement') && (val.includes('engagement') || txt.includes('engagement'))) ||
-          (needle.includes('birthday') && (val.includes('birthday') || txt.includes('birthday'))) ||
-          (needle.includes('custom') && (val.includes('custom') || txt.includes('custom')))
-        );
-
-        if (isMatch) {
-          selectEl.options[i].selected = true;
-          selectEl.selectedIndex = i;
-          selectEl.value = selectEl.options[i].value;
-          selectEl.dispatchEvent(new Event('change', { bubbles: true }));
-          return true;
-        }
-      }
-      return false;
-    }
 
     function bookMenuFromModal(packageName, modalId) {
       /* 1. Auto-select option in form dropdown */
