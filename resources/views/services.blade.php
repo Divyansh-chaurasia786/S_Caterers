@@ -777,6 +777,8 @@
       overflow: hidden !important;
       cursor: pointer !important;
       box-sizing: border-box !important;
+    }
+    
     /* Custom Event Card (Card 4 Signature Gold Styling) */
     .occasion-card.custom-card {
       border: 2px solid #C6A15B !important;
@@ -882,11 +884,14 @@
     .occasion-card .btn-gold {
       background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%) !important;
       color: #FFFFFF !important;
-      font-weight: 700 !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
       border: none !important;
       border-radius: 12px !important;
       padding: 12px 24px !important;
       width: 100% !important;
+      height: 48px !important;
+      min-height: 48px !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
