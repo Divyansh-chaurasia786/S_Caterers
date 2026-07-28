@@ -1034,9 +1034,9 @@
         flex-direction: column !important;
       }
       .occasion-card {
-        padding: 1.5rem 1.25rem 1.5rem 1.25rem !important;
+        padding: 1.6rem 1.25rem 1.6rem 1.25rem !important;
         height: 100% !important;
-        min-height: 330px !important;
+        min-height: 335px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -1105,9 +1105,9 @@
       .occasion-card .btn-wine,
       .occasion-card .btn-gold {
         width: 100% !important;
-        height: 46px !important;
-        min-height: 46px !important;
-        max-height: 46px !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
