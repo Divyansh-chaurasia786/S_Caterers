@@ -46,29 +46,32 @@
     }
 
     /* Close button — always on top, large mobile tap target */
-    .menu-modal-content .btn-close {
+    .menu-close-btn {
       position: absolute !important;
       top: 10px !important;
       right: 12px !important;
-      z-index: 100 !important;
+      z-index: 200 !important;
       width: 36px !important;
       height: 36px !important;
       min-width: 36px !important;
-      min-height: 36px !important;
+      border-radius: 50% !important;
+      background: rgba(255,255,255,0.18) !important;
+      border: 1.5px solid rgba(255,255,255,0.35) !important;
+      color: #fff !important;
+      font-size: 1.1rem !important;
+      line-height: 1 !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      background: rgba(255,255,255,0.15) !important;
-      border-radius: 50% !important;
-      opacity: 0.9 !important;
       cursor: pointer !important;
-      border: none !important;
+      opacity: 1 !important;
       touch-action: manipulation !important;
       -webkit-tap-highlight-color: transparent !important;
+      transition: background 0.15s ease !important;
     }
-    .menu-modal-content .btn-close:hover {
-      background: rgba(255,255,255,0.28) !important;
-      opacity: 1 !important;
+    .menu-close-btn:hover, .menu-close-btn:focus {
+      background: rgba(255,255,255,0.35) !important;
+      outline: none !important;
     }
     /* Ensure content wrapper never covers the close button */
     .menu-modal-content .modal-header > .w-100 {
@@ -2424,8 +2427,7 @@
           </div>
 
           <!-- Close button -->
-          <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close"
-                  style="top:10px;right:12px;opacity:0.9;z-index:10;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border-radius:50%;filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6));cursor:pointer;"></button>
+          <button type="button" class="menu-close-btn" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
         </div>
 
         <!-- Modal Body -->
@@ -2817,8 +2819,7 @@
           </div>
 
           <!-- Close button -->
-          <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close"
-                  style="top:10px;right:12px;opacity:0.9;z-index:10;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border-radius:50%;filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6));cursor:pointer;"></button>
+          <button type="button" class="menu-close-btn" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
         </div>
 
         <!-- Modal Body -->
@@ -3474,8 +3475,7 @@
           </div>
 
           <!-- Close button -->
-          <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close"
-                  style="top:10px;right:12px;opacity:0.9;z-index:10;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border-radius:50%;filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6));cursor:pointer;"></button>
+          <button type="button" class="menu-close-btn" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
         </div>
 
         <!-- Modal Body -->
@@ -3959,8 +3959,7 @@
           </div>
 
           <!-- Close button -->
-          <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close"
-                  style="top:10px;right:12px;opacity:0.9;z-index:10;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border-radius:50%;filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6));cursor:pointer;"></button>
+          <button type="button" class="menu-close-btn" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
         </div>
 
         <!-- Modal Body -->
@@ -4356,8 +4355,7 @@
           </div>
 
           <!-- Close button -->
-          <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal" aria-label="Close"
-                  style="top:10px;right:12px;opacity:0.9;z-index:10;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border-radius:50%;filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6));cursor:pointer;"></button>
+          <button type="button" class="menu-close-btn" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
         </div>
 
         <!-- Modal Body -->
