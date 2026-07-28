@@ -891,43 +891,57 @@
         overflow-x: auto !important;
         scroll-snap-type: x mandatory !important;
         -webkit-overflow-scrolling: touch !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
+        padding-left: 4% !important;
+        padding-right: 4% !important;
         padding-bottom: 12px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        gap: 16px !important;
+        gap: 12px !important;
         scrollbar-width: none !important;
       }
       .mobile-swipe-deck::-webkit-scrollbar {
         display: none !important;
       }
       .mobile-swipe-deck > [class*="col-"] {
-        flex: 0 0 85% !important;
-        max-width: 85% !important;
-        width: 85% !important;
+        flex: 0 0 92% !important;
+        max-width: 92% !important;
+        width: 92% !important;
         scroll-snap-align: center !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
       .occasion-card {
-        padding: 1.25rem !important;
+        padding: 1.35rem 1.25rem !important;
         height: 100% !important;
-        min-height: 260px !important;
+        min-height: 270px !important;
         display: flex !important;
         flex-direction: column !important;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06) !important;
         background: #FFFFFF !important;
-        border-radius: 16px !important;
+        border-radius: 18px !important;
+        border: 1.5px solid #E6D8C3 !important;
       }
       .occasion-card .event-title {
-        font-size: 1.15rem !important;
+        font-size: 1.2rem !important;
         margin: 6px 0 !important;
       }
       .occasion-card .event-desc {
-        font-size: 0.85rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 1rem !important;
+        font-size: 0.86rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 1.2rem !important;
+      }
+      .occasion-card a.select-package,
+      .occasion-card .btn-wine,
+      .occasion-card .btn-gold {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 12px 16px !important;
+        font-size: 0.88rem !important;
+        font-weight: 800 !important;
+        border-radius: 12px !important;
+        margin-top: auto !important;
       }
 
       /* Pagination dots styling */
@@ -936,7 +950,7 @@
         justify-content: center !important;
         align-items: center !important;
         gap: 8px !important;
-        margin-top: 14px !important;
+        margin-top: 16px !important;
       }
       .carousel-dot {
         width: 8px !important;
@@ -949,7 +963,7 @@
         display: inline-block !important;
       }
       .carousel-dot.active {
-        width: 22px !important;
+        width: 24px !important;
         border-radius: 10px !important;
         opacity: 1 !important;
         background: #7A1C2B !important;
