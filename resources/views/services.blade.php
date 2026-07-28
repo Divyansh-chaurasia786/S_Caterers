@@ -102,47 +102,95 @@
         overflow: hidden !important;
       }
 
-      /* 2. HEADER — slim single row: title left, close right */
+      /* 2. HEADER — 3-column row: [Logo] [Title] [Share] [✕] */
       .menu-modal-content .modal-header {
         padding: 0 !important;
         min-height: unset !important;
         flex-shrink: 0 !important;
         overflow: visible !important;
       }
-      /* Hide everything except the title h2 and close btn */
-      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center,
-      .menu-modal-content .modal-header p,
-      .menu-modal-content .modal-header .menu-dl-btn,
-      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.gap-2,
-      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.my-1 {
+      /* Content wrapper becomes a flex row */
+      .menu-modal-content .w-100.px-4.pt-3.pb-2 {
+        padding: 0 50px 0 10px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        min-height: 54px !important;
+        gap: 6px !important;
+      }
+      /* --- Brand pill row → LEFT logo --- */
+      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.mb-2 {
+        display: flex !important;
+        flex-shrink: 0 !important;
+        margin-bottom: 0 !important;
+        order: 1 !important;
+      }
+      /* Inner pill: strip background/border, show only logo */
+      .menu-modal-content .modal-header .d-inline-flex.gap-2.px-2.py-1 {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        backdrop-filter: none !important;
+      }
+      .menu-modal-content .modal-header img {
+        height: 26px !important;
+        width: auto !important;
+        filter: brightness(1.4) !important;
+      }
+      /* Hide the text inside pill */
+      .menu-modal-content .modal-header .d-inline-flex.gap-2 span {
         display: none !important;
       }
-      /* Content wrapper: single row, vertically centred */
-      .menu-modal-content .w-100.px-4.pt-3.pb-2 {
-        padding: 0 50px 0 16px !important;
+      /* --- Title → CENTER, flex-grow --- */
+      .menu-modal-content .modal-header h2 {
+        flex: 1 1 auto !important;
+        text-align: center !important;
+        font-size: 0.82rem !important;
+        letter-spacing: 1.5px !important;
+        line-height: 1.1 !important;
+        margin: 0 !important;
+        order: 2 !important;
+        white-space: normal !important;
+        overflow: visible !important;
+      }
+      /* --- Decorative line & subtitle → HIDE --- */
+      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.my-1,
+      .menu-modal-content .modal-header p {
+        display: none !important;
+      }
+      /* --- Action row → RIGHT share icon --- */
+      .menu-modal-content .modal-header .d-flex.align-items-center.justify-content-center.gap-2.pb-0 {
+        display: flex !important;
+        flex-shrink: 0 !important;
+        padding: 0 !important;
+        order: 3 !important;
+      }
+      /* Share button: icon only, compact */
+      .menu-modal-content .menu-dl-btn {
         display: flex !important;
         align-items: center !important;
-        min-height: 56px !important;
+        justify-content: center !important;
+        padding: 7px 9px !important;
+        font-size: 0 !important;        /* hide text */
+        line-height: 0 !important;
+        border-radius: 50% !important;
+        min-width: 32px !important;
+        height: 32px !important;
+        box-shadow: none !important;
+        letter-spacing: 0 !important;
       }
-      /* Title: left-aligned, one line */
-      .menu-modal-content .modal-header h2 {
-        font-size: 0.95rem !important;
-        letter-spacing: 1.2px !important;
-        line-height: 1 !important;
+      .menu-modal-content .menu-dl-btn i {
+        font-size: 0.88rem !important;
         margin: 0 !important;
-        text-align: left !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
       }
-      /* Close button — vertically centred, right side */
+      /* Close button — vertically centred at right edge */
       .menu-close-btn {
         top: 50% !important;
         transform: translateY(-50%) !important;
-        right: 10px !important;
-        width: 34px !important;
-        height: 34px !important;
-        font-size: 1rem !important;
+        right: 8px !important;
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.95rem !important;
       }
 
       /* 3. BODY — fill all remaining space, smooth scroll */
@@ -243,27 +291,70 @@
         padding: 3px 12px !important;
       }
 
-      /* 7. FOOTER — sticky, single row, compact */
+      /* 7. FOOTER — sticky, premium 3-button row */
       .menu-modal-footer {
         flex-shrink: 0 !important;
-        padding: 8px 10px !important;
-        border-top: 1px solid #E8DFD1 !important;
+        padding: 10px 10px 12px !important;
+        border-top: 2px solid #EDE8DF !important;
         background: #fff !important;
       }
-      .menu-modal-footer > div:first-child { display: none !important; } /* hide label on mobile */
+      .menu-modal-footer > div:first-child { display: none !important; } /* hide label */
       .menu-modal-footer > div:last-child {
         width: 100% !important;
-        gap: 6px !important;
+        gap: 8px !important;
+        display: flex !important;
       }
-      .menu-modal-footer .btn,
-      .menu-modal-footer button {
-        font-size: 0.72rem !important;
-        padding: 8px 0 !important;
-        flex: 1 1 0 !important;
-        white-space: nowrap !important;
-        text-align: center !important;
+      /* Share button — gold outline */
+      .menu-modal-footer .btn:first-child,
+      .menu-modal-footer button:first-child {
+        flex: 0 0 42px !important;
+        width: 42px !important;
+        height: 42px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        border: 2px solid #C6A15B !important;
+        color: #C6A15B !important;
+        font-size: 0 !important;      /* icon only */
+        display: flex !important;
+        align-items: center !important;
         justify-content: center !important;
-        border-radius: 8px !important;
+      }
+      .menu-modal-footer .btn:first-child i,
+      .menu-modal-footer button:first-child i {
+        font-size: 0.95rem !important;
+        margin: 0 !important;
+        color: #C6A15B !important;
+      }
+      /* Close button — grey subtle */
+      .menu-modal-footer .btn:nth-child(2),
+      .menu-modal-footer button:nth-child(2) {
+        flex: 1 1 auto !important;
+        height: 42px !important;
+        padding: 0 !important;
+        border-radius: 10px !important;
+        background: #F2EFE9 !important;
+        border: none !important;
+        color: #555 !important;
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+      }
+      /* Book button — solid gold gradient, dominant */
+      .menu-modal-footer .btn:nth-child(3),
+      .menu-modal-footer button:nth-child(3) {
+        flex: 2 1 auto !important;
+        height: 42px !important;
+        padding: 0 !important;
+        border-radius: 10px !important;
+        background: linear-gradient(135deg, #C6A15B 0%, #8A6B1B 100%) !important;
+        border: none !important;
+        color: #fff !important;
+        font-size: 0.75rem !important;
+        font-weight: 800 !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.3px !important;
+        box-shadow: 0 4px 14px rgba(198,161,91,0.45) !important;
       }
     }
 
@@ -5052,6 +5143,19 @@
     function selectPackageFromModal(packageName) {
       bookMenuFromModal(packageName, '');
     }
+
+    /* Hide floating WhatsApp button when any menu modal is open */
+    (function() {
+      var wa = document.querySelector('.floating-whatsapp-cta');
+      document.querySelectorAll('[id$="MenuModal"]').forEach(function(modal) {
+        modal.addEventListener('show.bs.modal', function() {
+          if (wa) wa.style.cssText += ';display:none!important;opacity:0!important;pointer-events:none!important;';
+        });
+        modal.addEventListener('hidden.bs.modal', function() {
+          if (wa) { wa.style.display = ''; wa.style.opacity = ''; wa.style.pointerEvents = ''; }
+        });
+      });
+    })();
   </script>
 
 
