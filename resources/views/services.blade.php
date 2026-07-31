@@ -3568,13 +3568,6 @@
               </div>
             </div>
 
-            <!-- BOOKING & INQUIRIES FOOTER BANNER -->
-            <div class="text-center p-3 rounded-3" style="background: linear-gradient(135deg, #7A1C2B 0%, #540D18 100%); color: #FFF;">
-              <p class="mb-1 text-uppercase fw-bold" style="letter-spacing: 1.5px; font-size: 0.88rem; color: #FFD700;">For Bookings &amp; Inquiries</p>
-              <h4 class="h5 font-heading mb-0 fw-bold" style="letter-spacing: 1px; color: #FFF;">
-                6393998141 &bull; 9839077960 &bull; 6387858852
-              </h4>
-            </div>
           </div>
         </div>
 
